@@ -3,6 +3,12 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import ToolLayout from "@/components/ToolLayout";
 import JsonLd from "@/components/JsonLd";
+import PercentageCalculator from "@/components/tools/PercentageCalculator";
+import BmiCalculator from "@/components/tools/BmiCalculator";
+import EmiCalculator from "@/components/tools/EmiCalculator";
+import LandCalculator from "@/components/tools/LandCalculator";
+import PasswordGenerator from "@/components/tools/PasswordGenerator";
+import CaseConverter from "@/components/tools/CaseConverter";
 import AgeCalculator from "@/components/tools/AgeCalculator";
 import GpaCalculator from "@/components/tools/GpaCalculator";
 import BkashCalculator from "@/components/tools/BkashCalculator";
@@ -58,6 +64,13 @@ const TOOL_REGISTRY: Record<string, Entry> = {
       { q: "Reading time কিভাবে হিসাব হয়?", a: "প্রতি মিনিটে ২০০ শব্দ ধরে।" },
       { q: "বাংলা লেখা কাউন্ট হয়?", a: "হ্যাঁ, বাংলা ও ইংরেজি দুটোই।" },
     ],
+    
+    "percentage-calculator": { component: PercentageCalculator, title: "Percentage Calculator - শতকরা হিসাব", desc: "X এর Y% কত, শতকরা বৃদ্ধি/হ্রাস সহজে বের করুন।", howTo: ["মোড সিলেক্ট করুন", "X ও Y মান লিখুন", "ফলাফল ও ফর্মুলা দেখুন"], faqs: [{q:"শতকরার ফর্মুলা কি?", a:"(অংশ ÷ মোট) × 100"}, {q:"% বৃদ্ধি কিভাবে বের করে?", a:"(নতুন-পুরাতন) ÷ পুরাতন × 100"}, {q:"100 এর 20% কত?", a:"100 × 20 ÷ 100 = 20"}] },
+"bmi-calculator": { component: BmiCalculator, title: "BMI Calculator - বিএমআই হিসাব", desc: "ওজন ও উচ্চতা দিয়ে BMI বের করুন ও স্বাভাবিক ওজন জানুন।", howTo: ["ওজন (kg) দিন", "উচ্চতা cm বা ফুট-ইঞ্চিতে দিন", "BMI ও ক্যাটাগরি দেখুন"], faqs: [{q:"BMI ফর্মুলা কি?", a:"ওজন(kg) ÷ উচ্চতা(m)²"}, {q:"স্বাভাবিক BMI কত?", a:"18.5 - 24.9"}, {q:"BMI কি সবার জন্য সঠিক?", a:"না, বাচ্চা, গর্ভবতী ও খেলোয়াড়দের জন্য সঠিক নয়"}] },
+"emi-calculator-bd": { component: EmiCalculator, title: "EMI Calculator BD - লোন কিস্তি হিসাব", desc: "লোনের মাসিক কিস্তি, মোট সুদ ও মোট পরিশোধ হিসাব করুন।", howTo: ["লোনের পরিমাণ দিন", "সুদের হার ও মেয়াদ দিন", "EMI ও 12 মাসের চার্ট দেখুন"], faqs: [{q:"EMI ফর্মুলা কি?", a:"P×r×(1+r)^n ÷ ((1+r)^n -1)"}, {q:"সুদ 0% হলে?", a:"EMI = আসল ÷ মাস"}, {q:"এটা কি ব্যাংকের ফাইনাল EMI?", a:"না, এটি আনুমানিক"}] },
+"land-calculator-bd": { component: LandCalculator, title: "Land Calculator BD - জমি মাপার হিসাব", desc: "শতাংশ, কাঠা, বিঘা, একর, বর্গফুট একসাথে হিসাব করুন।", howTo: ["যেকোনো এক এককে পরিমাণ দিন", "কাঠার মান 720 ঠিক আছে কিনা দেখুন", "সব এককে ফলাফল দেখুন"], faqs: [{q:"1 শতাংশ = কত বর্গফুট?", a:"435.6 বর্গফুট"}, {q:"1 কাঠা = কত শতাংশ?", a:"Dhaka তে 720 sqft = 1.65 শতাংশ"}, {q:"1 বিঘা = কত কাঠা?", a:"20 কাঠা"}] },
+"password-generator": { component: PasswordGenerator, title: "Password Generator - নিরাপদ পাসওয়ার্ড", desc: "মজবুত ও নিরাপদ পাসওয়ার্ড তৈরি করুন, ব্রাউজারেই কাজ করে।", howTo: ["দৈর্ঘ্য সিলেক্ট করুন", "কি কি থাকবে টিক দিন", "Generate ও Copy করুন"], faqs: [{q:"পাসওয়ার্ড কি সেভ হয়?", a:"না, 100% client-side"}, {q:"কোনটা নিরাপদ?", a:"16+ অক্ষর, বড়-ছোট, সংখ্যা ও চিহ্ন মিশানো"}, {q:"Math.random ব্যবহার হয়?", a:"না, crypto.getRandomValues"}] },
+"case-converter": { component: CaseConverter, title: "Case Converter - লেখার কেস পরিবর্তন", desc: "UPPER, lower, Title, camelCase সহ 8 ধরনের কেসে রূপান্তর করুন।", howTo: ["লেখা পেস্ট করুন", "যেকোনো কেস বাটনে ক্লিক করুন", "Copy করুন"], faqs: [{q:"Bangla লেখার কি হবে?", a:"অপরিবর্তিত থাকবে"}, {q:"Sentence case কি?", a:"প্রথম অক্ষর ও . ! ? এর পরের অক্ষর বড় হাতের"}, {q:"snake_case কি?", a:"শব্দগুলো _ দিয়ে যুক্ত"}] },
   },
 };
 
