@@ -1,0 +1,101 @@
+"use client";
+import { useState } from "react";
+import { Percent, RotateCcw } from "lucide-react";
+
+type Mode = "a" | "b" | "c" | "d";
+type SubMode = "add" | "sub";
+
+export default function PercentageCalculator() {
+  const [mode, setMode] = useState<Mode>("a");
+  const [subMode, setSubMode] = useState<SubMode>("add");
+  const [x, setX] = useState("");
+  const [y, setY] = useState("");
+  const [error, setError] = useState("");
+
+  const numX = parseFloat(x);
+  const numY = parseFloat(y);
+
+  let result: number | null = null;
+  let formula = "";
+  let resultLabel = "";
+
+  if (!isNaN(numX) && !isNaN(numY) && x !== "" && y !== "") {
+    if (mode === "a") {
+      result = (numX * numY) / 100;
+      formula = `${numX} × ${numY} ÷ 100 = ${result.toFixed(2)}`;
+      resultLabel = `${numX} এর ${numY}% = ${result.toFixed(2)}`;
+    } else if (mode === "b") {
+      if (numY === 0) {
+        if (!error) setError("০ দিয়ে ভাগ করা যাবে না");
+      } else {
+        result = (numX / numY) * 100;
+        formula = `${numX} ÷ ${numY} × 100 = ${result.toFixed(2)}%`;
+        resultLabel = `${numX} হলো ${numY} এর ${result.toFixed(2)}%`;
+      }
+    } else if (mode === "c") {
+      if (numX === 0) {
+        if (!error) setError("প্রথম মান ০ হলে পরিবর্তন বের করা যায় না");
+      } else {
+        result = ((numY - numX) / numX) * 100;
+        const type = result >= 0 ? "বৃদ্ধি" : "হ্রাস";
+        formula = `(${numY} - ${numX}) ÷ ${numX} × 100 = ${result.toFixed(2)}%`;
+        resultLabel = `${result.toFixed(2)}% ${type}`;
+      }
+    } else if (mode === "d") {
+      const change = (numX * numY) / 100;
+      result = subMode === "add" ? numX + change : numX - change;
+      formula = `${numX} ${subMode === "add" ? "+" : "-"} (${numX} × ${numY} ÷ 100) = ${result.toFixed(2)}`;
+      resultLabel = `${numX} এর সাথে ${numY}% ${subMode === "add" ? "যোগ" : "বিয়োগ"} = ${result.toFixed(2)}`;
+    }
+  }
+
+  const handleReset = () => { setX(""); setY(""); setError(""); };
+
+  const onXChange = (v: string) => { setError(""); setX(v); };
+  const onYChange = (v: string) => { setError(""); setY(v); };
+
+  return (
+    <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-4 md:p-6 space-y-4">
+      <h2 className="text-xl font-bold flex items-center gap-2 dark:text-white"><Percent className="text-indigo-600" /> শতকরা ক্যালকুলেটর</h2>
+      
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+        <button onClick={() => {setMode("a"); setError("")}} className={`p-2 rounded-lg text-sm border ${mode==="a" ? "bg-indigo-600 text-white border-indigo-600" : "bg-slate-50 dark:bg-slate-700 dark:text-white border-slate-200 dark:border-slate-600"}`}>X এর Y%</button>
+        <button onClick={() => {setMode("b"); setError("")}} className={`p-2 rounded-lg text-sm border ${mode==="b" ? "bg-indigo-600 text-white border-indigo-600" : "bg-slate-50 dark:bg-slate-700 dark:text-white border-slate-200 dark:border-slate-600"}`}>X, Y এর কত %</button>
+        <button onClick={() => {setMode("c"); setError("")}} className={`p-2 rounded-lg text-sm border ${mode==="c" ? "bg-indigo-600 text-white border-indigo-600" : "bg-slate-50 dark:bg-slate-700 dark:text-white border-slate-200 dark:border-slate-600"}`}>% পরিবর্তন</button>
+        <button onClick={() => {setMode("d"); setError("")}} className={`p-2 rounded-lg text-sm border ${mode==="d" ? "bg-indigo-600 text-white border-indigo-600" : "bg-slate-50 dark:bg-slate-700 dark:text-white border-slate-200 dark:border-slate-600"}`}>যোগ/বিয়োগ</button>
+      </div>
+
+      {mode === "d" && (
+        <div className="flex gap-2">
+          <button onClick={()=>setSubMode("add")} className={`flex-1 py-2 rounded-lg border text-sm ${subMode==="add" ? "bg-indigo-50 dark:bg-indigo-900/30 border-indigo-600 text-indigo-600" : "border-slate-200 dark:border-slate-600 dark:text-white"}`}>যোগ (+)</button>
+          <button onClick={()=>setSubMode("sub")} className={`flex-1 py-2 rounded-lg border text-sm ${subMode==="sub" ? "bg-indigo-50 dark:bg-indigo-900/30 border-indigo-600 text-indigo-600" : "border-slate-200 dark:border-slate-600 dark:text-white"}`}>বিয়োগ (-)</button>
+        </div>
+      )}
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label className="text-sm dark:text-slate-300">{mode==="b" ? "X (অংশ)" : mode==="c" ? "আগের মান (X)" : "মান X"}</label>
+          <input value={x} onChange={e=>onXChange(e.target.value)} inputMode="decimal" type="number" placeholder="যেমন: 200" className="w-full mt-1 p-2.5 rounded-lg border border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-900 dark:text-white outline-none focus:ring-2 focus:ring-indigo-500" />
+        </div>
+        <div>
+          <label className="text-sm dark:text-slate-300">{mode==="a" ? "Y (%)" : mode==="c" ? "পরের মান (Y)" : "মান Y"}</label>
+          <input value={y} onChange={e=>onYChange(e.target.value)} inputMode="decimal" type="number" placeholder="যেমন: 15" className="w-full mt-1 p-2.5 rounded-lg border border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-900 dark:text-white outline-none focus:ring-2 focus:ring-indigo-500" />
+        </div>
+      </div>
+
+      {error && <p className="text-sm text-red-600 bg-red-50 dark:bg-red-900/20 p-2 rounded-lg">{error}</p>}
+
+      <div className="flex gap-2">
+        <button onClick={handleReset} className="px-4 py-2 rounded-lg border border-slate-200 dark:border-slate-600 dark:text-white flex items-center gap-1"><RotateCcw size={16}/> Reset</button>
+      </div>
+
+      {result !== null && !error && (
+        <div className="bg-indigo-50 dark:bg-slate-700/50 rounded-xl p-4 border border-indigo-100 dark:border-slate-600">
+          <p className="text-sm text-slate-600 dark:text-slate-300">ফলাফল</p>
+          <p className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">{resultLabel}</p>
+          <p className="text-sm mt-1 bg-white dark:bg-slate-800 inline-block px-2 py-1 rounded border dark:text-slate-200">Formula: {formula}</p>
+        </div>
+      )}
+    </div>
+  );
+}
