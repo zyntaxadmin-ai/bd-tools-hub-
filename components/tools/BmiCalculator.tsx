@@ -1,0 +1,74 @@
+"use client";
+import { useState } from "react";
+import { RotateCcw } from "lucide-react";
+
+const input = "w-full mt-1 px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none";
+
+export default function BmiCalculator() {
+  const [weight, setWeight] = useState("");
+  const [unit, setUnit] = useState<"cm" | "ft">("cm");
+  const [cm, setCm] = useState("");
+  const [feet, setFeet] = useState("");
+  const [inch, setInch] = useState("");
+
+  const w = parseFloat(weight);
+  const heightCm = unit === "cm" ? parseFloat(cm) : (parseFloat(feet || "0") * 12 + parseFloat(inch || "0")) * 2.54;
+  const hasInput = weight !== "" && (unit === "cm" ? cm !== "" : feet !== "" || inch !== "");
+
+  let error = "";
+  let bmi: number | null = null;
+  if (hasInput) {
+    if (isNaN(w) || isNaN(heightCm)) error = "সঠিক সংখ্যা লিখুন";
+    else if (w < 2 || w > 500) error = "ওজন ২ থেকে ৫০০ কেজির মধ্যে দিন";
+    else if (heightCm < 50 || heightCm > 250) error = "উচ্চতা ৫০ থেকে ২৫০ সেমির মধ্যে দিন";
+    else {
+      const m = heightCm / 100;
+      bmi = w / (m * m);
+    }
+  }
+
+  let category = "", badge = "";
+  if (bmi !== null) {
+    if (bmi < 18.5) { category = "কম ওজন"; badge = "bg-blue-500"; }
+    else if (bmi < 25) { category = "স্বাভাবিক"; badge = "bg-emerald-500"; }
+    else if (bmi < 30) { category = "বেশি ওজন"; badge = "bg-amber-500"; }
+    else { category = "স্থূলতা"; badge = "bg-red-500"; }
+  }
+  const m2 = (heightCm / 100) * (heightCm / 100);
+  const pos = bmi !== null ? Math.min(100, Math.max(0, ((bmi - 10) / 30) * 100)) : 0;
+
+  return (
+    <div className="space-y-4">
+      <div>
+        <label className="text-sm font-medium dark:text-slate-200">ওজন (কেজি)</label>
+        <input type="number" inputMode="decimal" value={weight} onChange={(e) => setWeight(e.target.value)} placeholder="যেমন: 65" className={input} />
+      </div>
+      <div className="flex gap-2">
+        <button onClick={() => setUnit("cm")} className={`flex-1 py-2 rounded-xl border text-sm ${unit === "cm" ? "bg-indigo-600 text-white border-indigo-600" : "border-slate-200 dark:border-slate-700 dark:text-white"}`}>সেমি</button>
+        <button onClick={() => setUnit("ft")} className={`flex-1 py-2 rounded-xl border text-sm ${unit === "ft" ? "bg-indigo-600 text-white border-indigo-600" : "border-slate-200 dark:border-slate-700 dark:text-white"}`}>ফুট + ইঞ্চি</button>
+      </div>
+      {unit === "cm" ? (
+        <input type="number" inputMode="decimal" value={cm} onChange={(e) => setCm(e.target.value)} placeholder="উচ্চতা (সেমি) যেমন: 170" className={input} />
+      ) : (
+        <div className="grid grid-cols-2 gap-3">
+          <input type="number" inputMode="decimal" value={feet} onChange={(e) => setFeet(e.target.value)} placeholder="ফুট" className={input} />
+          <input type="number" inputMode="decimal" value={inch} onChange={(e) => setInch(e.target.value)} placeholder="ইঞ্চি" className={input} />
+        </div>
+      )}
+      <button onClick={() => { setWeight(""); setCm(""); setFeet(""); setInch(""); }} className="px-4 py-2.5 border border-slate-200 dark:border-slate-700 rounded-xl flex items-center gap-1 dark:text-white"><RotateCcw className="w-4 h-4" /> Reset</button>
+      {error && <p className="text-sm text-red-500">{error}</p>}
+      {bmi !== null && (
+        <div className="bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-5 text-center">
+          <p className="text-sm text-slate-500">আপনার BMI</p>
+          <p className="text-4xl font-bold dark:text-white">{bmi.toFixed(1)}</p>
+          <span className={`inline-block mt-2 px-3 py-1 rounded-full text-white text-sm ${badge}`}>{category}</span>
+          <div className="relative h-2 rounded-full mt-4 bg-gradient-to-r from-blue-500 via-emerald-500 via-60% to-red-500">
+            <div style={{ left: `${pos}%` }} className="absolute -top-1 w-1.5 h-4 bg-slate-900 dark:bg-white rounded -translate-x-1/2" />
+          </div>
+          <p className="text-xs text-slate-500 mt-3">আপনার উচ্চতায় স্বাভাবিক ওজন: {(18.5 * m2).toFixed(1)} – {(24.9 * m2).toFixed(1)} কেজি</p>
+        </div>
+      )}
+      <p className="text-xs text-slate-500 border border-slate-200 dark:border-slate-700 rounded-xl p-3">এটি আনুমানিক হিসাব, ডাক্তারের পরামর্শের বিকল্প নয়। শিশু, গর্ভবতী নারী ও খেলোয়াড়দের ক্ষেত্রে BMI সঠিক ফলাফল নাও দিতে পারে।</p>
+    </div>
+  );
+}
