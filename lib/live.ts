@@ -10,4 +10,11 @@ export const LIVE_SLUGS = [
   "land-calculator-bd",
   "password-generator",
   "case-converter",
+  // batch 1
+  "cgpa-calculator",
+  "unit-converter",
+  "bill-calculator",
+  "date-difference-calculator",
+  "govt-job-age-calculator",
+  "scientific-calculator",
 ];
