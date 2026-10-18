@@ -2,6 +2,7 @@
 import { useState, useMemo } from "react";
 import ToolCard from "@/components/ToolCard";
 import SearchBar from "@/components/SearchBar";
+import SiteJsonLd from "@/components/SiteJsonLd";
 import { tools, categories } from "@/data/tools";
 import { ShieldCheck, Zap, Users, Sparkles } from "lucide-react";
 
