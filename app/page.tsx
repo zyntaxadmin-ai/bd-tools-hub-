@@ -24,6 +24,7 @@ export default function HomePage() {
 
   return (
     <div>
+      <SiteJsonLd />
       <section className="px-4 pt-14 pb-10 text-center bg-gradient-to-b from-indigo-50 to-transparent dark:from-indigo-950/20">
         <h1 className="text-3xl sm:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
           Free Online Tools <span className="text-indigo-600">for Bangladesh</span>
@@ -66,7 +67,6 @@ export default function HomePage() {
                   <ToolCard key={t.id} name={t.name} slug={t.slug} description={t.description} iconName={t.icon} />
                 ))}
               </div>
-               <SiteJsonLd />-
             </section>
           ))
         )}
