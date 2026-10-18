@@ -66,6 +66,7 @@ export default function HomePage() {
                   <ToolCard key={t.id} name={t.name} slug={t.slug} description={t.description} iconName={t.icon} />
                 ))}
               </div>
+               <SiteJsonLd />-
             </section>
           ))
         )}
