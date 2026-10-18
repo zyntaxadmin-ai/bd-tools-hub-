@@ -1,0 +1,85 @@
+"use client";
+import { useEffect, useState } from "react";
+import { Download, RotateCcw } from "lucide-react";
+import { downloadUrl } from "@/lib/imageUtil";
+
+const input = "w-full mt-1 px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none";
+const LEVELS: { id: "L" | "M" | "Q" | "H"; label: string }[] = [
+  { id: "L", label: "L (৭%)" },
+  { id: "M", label: "M (১৫%)" },
+  { id: "Q", label: "Q (২৫%)" },
+  { id: "H", label: "H (৩০%)" },
+];
+
+export default function QrCodeGenerator() {
+  const [text, setText] = useState("");
+  const [size, setSize] = useState(400);
+  const [ec, setEc] = useState<"L" | "M" | "Q" | "H">("M");
+  const [fg, setFg] = useState("#000000");
+  const [bg, setBg] = useState("#ffffff");
+  const [dataUrl, setDataUrl] = useState("");
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    if (!text.trim()) { setDataUrl(""); setError(""); return; }
+    if (text.length > 1500) { setDataUrl(""); setError("লেখা অনেক বড়। ১৫০০ অক্ষরের মধ্যে দিন"); return; }
+    let cancelled = false;
+    (async () => {
+      try {
+        // লাইব্রেরি শুধু এই টুল খুললেই লোড হয়
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const mod: any = await import("qrcode");
+        const QR = mod.default ?? mod;
+        const url: string = await QR.toDataURL(text, { width: size, margin: 2, errorCorrectionLevel: ec, color: { dark: fg, light: bg } });
+        if (!cancelled) { setDataUrl(url); setError(""); }
+      } catch {
+        if (!cancelled) { setDataUrl(""); setError("QR বানানো যায়নি। লেখা ছোট করে আবার চেষ্টা করুন"); }
+      }
+    })();
+    return () => { cancelled = true; };
+  }, [text, size, ec, fg, bg]);
+
+  const reset = () => { setText(""); setSize(400); setEc("M"); setFg("#000000"); setBg("#ffffff"); };
+
+  return (
+    <div className="space-y-4">
+      <div>
+        <label className="text-sm font-medium dark:text-slate-200">লিংক বা লেখা</label>
+        <textarea value={text} onChange={(e) => setText(e.target.value)} rows={3} placeholder="যেমন: https://bd-tools-hub.vercel.app" className={`${input} resize-none`} />
+        <p className="text-xs text-slate-500 text-right">{text.length}/1500</p>
+      </div>
+      <div>
+        <label className="text-sm font-medium dark:text-slate-200">সাইজ: {size} px</label>
+        <input type="range" min={200} max={1000} step={50} value={size} onChange={(e) => setSize(parseInt(e.target.value, 10))} className="w-full mt-2 accent-indigo-600" />
+      </div>
+      <div>
+        <p className="text-sm font-medium dark:text-slate-200 mb-2">ভুল সংশোধনের মাত্রা</p>
+        <div className="grid grid-cols-4 gap-2">
+          {LEVELS.map((l) => (
+            <button key={l.id} onClick={() => setEc(l.id)} className={`py-2 rounded-xl border text-xs ${ec === l.id ? "bg-indigo-600 text-white border-indigo-600" : "border-slate-200 dark:border-slate-700 dark:text-white"}`}>{l.label}</button>
+          ))}
+        </div>
+      </div>
+      <div className="grid grid-cols-2 gap-3">
+        <div>
+          <label className="text-sm font-medium dark:text-slate-200">QR এর রং</label>
+          <input type="color" value={fg} onChange={(e) => setFg(e.target.value)} className="w-full h-12 mt-1 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-1" />
+        </div>
+        <div>
+          <label className="text-sm font-medium dark:text-slate-200">ব্যাকগ্রাউন্ড</label>
+          <input type="color" value={bg} onChange={(e) => setBg(e.target.value)} className="w-full h-12 mt-1 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-1" />
+        </div>
+      </div>
+      <p className="text-xs text-slate-500">গাঢ় রঙ আর হালকা ব্যাকগ্রাউন্ড ব্যবহার করুন, নাহলে কিছু স্ক্যানারে পড়া নাও যেতে পারে।</p>
+      <button onClick={reset} className="px-4 py-2.5 border border-slate-200 dark:border-slate-700 rounded-xl flex items-center gap-1 dark:text-white"><RotateCcw className="w-4 h-4" /> Reset</button>
+      {error && <p className="text-sm text-red-500">{error}</p>}
+      {dataUrl && (
+        <div className="space-y-3">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={dataUrl} alt="QR কোড" style={{ width: Math.min(size, 300) }} className="mx-auto max-w-full h-auto rounded-lg border border-slate-200 dark:border-slate-700" />
+          <button onClick={() => downloadUrl(dataUrl, "qrcode.png")} className="w-full py-3 bg-indigo-600 text-white rounded-xl font-medium hover:bg-indigo-700 flex items-center justify-center gap-2"><Download className="w-4 h-4" /> PNG ডাউনলোড ({size}×{size})</button>
+        </div>
+      )}
+    </div>
+  );
+}
