@@ -1,16 +1,81 @@
 # BD Tools Hub
 
-Next.js 14 + Tailwind + TypeScript. Client-side free tools site.
+Free online tools for Bangladesh. Fast, no signup, and everything runs in your browser (no server, no database, no uploads).
 
-## Deploy (Vercel, from phone)
-1. Unzip, upload the folder contents to a new GitHub repo (GitHub mobile site -> Add file -> Upload files).
-2. vercel.com -> Add New Project -> Import repo -> Deploy (Next.js auto-detected).
-3. After deploy, set env `NEXT_PUBLIC_SITE_URL` to your real URL, redeploy.
+**Live:** https://bd-tools-hub.vercel.app
 
-## Add a tool
-1. `components/tools/MyTool.tsx` ("use client")
-2. Add entry in `TOOL_REGISTRY` in `app/tool/[slug]/page.tsx`
-3. Add slug in `lib/live.ts`
+## Tools
 
-## After AdSense approval
-Set `NEXT_PUBLIC_ADSENSE_ID=ca-pub-xxxx` and `NEXT_PUBLIC_ADS=1`.
+50 tools are planned. 23 are live once Batch 2 is deployed; the rest show a "Coming soon" page and are kept out of the sitemap.
+
+| Category | Live | Coming soon |
+| --- | --- | --- |
+| Education & Calculation | Age, GPA (SSC/HSC), CGPA, Percentage, BMI, EMI, Unit Converter, Bill Splitter, Date Difference, Scientific Calculator | |
+| Bangladesh Special | bKash Calculator, Land Calculator (শতাংশ/কাঠা/বিঘা), Govt Job Age | Nagad, Rocket, Upay, BDT Converter, Electricity Bill, Passport Fee, TIN Check |
+| Image & PDF | Image Compressor, Image Resizer, Image Converter, QR Code Generator | Background Remover, Image to PDF, PDF to JPG, Merge PDF, Split PDF, Compress PDF |
+| Text & SEO | Word Counter, Character Counter, Case Converter, Password Generator, Color Picker, Lorem Ipsum | Meta Tag Generator, Keyword Density, Plagiarism Helper, Article Rewriter |
+| Daily Utility | | Stopwatch & Timer, To-Do, Bangla Calendar, Text to Speech, QR Scanner, Time Zone, Random Number, Invoice, Countdown, Expense Tracker |
+
+## Tech stack
+
+- Next.js 14 (App Router) and TypeScript
+- Tailwind CSS (class based dark mode), lucide-react, framer-motion, next-themes
+- `qrcode` (loaded only when the QR tool is opened)
+- Hosting: Vercel (free tier)
+
+## Project structure
+
+```
+app/
+  page.tsx                  Homepage with search and categories
+  layout.tsx                Root layout (header, footer, theme, optional AdSense script)
+  tool/[slug]/page.tsx      Renders any tool from the registry (+ SEO metadata, JSON-LD)
+  category/[categorySlug]/  Category pages
+  about, contact, privacy-policy, disclaimer
+  sitemap.ts, robots.ts
+components/
+  tools/                    One file per tool (client components)
+  toolRegistry.tsx          Base tools and merge of the batch registries
+  toolRegistryB1.tsx        Registry for batch 1 tools
+  toolRegistryB2.tsx        Registry for batch 2 tools
+  ToolLayout.tsx            Shared page layout (title, how-to, FAQ, related tools)
+  ToolCard, Header, Footer, SearchBar, JsonLd, AdSlot, ThemeProvider
+data/tools.ts               The full list of 50 tools (name, slug, category, icon)
+lib/
+  live.ts                   Slugs that are actually built (sitemap and related tools use this)
+  seo.ts                    Site URL and name
+  dateCalc.ts, sciEval.ts, imageUtil.ts, colorUtil.ts, lorem.ts   Shared logic
+```
+
+## Add a new tool
+
+1. Create `components/tools/MyTool.tsx` (`"use client"`, default export). Do not render a page title or outer card, because `ToolLayout` already does that.
+2. Add an entry to a registry file (`component`, `title`, `desc`, `howTo`, `faqs`). The slug must match `data/tools.ts`.
+3. Add the slug to `lib/live.ts`.
+
+## Environment variables
+
+Set these in Vercel under Settings, Environment Variables.
+
+| Name | Purpose |
+| --- | --- |
+| `NEXT_PUBLIC_SITE_URL` | Public site URL, used by the sitemap, canonical links and Open Graph (no trailing slash) |
+| `NEXT_PUBLIC_ADS` | Set to `1` after AdSense approval to show ad slots |
+| `NEXT_PUBLIC_ADSENSE_ID` | AdSense publisher ID (`ca-pub-...`) |
+
+## Run locally
+
+```bash
+npm install
+npm run dev
+```
+
+## Deploy
+
+Import the repo in Vercel (Next.js is detected automatically). Every commit to `main` redeploys.
+
+## Notes
+
+- All calculations happen in the browser. Images and text never leave the device.
+- Rates and rules (bKash charges, govt job age limits, loan fees) change over time. Always check the official source. Each tool says so on its page.
+- Google Search Console verification file is kept in `public/`. Do not delete it.
