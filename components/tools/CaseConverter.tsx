@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Copy, Check, RotateCcw } from "lucide-react";
 
-const words = (s: string) => s.match(/[\p{L}\p{N}]+/gu) || [];
+const words = (s: string) => s.match(/[\p{L}\p{M}\p{N}]+/gu) || [];
 const cap = (w: string) => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase();
 
 const CONVERTERS: { id: string; label: string; fn: (s: string) => string }[] = [
