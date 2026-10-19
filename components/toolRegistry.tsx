@@ -10,6 +10,7 @@ import PasswordGenerator from "@/components/tools/PasswordGenerator";
 import CaseConverter from "@/components/tools/CaseConverter";
 import { TOOL_REGISTRY_B1 } from "@/components/toolRegistryB1";
 import { TOOL_REGISTRY_B2 } from "@/components/toolRegistryB2";
+import { TOOL_REGISTRY_B3 } from "@/components/toolRegistryB3";
 
 export type Entry = {
   component: React.ComponentType;
@@ -126,4 +127,5 @@ export const TOOL_REGISTRY: Record<string, Entry> = {
   },
   ...TOOL_REGISTRY_B1,
   ...TOOL_REGISTRY_B2,
+  ...TOOL_REGISTRY_B3,
 };
