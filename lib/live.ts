@@ -25,4 +25,12 @@ export const LIVE_SLUGS = [
   "character-counter",
   "color-picker",
   "lorem-ipsum-generator",
+  // batch 3
+  "meta-tag-generator",
+  "keyword-density-checker",
+  "stopwatch-timer",
+  "todo-list",
+  "random-number-generator",
+  "countdown-timer",
+  "time-zone-converter",
 ];
