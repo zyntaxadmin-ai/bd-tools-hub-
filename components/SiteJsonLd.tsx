@@ -1,5 +1,5 @@
-
 import { siteConfig } from "@/lib/seo";
+import { CONTACT_EMAIL } from "@/lib/site";
 
 export default function SiteJsonLd() {
   const data = {
@@ -11,19 +11,16 @@ export default function SiteJsonLd() {
         name: "BD Tools Hub",
         alternateName: "BDToolsHub",
         url: `${siteConfig.url}/`,
-        inLanguage: "bn",
-        publisher: {
-          "@id": `${siteConfig.url}/#organization`,
-        },
+        inLanguage: ["bn", "en"],
+        publisher: { "@id": `${siteConfig.url}/#organization` },
       },
       {
         "@type": "Organization",
         "@id": `${siteConfig.url}/#organization`,
         name: "BD Tools Hub",
         url: `${siteConfig.url}/`,
-        description:
-          "বাংলাদেশের মানুষের জন্য বিনামূল্যের অনলাইন ক্যালকুলেটর ও ইউটিলিটি টুলস প্ল্যাটফর্ম।",
-        email: "bdtoolhudadmin@gmail.com",
+        description: "বাংলাদেশের মানুষের জন্য বিনামূল্যের অনলাইন ক্যালকুলেটর ও ইউটিলিটি টুলস প্ল্যাটফর্ম।",
+        email: CONTACT_EMAIL,
         founder: {
           "@type": "Person",
           name: "Md Rohan Islam",
@@ -40,13 +37,5 @@ export default function SiteJsonLd() {
     ],
   };
 
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{
-        __html: JSON.stringify(data),
-      }}
-    />
-  );
-        }
-        
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />;
+}

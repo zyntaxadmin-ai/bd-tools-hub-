@@ -2,11 +2,15 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import * as Icons from "lucide-react";
+import { useLang } from "@/lib/lang";
+import { DESC_EN } from "@/lib/i18nData";
 
 interface Props { name: string; slug: string; description: string; iconName: string; }
 
 export default function ToolCard({ name, slug, description, iconName }: Props) {
+  const { lang } = useLang();
   const Icon = ((Icons as any)[iconName] || Icons.Calculator) as React.ComponentType<{ className?: string }>;
+  const desc = lang === "en" ? DESC_EN[slug.replace("/tool/", "")] ?? description : description;
   return (
     <Link href={slug} className="group">
       <motion.div
@@ -18,7 +22,7 @@ export default function ToolCard({ name, slug, description, iconName }: Props) {
           <Icon className="w-5 h-5 text-white" />
         </div>
         <h3 className="font-semibold text-slate-900 dark:text-white text-[15px] leading-tight mb-1 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">{name}</h3>
-        <p className="text-sm text-slate-500 dark:text-slate-400 line-clamp-2 leading-relaxed">{description}</p>
+        <p className="text-sm text-slate-500 dark:text-slate-400 line-clamp-2 leading-relaxed">{desc}</p>
       </motion.div>
     </Link>
   );
