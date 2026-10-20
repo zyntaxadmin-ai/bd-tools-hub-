@@ -4,6 +4,7 @@ import "./globals.css";
 import ThemeProvider from "@/components/ThemeProvider";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { LangProvider } from "@/lib/lang";
 import { siteConfig } from "@/lib/seo";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
@@ -25,9 +26,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className={inter.className}>
         <ThemeProvider>
-          <Header />
-          <main>{children}</main>
-          <Footer />
+          <LangProvider>
+            <Header />
+            <main>{children}</main>
+            <Footer />
+          </LangProvider>
         </ThemeProvider>
       </body>
     </html>
