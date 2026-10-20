@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import ComingSoon from "@/components/ComingSoon";
 import { notFound } from "next/navigation";
 import ToolLayout from "@/components/ToolLayout";
 import JsonLd from "@/components/JsonLd";
@@ -32,15 +32,7 @@ export default function ToolPage({ params }: { params: { slug: string } }) {
   if (!tool) return notFound();
   const entry = TOOL_REGISTRY[params.slug];
 
-  if (!entry) {
-    return (
-      <div className="max-w-[600px] mx-auto px-4 py-20 text-center">
-        <h1 className="text-2xl font-bold text-slate-900 dark:text-white">{tool.name}</h1>
-        <p className="mt-3 text-slate-600 dark:text-slate-400">এই টুলটি শীঘ্রই আসছে। Coming soon!</p>
-        <Link href="/" className="inline-block mt-6 px-6 py-3 bg-indigo-600 text-white rounded-xl font-medium">Home এ ফিরুন</Link>
-      </div>
-    );
-  }
+  if (!entry) return <ComingSoon name={tool.name} />;
 
   const cat = categories.find((c) => c.name === tool.category)!;
   const Component = entry.component;
@@ -52,5 +44,4 @@ export default function ToolPage({ params }: { params: { slug: string } }) {
       </ToolLayout>
     </>
   );
-  }
-                          
+}
