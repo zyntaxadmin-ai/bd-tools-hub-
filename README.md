@@ -6,15 +6,15 @@ Free online tools for Bangladesh. Fast, no signup, and everything runs in your b
 
 ## Tools
 
-50 tools are planned. 23 are live once Batch 2 is deployed; the rest show a "Coming soon" page and are kept out of the sitemap.
+50 tools are planned. 30 are live; the other 20 show a "Coming soon" page and are kept out of the sitemap.
 
 | Category | Live | Coming soon |
 | --- | --- | --- |
 | Education & Calculation | Age, GPA (SSC/HSC), CGPA, Percentage, BMI, EMI, Unit Converter, Bill Splitter, Date Difference, Scientific Calculator | |
 | Bangladesh Special | bKash Calculator, Land Calculator (শতাংশ/কাঠা/বিঘা), Govt Job Age | Nagad, Rocket, Upay, BDT Converter, Electricity Bill, Passport Fee, TIN Check |
 | Image & PDF | Image Compressor, Image Resizer, Image Converter, QR Code Generator | Background Remover, Image to PDF, PDF to JPG, Merge PDF, Split PDF, Compress PDF |
-| Text & SEO | Word Counter, Character Counter, Case Converter, Password Generator, Color Picker, Lorem Ipsum | Meta Tag Generator, Keyword Density, Plagiarism Helper, Article Rewriter |
-| Daily Utility | | Stopwatch & Timer, To-Do, Bangla Calendar, Text to Speech, QR Scanner, Time Zone, Random Number, Invoice, Countdown, Expense Tracker |
+| Text & SEO | Word Counter, Character Counter, Case Converter, Password Generator, Color Picker, Lorem Ipsum, Meta Tag Generator, Keyword Density | Plagiarism Helper, Article Rewriter |
+| Daily Utility | Stopwatch & Timer, To-Do, Random Number, Countdown, Time Zone Converter | Bangla Calendar, Text to Speech, QR Scanner, Invoice, Expense Tracker |
 
 ## Tech stack
 
@@ -38,20 +38,31 @@ components/
   toolRegistry.tsx          Base tools and merge of the batch registries
   toolRegistryB1.tsx        Registry for batch 1 tools
   toolRegistryB2.tsx        Registry for batch 2 tools
+  toolRegistryB3.tsx        Registry for batch 3 tools
   ToolLayout.tsx            Shared page layout (title, how-to, FAQ, related tools)
   ToolCard, Header, Footer, SearchBar, JsonLd, AdSlot, ThemeProvider
 data/tools.ts               The full list of 50 tools (name, slug, category, icon)
 lib/
   live.ts                   Slugs that are actually built (sitemap and related tools use this)
   seo.ts                    Site URL and name
-  dateCalc.ts, sciEval.ts, imageUtil.ts, colorUtil.ts, lorem.ts   Shared logic
+  dateCalc.ts, sciEval.ts, imageUtil.ts, colorUtil.ts, lorem.ts,
+  keywords.ts, metaTags.ts, rand.ts, tz.ts   Shared, tested logic
+  lang.tsx                  Language provider (BN default, EN) saved in localStorage
+  i18nData.ts               UI strings, category names, English card descriptions
+  toolContentEn.ts          English title/description/how-to/FAQ for every live tool
+  site.ts                   CONTACT_EMAIL (edit this one line)
 ```
+
+## Languages (Bangla default, English toggle)
+
+The header has a BN | EN toggle. The choice is saved in the browser. The page frame (header, footer, homepage, categories, tool title, description, how-to and FAQ) is translated. The text inside each tool (labels and buttons) is still Bangla only.
 
 ## Add a new tool
 
 1. Create `components/tools/MyTool.tsx` (`"use client"`, default export). Do not render a page title or outer card, because `ToolLayout` already does that.
 2. Add an entry to a registry file (`component`, `title`, `desc`, `howTo`, `faqs`). The slug must match `data/tools.ts`.
 3. Add the slug to `lib/live.ts`.
+4. Add the English version to `lib/toolContentEn.ts` (the English card text is already in `lib/i18nData.ts`).
 
 ## Environment variables
 
