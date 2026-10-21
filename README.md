@@ -55,14 +55,15 @@ lib/
 
 ## Languages (Bangla default, English toggle)
 
-The header has a BN | EN toggle. The choice is saved in the browser. The page frame (header, footer, homepage, categories, tool title, description, how-to and FAQ) is translated. The text inside each tool (labels and buttons) is still Bangla only.
+The header has a BN | EN toggle. The choice is saved in the browser. The page frame (header, footer, homepage, categories, tool title, description, how-to and FAQ) is translated. The text inside each tool is being translated tool by tool with `const tr = useTr();` and `tr("বাংলা", "English")` (see `lib/lang.tsx`). Done so far: the Education & Calculation tools.
 
 ## Add a new tool
 
 1. Create `components/tools/MyTool.tsx` (`"use client"`, default export). Do not render a page title or outer card, because `ToolLayout` already does that.
 2. Add an entry to a registry file (`component`, `title`, `desc`, `howTo`, `faqs`). The slug must match `data/tools.ts`.
 3. Add the slug to `lib/live.ts`.
-4. Add the English version to `lib/toolContentEn.ts` (the English card text is already in `lib/i18nData.ts`).
+4. Write every label and message with `tr("বাংলা", "English")` so the tool works in both languages.
+5. Add the English version to `lib/toolContentEn.ts` (the English card text is already in `lib/i18nData.ts`).
 
 ## Environment variables
 
