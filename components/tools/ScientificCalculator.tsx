@@ -1,6 +1,8 @@
 "use client";
 import { useState } from "react";
 import { evaluate, fmtResult } from "@/lib/sciEval";
+import { errEn } from "@/lib/sciErrEn";
+import { useTr } from "@/lib/lang";
 
 type Btn = { label: string; ins?: string; act?: "C" | "BACK" | "EQ"; cls?: string };
 const op = "bg-indigo-50 dark:bg-indigo-950/40 text-indigo-700 dark:text-indigo-300";
@@ -18,6 +20,7 @@ const ROWS: Btn[][] = [
 ];
 
 export default function ScientificCalculator() {
+  const tr = useTr();
   const [expr, setExpr] = useState("");
   const [deg, setDeg] = useState(true);
   const [ans, setAns] = useState(0);
@@ -41,7 +44,7 @@ export default function ScientificCalculator() {
       setExpr(fmtResult(r));
       setError("");
     } catch (e) {
-      setError(e instanceof Error ? e.message : "হিসাব করা যায়নি");
+      setError(e instanceof Error ? tr(e.message, errEn(e.message)) : tr("হিসাব করা যায়নি", "Could not calculate"));
     }
   };
 
@@ -54,15 +57,15 @@ export default function ScientificCalculator() {
           onKeyDown={(e) => { if (e.key === "Enter") equals(); }}
           inputMode="none"
           placeholder="0"
-          aria-label="এক্সপ্রেশন"
+          aria-label={tr("এক্সপ্রেশন", "Expression")}
           className="w-full bg-transparent text-right text-2xl font-mono dark:text-white outline-none"
         />
         <p className="text-right text-sm text-slate-500 min-h-[20px] font-mono break-all">{preview !== null && preview !== expr ? `= ${preview}` : ""}</p>
       </div>
       {error && <p className="text-sm text-red-500">{error}</p>}
       <div className="flex justify-between items-center">
-        <button onClick={() => setDeg(!deg)} className="px-3 py-1.5 rounded-full border border-slate-200 dark:border-slate-700 text-xs dark:text-white">{deg ? "Deg (ডিগ্রি)" : "Rad (রেডিয়ান)"}</button>
-        <span className="text-xs text-slate-500">ক্লিক করে বদলান</span>
+        <button onClick={() => setDeg(!deg)} className="px-3 py-1.5 rounded-full border border-slate-200 dark:border-slate-700 text-xs dark:text-white">{deg ? tr("Deg (ডিগ্রি)", "Deg (degrees)") : tr("Rad (রেডিয়ান)", "Rad (radians)")}</button>
+        <span className="text-xs text-slate-500">{tr("ক্লিক করে বদলান", "Tap to switch")}</span>
       </div>
       <div className="grid grid-cols-5 gap-2">
         {ROWS.flat().map((b, i) => (

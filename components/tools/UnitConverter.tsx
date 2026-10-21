@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { ArrowLeftRight } from "lucide-react";
+import { useTr } from "@/lib/lang";
 
 type Unit = { id: string; label: string; f: number };
 type Cat = { id: string; label: string; units: Unit[] };
@@ -41,6 +42,56 @@ const CATS: Cat[] = [
   ] },
 ];
 
+const EN: Record<string, string> = {
+  "দৈর্ঘ্য": "Length",
+  "ওজন": "Weight",
+  "তাপমাত্রা": "Temperature",
+  "ক্ষেত্রফল": "Area",
+  "আয়তন": "Volume",
+  "গতি": "Speed",
+  "ডেটা সাইজ": "Data size",
+  "মিলিমিটার (mm)": "Millimetre (mm)",
+  "সেন্টিমিটার (cm)": "Centimetre (cm)",
+  "মিটার (m)": "Metre (m)",
+  "কিলোমিটার (km)": "Kilometre (km)",
+  "ইঞ্চি (inch)": "Inch",
+  "ফুট (feet)": "Foot (feet)",
+  "গজ (yard)": "Yard",
+  "মাইল (mile)": "Mile",
+  "মিলিগ্রাম (mg)": "Milligram (mg)",
+  "গ্রাম (g)": "Gram (g)",
+  "কেজি (kg)": "Kilogram (kg)",
+  "মেট্রিক টন": "Metric tonne",
+  "পাউন্ড (lb)": "Pound (lb)",
+  "আউন্স (oz)": "Ounce (oz)",
+  "সেলসিয়াস (°C)": "Celsius (°C)",
+  "ফারেনহাইট (°F)": "Fahrenheit (°F)",
+  "কেলভিন (K)": "Kelvin (K)",
+  "বর্গমিটার": "Square metre",
+  "বর্গফুট": "Square foot",
+  "বর্গগজ": "Square yard",
+  "শতাংশ": "Shatak (decimal)",
+  "একর": "Acre",
+  "হেক্টর": "Hectare",
+  "বর্গকিলোমিটার": "Square kilometre",
+  "মিলিলিটার (ml)": "Millilitre (ml)",
+  "লিটার (L)": "Litre (L)",
+  "ঘনমিটার (m³)": "Cubic metre (m³)",
+  "গ্যালন (US)": "Gallon (US)",
+  "ফ্লুইড আউন্স (US)": "Fluid ounce (US)",
+  "কাপ (US)": "Cup (US)",
+  "মিটার/সেকেন্ড": "Metre/second",
+  "কিমি/ঘণ্টা": "km/hour",
+  "মাইল/ঘণ্টা": "Miles/hour",
+  "নট": "Knot",
+  "বিট": "Bit",
+  "বাইট (B)": "Byte (B)",
+  "কিলোবাইট (KB)": "Kilobyte (KB)",
+  "মেগাবাইট (MB)": "Megabyte (MB)",
+  "গিগাবাইট (GB)": "Gigabyte (GB)",
+  "টেরাবাইট (TB)": "Terabyte (TB)"
+};
+
 const input = "w-full mt-1 px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none";
 const fmt = (n: number) => Number(n.toPrecision(10)).toLocaleString("en-US", { maximumFractionDigits: 10 });
 
@@ -54,6 +105,8 @@ function convert(cat: string, from: Unit, to: Unit, v: number): number | string 
 }
 
 export default function UnitConverter() {
+  const tr = useTr();
+  const L = (x: string) => tr(x, EN[x] ?? x);
   const [catId, setCatId] = useState("length");
   const [from, setFrom] = useState("m");
   const [to, setTo] = useState("ft");
@@ -75,36 +128,36 @@ export default function UnitConverter() {
     <div className="space-y-4">
       <div className="flex flex-wrap gap-2">
         {CATS.map((c) => (
-          <button key={c.id} onClick={() => changeCat(c.id)} className={`px-3 py-2 rounded-xl border text-sm ${catId === c.id ? "bg-indigo-600 text-white border-indigo-600" : "border-slate-200 dark:border-slate-700 dark:text-white"}`}>{c.label}</button>
+          <button key={c.id} onClick={() => changeCat(c.id)} className={`px-3 py-2 rounded-xl border text-sm ${catId === c.id ? "bg-indigo-600 text-white border-indigo-600" : "border-slate-200 dark:border-slate-700 dark:text-white"}`}>{L(c.label)}</button>
         ))}
       </div>
       <div>
-        <label className="text-sm font-medium dark:text-slate-200">মান</label>
-        <input type="number" inputMode="decimal" value={val} onChange={(e) => setVal(e.target.value)} placeholder="যেমন: 10" className={input} />
+        <label className="text-sm font-medium dark:text-slate-200">{tr("মান", "Value")}</label>
+        <input type="number" inputMode="decimal" value={val} onChange={(e) => setVal(e.target.value)} placeholder={tr("যেমন: 10", "e.g. 10")} className={input} />
       </div>
       <div className="grid grid-cols-[1fr_auto_1fr] gap-2 items-end">
         <div className="min-w-0">
-          <label className="text-xs text-slate-500">থেকে</label>
+          <label className="text-xs text-slate-500">{tr("থেকে", "From")}</label>
           <select value={fromU.id} onChange={(e) => setFrom(e.target.value)} className={input}>
-            {cat.units.map((u) => <option key={u.id} value={u.id}>{u.label}</option>)}
+            {cat.units.map((u) => <option key={u.id} value={u.id}>{L(u.label)}</option>)}
           </select>
         </div>
-        <button onClick={() => { setFrom(toU.id); setTo(fromU.id); }} aria-label="অদলবদল" className="p-3 mb-0.5 rounded-xl border border-slate-200 dark:border-slate-700 dark:text-white"><ArrowLeftRight className="w-4 h-4" /></button>
+        <button onClick={() => { setFrom(toU.id); setTo(fromU.id); }} aria-label={tr("অদলবদল", "Swap")} className="p-3 mb-0.5 rounded-xl border border-slate-200 dark:border-slate-700 dark:text-white"><ArrowLeftRight className="w-4 h-4" /></button>
         <div className="min-w-0">
-          <label className="text-xs text-slate-500">এ</label>
+          <label className="text-xs text-slate-500">{tr("এ", "To")}</label>
           <select value={toU.id} onChange={(e) => setTo(e.target.value)} className={input}>
-            {cat.units.map((u) => <option key={u.id} value={u.id}>{u.label}</option>)}
+            {cat.units.map((u) => <option key={u.id} value={u.id}>{L(u.label)}</option>)}
           </select>
         </div>
       </div>
-      {typeof res === "string" && <p className="text-sm text-red-500">{res}</p>}
+      {typeof res === "string" && <p className="text-sm text-red-500">{tr(res, "Temperature cannot be below absolute zero (-273.15°C)")}</p>}
       {typeof res === "number" && (
         <div className="bg-indigo-50 dark:bg-indigo-950/30 rounded-xl p-5">
-          <p className="text-xs text-slate-500">ফলাফল</p>
-          <p className="text-xl font-bold text-indigo-600 dark:text-indigo-400 mt-1 break-words">{fmt(v)} {fromU.label} = {fmt(res)} {toU.label}</p>
+          <p className="text-xs text-slate-500">{tr("ফলাফল", "Result")}</p>
+          <p className="text-xl font-bold text-indigo-600 dark:text-indigo-400 mt-1 break-words">{fmt(v)} {L(fromU.label)} = {fmt(res)} {L(toU.label)}</p>
         </div>
       )}
-      {catId === "data" && <p className="text-xs text-slate-500">এখানে ১ KB = ১০২৪ বাইট ধরা হয়েছে।</p>}
+      {catId === "data" && <p className="text-xs text-slate-500">{tr("এখানে ১ KB = ১০২৪ বাইট ধরা হয়েছে।", "Here 1 KB = 1,024 bytes.")}</p>}
     </div>
   );
 }

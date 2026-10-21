@@ -1,18 +1,20 @@
 "use client";
 import { useState } from "react";
 import { RotateCcw, Calendar } from "lucide-react";
+import { useTr } from "@/lib/lang";
 
 export default function AgeCalculator() {
+  const tr = useTr();
   const [dob, setDob] = useState("");
   const [result, setResult] = useState<null | { y: number; m: number; d: number; totalDays: number; nextBirthday: number }>(null);
   const [error, setError] = useState("");
 
   const calculate = () => {
     setError("");
-    if (!dob) return setError("জন্ম তারিখ সিলেক্ট করুন");
+    if (!dob) return setError(tr("জন্ম তারিখ সিলেক্ট করুন", "Select your date of birth"));
     const birth = new Date(dob);
     const today = new Date();
-    if (birth > today) return setError("জন্ম তারিখ ভবিষ্যতে হতে পারে না");
+    if (birth > today) return setError(tr("জন্ম তারিখ ভবিষ্যতে হতে পারে না", "Date of birth cannot be in the future"));
 
     let y = today.getFullYear() - birth.getFullYear();
     let m = today.getMonth() - birth.getMonth();
@@ -32,7 +34,7 @@ export default function AgeCalculator() {
 
   return (
     <div>
-      <label className="text-sm font-medium text-slate-700 dark:text-slate-300">আপনার জন্ম তারিখ</label>
+      <label className="text-sm font-medium text-slate-700 dark:text-slate-300">{tr("আপনার জন্ম তারিখ", "Your date of birth")}</label>
       <div className="flex flex-col sm:flex-row gap-3 mt-2">
         <input type="date" value={dob} onChange={(e) => setDob(e.target.value)} max={new Date().toISOString().split("T")[0]} className="flex-1 px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none" />
         <button onClick={calculate} className="px-6 py-3 bg-indigo-600 text-white rounded-xl font-medium hover:bg-indigo-700 transition-colors">Calculate</button>

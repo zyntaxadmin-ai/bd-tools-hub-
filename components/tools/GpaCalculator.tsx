@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { RotateCcw } from "lucide-react";
+import { useTr } from "@/lib/lang";
 
 const grades = [
   { label: "A+ (80-100)", value: 5.0 },
@@ -13,12 +14,13 @@ const grades = [
 ];
 
 export default function GpaCalculator() {
+  const tr = useTr();
   const [subjects, setSubjects] = useState<number[]>([5, 5, 5, 5, 5]);
   const [gpa, setGpa] = useState<string | null>(null);
   const [status, setStatus] = useState("");
 
   const calculate = () => {
-    if (subjects.includes(0)) { setGpa("0.00"); setStatus("Fail - এক বা একাধিক বিষয়ে F"); return; }
+    if (subjects.includes(0)) { setGpa("0.00"); setStatus(tr("Fail - এক বা একাধিক বিষয়ে F", "Fail - F in one or more subjects")); return; }
     const result = (subjects.reduce((a, b) => a + b, 0) / subjects.length).toFixed(2);
     setGpa(result);
     setStatus(Number(result) >= 5 ? "Golden A+ !" : Number(result) >= 4 ? "Excellent" : "Good");
@@ -27,7 +29,7 @@ export default function GpaCalculator() {
 
   return (
     <div>
-      <p className="text-sm text-slate-500 mb-4">৫টি বিষয়ের গ্রেড সিলেক্ট করুন (Simple average)</p>
+      <p className="text-sm text-slate-500 mb-4">{tr("৫টি বিষয়ের গ্রেড সিলেক্ট করুন (Simple average)", "Select the grade for each of the 5 subjects (simple average)")}</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         {subjects.map((val, i) => (
           <div key={i}>
