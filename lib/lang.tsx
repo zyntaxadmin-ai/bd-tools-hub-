@@ -29,3 +29,9 @@ export function useUI() {
   const { lang } = useLang();
   return UI[lang];
 }
+
+// tr("বাংলা", "English"): picks the text for the current language (use inside components)
+export function useTr() {
+  const { lang } = useLang();
+  return (bn: string, en: string) => (lang === "en" ? en : bn);
+}
