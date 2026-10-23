@@ -55,7 +55,7 @@ lib/
 
 ## Languages (Bangla default, English toggle)
 
-The header has a BN | EN toggle. The choice is saved in the browser. The page frame (header, footer, homepage, categories, tool title, description, how-to and FAQ) is translated. The text inside each tool is being translated tool by tool with `const tr = useTr();` and `tr("বাংলা", "English")` (see `lib/lang.tsx`). Done so far: the Education & Calculation tools.
+The header has a BN | EN toggle. The choice is saved in the browser. The page frame (header, footer, homepage, categories, tool title, description, how-to and FAQ) is translated. The text inside each tool is being translated tool by tool with `const tr = useTr();` and `tr("বাংলা", "English")` (see `lib/lang.tsx`). Done so far: the Education & Calculation tools, bKash, Land, Govt Job Age and the text tools (Word/Character counter, Case Converter, Password, Color, Lorem Ipsum, Meta Tag).
 
 ## Add a new tool
 
