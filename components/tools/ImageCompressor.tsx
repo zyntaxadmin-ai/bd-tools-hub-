@@ -2,11 +2,27 @@
 import { useEffect, useState } from "react";
 import { Upload, Download, RotateCcw } from "lucide-react";
 import { fmtBytes, loadImage, canvasToBlob, renderToCanvas, fitPixels, downloadUrl, baseName, MAX_FILE_BYTES } from "@/lib/imageUtil";
+import { useTr } from "@/lib/lang";
 
 const input = "w-full mt-1 px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none";
 type Result = { url: string; size: number; w: number; h: number; scaled: boolean; realMime: string };
 
+const ERR_EN: Record<string, string> = {
+  "এই ছবিটি খোলা যায়নি": "This image could not be opened",
+  "ছবির মাপ জানা যায়নি": "Could not read the image size",
+  "শুধু ছবি ফাইল (JPG, PNG, WebP) দিন": "Please choose an image file (JPG, PNG, WebP)",
+  "ছবির সাইজ ২৫ MB এর বেশি, ছোট ছবি দিন": "The image is larger than 25 MB. Please choose a smaller one",
+  "কম্প্রেস করা যায়নি": "Compression failed"
+};
+
+function errEn(m: string): string {
+  if (ERR_EN[m]) return ERR_EN[m];
+  return m;
+}
+
 export default function ImageCompressor() {
+  const tr = useTr();
+  const E = (m: string) => tr(m, errEn(m));
   const [file, setFile] = useState<File | null>(null);
   const [img, setImg] = useState<HTMLImageElement | null>(null);
   const [quality, setQuality] = useState(70);
@@ -70,12 +86,12 @@ export default function ImageCompressor() {
     <div className="space-y-4">
       <label className="flex flex-col items-center justify-center gap-2 border-2 border-dashed border-slate-300 dark:border-slate-600 rounded-xl p-8 cursor-pointer hover:border-indigo-400 text-center dark:text-slate-200">
         <Upload className="w-6 h-6 text-indigo-600" />
-        <span className="text-sm font-medium">{file ? file.name : "ছবি সিলেক্ট করতে ট্যাপ করুন"}</span>
-        <span className="text-xs text-slate-500">JPG, PNG, WebP (সর্বোচ্চ ২৫ MB)</span>
+        <span className="text-sm font-medium">{file ? file.name : tr("ছবি সিলেক্ট করতে ট্যাপ করুন", "Tap to select an image")}</span>
+        <span className="text-xs text-slate-500">{tr("JPG, PNG, WebP (সর্বোচ্চ ২৫ MB)", "JPG, PNG, WebP (up to 25 MB)")}</span>
         <input type="file" accept="image/*" onChange={onPick} className="hidden" />
       </label>
-      <p className="text-xs text-slate-500">আপনার ছবি কোথাও আপলোড হয় না। সব কাজ আপনার ফোন/ব্রাউজারেই হয়।</p>
-      {error && <p className="text-sm text-red-500">{error}</p>}
+      <p className="text-xs text-slate-500">{tr("আপনার ছবি কোথাও আপলোড হয় না। সব কাজ আপনার ফোন/ব্রাউজারেই হয়।", "Your image is not uploaded anywhere. Everything happens on your phone/browser.")}</p>
+      {error && <p className="text-sm text-red-500">{E(error)}</p>}
 
       {img && (
         <>
@@ -84,34 +100,34 @@ export default function ImageCompressor() {
             <button onClick={() => setFormat("webp")} className={`flex-1 py-2 rounded-xl border text-sm ${format === "webp" ? "bg-indigo-600 text-white border-indigo-600" : "border-slate-200 dark:border-slate-700 dark:text-white"}`}>WebP</button>
           </div>
           <div>
-            <label className="text-sm font-medium dark:text-slate-200">কোয়ালিটি: {quality}%</label>
+            <label className="text-sm font-medium dark:text-slate-200">{tr("কোয়ালিটি:", "Quality:")} {quality}%</label>
             <input type="range" min={10} max={100} value={quality} onChange={(e) => setQuality(parseInt(e.target.value, 10))} className="w-full mt-2 accent-indigo-600" />
           </div>
           <div>
-            <label className="text-sm font-medium dark:text-slate-200">সর্বোচ্চ প্রস্থ (px, ঐচ্ছিক)</label>
-            <input type="number" inputMode="numeric" value={maxW} onChange={(e) => setMaxW(e.target.value)} placeholder={`বর্তমান: ${img.naturalWidth}`} className={input} />
+            <label className="text-sm font-medium dark:text-slate-200">{tr("সর্বোচ্চ প্রস্থ (px, ঐচ্ছিক)", "Maximum width (px, optional)")}</label>
+            <input type="number" inputMode="numeric" value={maxW} onChange={(e) => setMaxW(e.target.value)} placeholder={tr(`বর্তমান: ${img.naturalWidth}`, `Current: ${img.naturalWidth}`)} className={input} />
           </div>
         </>
       )}
 
-      {busy && <p className="text-sm text-slate-500">প্রসেস হচ্ছে...</p>}
+      {busy && <p className="text-sm text-slate-500">{tr("প্রসেস হচ্ছে...", "Processing...")}</p>}
       {result && file && (
         <div className="space-y-3">
           <div className="grid grid-cols-3 gap-3 text-center">
-            <div className="bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-3"><p className="text-xs text-slate-500">আগে</p><p className="font-bold dark:text-white">{fmtBytes(file.size)}</p></div>
-            <div className="bg-indigo-50 dark:bg-indigo-950/30 rounded-xl p-3"><p className="text-xs text-slate-500">পরে</p><p className="font-bold text-indigo-600 dark:text-indigo-400">{fmtBytes(result.size)}</p></div>
-            <div className={`rounded-xl p-3 ${saving >= 0 ? "bg-emerald-50 dark:bg-emerald-950/20" : "bg-red-50 dark:bg-red-950/20"}`}><p className="text-xs text-slate-500">সাশ্রয়</p><p className={`font-bold ${saving >= 0 ? "text-emerald-600" : "text-red-600"}`}>{saving.toFixed(0)}%</p></div>
+            <div className="bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-3"><p className="text-xs text-slate-500">{tr("আগে", "Before")}</p><p className="font-bold dark:text-white">{fmtBytes(file.size)}</p></div>
+            <div className="bg-indigo-50 dark:bg-indigo-950/30 rounded-xl p-3"><p className="text-xs text-slate-500">{tr("পরে", "After")}</p><p className="font-bold text-indigo-600 dark:text-indigo-400">{fmtBytes(result.size)}</p></div>
+            <div className={`rounded-xl p-3 ${saving >= 0 ? "bg-emerald-50 dark:bg-emerald-950/20" : "bg-red-50 dark:bg-red-950/20"}`}><p className="text-xs text-slate-500">{tr("সাশ্রয়", "Saved")}</p><p className={`font-bold ${saving >= 0 ? "text-emerald-600" : "text-red-600"}`}>{saving.toFixed(0)}%</p></div>
           </div>
-          {saving < 0 && <p className="text-xs text-amber-600">ছবিটি আগে থেকেই ছোট বা কম্প্রেসড, তাই সাইজ বাড়ছে। কোয়ালিটি কমিয়ে দেখুন।</p>}
-          {result.scaled && <p className="text-xs text-amber-600">ছবিটি খুব বড় ছিল, তাই ফোনের মেমোরির জন্য মাপ কিছুটা ছোট করা হয়েছে।</p>}
-          {result.realMime !== (format === "jpeg" ? "image/jpeg" : "image/webp") && <p className="text-xs text-amber-600">আপনার ব্রাউজার {format.toUpperCase()} সাপোর্ট করে না, তাই PNG হিসেবে সেভ হবে।</p>}
+          {saving < 0 && <p className="text-xs text-amber-600">{tr("ছবিটি আগে থেকেই ছোট বা কম্প্রেসড, তাই সাইজ বাড়ছে। কোয়ালিটি কমিয়ে দেখুন।", "The image is already small or compressed, so the size increases. Try lowering the quality.")}</p>}
+          {result.scaled && <p className="text-xs text-amber-600">{tr("ছবিটি খুব বড় ছিল, তাই ফোনের মেমোরির জন্য মাপ কিছুটা ছোট করা হয়েছে।", "The image was very large, so its dimensions were reduced slightly to fit your phone's memory.")}</p>}
+          {result.realMime !== (format === "jpeg" ? "image/jpeg" : "image/webp") && <p className="text-xs text-amber-600">{tr(`আপনার ব্রাউজার ${format.toUpperCase()} সাপোর্ট করে না, তাই PNG হিসেবে সেভ হবে।`, `Your browser does not support ${format.toUpperCase()}, so it will be saved as PNG.`)}</p>}
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={result.url} alt="কম্প্রেস করা ছবি" className="max-h-64 mx-auto rounded-lg border border-slate-200 dark:border-slate-700" />
+          <img src={result.url} alt={tr("কম্প্রেস করা ছবি", "Compressed image")} className="max-h-64 mx-auto rounded-lg border border-slate-200 dark:border-slate-700" />
           <p className="text-xs text-center text-slate-500">{result.w} × {result.h} px</p>
-          <button onClick={() => downloadUrl(result.url, `${baseName(file.name)}-compressed.${ext}`)} className="w-full py-3 bg-indigo-600 text-white rounded-xl font-medium hover:bg-indigo-700 flex items-center justify-center gap-2"><Download className="w-4 h-4" /> ডাউনলোড</button>
+          <button onClick={() => downloadUrl(result.url, `${baseName(file.name)}-compressed.${ext}`)} className="w-full py-3 bg-indigo-600 text-white rounded-xl font-medium hover:bg-indigo-700 flex items-center justify-center gap-2"><Download className="w-4 h-4" /> {tr("ডাউনলোড", "Download")}</button>
         </div>
       )}
-      {file && <button onClick={reset} className="px-4 py-2.5 border border-slate-200 dark:border-slate-700 rounded-xl flex items-center gap-1 dark:text-white"><RotateCcw className="w-4 h-4" /> নতুন ছবি</button>}
+      {file && <button onClick={reset} className="px-4 py-2.5 border border-slate-200 dark:border-slate-700 rounded-xl flex items-center gap-1 dark:text-white"><RotateCcw className="w-4 h-4" /> {tr("নতুন ছবি", "New image")}</button>}
     </div>
   );
 }

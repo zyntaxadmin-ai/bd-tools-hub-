@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { Play, Pause, RotateCcw, Flag } from "lucide-react";
+import { useTr } from "@/lib/lang";
 
 const input = "w-full mt-1 px-3 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none text-center";
 const tab = (on: boolean) => `flex-1 py-2 rounded-xl border text-sm ${on ? "bg-indigo-600 text-white border-indigo-600" : "border-slate-200 dark:border-slate-700 dark:text-white"}`;
@@ -15,6 +16,17 @@ function fmtSw(ms: number) {
 function fmtTimer(ms: number) {
   const t = Math.ceil(ms / 1000);
   return `${p2(Math.floor(t / 3600))}:${p2(Math.floor(t / 60) % 60)}:${p2(t % 60)}`;
+}
+
+const ERR_EN: Record<string, string> = {
+  "০ বা ধনাত্মক পূর্ণসংখ্যা দিন": "Enter 0 or a positive whole number",
+  "সময় ০ এর বেশি দিন": "Time must be more than 0",
+  "সর্বোচ্চ ৯৯ ঘণ্টা": "Maximum 99 hours"
+};
+
+function errEn(m: string): string {
+  if (ERR_EN[m]) return ERR_EN[m];
+  return m;
 }
 
 function Stopwatch() {
@@ -62,6 +74,8 @@ function Stopwatch() {
 }
 
 function Timer() {
+  const tr = useTr();
+  const E = (m: string) => tr(m, errEn(m));
   const [h, setH] = useState("");
   const [m, setM] = useState("5");
   const [s, setS] = useState("");
@@ -128,15 +142,15 @@ function Timer() {
     <div className="space-y-4">
       {showInputs ? (
         <div className="grid grid-cols-3 gap-3">
-          <div><label className="text-xs text-slate-500">ঘণ্টা</label><input type="number" inputMode="numeric" value={h} onChange={(e) => setH(e.target.value)} placeholder="0" className={input} /></div>
-          <div><label className="text-xs text-slate-500">মিনিট</label><input type="number" inputMode="numeric" value={m} onChange={(e) => setM(e.target.value)} placeholder="0" className={input} /></div>
-          <div><label className="text-xs text-slate-500">সেকেন্ড</label><input type="number" inputMode="numeric" value={s} onChange={(e) => setS(e.target.value)} placeholder="0" className={input} /></div>
+          <div><label className="text-xs text-slate-500">{tr("ঘণ্টা", "Hours")}</label><input type="number" inputMode="numeric" value={h} onChange={(e) => setH(e.target.value)} placeholder="0" className={input} /></div>
+          <div><label className="text-xs text-slate-500">{tr("মিনিট", "Minutes")}</label><input type="number" inputMode="numeric" value={m} onChange={(e) => setM(e.target.value)} placeholder="0" className={input} /></div>
+          <div><label className="text-xs text-slate-500">{tr("সেকেন্ড", "Seconds")}</label><input type="number" inputMode="numeric" value={s} onChange={(e) => setS(e.target.value)} placeholder="0" className={input} /></div>
         </div>
       ) : (
         <p className="text-center text-5xl font-mono font-bold dark:text-white tabular-nums">{fmtTimer(remaining)}</p>
       )}
-      {status === "done" && <p className="text-center text-lg font-bold text-red-500">সময় শেষ!</p>}
-      {error && <p className="text-sm text-red-500">{error}</p>}
+      {status === "done" && <p className="text-center text-lg font-bold text-red-500">{tr("সময় শেষ!", "Time's up!")}</p>}
+      {error && <p className="text-sm text-red-500">{E(error)}</p>}
       <div className="flex gap-3">
         {status === "running" ? (
           <button onClick={pause} className="flex-1 py-3 bg-amber-500 text-white rounded-xl font-medium flex items-center justify-center gap-2"><Pause className="w-4 h-4" /> Pause</button>
@@ -145,18 +159,19 @@ function Timer() {
         )}
         <button onClick={reset} className="px-4 py-3 border border-slate-200 dark:border-slate-700 rounded-xl flex items-center gap-1 dark:text-white"><RotateCcw className="w-4 h-4" /> Reset</button>
       </div>
-      <p className="text-xs text-slate-500">সময় শেষে বিপ শব্দ হয় ও ফোন কাঁপে (ব্রাউজার সাপোর্ট করলে)। টাইমার চলাকালীন পেজটি খোলা রাখুন, স্ক্রিন লক বা ট্যাব বন্ধ করলে শব্দ নাও হতে পারে।</p>
+      <p className="text-xs text-slate-500">{tr("সময় শেষে বিপ শব্দ হয় ও ফোন কাঁপে (ব্রাউজার সাপোর্ট করলে)। টাইমার চলাকালীন পেজটি খোলা রাখুন, স্ক্রিন লক বা ট্যাব বন্ধ করলে শব্দ নাও হতে পারে।", "A beep sounds and your phone vibrates when time is up (if your browser supports it). Keep this page open while the timer runs, because a locked screen or closed tab may stop the sound.")}</p>
     </div>
   );
 }
 
 export default function StopwatchTimer() {
+  const tr = useTr();
   const [mode, setMode] = useState<"sw" | "timer">("sw");
   return (
     <div className="space-y-5">
       <div className="flex gap-2">
-        <button onClick={() => setMode("sw")} className={tab(mode === "sw")}>স্টপওয়াচ</button>
-        <button onClick={() => setMode("timer")} className={tab(mode === "timer")}>কাউন্টডাউন টাইমার</button>
+        <button onClick={() => setMode("sw")} className={tab(mode === "sw")}>{tr("স্টপওয়াচ", "Stopwatch")}</button>
+        <button onClick={() => setMode("timer")} className={tab(mode === "timer")}>{tr("কাউন্টডাউন টাইমার", "Countdown timer")}</button>
       </div>
       {mode === "sw" ? <Stopwatch /> : <Timer />}
     </div>

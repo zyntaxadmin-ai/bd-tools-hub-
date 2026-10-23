@@ -2,11 +2,13 @@
 import { useEffect, useState } from "react";
 import { RotateCcw } from "lucide-react";
 import { splitDuration } from "@/lib/tz";
+import { useTr } from "@/lib/lang";
 
 const KEY = "bdtoolshub-countdown-v1";
 const input = "w-full mt-1 px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none";
 
 export default function CountdownTimer() {
+  const tr = useTr();
   const [name, setName] = useState("");
   const [when, setWhen] = useState("");
   const [now, setNow] = useState<number | null>(null);
@@ -40,17 +42,17 @@ export default function CountdownTimer() {
   const past = valid && diff <= 0;
   const t = splitDuration(diff);
   const boxes = [
-    { v: t.d, l: "দিন" }, { v: t.h, l: "ঘণ্টা" }, { v: t.m, l: "মিনিট" }, { v: t.s, l: "সেকেন্ড" },
+    { v: t.d, l: tr("দিন", "Days") }, { v: t.h, l: tr("ঘণ্টা", "Hours") }, { v: t.m, l: tr("মিনিট", "Minutes") }, { v: t.s, l: tr("সেকেন্ড", "Seconds") },
   ];
 
   return (
     <div className="space-y-4">
       <div>
-        <label className="text-sm font-medium dark:text-slate-200">ইভেন্টের নাম</label>
-        <input value={name} onChange={(e) => setName(e.target.value)} maxLength={80} placeholder="যেমন: পরীক্ষা, বিয়ে, ট্রিপ" className={input} />
+        <label className="text-sm font-medium dark:text-slate-200">{tr("ইভেন্টের নাম", "Event name")}</label>
+        <input value={name} onChange={(e) => setName(e.target.value)} maxLength={80} placeholder={tr("যেমন: পরীক্ষা, বিয়ে, ট্রিপ", "e.g. Exam, Wedding, Trip")} className={input} />
       </div>
       <div>
-        <label className="text-sm font-medium dark:text-slate-200">তারিখ ও সময়</label>
+        <label className="text-sm font-medium dark:text-slate-200">{tr("তারিখ ও সময়", "Date and time")}</label>
         <input type="datetime-local" value={when} onChange={(e) => setWhen(e.target.value)} className={input} />
       </div>
       <button onClick={() => { setName(""); setWhen(""); }} className="px-4 py-2.5 border border-slate-200 dark:border-slate-700 rounded-xl flex items-center gap-1 dark:text-white"><RotateCcw className="w-4 h-4" /> Reset</button>
@@ -66,10 +68,10 @@ export default function CountdownTimer() {
               </div>
             ))}
           </div>
-          <p className={`text-sm mt-3 ${past ? "text-red-500" : "text-slate-600 dark:text-slate-400"}`}>{past ? "এই সময় পেরিয়ে গেছে (উপরে কত আগে তা দেখানো হচ্ছে)" : "বাকি আছে"}</p>
+          <p className={`text-sm mt-3 ${past ? "text-red-500" : "text-slate-600 dark:text-slate-400"}`}>{past ? tr("এই সময় পেরিয়ে গেছে (উপরে কত আগে তা দেখানো হচ্ছে)", "This time has passed (the time shown above is how long ago it was)") : tr("বাকি আছে", "Remaining")}</p>
         </div>
       )}
-      <p className="text-xs text-slate-500">ঈদ, রোজা বা ছুটির তারিখ প্রতি বছর বদলায়, তাই তারিখ নিজে সেট করুন। আপনার ইভেন্ট শুধু এই ব্রাউজারে সেভ থাকে।</p>
+      <p className="text-xs text-slate-500">{tr("ঈদ, রোজা বা ছুটির তারিখ প্রতি বছর বদলায়, তাই তারিখ নিজে সেট করুন। আপনার ইভেন্ট শুধু এই ব্রাউজারে সেভ থাকে।", "Eid, Ramadan and holiday dates change every year, so set the date yourself. Your event is saved only in this browser.")}</p>
     </div>
   );
 }

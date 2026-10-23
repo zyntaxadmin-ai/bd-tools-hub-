@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { Clock } from "lucide-react";
 import { wallParts, zonedToInstant, offsetMinutes, fmtOffset, formatInZone } from "@/lib/tz";
+import { useTr } from "@/lib/lang";
 
 const input = "w-full mt-1 px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none";
 const ZONES: { id: string; label: string }[] = [
@@ -19,7 +20,23 @@ const ZONES: { id: string; label: string }[] = [
 ];
 const p2 = (n: number) => String(n).padStart(2, "0");
 
+const EN: Record<string, string> = {
+  "বাংলাদেশ (ঢাকা)": "Bangladesh (Dhaka)",
+  "যুক্তরাজ্য (লন্ডন)": "United Kingdom (London)",
+  "যুক্তরাষ্ট্র - পূর্ব (নিউ ইয়র্ক)": "United States - East (New York)",
+  "যুক্তরাষ্ট্র - পশ্চিম (লস অ্যাঞ্জেলেস)": "United States - West (Los Angeles)",
+  "সৌদি আরব (রিয়াদ)": "Saudi Arabia (Riyadh)",
+  "সংযুক্ত আরব আমিরাত (দুবাই)": "United Arab Emirates (Dubai)",
+  "মালয়েশিয়া (কুয়ালালামপুর)": "Malaysia (Kuala Lumpur)",
+  "সিঙ্গাপুর": "Singapore",
+  "ভারত (কলকাতা)": "India (Kolkata)",
+  "জাপান (টোকিও)": "Japan (Tokyo)",
+  "অস্ট্রেলিয়া (সিডনি)": "Australia (Sydney)"
+};
+
 export default function TimeZoneConverter() {
+  const tr = useTr();
+  const tl = (x: string) => tr(x, EN[x] ?? x);
   const [from, setFrom] = useState("Asia/Dhaka");
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
@@ -41,28 +58,28 @@ export default function TimeZoneConverter() {
   return (
     <div className="space-y-4">
       <div>
-        <label className="text-sm font-medium dark:text-slate-200">কোন দেশের সময় থেকে বদলাবেন</label>
+        <label className="text-sm font-medium dark:text-slate-200">{tr("কোন দেশের সময় থেকে বদলাবেন", "Convert from which country's time")}</label>
         <select value={from} onChange={(e) => setFrom(e.target.value)} className={input}>
-          {ZONES.map((z) => <option key={z.id} value={z.id}>{z.label}</option>)}
+          {ZONES.map((z) => <option key={z.id} value={z.id}>{tl(z.label)}</option>)}
         </select>
       </div>
       <div className="grid grid-cols-2 gap-3">
-        <div><label className="text-sm font-medium dark:text-slate-200">তারিখ</label><input type="date" value={date} onChange={(e) => setDate(e.target.value)} className={input} /></div>
-        <div><label className="text-sm font-medium dark:text-slate-200">সময়</label><input type="time" value={time} onChange={(e) => setTime(e.target.value)} className={input} /></div>
+        <div><label className="text-sm font-medium dark:text-slate-200">{tr("তারিখ", "Date")}</label><input type="date" value={date} onChange={(e) => setDate(e.target.value)} className={input} /></div>
+        <div><label className="text-sm font-medium dark:text-slate-200">{tr("সময়", "Time")}</label><input type="time" value={time} onChange={(e) => setTime(e.target.value)} className={input} /></div>
       </div>
-      <button onClick={() => setNow(from)} className="px-4 py-2.5 border border-slate-200 dark:border-slate-700 rounded-xl flex items-center gap-2 dark:text-white"><Clock className="w-4 h-4" /> এখনকার সময় বসান</button>
+      <button onClick={() => setNow(from)} className="px-4 py-2.5 border border-slate-200 dark:border-slate-700 rounded-xl flex items-center gap-2 dark:text-white"><Clock className="w-4 h-4" /> {tr("এখনকার সময় বসান", "Use current time")}</button>
 
       {instant !== null && (
         <div className="border border-slate-200 dark:border-slate-700 rounded-xl divide-y divide-slate-100 dark:divide-slate-800 overflow-hidden">
           {ZONES.map((z) => (
             <div key={z.id} className={`px-4 py-3 ${z.id === from ? "bg-indigo-50 dark:bg-indigo-950/30" : "bg-white dark:bg-slate-800"}`}>
-              <div className="flex justify-between gap-2 text-xs text-slate-500"><span>{z.label}</span><span>{fmtOffset(offsetMinutes(instant as number, z.id))}</span></div>
+              <div className="flex justify-between gap-2 text-xs text-slate-500"><span>{tl(z.label)}</span><span>{fmtOffset(offsetMinutes(instant as number, z.id))}</span></div>
               <p className="font-semibold dark:text-white">{formatInZone(instant as number, z.id)}</p>
             </div>
           ))}
         </div>
       )}
-      <p className="text-xs text-slate-500">ডে-লাইট সেভিং (গ্রীষ্মকালীন সময়) ব্রাউজার নিজেই হিসাব করে। বাংলাদেশে এখন DST নেই (UTC+6)। DST পরিবর্তনের দিনের ঠিক ভোরের সময়গুলোতে ফলাফল এক ঘণ্টা আলাদা হতে পারে।</p>
+      <p className="text-xs text-slate-500">{tr("ডে-লাইট সেভিং (গ্রীষ্মকালীন সময়) ব্রাউজার নিজেই হিসাব করে। বাংলাদেশে এখন DST নেই (UTC+6)। DST পরিবর্তনের দিনের ঠিক ভোরের সময়গুলোতে ফলাফল এক ঘণ্টা আলাদা হতে পারে।", "Daylight saving time (summer time) is calculated automatically by your browser. Bangladesh currently has no DST (UTC+6). Times right around a DST change may differ by an hour.")}</p>
     </div>
   );
 }
