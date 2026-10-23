@@ -1,8 +1,10 @@
 "use client";
 import { useState, useMemo } from "react";
 import { RotateCcw } from "lucide-react";
+import { useTr } from "@/lib/lang";
 
 export default function WordCounter() {
+  const tr = useTr();
   const [text, setText] = useState("");
   const stats = useMemo(() => {
     const t = text.trim();
@@ -19,7 +21,7 @@ export default function WordCounter() {
 
   return (
     <div>
-      <textarea value={text} onChange={(e) => setText(e.target.value)} placeholder="এখানে আপনার লেখা পেস্ট করুন..." rows={7} className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none resize-none" />
+      <textarea value={text} onChange={(e) => setText(e.target.value)} placeholder={tr("এখানে আপনার লেখা পেস্ট করুন...", "Paste your text here...")} rows={7} className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none resize-none" />
       <div className="flex justify-between items-center mt-3">
         <p className="text-xs text-slate-500">{stats.words} words</p>
         <button onClick={() => setText("")} className="text-xs px-3 py-1.5 border border-slate-200 dark:border-slate-700 rounded-full hover:bg-slate-50 dark:hover:bg-slate-800 flex items-center gap-1 dark:text-white"><RotateCcw className="w-3 h-3" /> Clear</button>

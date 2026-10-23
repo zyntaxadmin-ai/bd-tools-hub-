@@ -1,12 +1,14 @@
 "use client";
 import { useState } from "react";
 import { RotateCcw } from "lucide-react";
+import { useTr } from "@/lib/lang";
 
 // NOTE: Rates change. Verify on bKash official site and edit the two constants below.
 const CASHOUT_RATE = 0.0185; // 18.5 TK per 1000 (agent cash out)
 const SEND_MONEY_FEE = 0;    // Set to current send money fee if applicable
 
 export default function BkashCalculator() {
+  const tr = useTr();
   const [amount, setAmount] = useState("");
   const [type, setType] = useState<"send" | "cashout">("cashout");
   const [result, setResult] = useState<null | { charge: number; total: number }>(null);
@@ -15,7 +17,7 @@ export default function BkashCalculator() {
   const calculate = () => {
     setError("");
     const amt = parseFloat(amount);
-    if (!amount || isNaN(amt) || amt <= 0) return setError("সঠিক টাকার পরিমাণ লিখুন");
+    if (!amount || isNaN(amt) || amt <= 0) return setError(tr("সঠিক টাকার পরিমাণ লিখুন", "Enter a valid amount in taka"));
     const charge = type === "send" ? SEND_MONEY_FEE : amt * CASHOUT_RATE;
     setResult({ charge: Number(charge.toFixed(2)), total: Number((amt + charge).toFixed(2)) });
   };
@@ -47,7 +49,7 @@ export default function BkashCalculator() {
           <div className="flex justify-between text-sm mt-2"><span className="text-slate-600 dark:text-slate-400">Charge</span><span className="font-semibold text-[#E2136E]">{result.charge} TK</span></div>
           <div className="h-px bg-pink-200 dark:bg-pink-900 my-3"></div>
           <div className="flex justify-between font-bold text-lg dark:text-white"><span>Total</span><span className="text-[#E2136E]">{result.total} TK</span></div>
-          <p className="text-xs text-slate-500 mt-2 text-center">চার্জ পরিবর্তন হতে পারে। অফিসিয়াল bKash চার্জ চার্ট দেখে নিশ্চিত হোন।</p>
+          <p className="text-xs text-slate-500 mt-2 text-center">{tr("চার্জ পরিবর্তন হতে পারে। অফিসিয়াল bKash চার্জ চার্ট দেখে নিশ্চিত হোন।", "Charges may change. Confirm with the official bKash charge chart.")}</p>
         </div>
       )}
     </div>
