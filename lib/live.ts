@@ -33,4 +33,10 @@ export const LIVE_SLUGS = [
   "random-number-generator",
   "countdown-timer",
   "time-zone-converter",
+  // batch 4
+  "expense-tracker",
+  "invoice-generator",
+  "qr-scanner",
+  "text-to-speech",
+  "bangla-calendar",
 ];

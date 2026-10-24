@@ -281,4 +281,52 @@ export const TOOL_EN: Record<string, ToolEn> = {
       { q: "What is Bangladesh time?", a: "Bangladesh Standard Time is UTC+6, and Bangladesh currently does not use daylight saving." },
     ],
   },
+  "expense-tracker": {
+    title: "Expense Tracker",
+    desc: "Keep track of income and expenses, view them by month, see where your money goes by category and download a CSV. Your data stays on your phone.",
+    howTo: ["Choose income or expense, then enter the amount and category", "Tap Add", "See your total income, expenses and balance by month, and download a CSV if needed"],
+    faqs: [
+      { q: "Where are my entries saved?", a: "Only on your phone or browser (local storage), never on a server. They will not appear on other devices." },
+      { q: "What if I clear my browser data?", a: "Your entries will be deleted too, so download a CSV now and then as a backup." },
+    ],
+  },
+  "invoice-generator": {
+    title: "Invoice Generator",
+    desc: "Create a free invoice with items, VAT and discount, then print it or save it as a PDF. No signup needed.",
+    howTo: ["Enter your details and your client's details", "Add the items, VAT and discount", "Tap Print and choose \"Save as PDF\""],
+    faqs: [
+      { q: "How do I get a PDF?", a: "Tap Print and the print window opens. Choose \"Save as PDF\" in place of a printer." },
+      { q: "Is my information sent anywhere?", a: "No. Everything happens in your browser. Only your (seller) details and currency are remembered in this browser for next time." },
+      { q: "Is this the official government VAT challan (Mushak) format?", a: "No, this is a general invoice. The official VAT invoice rules are different, so check the NBR rules for that." },
+    ],
+  },
+  "qr-scanner": {
+    title: "QR Code Scanner",
+    desc: "Scan a QR code with your phone camera, or upload a photo of one. No image is sent to a server.",
+    howTo: ["Start the camera and allow permission", "Hold the QR code inside the frame", "See the result and, if it is a link, check the address before opening it"],
+    faqs: [
+      { q: "What if the camera does not start?", a: "Check that camera permission is allowed for this site in your browser and that no other app is using the camera. You can also upload a photo of the QR code below." },
+      { q: "Is a scanned link safe?", a: "Not necessarily. An unknown QR code can lead to a harmful site, so check the address before opening a link." },
+      { q: "Is my image uploaded anywhere?", a: "No, everything is processed on your phone." },
+    ],
+  },
+  "text-to-speech": {
+    title: "Text to Speech",
+    desc: "Paste text and have it read aloud in Bangla and English. Adjust speed and pitch. Your text is never sent anywhere.",
+    howTo: ["Type or paste your text", "Set the voice, speed and pitch", "Tap Speak"],
+    faqs: [
+      { q: "What if Bangla is not read aloud?", a: "The voice depends on your phone's installed voices. Install a Bangla voice in Settings → Language → Text-to-speech." },
+      { q: "Can I download the audio?", a: "No. The browser voice can only play the sound and cannot save it as a file." },
+    ],
+  },
+  "bangla-calendar": {
+    title: "Bangla Calendar",
+    desc: "See today's Bangla date, browse a Gregorian and Bangla calendar and convert dates, using Bangladesh's revised Bangla calendar.",
+    howTo: ["See today's Bangla date and season", "Change the month to browse the calendar", "Use the date converter to go from Gregorian to Bangla or the other way round"],
+    faqs: [
+      { q: "When is Pohela Boishakh?", a: "On 14 April every year in Bangladesh's revised calendar." },
+      { q: "How many days does Falgun have?", a: "29 days in a normal year and 30 in a Gregorian leap year." },
+      { q: "Will it match West Bengal's dates?", a: "No. This follows Bangladesh's calendar. West Bengal uses a different calendar, where Pohela Boishakh is usually on 15 April." },
+    ],
+  },
 };
