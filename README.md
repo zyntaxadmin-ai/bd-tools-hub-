@@ -48,7 +48,7 @@ lib/
   seo.ts                    Site URL and name
   dateCalc.ts, sciEval.ts, imageUtil.ts, colorUtil.ts, lorem.ts,
   keywords.ts, metaTags.ts, rand.ts, tz.ts,
-  banglaDate.ts, expense.ts, invoice.ts, scan.ts, tts.ts   Shared, tested logic
+  banglaDate.ts, expense.ts, invoice.ts, scan.ts, tts.ts, ttsEngine.ts   Shared, tested logic
   lang.tsx                  Language provider (BN default, EN) saved in localStorage
   i18nData.ts               UI strings, category names, English card descriptions
   toolContentEn.ts          English title/description/how-to/FAQ for every live tool
