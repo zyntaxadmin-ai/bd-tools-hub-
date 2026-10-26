@@ -312,10 +312,12 @@ export const TOOL_EN: Record<string, ToolEn> = {
   },
   "text-to-speech": {
     title: "Text to Speech",
-    desc: "Paste text and have it read aloud in Bangla and English. Adjust speed and pitch. Your text is never sent anywhere.",
-    howTo: ["Type or paste your text", "Set the voice, speed and pitch", "Tap Speak"],
+    desc: "Paste text and have it read aloud in Bangla, English and other languages installed on your device. Adjust voice, speed and pitch. Your text is never sent anywhere.",
+    howTo: ["Type or paste your text", "Choose the language and voice (leave it on Automatic to detect the language from the text), then set speed and pitch", "Tap Speak"],
     faqs: [
-      { q: "What if Bangla is not read aloud?", a: "The voice depends on your phone's installed voices. Install a Bangla voice in Settings → Language → Text-to-speech." },
+      { q: "Which languages work?", a: "The languages that have a voice installed on your phone or browser. In Automatic mode the tool detects the language from the writing system (for example Bangla, Hindi, Arabic, English). For other languages written in Latin letters, such as Spanish, choose that language from the Language list." },
+      { q: "What if Bangla or another language is not read aloud?", a: "Install a voice for that language in Settings → Language → Text-to-speech. Voices marked \"online\" need internet and start slowly, so pick an offline voice if you can." },
+      { q: "Why does it not work when I open it from Instagram or Facebook?", a: "The built-in browser of those apps does not support voice. Use the ⋯ menu and choose \"Open in browser\" to open it in Chrome." },
       { q: "Can I download the audio?", a: "No. The browser voice can only play the sound and cannot save it as a file." },
     ],
   },
