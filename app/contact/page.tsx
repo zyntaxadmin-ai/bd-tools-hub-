@@ -5,7 +5,7 @@ import { siteConfig } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Contact Us",
-  description: "Contact BD Tools Hub by email or connect with us on Instagram, Facebook, and TikTok.",
+  description: "Contact BD Tools Flow by email or connect with us on Instagram, Facebook, and TikTok.",
   alternates: { canonical: `${siteConfig.url}/contact` },
 };
 
@@ -23,8 +23,8 @@ export default function Page() {
       <div className="space-y-6 text-slate-600 dark:text-slate-400 leading-relaxed">
         <p>
           <T
-            bn="BD Tools Hub সম্পর্কে কোনো প্রশ্ন, পরামর্শ বা প্রযুক্তিগত সমস্যার জন্য ইমেইল অথবা সোশ্যাল মিডিয়ায় যোগাযোগ করুন।"
-            en="For any question, suggestion or technical problem about BD Tools Hub, contact us by email or on social media."
+            bn="BD Tools Flow সম্পর্কে কোনো প্রশ্ন, পরামর্শ বা প্রযুক্তিগত সমস্যার জন্য ইমেইল অথবা সোশ্যাল মিডিয়ায় যোগাযোগ করুন।"
+            en="For any question, suggestion or technical problem about BD Tools Flow, contact us by email or on social media."
           />
         </p>
 
