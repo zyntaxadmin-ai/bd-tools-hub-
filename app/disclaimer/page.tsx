@@ -5,7 +5,7 @@ import { siteConfig } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Disclaimer",
-  description: "BD Tools Hub-এর অনলাইন ক্যালকুলেটর ও ইউটিলিটির ফলাফল, নির্ভুলতা, আর্থিক হিসাব এবং তথ্য ব্যবহারের সীমাবদ্ধতা সম্পর্কে জানুন।",
+  description: "BD Tools Flow-এর অনলাইন ক্যালকুলেটর ও ইউটিলিটির ফলাফল, নির্ভুলতা, আর্থিক হিসাব এবং তথ্য ব্যবহারের সীমাবদ্ধতা সম্পর্কে জানুন।",
   alternates: { canonical: `${siteConfig.url}/disclaimer` },
 };
 
@@ -22,7 +22,7 @@ const sections: Sec[] = [
     h: ["আর্থিক হিসাব ও চার্জ", "Financial calculations and charges"],
     p: [
       ["bKash, Nagad, ব্যাংক, মোবাইল আর্থিক সেবা বা অন্যান্য প্রতিষ্ঠানের ফি, চার্জ, সুদ, সীমা ও নিয়ম পরিবর্তিত হতে পারে। কোনো হিসাব করার আগে সংশ্লিষ্ট প্রতিষ্ঠানের অফিসিয়াল ওয়েবসাইট বা প্রকাশিত শর্ত যাচাই করুন।", "Fees, charges, interest, limits and rules of bKash, Nagad, banks, mobile financial services or other organisations may change. Before making any calculation, check the official website or published terms of the organisation concerned."],
-      ["BD Tools Hub কোনো আর্থিক প্রতিষ্ঠান নয় এবং আমাদের ক্যালকুলেটরের ফলাফলকে চূড়ান্ত আর্থিক সিদ্ধান্তের একমাত্র ভিত্তি হিসেবে ব্যবহার করা উচিত নয়।", "BD Tools Hub is not a financial institution, and the results of our calculators should not be used as the sole basis for final financial decisions."],
+      ["BD Tools Flow কোনো আর্থিক প্রতিষ্ঠান নয় এবং আমাদের ক্যালকুলেটরের ফলাফলকে চূড়ান্ত আর্থিক সিদ্ধান্তের একমাত্র ভিত্তি হিসেবে ব্যবহার করা উচিত নয়।", "BD Tools Flow is not a financial institution, and the results of our calculators should not be used as the sole basis for final financial decisions."],
     ],
   },
   {
@@ -40,7 +40,7 @@ const sections: Sec[] = [
   {
     h: ["সরকারি ও তৃতীয় পক্ষের সম্পর্ক", "Government and third-party relationships"],
     p: [
-      ["স্পষ্টভাবে উল্লেখ করা না থাকলে BD Tools Hub কোনো সরকারি সংস্থা, ব্যাংক, মোবাইল আর্থিক সেবা, শিক্ষা প্রতিষ্ঠান বা অন্য কোনো ব্র্যান্ডের সঙ্গে অনুমোদিত বা আনুষ্ঠানিকভাবে যুক্ত নয়। তৃতীয় পক্ষের নাম তাদের নিজস্ব পরিচয়ের জন্য উল্লেখ করা হতে পারে।", "Unless clearly stated otherwise, BD Tools Hub is not approved by, or officially affiliated with, any government body, bank, mobile financial service, educational institution or any other brand. Names of third parties may be mentioned only to identify them."],
+      ["স্পষ্টভাবে উল্লেখ করা না থাকলে BD Tools Flow কোনো সরকারি সংস্থা, ব্যাংক, মোবাইল আর্থিক সেবা, শিক্ষা প্রতিষ্ঠান বা অন্য কোনো ব্র্যান্ডের সঙ্গে অনুমোদিত বা আনুষ্ঠানিকভাবে যুক্ত নয়। তৃতীয় পক্ষের নাম তাদের নিজস্ব পরিচয়ের জন্য উল্লেখ করা হতে পারে।", "Unless clearly stated otherwise, BD Tools Flow is not approved by, or officially affiliated with, any government body, bank, mobile financial service, educational institution or any other brand. Names of third parties may be mentioned only to identify them."],
     ],
   },
   {
@@ -78,7 +78,7 @@ export default function Page() {
         <T bn="সর্বশেষ আপডেট: ১৮ অক্টোবর, ২০২৬" en="Last updated: 18 October 2026" />
       </p>
       <div className="space-y-5 text-slate-600 dark:text-slate-400 leading-7">
-        <p><T bn="BD Tools Hub-এ স্বাগতম। এই ওয়েবসাইটে দেওয়া ক্যালকুলেটর, শিক্ষাসংক্রান্ত টুল এবং অন্যান্য ইউটিলিটি সাধারণ তথ্য ও হিসাবের সুবিধার জন্য তৈরি করা হয়েছে। ওয়েবসাইট ব্যবহার করার আগে নিচের শর্ত ও সীমাবদ্ধতাগুলো পড়ে নিন।" en="Welcome to BD Tools Hub. The calculators, educational tools and other utilities on this website are provided for general information and convenience in calculations. Please read the terms and limitations below before using the website." /></p>
+        <p><T bn="BD Tools Flow-এ স্বাগতম। এই ওয়েবসাইটে দেওয়া ক্যালকুলেটর, শিক্ষাসংক্রান্ত টুল এবং অন্যান্য ইউটিলিটি সাধারণ তথ্য ও হিসাবের সুবিধার জন্য তৈরি করা হয়েছে। ওয়েবসাইট ব্যবহার করার আগে নিচের শর্ত ও সীমাবদ্ধতাগুলো পড়ে নিন।" en="Welcome to BD Tools Flow. The calculators, educational tools and other utilities on this website are provided for general information and convenience in calculations. Please read the terms and limitations below before using the website." /></p>
         {sections.map((s, i) => (
           <section key={i} className="space-y-2">
             <h2 className="text-xl font-semibold text-slate-900 dark:text-white">
