@@ -8,8 +8,8 @@ export default function SiteJsonLd() {
       {
         "@type": "WebSite",
         "@id": `${siteConfig.url}/#website`,
-        name: "BD Tools Hub",
-        alternateName: "BDToolsHub",
+        name: "BD Tools Flow",
+        alternateName: "BDToolsFlow",
         url: `${siteConfig.url}/`,
         inLanguage: ["bn", "en"],
         publisher: { "@id": `${siteConfig.url}/#organization` },
@@ -17,7 +17,7 @@ export default function SiteJsonLd() {
       {
         "@type": "Organization",
         "@id": `${siteConfig.url}/#organization`,
-        name: "BD Tools Hub",
+        name: "BD Tools Flow",
         url: `${siteConfig.url}/`,
         description: "বাংলাদেশের মানুষের জন্য বিনামূল্যের অনলাইন ক্যালকুলেটর ও ইউটিলিটি টুলস প্ল্যাটফর্ম।",
         email: CONTACT_EMAIL,

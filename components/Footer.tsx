@@ -16,7 +16,7 @@ export default function Footer() {
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center gap-2 mb-3">
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-600 to-violet-600 flex items-center justify-center"><Wrench className="w-4 h-4 text-white" /></div>
-              <span className="font-bold text-slate-900 dark:text-white">BD Tools Hub</span>
+              <span className="font-bold text-slate-900 dark:text-white">BD Tools Flow</span>
             </div>
             <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">{ui.footerTag}</p>
           </div>
@@ -49,7 +49,7 @@ export default function Footer() {
         </div>
         <div className="mt-8"><AdSlot label="Advertisement" /></div>
         <div className="mt-8 pt-6 border-t border-slate-200 dark:border-slate-800 text-center text-sm text-slate-500">
-          © {new Date().getFullYear()} BD Tools Hub. {ui.rights}
+          © {new Date().getFullYear()} BD Tools Flow. {ui.rights}
         </div>
       </div>
     </footer>
