@@ -7,8 +7,7 @@ import { speakPlan, SynthLike, UtteranceLike } from "@/lib/ttsEngine";
 
 type Status = "idle" | "speaking" | "paused";
 const MAX = 5000;
-const FIRST_CHUNK = 70; // short first piece = the voice starts sooner
-// In-app browsers (Instagram, Facebook, Messenger, TikTok...) usually have no speech support at all
+const FIRST_CHUNK = 70;
 const IN_APP = /Instagram|FBAN|FBAV|FB_IAB|FBIOS|Messenger|TikTok|musical_ly|Snapchat|Line\/|MicroMessenger|Twitter/i;
 const input = "w-full mt-1 px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none";
 
@@ -34,14 +33,13 @@ export default function TextToSpeech() {
   useEffect(() => {
     const ua = navigator.userAgent || "";
     setInApp(IN_APP.test(ua));
-    setCanPause(!/Android/i.test(ua)); // pause/resume is not reliable in Android browsers
-    // some in-app WebViews have the property but it is empty, or lack SpeechSynthesisUtterance
+    setCanPause(!/Android/i.test(ua));
     if (!("speechSynthesis" in window) || !window.speechSynthesis || typeof SpeechSynthesisUtterance === "undefined") { setSupported(false); return; }
     setSupported(true);
     const synth = window.speechSynthesis;
     const load = () => { const v = synth.getVoices(); setVoices(v); return v.length; };
     load();
-    let tries = 0; // some phones fill the voice list late and never fire "voiceschanged"
+    let tries = 0;
     const iv = setInterval(() => { tries++; if (load() > 0 || tries > 12) clearInterval(iv); }, 500);
     synth.addEventListener?.("voiceschanged", load);
     return () => { clearInterval(iv); synth.removeEventListener?.("voiceschanged", load); speakerRef.current?.stop(); synth.cancel(); };
@@ -58,19 +56,28 @@ export default function TextToSpeech() {
   const missing = chosen ? [] : langsInPlan.filter((l) => !pickVoice(voices, l));
   const installed = languagesFromVoices(voices);
   const voiceChoices = voices.filter((v) => langSel === "auto" || baseLang(v.lang) === langSel);
+  const automaticVoice = langsInPlan.length === 1 ? pickVoice(voices, langsInPlan[0]) : undefined;
+  const automaticLabel = langsInPlan.length === 1 && automaticVoice
+    ? `${tr("স্বয়ংক্রিয়", "Automatic")} • ${langName(langsInPlan[0])}: ${automaticVoice.name} (${automaticVoice.lang})`
+    : tr("স্বয়ংক্রিয় (লেখার ভাষা অনুযায়ী কণ্ঠ)", "Automatic (voice for detected language)");
 
   const speak = () => {
     speakerRef.current?.stop();
     setError(""); setSlow(false); setStarted(false);
     if (plan.length === 0) return;
+    // Some browsers expose voices only after the page has loaded. Use their latest list.
+    const latestVoices = window.speechSynthesis.getVoices();
+    const availableVoices = latestVoices.length ? latestVoices : voices;
+    if (latestVoices.length) setVoices(latestVoices);
+    const playbackChosen = voiceSel !== "auto" ? availableVoices.find((v) => voiceId(v) === voiceSel) ?? chosen : undefined;
     setStatus("speaking");
     speakerRef.current = speakPlan(
       window.speechSynthesis as unknown as SynthLike,
       (item) => {
         const u = new SpeechSynthesisUtterance(item.text);
-        const v = chosen ?? pickVoice(voices, item.lang);
+        const v = playbackChosen ?? pickVoice(availableVoices, item.lang);
         if (v) u.voice = v;
-        u.lang = v ? v.lang : fallbackLocale(item.lang); // even if the voice is not listed, the phone's engine may still speak this language
+        u.lang = v ? v.lang : fallbackLocale(item.lang);
         u.rate = rate; u.pitch = pitch;
         return u as unknown as UtteranceLike;
       },
@@ -143,9 +150,19 @@ export default function TextToSpeech() {
         <div>
           <label className="text-sm font-medium dark:text-slate-200">{tr("কণ্ঠ", "Voice")}</label>
           <select value={voiceSel} onChange={(e) => setVoiceSel(e.target.value)} className={input}>
-            <option value="auto">{tr("স্বয়ংক্রিয় (সেরা কণ্ঠ)", "Automatic (best voice)")}</option>
+            <option value="auto">{automaticLabel}</option>
             {voiceChoices.map((v) => <option key={voiceId(v)} value={voiceId(v)}>{v.name} ({v.lang}){v.localService === false ? ` • ${tr("অনলাইন", "online")}` : ""}</option>)}
           </select>
+          {voiceSel === "auto" && langsInPlan.length > 0 && (
+            <div className="mt-2 text-xs text-slate-500 space-y-1" aria-live="polite">
+              {langsInPlan.map((c) => {
+                const v = pickVoice(voices, c);
+                return <p key={c}>{langName(c)}: {v
+                  ? `${v.name} (${v.lang})${v.localService === false ? ` • ${tr("অনলাইন", "online")}` : ""}`
+                  : tr("এই ভাষার কণ্ঠ তালিকায় নেই; ব্রাউজার বিকল্প কণ্ঠ ব্যবহার করতে পারে।", "No matching voice is listed; the browser may use a fallback voice.")}</p>;
+              })}
+            </div>
+          )}
         </div>
       </div>
 
