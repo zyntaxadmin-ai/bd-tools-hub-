@@ -5,7 +5,7 @@ import { siteConfig } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "BD Tools Hub কীভাবে ব্যবহারকারীর তথ্য, cookies, analytics এবং third-party advertising সম্পর্কিত গোপনীয়তা পরিচালনা করে তা জানুন।",
+  description: "BD Tools Flow কীভাবে ব্যবহারকারীর তথ্য, cookies, analytics এবং third-party advertising সম্পর্কিত গোপনীয়তা পরিচালনা করে তা জানুন।",
   alternates: { canonical: `${siteConfig.url}/privacy-policy` },
 };
 
@@ -87,7 +87,7 @@ export default function Page() {
         <T bn="সর্বশেষ আপডেট: ২০ অক্টোবর, ২০২৬" en="Last updated: 20 October 2026" />
       </p>
       <div className="space-y-5 text-slate-600 dark:text-slate-400 leading-7">
-        <p><T bn="BD Tools Hub-এ আপনাকে স্বাগতম। আপনার গোপনীয়তা রক্ষা করা আমাদের কাছে গুরুত্বপূর্ণ। এই নীতিতে আমাদের ওয়েবসাইট ব্যবহার করার সময় তথ্য কীভাবে প্রক্রিয়াকৃত হতে পারে, তা ব্যাখ্যা করা হয়েছে।" en="Welcome to BD Tools Hub. Protecting your privacy is important to us. This policy explains how information may be processed when you use our website." /></p>
+        <p><T bn="BD Tools Flow-এ আপনাকে স্বাগতম। আপনার গোপনীয়তা রক্ষা করা আমাদের কাছে গুরুত্বপূর্ণ। এই নীতিতে আমাদের ওয়েবসাইট ব্যবহার করার সময় তথ্য কীভাবে প্রক্রিয়াকৃত হতে পারে, তা ব্যাখ্যা করা হয়েছে।" en="Welcome to BD Tools Flow. Protecting your privacy is important to us. This policy explains how information may be processed when you use our website." /></p>
         {sections.map((s, i) => (
           <section key={i} className="space-y-2">
             <h2 className="text-xl font-semibold text-slate-900 dark:text-white">
