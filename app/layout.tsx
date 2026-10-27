@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
-  title: { default: "BD Tools Hub - Free Online Tools for Bangladesh", template: "%s | BD Tools Hub" },
+  title: { default: "BD Tools Flow - Free Online Tools for Bangladesh", template: "%s | BD Tools Flow" },
   description: "ফ্রি অনলাইন টুলস: Age Calculator, GPA Calculator, bKash Calculator, Word Counter ও আরও অনেক কিছু। Fast, Free, No Signup.",
 };
 
