@@ -2,7 +2,7 @@
 
 Free online tools for Bangladesh. Fast, no signup, and everything runs in your browser (no server, no database, no uploads).
 
-**Live:** https://bd-tools-hub.vercel.app
+**Live:** https://bdtoolsflow.cyou/
 
 ## Tools
 
