@@ -1,5 +1,5 @@
 
 export const siteConfig = {
-  url: "https://bd-tools-hub.vercel.app",
+  url: "https://bdtoolsflow.cyou",
   name: "BD Tools Flow",
 };
