@@ -6,7 +6,7 @@ Free online tools for Bangladesh. Fast, no signup, and everything runs in your b
 
 ## Tools
 
-50 tools are planned. 35 are live; the other 15 show a "Coming soon" page and are kept out of the sitemap.
+46 tools are planned. Tools that are not built yet are hidden everywhere (homepage, categories, search, sitemap) until their slug is added to `lib/live.ts`. Background Remover, TIN Check, Plagiarism Helper and Article Rewriter were dropped.
 
 | Category | Live | Coming soon |
 | --- | --- | --- |
