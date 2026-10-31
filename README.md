@@ -87,6 +87,14 @@ npm run dev
 
 Import the repo in Vercel (Next.js is detected automatically). Every commit to `main` redeploys.
 
+## Cash out rates (Nagad, Rocket, Upay)
+
+The rates live at the top of `components/tools/NagadCalculator.tsx`, `RocketCalculator.tsx` and `UpayCalculator.tsx` (taka per 1,000). Public sources disagree and none is official, so check each app and edit the numbers:
+
+- Nagad agent: 14.9 used (one source says 12.99 in the app, 15 on USSD)
+- Rocket agent: 18 used (another source says 16.7), Dutch-Bangla ATM: 10 used (another says 9)
+- Upay agent: 14, UCB ATM: 8 (single source)
+
 ## Notes
 
 - All calculations happen in the browser. Images and text never leave the device.
