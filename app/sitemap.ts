@@ -6,7 +6,7 @@ import { siteConfig } from "@/lib/seo";
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = siteConfig.url;
   const now = new Date();
-  const statics = ["", "/about", "/contact", "/privacy-policy", "/disclaimer"].map((p) => ({
+  const statics = ["", "/about", "/contact", "/privacy-policy", "/terms", "/disclaimer"].map((p) => ({
     url: `${base}${p}`, lastModified: now, changeFrequency: "monthly" as const, priority: p === "" ? 1 : 0.4,
   }));
   const cats = categories.map((c) => ({ url: `${base}/category/${c.slug}`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.6 }));
