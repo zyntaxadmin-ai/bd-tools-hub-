@@ -1,3 +1,5 @@
+import { LIVE_SLUGS } from "@/lib/live";
+
 export type Category = "Education & Calculation" | "Image & PDF" | "Text & SEO" | "Bangladesh Special" | "Daily Utility";
 
 export interface Tool {
@@ -17,7 +19,7 @@ export const categories: { name: Category; slug: string; desc: string }[] = [
   { name: "Daily Utility", slug: "daily-utility", desc: "Everyday Life Tools" },
 ];
 
-export const tools: Tool[] = [
+const allTools: Tool[] = [
   { id: 31, name: "bKash Calculator", slug: "/tool/bkash-calculator", description: "Cash out charge হিসাব করুন", category: "Bangladesh Special", icon: "Wallet" },
   { id: 32, name: "Nagad Calculator", slug: "/tool/nagad-calculator", description: "Nagad charge calculator", category: "Bangladesh Special", icon: "Smartphone" },
   { id: 34, name: "Land Calculator", slug: "/tool/land-calculator-bd", description: "শতাংশ, কাঠা, বিঘা হিসাব", category: "Bangladesh Special", icon: "MapPinned" },
@@ -27,7 +29,6 @@ export const tools: Tool[] = [
   { id: 33, name: "Rocket Calculator", slug: "/tool/rocket-calculator", description: "Rocket charge হিসাব", category: "Bangladesh Special", icon: "Send" },
   { id: 38, name: "Passport Fee Calculator", slug: "/tool/passport-fee-calculator-bd", description: "E-Passport fee check", category: "Bangladesh Special", icon: "Plane" },
   { id: 40, name: "Upay Calculator", slug: "/tool/upay-calculator", description: "Upay charge calculator", category: "Bangladesh Special", icon: "CreditCard" },
-  { id: 39, name: "TIN Check Helper", slug: "/tool/tin-certificate-check", description: "TIN certificate verify", category: "Bangladesh Special", icon: "FileCheck" },
 
   { id: 1, name: "Age Calculator", slug: "/tool/age-calculator", description: "জন্ম তারিখ দিয়ে বয়স বের করুন", category: "Education & Calculation", icon: "Cake" },
   { id: 2, name: "GPA Calculator", slug: "/tool/gpa-calculator-bd", description: "SSC/HSC GPA নির্ণয়", category: "Education & Calculation", icon: "GraduationCap" },
@@ -43,7 +44,6 @@ export const tools: Tool[] = [
   { id: 11, name: "Image Compressor", slug: "/tool/image-compressor", description: "ছবির সাইজ কমান", category: "Image & PDF", icon: "ImageDown" },
   { id: 12, name: "Image Resizer", slug: "/tool/image-resizer", description: "Passport size resize", category: "Image & PDF", icon: "Expand" },
   { id: 13, name: "Image Converter", slug: "/tool/image-converter", description: "JPG to PNG, WebP", category: "Image & PDF", icon: "RefreshCw" },
-  { id: 14, name: "Background Remover", slug: "/tool/background-remover", description: "ছবির BG remove", category: "Image & PDF", icon: "Eraser" },
   { id: 16, name: "Image to PDF", slug: "/tool/image-to-pdf", description: "ছবি থেকে PDF বানান", category: "Image & PDF", icon: "FileImage" },
   { id: 18, name: "Merge PDF", slug: "/tool/merge-pdf", description: "একাধিক PDF জোড়া দিন", category: "Image & PDF", icon: "Combine" },
   { id: 19, name: "Split PDF", slug: "/tool/split-pdf", description: "PDF পেজ আলাদা করুন", category: "Image & PDF", icon: "Scissors" },
@@ -57,8 +57,6 @@ export const tools: Tool[] = [
   { id: 22, name: "Character Counter", slug: "/tool/character-counter", description: "Character count check", category: "Text & SEO", icon: "Hash" },
   { id: 23, name: "Case Converter", slug: "/tool/case-converter", description: "UPPER to lower", category: "Text & SEO", icon: "CaseSensitive" },
   { id: 26, name: "Keyword Density", slug: "/tool/keyword-density-checker", description: "SEO density checker", category: "Text & SEO", icon: "Search" },
-  { id: 27, name: "Plagiarism Helper", slug: "/tool/plagiarism-checker", description: "Plagiarism check helper", category: "Text & SEO", icon: "ShieldCheck" },
-  { id: 28, name: "Article Rewriter", slug: "/tool/article-rewriter", description: "Rewrite article unique", category: "Text & SEO", icon: "PenLine" },
   { id: 30, name: "Color Picker", slug: "/tool/color-picker", description: "HEX, RGB color picker", category: "Text & SEO", icon: "Palette" },
   { id: 24, name: "Lorem Ipsum", slug: "/tool/lorem-ipsum-generator", description: "Dummy text generator", category: "Text & SEO", icon: "Text" },
 
@@ -73,3 +71,7 @@ export const tools: Tool[] = [
   { id: 49, name: "Countdown Timer", slug: "/tool/countdown-timer", description: "ঈদ, রোজার কাউন্টডাউন", category: "Daily Utility", icon: "Hourglass" },
   { id: 50, name: "Expense Tracker", slug: "/tool/expense-tracker", description: "দৈনিক খরচের হিসাব", category: "Daily Utility", icon: "WalletCards" },
 ];
+
+// Only tools that are actually built are shown (homepage, categories, search, sitemap).
+// Add a slug to lib/live.ts when a new tool is ready and it appears automatically.
+export const tools: Tool[] = allTools.filter((t) => LIVE_SLUGS.includes(t.slug.replace("/tool/", "")));
