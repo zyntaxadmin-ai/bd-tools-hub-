@@ -14,6 +14,7 @@ import { TOOL_REGISTRY_B3 } from "@/components/toolRegistryB3";
 import { TOOL_REGISTRY_B4 } from "@/components/toolRegistryB4";
 import { TOOL_REGISTRY_B5 } from "@/components/toolRegistryB5";
 import { TOOL_REGISTRY_B6 } from "@/components/toolRegistryB6";
+import { TOOL_REGISTRY_B7 } from "@/components/toolRegistryB7";
 
 export type Entry = {
   component: React.ComponentType;
@@ -134,4 +135,5 @@ export const TOOL_REGISTRY: Record<string, Entry> = {
   ...TOOL_REGISTRY_B4,
   ...TOOL_REGISTRY_B5,
   ...TOOL_REGISTRY_B6,
+  ...TOOL_REGISTRY_B7,
 };
