@@ -321,6 +321,37 @@ export const TOOL_EN: Record<string, ToolEn> = {
       { q: "Can I download the audio?", a: "No. The browser voice can only play the sound and cannot save it as a file." },
     ],
   },
+  "nagad-calculator": {
+    title: "Nagad Charge Calculator",
+    desc: "Work out the Nagad cash out charge and the total amount deducted in a moment. You can also enter your own rate.",
+    howTo: ["Enter the amount", "Choose agent or ATM cash out", "See the charge and the total deducted"],
+    faqs: [
+      { q: "What is the Nagad cash out charge on 1,000 taka?", a: "This calculator uses 14.90 taka per 1,000. Rates can differ by app, USSD and offers, so check the app." },
+      { q: "Is the charge always the same?", a: "No. Nagad can change its charges at any time. Check the app or the official charge chart." },
+      { q: "What if my rate is different?", a: "Choose \"Enter my own rate\" and type your rate per 1,000 taka." },
+      { q: "Why is send money not included?", a: "Send money fees vary by app and offer, so they are not included." },
+    ],
+  },
+  "rocket-calculator": {
+    title: "Rocket Charge Calculator",
+    desc: "Work out how much it costs to cash out from Dutch-Bangla Bank's Rocket at an agent or an ATM.",
+    howTo: ["Enter the amount", "Choose agent or Dutch-Bangla ATM", "See the charge and the total deducted"],
+    faqs: [
+      { q: "What is the Rocket agent cash out charge?", a: "This calculator uses 18 taka per 1,000 (1.8%). Some sources list 1.67%, so check the app." },
+      { q: "Why is the Dutch-Bangla ATM cheaper?", a: "Rocket is a Dutch-Bangla Bank service, so cash out at its own ATMs usually costs less." },
+      { q: "Do charges change?", a: "Yes, at any time. Check the official app or charge chart." },
+    ],
+  },
+  "upay-calculator": {
+    title: "Upay Charge Calculator",
+    desc: "Work out how much it costs to cash out from UCB's Upay at an agent or an ATM.",
+    howTo: ["Enter the amount", "Choose agent or UCB ATM", "See the charge and the total deducted"],
+    faqs: [
+      { q: "What is the Upay agent cash out charge?", a: "This calculator uses 14 taka per 1,000 (1.4%) and 8 taka at UCB ATMs. Confirm in the app." },
+      { q: "Do charges change?", a: "Yes, at any time. Check the official app or charge chart." },
+      { q: "What if my rate is different?", a: "Choose \"Enter my own rate\" and type your rate per 1,000 taka." },
+    ],
+  },
   "bangla-calendar": {
     title: "Bangla Calendar",
     desc: "See today's Bangla date, browse a Gregorian and Bangla calendar and convert dates, using Bangladesh's revised Bangla calendar.",

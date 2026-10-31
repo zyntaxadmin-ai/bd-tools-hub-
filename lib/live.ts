@@ -39,4 +39,8 @@ export const LIVE_SLUGS = [
   "qr-scanner",
   "text-to-speech",
   "bangla-calendar",
+  // batch 5
+  "nagad-calculator",
+  "rocket-calculator",
+  "upay-calculator",
 ];
