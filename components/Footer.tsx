@@ -43,6 +43,7 @@ export default function Footer() {
               <li><Link href="/privacy-policy" className="hover:text-indigo-600">{ui.privacy}</Link></li>
               <li><Link href="/about" className="hover:text-indigo-600">{ui.about}</Link></li>
               <li><Link href="/contact" className="hover:text-indigo-600">{ui.contact}</Link></li>
+              <li><Link href="/terms" className="hover:text-indigo-600">{ui.terms}</Link></li>
               <li><Link href="/disclaimer" className="hover:text-indigo-600">{ui.disclaimer}</Link></li>
             </ul>
           </div>
