@@ -43,4 +43,8 @@ export const LIVE_SLUGS = [
   "nagad-calculator",
   "rocket-calculator",
   "upay-calculator",
+  // batch 6
+  "image-to-pdf",
+  "merge-pdf",
+  "split-pdf",
 ];

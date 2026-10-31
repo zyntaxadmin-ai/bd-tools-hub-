@@ -352,6 +352,42 @@ export const TOOL_EN: Record<string, ToolEn> = {
       { q: "What if my rate is different?", a: "Choose \"Enter my own rate\" and type your rate per 1,000 taka." },
     ],
   },
+  "image-to-pdf": {
+    title: "Image to PDF",
+    desc: "Make one PDF from one or more images. Set the order and choose A4 or fit-to-image pages. Your images are not uploaded, everything happens on your phone.",
+    howTo: ["Select one or more images", "Set the order with the arrow buttons and pick a page size", "Tap Create PDF and download it"],
+    faqs: [
+      { q: "Are my images uploaded anywhere?", a: "No. The PDF is made entirely on your phone or browser and no image goes to a server." },
+      { q: "Can I make one PDF from several images?", a: "Yes, up to 50 images at once. Each image becomes its own page." },
+      { q: "What is the difference between A4 and fit to image?", a: "With A4, each image is centred on an A4 page with a small margin. With fit to image, the page is exactly the size of the image with no margin." },
+      { q: "What happens to transparent parts of a PNG?", a: "Images are placed in the PDF as JPEG, so transparent areas turn white." },
+      { q: "Can I use it for passport or form submissions?", a: "Yes. If there is a file size limit, shrink the images first with the Image Compressor." },
+    ],
+  },
+  "merge-pdf": {
+    title: "Merge PDF",
+    desc: "Combine several PDF files into one PDF and set the order yourself. Your files are not uploaded, everything happens on your phone.",
+    howTo: ["Select two or more PDFs", "Set the order with the arrow buttons", "Tap Merge PDFs and download the result"],
+    faqs: [
+      { q: "Are my PDFs uploaded anywhere?", a: "No. Merging happens entirely on your phone or browser and no file goes to a server." },
+      { q: "How many PDFs can I merge?", a: "Up to 20 files at once, each up to 50 MB." },
+      { q: "Can I merge a password protected PDF?", a: "No. Password protected or damaged PDFs cannot be opened. Remove the password first." },
+      { q: "How do I change the order afterwards?", a: "Use the arrow buttons next to each file and merge again." },
+      { q: "Will the file get bigger?", a: "It will be roughly the sum of all the file sizes. Compress it afterwards if you need it smaller." },
+    ],
+  },
+  "split-pdf": {
+    title: "Split PDF",
+    desc: "Pull chosen pages out of a PDF, or turn every page into its own PDF. Your file is not uploaded, everything happens on your phone.",
+    howTo: ["Select a PDF", "Type a page range (for example 1-3, 5) or choose each page separately", "Tap Split PDF and download the result"],
+    faqs: [
+      { q: "Is my PDF uploaded anywhere?", a: "No. Splitting happens entirely on your phone or browser and no file goes to a server." },
+      { q: "How do I write a page range?", a: "Separate parts with commas. For example, 1-3, 5, 8-10 keeps pages 1, 2, 3, 5, 8, 9 and 10 in one new PDF. Bangla digits work too." },
+      { q: "What do I get if I split each page?", a: "Every page becomes its own PDF and you download them one by one. This works for PDFs up to 100 pages." },
+      { q: "Can I split a password protected PDF?", a: "No. Password protected or damaged PDFs cannot be opened." },
+      { q: "Does the original PDF change?", a: "No. Your original stays as it was, only new files are created." },
+    ],
+  },
   "bangla-calendar": {
     title: "Bangla Calendar",
     desc: "See today's Bangla date, browse a Gregorian and Bangla calendar and convert dates, using Bangladesh's revised Bangla calendar.",
