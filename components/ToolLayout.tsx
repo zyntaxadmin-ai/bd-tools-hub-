@@ -6,6 +6,7 @@ import AdSlot from "./AdSlot";
 import { tools } from "@/data/tools";
 import { LIVE_SLUGS } from "@/lib/live";
 import { TOOL_EN } from "@/lib/toolContentEn";
+import { TOOL_ARTICLES } from "@/lib/toolArticles";
 import { CAT_I18N } from "@/lib/i18nData";
 import { useLang, useUI } from "@/lib/lang";
 
@@ -28,6 +29,7 @@ export default function ToolLayout({ title, description, category, categorySlug,
   const d = en ? en.desc : description;
   const steps = en ? en.howTo : howToSteps;
   const questions = en ? en.faqs : faqs;
+  const article = TOOL_ARTICLES[slug.replace("/tool/", "")]?.[lang === "en" ? "en" : "bn"];
   const catLabel = CAT_I18N[categorySlug]?.[lang].name ?? category;
 
   const related = tools
@@ -54,6 +56,19 @@ export default function ToolLayout({ title, description, category, categorySlug,
       <div className="mt-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm p-6 md:p-8">{children}</div>
 
       <div className="mt-6"><AdSlot label="Advertisement" /></div>
+
+      {article && (
+        <div className="mt-8 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 space-y-6">
+          {article.map((sec) => (
+            <section key={sec.h}>
+              <h2 className="font-semibold text-slate-900 dark:text-white mb-3">{sec.h}</h2>
+              <div className="space-y-3 text-sm text-slate-600 dark:text-slate-400 leading-7">
+                {sec.p.map((para, i) => <p key={i}>{para}</p>)}
+              </div>
+            </section>
+          ))}
+        </div>
+      )}
 
       <div className="mt-8 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6">
         <h2 className="font-semibold text-slate-900 dark:text-white mb-4">{ui.howTo(t)}</h2>
