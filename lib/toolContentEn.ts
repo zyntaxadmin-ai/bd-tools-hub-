@@ -388,6 +388,31 @@ export const TOOL_EN: Record<string, ToolEn> = {
       { q: "Does the original PDF change?", a: "No. Your original stays as it was, only new files are created." },
     ],
   },
+  "pdf-to-jpg": {
+    title: "PDF to JPG",
+    desc: "Turn each page of a PDF into a JPG image. Pick the pages and the image quality. Your PDF is not uploaded, everything happens on your phone.",
+    howTo: ["Select a PDF", "Type a page range if needed and choose the image quality", "Tap Convert to JPG and download each page image"],
+    faqs: [
+      { q: "Is my PDF uploaded anywhere?", a: "No. Your PDF is turned into images entirely on your phone or browser. Only the PDF reader library (pdf.js) is loaded once from the internet, so you need a connection the first time." },
+      { q: "How many pages can I convert at once?", a: "Up to 50 pages at a time. For longer PDFs, type a page range such as 1-50, then 51-100." },
+      { q: "What is the difference between normal and high quality?", a: "Normal makes an A4 page about 892 × 1262 pixels with a smaller file. High makes bigger, sharper images but larger files." },
+      { q: "Can I download all pages at once?", a: "No, each page image has its own download button." },
+      { q: "Can I convert a password protected PDF?", a: "No. Password protected or damaged PDFs cannot be opened." },
+    ],
+  },
+  "compress-pdf": {
+    title: "Compress PDF",
+    desc: "Shrink scanned or image-based PDFs with three compression levels and see the size before and after. Your PDF is not uploaded, everything happens on your phone.",
+    howTo: ["Select a PDF", "Choose light, balanced or strong compression", "Tap Compress PDF, check the before and after size and download it"],
+    faqs: [
+      { q: "Is my PDF uploaded anywhere?", a: "No. Compression happens entirely on your phone or browser. Only the PDF reader library (pdf.js) is loaded once from the internet, so you need a connection the first time." },
+      { q: "Which PDFs does it work best on?", a: "Scanned papers, image-based PDFs and PDFs of phone photos. Files like these often shrink a lot, sometimes by 80% or more, though it varies from file to file." },
+      { q: "Can I still copy text after compressing?", a: "No. This tool turns every page into an image to build the new PDF, so text can no longer be selected, copied or searched. Keep the original if you need the text." },
+      { q: "Why did the size not go down?", a: "Text-based PDFs are usually small already, so the new file can even be bigger. In that case the tool hides the download button and you should keep the original." },
+      { q: "Which level should I pick?", a: "Start with balanced. Choose strong to go smaller, or light if text looks blurry." },
+      { q: "How many pages can it handle?", a: "Up to 60 pages and 50 MB. Split bigger PDFs first with Split PDF." },
+    ],
+  },
   "bangla-calendar": {
     title: "Bangla Calendar",
     desc: "See today's Bangla date, browse a Gregorian and Bangla calendar and convert dates, using Bangladesh's revised Bangla calendar.",

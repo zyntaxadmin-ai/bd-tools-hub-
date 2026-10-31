@@ -47,4 +47,7 @@ export const LIVE_SLUGS = [
   "image-to-pdf",
   "merge-pdf",
   "split-pdf",
+  // batch 7
+  "pdf-to-jpg",
+  "compress-pdf",
 ];

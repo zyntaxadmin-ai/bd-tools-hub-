@@ -693,4 +693,74 @@ export const TOOL_ARTICLES: Record<string, ToolArticle> = {
       },
     ],
   },
+
+  "pdf-to-jpg": {
+    bn: [
+      {
+        h: "PDF থেকে JPG কীভাবে বানাবেন",
+        p: [
+          "PDF সিলেক্ট করুন, চাইলে পেজ রেঞ্জ লিখুন (যেমন 1-3, 5), ছবির মান বেছে নিন, তারপর JPG বানান চাপুন। প্রতিটি পেজ একটি আলাদা JPG ছবি হয় এবং পাশের বাটন থেকে ডাউনলোড করা যায়।",
+          "সাধারণ মানে A4 পেজ প্রায় ৮৯২ × ১২৬২ পিক্সেলের ছবি হয়, ফাইল ছোট থাকে। উচ্চ মানে ছবি আরও বড় ও স্পষ্ট হয়, তবে ফাইলের সাইজও বাড়ে। একবারে সর্বোচ্চ ৫০টি পেজ করা যায়।",
+        ],
+      },
+      {
+        h: "কখন কাজে লাগে",
+        p: [
+          "PDF এর কোনো পেজ ছবি হিসেবে মেসেঞ্জারে বা ফর্মে পাঠাতে, বা পেজের ছবি এডিট করতে চাইলে এটি কাজে লাগে।",
+          "আপনার PDF কোথাও আপলোড হয় না, সব কাজ আপনার ফোন বা ব্রাউজারেই হয়। শুধু PDF পড়ার টুলটি ইন্টারনেট থেকে একবার লোড হয়, তাই প্রথমবার ইন্টারনেট দরকার। পাসওয়ার্ড দেওয়া PDF খোলা যায় না।",
+        ],
+      },
+    ],
+    en: [
+      {
+        h: "How to turn a PDF into JPG images",
+        p: [
+          "Select a PDF, optionally type a page range (for example 1-3, 5), choose the image quality, then tap Convert to JPG. Each page becomes its own JPG image with a download button beside it.",
+          "Normal quality makes an A4 page about 892 × 1262 pixels with a smaller file. High quality gives bigger, sharper images but larger files. You can convert up to 50 pages at a time.",
+        ],
+      },
+      {
+        h: "When it helps",
+        p: [
+          "It helps when you want to send a PDF page as a picture in a chat or form, or edit a page as an image.",
+          "Your PDF is not uploaded anywhere, everything happens on your phone or browser. Only the PDF reader library is loaded once from the internet, so you need a connection the first time. Password protected PDFs cannot be opened.",
+        ],
+      },
+    ],
+  },
+
+  "compress-pdf": {
+    bn: [
+      {
+        h: "PDF এর সাইজ কীভাবে কমাবেন",
+        p: [
+          "PDF সিলেক্ট করে হালকা, মাঝারি বা শক্তিশালী মাত্রা বেছে নিন, তারপর PDF কম্প্রেস করুন চাপুন। শেষে আগে ও পরের সাইজ দেখানো হয়। নতুন ফাইল ছোট হলেই ডাউনলোড বাটন আসে।",
+          "এই টুল প্রতিটি পেজকে ছবিতে বদলে নতুন PDF বানায়, পেজের মাপ একই থাকে। তাই স্ক্যান করা কাগজ বা ছবির PDF অনেকটাই ছোট হয়।",
+        ],
+      },
+      {
+        h: "যা মনে রাখবেন",
+        p: [
+          "কম্প্রেসের পর PDF এর লেখা সিলেক্ট, কপি বা সার্চ করা যাবে না, কারণ পেজ এখন ছবি। লেখা দরকার হলে মূল ফাইল রেখে দিন। লেখা-ভিত্তিক PDF আগে থেকেই ছোট থাকে, সেখানে নতুন ফাইল বড় হতে পারে, তখন মূল ফাইলটিই ব্যবহার করুন।",
+          "আবেদন ফর্মে ফাইলের সাইজের সীমা থাকলে এটি কাজে লাগে। আপনার PDF কোথাও আপলোড হয় না, সব কাজ আপনার ফোন বা ব্রাউজারেই হয়। শুধু PDF পড়ার টুলটি ইন্টারনেট থেকে একবার লোড হয়। সর্বোচ্চ ৬০ পেজ ও ৫০ MB।",
+        ],
+      },
+    ],
+    en: [
+      {
+        h: "How to reduce a PDF's size",
+        p: [
+          "Select a PDF, choose light, balanced or strong compression, then tap Compress PDF. You then see the size before and after. The download button appears only when the new file is smaller.",
+          "This tool turns every page into an image and builds a new PDF at the same page size. Scanned papers and image-based PDFs often shrink a lot.",
+        ],
+      },
+      {
+        h: "Good to know",
+        p: [
+          "After compressing, the text in the PDF can no longer be selected, copied or searched, because the pages are now images. Keep the original if you need the text. Text-based PDFs are usually small already, so the new file can even be bigger, in which case keep the original.",
+          "It helps when an application form has a file size limit. Your PDF is not uploaded anywhere, everything happens on your phone or browser. Only the PDF reader library is loaded once from the internet. Up to 60 pages and 50 MB.",
+        ],
+      },
+    ],
+  },
 };
