@@ -763,4 +763,74 @@ export const TOOL_ARTICLES: Record<string, ToolArticle> = {
       },
     ],
   },
+
+  "passport-fee-calculator-bd": {
+    bn: [
+      {
+        h: "ই-পাসপোর্টের ফি কীভাবে দেখবেন",
+        p: [
+          "পাসপোর্টের পৃষ্ঠা (৪৮ বা ৬৪), মেয়াদ (৫ বা ১০ বছর) এবং ডেলিভারির ধরন (সাধারণ, জরুরি বা অতি জরুরি) বেছে নিলে ফি দেখা যায়। যেমন ৪৮ পৃষ্ঠার ৫ বছরের সাধারণ ই-পাসপোর্টের ফি ৪,০২৫ টাকা, আর ৬৪ পৃষ্ঠার ১০ বছরের অতি জরুরি পাসপোর্টের ফি ১৩,৮০০ টাকা। সব ফি ১৫% ভ্যাটসহ।",
+          "নিচের তালিকায় একই পৃষ্ঠা ও মেয়াদের তিন ধরনের ডেলিভারির ফি পাশাপাশি দেখানো হয়, তাই কোনটিতে কত বাড়তি লাগবে তা সহজে তুলনা করা যায়।",
+        ],
+      },
+      {
+        h: "আবেদনের আগে যা মনে রাখবেন",
+        p: [
+          "এই ফি তালিকা ১২ জুলাই ২০২৬ তারিখের সরকারি তালিকা অনুযায়ী প্রকাশিত তথ্য থেকে নেওয়া। ফি বদলাতে পারে, তাই আবেদনের আগে অফিসিয়াল পোর্টাল epassport.gov.bd এ মিলিয়ে নিন।",
+          "শিশু, নবায়ন, জরুরি পাসপোর্ট, বিদেশের দূতাবাস এবং NOC এর মতো বিশেষ ছাড়ের ক্ষেত্রে ফি আলাদা হতে পারে, এই টুল সেগুলো ধরে না। এটি একটি স্বাধীন ওয়েবসাইট, কোনো সরকারি সংস্থার সঙ্গে যুক্ত নয়।",
+        ],
+      },
+    ],
+    en: [
+      {
+        h: "How to check the e-passport fee",
+        p: [
+          "Choose the booklet pages (48 or 64), the validity (5 or 10 years) and the delivery type (regular, express or super express) to see the fee. For example, a 48 page, 5 year regular e-passport costs 4,025 taka, and a 64 page, 10 year super express passport costs 13,800 taka. All fees include 15% VAT.",
+          "The table below shows the fees for all three delivery types for the same pages and validity side by side, so you can easily compare how much extra each costs.",
+        ],
+      },
+      {
+        h: "Before you apply",
+        p: [
+          "This fee list is taken from published information quoting the official schedule updated 12 July 2026. Fees can change, so confirm them on the official portal, epassport.gov.bd, before you apply.",
+          "Fees can differ for children, renewals, emergency passports, overseas missions and special concessions such as NOC, and this tool does not cover them. This is an independent website and is not connected to any government body.",
+        ],
+      },
+    ],
+  },
+
+  "bdt-currency-converter": {
+    bn: [
+      {
+        h: "টাকার রেট কীভাবে কনভার্ট করবেন",
+        p: [
+          "পরিমাণ লিখে কোন মুদ্রা থেকে কোন মুদ্রায় বদলাবেন তা বেছে নিন। টাকা, মার্কিন ডলার, সৌদি রিয়াল, UAE দিরহাম, ভারতীয় রুপি, ইউরো, পাউন্ডসহ কয়েকটি মুদ্রা আছে। মাঝের তীর বাটনে চাপ দিলে দুই মুদ্রা অদলবদল হয়।",
+          "ফলাফলের নিচে ১ একক মুদ্রার রেট ও রেটের তারিখ দেখানো হয়। রেট দিনে একবার আপডেট হয়।",
+        ],
+      },
+      {
+        h: "এই রেট আর ব্যাংকের রেটের পার্থক্য",
+        p: [
+          "এখানে দেখানো রেট মধ্যবর্তী (রেফারেন্স) রেট। ব্যাংক, এক্সচেঞ্জ হাউস বা মানি চেঞ্জার নিজেদের কেনা ও বেচার রেট ব্যবহার করে, যা এর থেকে আলাদা হয়। তাই টাকা বদলানো বা রেমিট্যান্স পাঠানোর আগে তাদের রেট দেখে নিন।",
+          "রেট আনার জন্য ইন্টারনেট লাগে। আপনার লেখা পরিমাণ কোথাও পাঠানো হয় না।",
+        ],
+      },
+    ],
+    en: [
+      {
+        h: "How to convert currency",
+        p: [
+          "Enter an amount and choose which currency to convert from and to. Taka, US dollar, Saudi riyal, UAE dirham, Indian rupee, euro and pound are among the currencies available. Tap the arrow button in the middle to swap the two currencies.",
+          "Below the result you see the rate for 1 unit and the date of the rate. The rates update once a day.",
+        ],
+      },
+      {
+        h: "How this differs from a bank's rate",
+        p: [
+          "The rate shown here is a mid-market (reference) rate. Banks, exchange houses and money changers use their own buying and selling rates, which differ from it. Check their rates before you exchange money or send remittance.",
+          "An internet connection is needed to fetch the rates. The amount you type is never sent anywhere.",
+        ],
+      },
+    ],
+  },
 };

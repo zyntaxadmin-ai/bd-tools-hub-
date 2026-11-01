@@ -50,4 +50,7 @@ export const LIVE_SLUGS = [
   // batch 7
   "pdf-to-jpg",
   "compress-pdf",
+  // batch 8
+  "passport-fee-calculator-bd",
+  "bdt-currency-converter",
 ];

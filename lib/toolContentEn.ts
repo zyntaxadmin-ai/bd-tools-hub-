@@ -413,6 +413,28 @@ export const TOOL_EN: Record<string, ToolEn> = {
       { q: "How many pages can it handle?", a: "Up to 60 pages and 50 MB. Split bigger PDFs first with Split PDF." },
     ],
   },
+  "passport-fee-calculator-bd": {
+    title: "Passport Fee Calculator BD",
+    desc: "Pick 48 or 64 pages, 5 or 10 years and a delivery type to see the e-passport fee. 15% VAT included.",
+    howTo: ["Choose the booklet pages (48 or 64)", "Choose the validity (5 or 10 years) and the delivery type", "See the fee and confirm it on the official portal before you apply"],
+    faqs: [
+      { q: "What is the fee for a 48 page, 5 year regular e-passport?", a: "According to this tool's list it is 4,025 taka including 15% VAT. Fees can change, so check epassport.gov.bd before you apply." },
+      { q: "Is VAT included?", a: "Yes, every fee here includes 15% VAT." },
+      { q: "Are child and renewal fees different?", a: "This tool only has the standard fees for a new e-passport. Fees for children, renewals, emergency passports, overseas missions and special concessions can differ, so check the official portal." },
+      { q: "Is this an official government tool?", a: "No. This is an independent website. The fee list is taken from published information and is not connected to any government body. Check the final fee on the official portal." },
+    ],
+  },
+  "bdt-currency-converter": {
+    title: "BDT Currency Converter",
+    desc: "Convert taka to dollars, riyals, dirhams, rupees, pounds and more at a daily reference rate.",
+    howTo: ["Enter an amount", "Choose which currency to convert from and to", "See the result and the date of the rate"],
+    faqs: [
+      { q: "Where do the rates come from?", a: "From an open currency rate dataset that updates once a day. It is a mid-market (reference) rate, and the rate date is shown under the result." },
+      { q: "Why does it differ from my bank or exchange house?", a: "Banks, exchange houses and money changers use their own buying and selling rates, which differ from the mid-market rate. Check theirs before you transact." },
+      { q: "Is this the rate used to send remittance?", a: "No. Remittance rates and fees depend on the service you use. This tool is only for estimating." },
+      { q: "Does it work offline?", a: "No, it needs an internet connection to fetch the rates. The amount you type is never sent anywhere." },
+    ],
+  },
   "bangla-calendar": {
     title: "Bangla Calendar",
     desc: "See today's Bangla date, browse a Gregorian and Bangla calendar and convert dates, using Bangladesh's revised Bangla calendar.",
