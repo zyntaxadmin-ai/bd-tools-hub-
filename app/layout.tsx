@@ -13,6 +13,20 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: { default: "BD Tools Flow - Free Online Tools for Bangladesh", template: "%s | BD Tools Flow" },
   description: "ফ্রি অনলাইন টুলস: Age Calculator, GPA Calculator, bKash Calculator, Word Counter ও আরও অনেক কিছু। Fast, Free, No Signup.",
+  openGraph: {
+    type: "website",
+    siteName: siteConfig.name,
+    url: siteConfig.url,
+    title: "BD Tools Flow - Free Online Tools for Bangladesh",
+    description: "ফ্রি অনলাইন টুলস: Age Calculator, GPA Calculator, bKash Calculator, Word Counter ও আরও অনেক কিছু। Fast, Free, No Signup.",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "BD Tools Flow - Free Online Tools for Bangladesh" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "BD Tools Flow - Free Online Tools for Bangladesh",
+    description: "Free online tools for Bangladesh. Fast, free, no signup.",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
