@@ -53,4 +53,6 @@ export const LIVE_SLUGS = [
   // batch 8
   "passport-fee-calculator-bd",
   "bdt-currency-converter",
+  // batch 9
+  "electricity-bill-calculator-bd",
 ];
