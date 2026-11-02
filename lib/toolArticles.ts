@@ -840,13 +840,13 @@ export const TOOL_ARTICLES: Record<string, ToolArticle> = {
         h: "বিদ্যুৎ বিল কীভাবে হিসাব হয়",
         p: [
           "আবাসিক বিল তিনটি অংশ নিয়ে হয়: ইউনিট অনুযায়ী বিদ্যুতের মূল্য, অনুমোদিত লোড অনুযায়ী ডিমান্ড চার্জ, এবং এই দুটির যোগফলের ওপর ৫% ভ্যাট। ইউনিটের মূল্য স্ল্যাব ধরে হয়, প্রতিটি রেট শুধু ওই স্ল্যাবের ইউনিটে লাগে।",
-          "উদাহরণ: ২০০ ইউনিট ও ১ kW লোড হলে প্রথম ৭৫ ইউনিট ৬.১৮ টাকায় (৪৬৩.৫০), পরের ১২৫ ইউনিট ৮.৫০ টাকায় (১,০৬২.৫০) ধরে বিদ্যুতের মূল্য ১,৫২৬ টাকা। এর সঙ্গে ডিমান্ড চার্জ ৪২ টাকা যোগ করে ১,৫৬৮ টাকার ওপর ৫% ভ্যাট ৭৮.৪০ টাকা, মোট ১,৬৪৬.৪০ টাকা।",
+          "উদাহরণ: ২০০ ইউনিট ও ১ kW লোড হলে প্রথম ৭৫ ইউনিট ৫.২৬ টাকায় (৩৯৪.৫০), পরের ১২৫ ইউনিট ৮.৫০ টাকায় (১,০৬২.৫০) ধরে বিদ্যুতের মূল্য ১,৪৫৭ টাকা। এর সঙ্গে ডিমান্ড চার্জ ৪২ টাকা যোগ করে ১,৪৯৯ টাকার ওপর ৫% ভ্যাট ৭৪.৯৫ টাকা, মোট ১,৫৭৩.৯৫ টাকা।",
         ],
       },
       {
         h: "বিলের সঙ্গে মিলিয়ে নিন",
         p: [
-          "এই টুলে ১ জুন ২০২৬ থেকে কার্যকর বিইআরসির ঘোষিত আবাসিক (LT-A) রেট ধরা হয়েছে। ৫০ ইউনিট বা কম ব্যবহার করলে সব ইউনিট লাইফলাইন রেট ৫.৩২ টাকায় ধরা হয়।",
+          "এই টুলে জুন ২০২৬ বিলিং থেকে কার্যকর আবাসিক (LT-A) রেট ধরা হয়েছে। বিইআরসি ৩ জুনের বাড়তি দাম ৫০ ও ৭৫ ইউনিটের স্ল্যাবের জন্য ৪ জুন প্রত্যাহার করেছে, তাই লাইফলাইন (৫০ ইউনিট বা কম) রেট ৪.৬৩ ও প্রথম স্ল্যাব ৫.২৬ টাকাই আছে।",
           "ডিমান্ড চার্জ প্রতি kW ৪২ টাকা ধরা হয়েছে, তবে আপনার বিলে আলাদা হতে পারে, তাই ঘরটি বদলানো যায়। মিটার ভাড়া, বকেয়া, দেরির জরিমানা ও রিবেট ধরা হয়নি, তাই প্রকৃত বিল কিছুটা আলাদা হতে পারে। প্রকৃত বিলই চূড়ান্ত।",
         ],
       },
@@ -856,13 +856,13 @@ export const TOOL_ARTICLES: Record<string, ToolArticle> = {
         h: "How an electricity bill is worked out",
         p: [
           "A residential bill has three parts: the energy charge based on units used, the demand charge based on your sanctioned load, and 5% VAT on the sum of those two. The energy charge is worked out slab by slab, and each rate applies only to the units inside its slab.",
-          "Example: with 200 units and a 1 kW load, the first 75 units are charged at 6.18 taka (463.50) and the next 125 at 8.50 taka (1,062.50), so the energy charge is 1,526 taka. Adding a demand charge of 42 taka gives 1,568 taka, and 5% VAT of 78.40 makes the total 1,646.40 taka.",
+          "Example: with 200 units and a 1 kW load, the first 75 units are charged at 5.26 taka (394.50) and the next 125 at 8.50 taka (1,062.50), so the energy charge is 1,457 taka. Adding a demand charge of 42 taka gives 1,499 taka, and 5% VAT of 74.95 makes the total 1,573.95 taka.",
         ],
       },
       {
         h: "Check it against your bill",
         p: [
-          "This tool uses the residential (LT-A) rates announced by BERC, effective from 1 June 2026. If you use 50 units or fewer, all units are charged the lifeline rate of 5.32 taka.",
+          "This tool uses the residential (LT-A) rates effective from the June 2026 billing month. BERC withdrew its 3 June hike for the 0-50 and 0-75 unit slabs on 4 June, so the lifeline rate (50 units or fewer) stays at 4.63 taka and the first slab at 5.26 taka.",
           "The demand charge is set at 42 taka per kW, but your bill may differ, so the field can be changed. Meter rent, arrears, late fees and rebates are not included, so your actual bill can be a little different. The bill you receive is final.",
         ],
       },

@@ -440,8 +440,8 @@ export const TOOL_EN: Record<string, ToolEn> = {
     desc: "Estimate your monthly residential (LT-A) electricity bill from units used, sanctioned load and 5% VAT, with a slab by slab breakdown.",
     howTo: ["Enter the units you used in the month", "Enter your sanctioned load in kW and check the demand charge", "Tap Calculate Bill and compare the breakdown with your bill"],
     faqs: [
-      { q: "Which rates does it use?", a: "The residential (LT-A) rates announced by BERC on 3 June 2026, effective from 1 June 2026: 6.18 taka up to 75 units, 8.50 for 76-200, 9.10 for 201-300, 9.62 for 301-400, 15.01 for 401-600 and 17.35 above 600. With 50 units or fewer, all units are charged 5.32 taka." },
-      { q: "Is each rate applied to all my units?", a: "No. Each rate applies only to the units inside its slab. For example, with 200 units the first 75 are charged 6.18 and the next 125 are charged 8.50." },
+      { q: "Which rates does it use?", a: "The residential (LT-A) rates effective from the June 2026 billing month: 5.26 taka up to 75 units, 8.50 for 76-200, 9.10 for 201-300, 9.62 for 301-400, 15.01 for 401-600 and 17.35 above 600. With 50 units or fewer, all units are charged 4.63 taka. BERC withdrew its 3 June hike for the 0-50 and 0-75 unit slabs on 4 June, so those two rates stay as before." },
+      { q: "Is each rate applied to all my units?", a: "No. Each rate applies only to the units inside its slab. For example, with 200 units the first 75 are charged 5.26 and the next 125 are charged 8.50." },
       { q: "What is the demand charge?", a: "A fixed monthly charge based on your sanctioned load in kW, whatever your usage. This tool uses 42 taka per kW, and you can change it to match your bill." },
       { q: "Why is my bill different from the result?", a: "Your bill can include meter rent, arrears, late fees, rebates and a different demand charge, and your distribution company may apply its own rules. Use this as an estimate and trust the bill you receive." },
       { q: "Does it work for commercial or industrial connections?", a: "No. It is only for residential (LT-A) customers." },
