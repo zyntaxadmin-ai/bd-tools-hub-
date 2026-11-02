@@ -6,6 +6,7 @@ import JsonLd from "@/components/JsonLd";
 import { TOOL_REGISTRY } from "@/components/toolRegistry";
 import { tools, categories } from "@/data/tools";
 import { siteConfig } from "@/lib/seo";
+import { SEO_META } from "@/lib/seoMeta";
 
 export function generateStaticParams() {
   return tools.map((t) => ({ slug: t.slug.replace("/tool/", "") }));
@@ -15,8 +16,9 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   const tool = tools.find((t) => t.slug === `/tool/${params.slug}`);
   if (!tool) return {};
   const entry = TOOL_REGISTRY[params.slug];
-  const title = `${tool.name} - Free Online Tool`;
-  const description = (entry ? entry.desc : tool.description).slice(0, 155);
+  const seo = SEO_META[params.slug];
+  const title = seo ? seo.title : `${tool.name} - Free Online Tool`;
+  const description = seo ? seo.description : (entry ? entry.desc : tool.description).slice(0, 155);
   const canonical = `${siteConfig.url}/tool/${params.slug}`;
   return {
     title,
