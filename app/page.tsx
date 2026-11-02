@@ -1,91 +1,88 @@
-import type { Metadata } from "next";
-import Link from "next/link";
-import { notFound } from "next/navigation";
-import T from "@/components/T";
-import { GUIDES, getGuide } from "@/lib/guides";
-import { siteConfig } from "@/lib/seo";
+"use client";
+import { useState, useMemo } from "react";
+import ToolCard from "@/components/ToolCard";
+import SiteJsonLd from "@/components/SiteJsonLd";
+import SearchBar from "@/components/SearchBar";
+import { tools, categories } from "@/data/tools";
+import { CAT_I18N, DESC_EN } from "@/lib/i18nData";
+import { useLang, useUI } from "@/lib/lang";
+import { ShieldCheck, Zap, Users, Sparkles } from "lucide-react";
 
-export function generateStaticParams() {
-  return GUIDES.map((g) => ({ slug: g.slug }));
-}
+const ICONS = [Zap, ShieldCheck, Users, Sparkles];
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const g = getGuide(params.slug);
-  if (!g) return {};
-  const canonical = `${siteConfig.url}/guides/${g.slug}`;
-  return {
-    title: g.title[0],
-    description: g.desc[0],
-    alternates: { canonical },
-    openGraph: { title: g.title[0], description: g.desc[0], url: canonical, siteName: siteConfig.name, type: "article", images: [{ url: "/og-image.png", width: 1200, height: 630, alt: siteConfig.name }] },
-    twitter: { card: "summary_large_image", title: g.title[0], description: g.desc[0], images: ["/og-image.png"] },
-  };
-}
+export default function HomePage() {
+  const [search, setSearch] = useState("");
+  const { lang } = useLang();
+  const ui = useUI();
 
-export default function Page({ params }: { params: { slug: string } }) {
-  const g = getGuide(params.slug);
-  if (!g) return notFound();
-  const url = `${siteConfig.url}/guides/${g.slug}`;
-  const article = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: g.title[0],
-    description: g.desc[0],
-    dateModified: g.updated,
-    datePublished: g.updated,
-    inLanguage: "bn",
-    mainEntityOfPage: url,
-    author: { "@type": "Organization", name: siteConfig.name },
-    publisher: { "@type": "Organization", name: siteConfig.name },
-  };
-  const faq = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: g.faqs.map((f) => ({ "@type": "Question", name: f.q[0], acceptedAnswer: { "@type": "Answer", text: f.a[0] } })),
-  };
-  const others = GUIDES.filter((x) => x.slug !== g.slug);
+  const filtered = useMemo(() => {
+    const q = search.trim().toLowerCase();
+    if (!q) return tools;
+    return tools.filter((t) => {
+      const en = (DESC_EN[t.slug.replace("/tool/", "")] || "").toLowerCase();
+      const cat = CAT_I18N[categories.find((c) => c.name === t.category)!.slug];
+      return (
+        t.name.toLowerCase().includes(q) ||
+        t.description.toLowerCase().includes(q) ||
+        en.includes(q) ||
+        t.category.toLowerCase().includes(q) ||
+        cat.bn.name.toLowerCase().includes(q)
+      );
+    });
+  }, [search]);
+
   return (
-    <div className="max-w-[800px] mx-auto px-4 sm:px-6 py-10">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-      <nav className="text-sm text-slate-500 mb-4"><Link href="/guides" className="hover:text-indigo-600"><T bn="গাইড" en="Guides" /></Link></nav>
-      <h1 className="text-3xl font-bold text-slate-900 dark:text-white mb-3"><T bn={g.title[0]} en={g.title[1]} /></h1>
-      <p className="text-sm text-slate-500 dark:text-slate-400 mb-6"><T bn={`সর্বশেষ আপডেট: ${g.updatedLabel[0]}`} en={`Last updated: ${g.updatedLabel[1]}`} /></p>
+    <div>
+      <SiteJsonLd />
+      <section className="px-4 pt-14 pb-10 text-center bg-gradient-to-b from-indigo-50 to-transparent dark:from-indigo-950/20">
+        <h1 className="text-3xl sm:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
+          {ui.heroA} <span className="text-indigo-600">{ui.heroB}</span>
+        </h1>
+        <p className="mt-4 text-slate-600 dark:text-slate-400 max-w-xl mx-auto">{ui.heroSub}</p>
+        <div className="mt-8 px-1"><SearchBar value={search} onChange={setSearch} placeholder={ui.searchPh} clearLabel={ui.clear} /></div>
+      </section>
 
-      <Link href={`/tool/${g.tool.slug}`} className="block rounded-xl border border-indigo-200 dark:border-indigo-900 bg-indigo-50 dark:bg-indigo-950/20 p-4 mb-8 hover:border-indigo-400 transition">
-        <span className="text-sm text-slate-600 dark:text-slate-400"><T bn="নিজে হিসাব করে দেখুন" en="Try it yourself" />: </span>
-        <span className="font-semibold text-indigo-600 dark:text-indigo-400"><T bn={g.tool.name[0]} en={g.tool.name[1]} /> →</span>
-      </Link>
-
-      <div className="space-y-6 text-slate-600 dark:text-slate-400 leading-7">
-        {g.sections.map((s, i) => (
-          <section key={i} className="space-y-2">
-            <h2 className="text-xl font-semibold text-slate-900 dark:text-white"><T bn={s.h[0]} en={s.h[1]} /></h2>
-            {s.p.map((p, j) => <p key={j}><T bn={p[0]} en={p[1]} /></p>)}
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+        {!search.trim() && (
+          <section className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-10">
+            {ui.features.map((f, i) => {
+              const Icon = ICONS[i];
+              return (
+                <div key={f.title} className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 text-center">
+                  <Icon className="w-6 h-6 mx-auto text-indigo-600 mb-2" />
+                  <p className="font-semibold text-sm text-slate-900 dark:text-white">{f.title}</p>
+                  <p className="text-xs text-slate-500 mt-1">{f.text}</p>
+                </div>
+              );
+            })}
           </section>
-        ))}
+        )}
 
-        <section className="space-y-3">
-          <h2 className="text-xl font-semibold text-slate-900 dark:text-white"><T bn="সাধারণ প্রশ্ন" en="Frequently asked questions" /></h2>
-          {g.faqs.map((f, i) => (
-            <div key={i}>
-              <h3 className="font-semibold text-slate-900 dark:text-white"><T bn={f.q[0]} en={f.q[1]} /></h3>
-              <p><T bn={f.a[0]} en={f.a[1]} /></p>
-            </div>
-          ))}
-        </section>
+        {search.trim() ? (
+          <section>
+            <h2 className="font-bold text-xl mb-4 text-slate-900 dark:text-white">{ui.found(filtered.length)}</h2>
+            {filtered.length === 0 ? (
+              <p className="text-slate-500">{ui.none}</p>
+            ) : (
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                {filtered.map((t) => <ToolCard key={t.id} name={t.name} slug={t.slug} description={t.description} iconName={t.icon} />)}
+              </div>
+            )}
+          </section>
+        ) : (
+          categories.map((c) => (
+            <section key={c.slug} id={c.slug} className="mb-12 scroll-mt-20">
+              <h2 className="font-bold text-xl text-slate-900 dark:text-white">{CAT_I18N[c.slug][lang].name}</h2>
+              <p className="text-sm text-slate-500 mb-4">{CAT_I18N[c.slug][lang].desc}</p>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                {tools.filter((t) => t.category === c.name).map((t) => (
+                  <ToolCard key={t.id} name={t.name} slug={t.slug} description={t.description} iconName={t.icon} />
+                ))}
+              </div>
+            </section>
+          ))
+        )}
       </div>
-
-      {others.length > 0 && (
-        <div className="mt-10 pt-6 border-t border-slate-200 dark:border-slate-800">
-          <h2 className="text-lg font-semibold text-slate-900 dark:text-white mb-3"><T bn="আরও গাইড" en="More guides" /></h2>
-          <ul className="space-y-2">
-            {others.map((o) => (
-              <li key={o.slug}><Link href={`/guides/${o.slug}`} className="text-indigo-600 dark:text-indigo-400 hover:underline"><T bn={o.title[0]} en={o.title[1]} /></Link></li>
-            ))}
-          </ul>
-        </div>
-      )}
     </div>
   );
 }
