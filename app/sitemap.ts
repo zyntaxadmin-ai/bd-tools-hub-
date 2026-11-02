@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { LIVE_SLUGS } from "@/lib/live";
 import { categories } from "@/data/tools";
 import { siteConfig } from "@/lib/seo";
+import { GUIDES } from "@/lib/guides";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = siteConfig.url;
@@ -11,5 +12,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
   const cats = categories.map((c) => ({ url: `${base}/category/${c.slug}`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.6 }));
   const live = LIVE_SLUGS.map((s) => ({ url: `${base}/tool/${s}`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.9 }));
-  return [...statics, ...cats, ...live];
+  const guides = [{ url: `${base}/guides`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.7 }, ...GUIDES.map((g) => ({ url: `${base}/guides/${g.slug}`, lastModified: new Date(g.updated), changeFrequency: "monthly" as const, priority: 0.8 }))];
+  return [...statics, ...cats, ...live, ...guides];
 }
