@@ -2,6 +2,18 @@
 // The site name is added automatically by the layout title template, so keep titles short (about 45 characters).
 // Descriptions: aim for 120-155 characters. Only say what the tool really does.
 export const SEO_META: Record<string, { title: string; description: string }> = {
+  "zakat-calculator-bd": {
+    title: "Zakat Calculator BD - যাকাত ক্যালকুলেটর",
+    description: "যাকাত ক্যালকুলেটর। নগদ, সোনা, রুপা ও ব্যবসার মজুত থেকে ঋণ বাদ দিয়ে যাকাত হিসাব করুন। নিসাব ৭.৫ ভরি সোনা বা ৫২.৫ ভরি রুপা, হার ২.৫%।",
+  },
+  "gold-weight-converter-bd": {
+    title: "ভরি আনা রতি থেকে গ্রাম - Gold Weight Converter",
+    description: "ভরি, আনা, রতি থেকে গ্রাম এবং গ্রাম থেকে ভরি-আনা-রতিতে সোনা ও রুপার ওজন রূপান্তর করুন। ১ ভরি = ১১.৬৬৪ গ্রাম। Vori to gram converter।",
+  },
+  "number-to-words-bd": {
+    title: "টাকার অঙ্ক কথায় - Number to Words BD",
+    description: "টাকার অঙ্ক বাংলা ও ইংরেজি কথায় লিখুন। চেক ও ভাউচারের জন্য সুবিধাজনক। লাখ-কোটি পদ্ধতি, পয়সাসহ। Taka amount in words, ফ্রি।",
+  },
   "nagad-calculator": {
     title: "Nagad Charge Calculator - নগদ ক্যাশ আউট চার্জ",
     description: "নগদ ক্যাশ আউট চার্জ ক্যালকুলেটর। Nagad cash out কত টাকা কাটবে ও মোট কত লাগবে, এক সেকেন্ডে হিসাব করুন। ফ্রি ও আপলোড ছাড়াই।",

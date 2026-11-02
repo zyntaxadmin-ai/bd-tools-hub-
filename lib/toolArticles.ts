@@ -868,4 +868,107 @@ export const TOOL_ARTICLES: Record<string, ToolArticle> = {
       },
     ],
   },
+
+  "number-to-words-bd": {
+    bn: [
+      {
+        h: "টাকার অঙ্ক কথায় লেখা কেন দরকার",
+        p: [
+          "চেক, ভাউচার, চালান ও চুক্তিতে টাকার অঙ্কের পাশাপাশি কথায়ও লিখতে হয়, যাতে অঙ্কে কোনো বদল বা ভুল সহজে ধরা পড়ে। এই টুল আপনার অঙ্ক বাংলা ও ইংরেজি দুই ভাষায় কথায় লিখে দেয়।",
+          "যেমন ১২,৩৪,৫৬৭ টাকা কথায় হয় \"বারো লাখ চৌত্রিশ হাজার পাঁচশ সাতষট্টি টাকা মাত্র\"। পয়সা থাকলে \"টাকা ... পয়সা মাত্র\" আকারে দেখায়।",
+        ],
+      },
+      {
+        h: "লাখ-কোটি পদ্ধতি",
+        p: [
+          "বাংলাদেশে সংখ্যা গোনা হয় হাজার, লাখ ও কোটি দিয়ে। এক লাখ মানে ১,০০,০০০ এবং এক কোটি মানে ১,০০,০০,০০০। ইংরেজিতেও তাই Lakh ও Crore ব্যবহার করা হয়েছে।",
+          "চেকে লেখার আগে বানান একবার মিলিয়ে নিন। কিছু ব্যাংকে \"শ\" এর বদলে \"শত\" লেখার চল থাকলে নিজে বদলে নিন।",
+        ],
+      },
+    ],
+    en: [
+      {
+        h: "Why write an amount in words",
+        p: [
+          "Cheques, vouchers, invoices and contracts ask for the amount in words as well as numbers, so that any change or mistake in the digits is easy to spot. This tool writes your amount in words in both Bangla and English.",
+          "For example 12,34,567 taka reads \"Twelve Lakh Thirty Four Thousand Five Hundred Sixty Seven Taka Only\". If there are paisa, it reads \"Taka ... Paisa Only\".",
+        ],
+      },
+      {
+        h: "The lakh and crore system",
+        p: [
+          "Numbers in Bangladesh are counted in thousands, lakhs and crores. One lakh is 1,00,000 and one crore is 1,00,00,000. That is why the English words use Lakh and Crore too.",
+          "Check the spelling once before you write it on a cheque. If your bank prefers a different Bangla spelling for hundreds, change it yourself.",
+        ],
+      },
+    ],
+  },
+
+  "zakat-calculator-bd": {
+    bn: [
+      {
+        h: "যাকাত কীভাবে হিসাব হয়",
+        p: [
+          "এই টুলে আপনার নগদ টাকা, সোনা ও রুপার বাজার মূল্য, ব্যবসার মজুত এবং ফেরত পাওয়ার মতো পাওনা যোগ করা হয়, তারপর আপনার ঋণ বাদ দিয়ে নিট সম্পদ বের হয়। নিট সম্পদ নিসাবের সমান বা বেশি হলে তার ২.৫% যাকাত হিসেবে দেখায়।",
+          "নিসাব হলো ৭.৫ ভরি সোনা অথবা ৫২.৫ ভরি রুপার দাম। ১ ভরি ১১.৬৬৪ গ্রাম ধরে এটি প্রায় ৮৭.৪৮ গ্রাম সোনা বা ৬১২.৩৬ গ্রাম রুপা। সোনা-রুপার দাম রোজ বদলায়, তাই আপনি আজকের প্রতি ভরির দাম নিজে লিখবেন।",
+        ],
+      },
+      {
+        h: "কিছু জরুরি কথা",
+        p: [
+          "সাধারণ নিয়মে নিট সম্পদ নিসাব পরিমাণ হলে এবং এক চান্দ্র বছর আপনার কাছে থাকলে যাকাত দিতে হয়। রুপা না সোনা দিয়ে নিসাব ধরবেন, তা নিয়ে আলিমদের মত আছে।",
+          "এই টুল একটি সাধারণ হিসাবের সহায়ক, ফতোয়া নয়। ব্যক্তিগত অবস্থায় কোনো সন্দেহ থাকলে আপনার স্থানীয় আলিম বা ইসলামী প্রতিষ্ঠানের সঙ্গে কথা বলুন।",
+        ],
+      },
+    ],
+    en: [
+      {
+        h: "How zakat is worked out",
+        p: [
+          "This tool adds your cash, the market value of your gold and silver, business stock and money owed to you that is likely to be repaid, then subtracts your debts to get net wealth. If net wealth is at least the nisab, it shows 2.5% of it as zakat.",
+          "The nisab is the price of 7.5 vori of gold or 52.5 vori of silver. With 1 vori = 11.664 g, that is about 87.48 g of gold or 612.36 g of silver. Gold and silver prices change every day, so you type today's price per vori yourself.",
+        ],
+      },
+      {
+        h: "A few important points",
+        p: [
+          "As a general rule, zakat is due when your net wealth reaches the nisab and you have held it for one lunar year. Scholars differ on whether to use silver or gold for the nisab.",
+          "This tool is a general calculation aid, not a religious ruling. If you have doubts about your own situation, speak to your local scholar or an Islamic institution.",
+        ],
+      },
+    ],
+  },
+
+  "gold-weight-converter-bd": {
+    bn: [
+      {
+        h: "ভরি, আনা, রতি ও গ্রাম",
+        p: [
+          "বাংলাদেশে সোনা-রুপা ভরি, আনা ও রতিতে মাপা হয়, কিন্তু ওজন যন্ত্রে ও দামের তালিকায় গ্রামও দেখা যায়। এই টুল দুই দিকেই রূপান্তর করে।",
+          "১ ভরি = ১৬ আনা = ৯৬ রতি = ১১.৬৬৪ গ্রাম। তাই ১ আনা = ০.৭২৯ গ্রাম এবং ১ রতি = ০.১২১৫ গ্রাম। যেমন ২ ভরি ৮ আনা ৩ রতি হলো ২৯.৫২৪৫ গ্রাম।",
+        ],
+      },
+      {
+        h: "দামের হিসাব",
+        p: [
+          "প্রতি ভরির দাম লিখলে আপনার ওজনের মোট দাম দেখায়। আজকের দাম এই টুলে নেই, তাই বাজুসের আজকের দাম দেখে নিজে লিখুন। ক্যারেট অনুযায়ী দাম আলাদা, আর গয়নার মজুরি ও ভ্যাট এখানে ধরা হয়নি।",
+        ],
+      },
+    ],
+    en: [
+      {
+        h: "Vori, ana, roti and grams",
+        p: [
+          "In Bangladesh gold and silver are weighed in vori, ana and roti, while scales and price lists often show grams. This tool converts in both directions.",
+          "1 vori = 16 ana = 96 roti = 11.664 grams, so 1 ana = 0.729 g and 1 roti = 0.1215 g. For example 2 vori 8 ana 3 roti is 29.5245 grams.",
+        ],
+      },
+      {
+        h: "Working out the price",
+        p: [
+          "Type the price per vori and the tool shows the total value of your weight. Today's price is not in this tool, so check the BAJUS rate and type it yourself. Price differs by carat, and jewellery making charges and VAT are not included.",
+        ],
+      },
+    ],
+  },
 };

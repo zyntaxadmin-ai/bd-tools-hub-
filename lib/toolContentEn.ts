@@ -447,6 +447,40 @@ export const TOOL_EN: Record<string, ToolEn> = {
       { q: "Does it work for commercial or industrial connections?", a: "No. It is only for residential (LT-A) customers." },
     ],
   },
+  "number-to-words-bd": {
+    title: "Number to Words BD",
+    desc: "Write a taka amount in Bangla and English words, for example 12345 taka = Twelve Thousand Three Hundred Forty Five Taka Only. Lakh-crore system, paisa included.",
+    howTo: ["Type the taka amount in numbers (commas and Bangla digits also work)", "See the Bangla and English words below", "Tap Copy and paste it into your cheque or form"],
+    faqs: [
+      { q: "How are paisa shown?", a: "Type up to two decimal places and the words read \"Taka ... Paisa Only\". For example 100.50 reads One Hundred Taka Fifty Paisa Only." },
+      { q: "What is the largest number it accepts?", a: "Up to 14 digits, which is plenty for everyday cheques and bills." },
+      { q: "Why lakh and crore instead of million and billion?", a: "Banks and offices in Bangladesh use the lakh and crore system, so the English words use Lakh and Crore too." },
+      { q: "What should I do before writing it on a cheque?", a: "Check the spelling once. Some banks and offices prefer a slightly different Bangla spelling for hundreds, so change it yourself if needed." },
+    ],
+  },
+  "zakat-calculator-bd": {
+    title: "Zakat Calculator BD",
+    desc: "Work out your zakat from cash, gold, silver, business stock and money owed to you, minus debts. Nisab is 7.5 vori of gold or 52.5 vori of silver, rate 2.5%.",
+    howTo: ["Choose silver or gold and type today's price per vori", "Enter your cash, gold, silver, business goods, money owed and debts", "Tap Calculate Zakat to see the result"],
+    faqs: [
+      { q: "What is the nisab?", a: "The price of 7.5 vori of gold or 52.5 vori of silver. With 1 vori = 11.664 g, that is about 87.48 g of gold or 612.36 g of silver." },
+      { q: "What is the zakat rate?", a: "2.5% of net wealth, which is 2.5 taka for every 100 taka." },
+      { q: "Should I use silver or gold for the nisab?", a: "Scholars differ on this. Many use the silver nisab because it is lower, so more people owe zakat. Ask your local scholar." },
+      { q: "Are debts subtracted?", a: "Yes, this tool subtracts your debts from total wealth to get net wealth. Ask a scholar which debts count in your case." },
+      { q: "Is this a religious ruling?", a: "No. It is a general calculation tool. For the conditions and special cases, speak to a scholar or an Islamic institution." },
+    ],
+  },
+  "gold-weight-converter-bd": {
+    title: "Gold Weight Converter BD",
+    desc: "Convert gold or silver weight between vori, ana, roti and grams. 1 vori = 11.664 grams. Optional price calculation.",
+    howTo: ["Enter vori, ana and roti or enter grams", "See the converted weight right away", "Optionally enter the price per vori to get the total value"],
+    faqs: [
+      { q: "How many grams is 1 vori?", a: "In Bangladesh 1 vori = 11.664 grams. 1 vori = 16 ana = 96 roti, so 1 ana = 0.729 g and 1 roti = 0.1215 g." },
+      { q: "How many ana and roti are in 1 vori?", a: "1 vori is 16 ana and 1 ana is 6 roti, so 1 vori has 96 roti." },
+      { q: "Does it handle 22 carat or 21 carat gold?", a: "Weight conversion does not depend on carat. Prices differ by carat, so type the price per vori for your carat in the price box." },
+      { q: "Does it show today's gold price?", a: "No. Prices change daily, so type today's price yourself from the BAJUS rate." },
+    ],
+  },
   "bangla-calendar": {
     title: "Bangla Calendar",
     desc: "See today's Bangla date, browse a Gregorian and Bangla calendar and convert dates, using Bangladesh's revised Bangla calendar.",

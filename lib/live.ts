@@ -55,4 +55,8 @@ export const LIVE_SLUGS = [
   "bdt-currency-converter",
   // batch 9
   "electricity-bill-calculator-bd",
+  // batch 10
+  "number-to-words-bd",
+  "zakat-calculator-bd",
+  "gold-weight-converter-bd",
 ];
