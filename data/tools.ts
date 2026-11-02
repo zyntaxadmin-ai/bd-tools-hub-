@@ -31,6 +31,8 @@ const allTools: Tool[] = [
   { id: 51, name: "Zakat Calculator", slug: "/tool/zakat-calculator-bd", description: "যাকাত ও নিসাব হিসাব", category: "Bangladesh Special", icon: "Coins" },
   { id: 52, name: "Gold Weight Converter", slug: "/tool/gold-weight-converter-bd", description: "ভরি, আনা, রতি থেকে গ্রাম", category: "Bangladesh Special", icon: "Gem" },
   { id: 53, name: "Number to Words", slug: "/tool/number-to-words-bd", description: "টাকার অঙ্ক কথায় লিখুন", category: "Education & Calculation", icon: "Hash" },
+  { id: 54, name: "Income Tax Calculator", slug: "/tool/income-tax-calculator-bd", description: "ব্যক্তি করদাতার আয়কর হিসাব", category: "Bangladesh Special", icon: "Landmark" },
+  { id: 55, name: "FDR DPS Calculator", slug: "/tool/fdr-dps-calculator-bd", description: "FDR ও DPS সুদ হিসাব", category: "Education & Calculation", icon: "PiggyBank" },
   { id: 40, name: "Upay Calculator", slug: "/tool/upay-calculator", description: "Upay charge calculator", category: "Bangladesh Special", icon: "CreditCard" },
 
   { id: 1, name: "Age Calculator", slug: "/tool/age-calculator", description: "জন্ম তারিখ দিয়ে বয়স বের করুন", category: "Education & Calculation", icon: "Cake" },
