@@ -4,13 +4,14 @@ import { RotateCcw } from "lucide-react";
 import { useTr } from "@/lib/lang";
 
 // NOTE: Tariffs change. Check your latest bill and the BERC order, then edit the numbers below.
-// Residential (LT-A) tariff announced by BERC on 3 June 2026, effective from 1 June 2026.
+// Residential (LT-A) tariff from the BERC order of 3 June 2026 (effective June 2026 billing).
+// BERC withdrew the hike for the lifeline (0-50) and first (0-75) slabs on 4 June 2026, so those two keep the old rates 4.63 and 5.26.
 // Demand charge and VAT come from published calculators and can differ on your bill, so the demand rate is editable in the tool.
-const TARIFF_NOTE = { bn: "১ জুন ২০২৬ থেকে কার্যকর", en: "effective from 1 June 2026" };
+const TARIFF_NOTE = { bn: "জুন ২০২৬ বিলিং থেকে কার্যকর", en: "effective from the June 2026 billing month" };
 const LIFELINE_LIMIT = 50; // if total units are 50 or fewer, all units use the lifeline rate
-const LIFELINE_RATE = 5.32;
+const LIFELINE_RATE = 4.63;
 const SLABS: { upTo: number; rate: number }[] = [
-  { upTo: 75, rate: 6.18 },
+  { upTo: 75, rate: 5.26 },
   { upTo: 200, rate: 8.5 },
   { upTo: 300, rate: 9.1 },
   { upTo: 400, rate: 9.62 },
