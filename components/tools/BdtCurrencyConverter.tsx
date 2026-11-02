@@ -85,12 +85,12 @@ export default function BdtCurrencyConverter() {
         <label className="text-sm font-medium dark:text-slate-200">{tr("পরিমাণ", "Amount")}</label>
         <input type="number" inputMode="decimal" min="0" value={amount} onChange={(e) => setAmount(e.target.value)} className={input} />
       </div>
-      <div className="grid grid-cols-[1fr_auto_1fr] items-end gap-2">
+      <div className="grid grid-cols-1 sm:grid-cols-[1fr_auto_1fr] items-end gap-2">
         <div>
           <label className="text-sm font-medium dark:text-slate-200">{tr("থেকে", "From")}</label>
           <select value={from} onChange={(e) => setFrom(e.target.value)} className={input}>{list.map((c) => <option key={c.code} value={c.code}>{label(c.code)}</option>)}</select>
         </div>
-        <button onClick={() => { setFrom(to); setTo(from); }} aria-label={tr("অদলবদল", "Swap")} className="p-3 mb-0.5 rounded-xl border border-slate-200 dark:border-slate-700 dark:text-white"><ArrowLeftRight className="w-4 h-4" /></button>
+        <button onClick={() => { setFrom(to); setTo(from); }} aria-label={tr("অদলবদল", "Swap")} className="p-3 mb-0.5 justify-self-center rotate-90 sm:rotate-0 rounded-xl border border-slate-200 dark:border-slate-700 dark:text-white"><ArrowLeftRight className="w-4 h-4" /></button>
         <div>
           <label className="text-sm font-medium dark:text-slate-200">{tr("এতে", "To")}</label>
           <select value={to} onChange={(e) => setTo(e.target.value)} className={input}>{list.map((c) => <option key={c.code} value={c.code}>{label(c.code)}</option>)}</select>
