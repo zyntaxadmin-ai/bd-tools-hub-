@@ -971,4 +971,74 @@ export const TOOL_ARTICLES: Record<string, ToolArticle> = {
       },
     ],
   },
+
+  "income-tax-calculator-bd": {
+    bn: [
+      {
+        h: "আয়কর কীভাবে হিসাব হয়",
+        p: [
+          "এই টুলে আপনার করযোগ্য আয় থেকে করমুক্ত সীমা বাদ যায়। সীমার ওপরের আয় ধাপে ধাপে করের আওতায় পড়ে: প্রথম ৩ লাখে ১০%, পরের ৪ লাখে ১৫%, পরের ৫ লাখে ২০%, পরের ২০ লাখে ২৫% এবং বাকিতে ৩০%।",
+          "উদাহরণ: সাধারণ করদাতার করযোগ্য আয় ১২,০০,০০০ টাকা হলে করমুক্ত সীমা ৪,০০,০০০ বাদ দিয়ে ৩,০০,০০০ টাকায় ১০% (৩০,০০০), ৪,০০,০০০ টাকায় ১৫% (৬০,০০০) এবং ১,০০,০০০ টাকায় ২০% (২০,০০০), মোট ১,১০,০০০ টাকা কর।",
+        ],
+      },
+      {
+        h: "বিনিয়োগ রেয়াত ও ন্যূনতম কর",
+        p: [
+          "যোগ্য বিনিয়োগ থাকলে কর কমে। এই টুলে রেয়াত ধরা হয় করযোগ্য আয়ের ৩%, বিনিয়োগের ১০% এবং ৭,৫০,০০০ টাকার মধ্যে যেটি সবচেয়ে কম। আয় করমুক্ত সীমার বেশি হলে ন্যূনতম কর (সাধারণত ৫,০০০ টাকা) দিতে হয়।",
+          "আয়কর আইন প্রতি বাজেটে বদলায় এবং নারী, প্রবীণ, প্রতিবন্ধী ও মুক্তিযোদ্ধাদের করমুক্ত সীমা আলাদা, তাই এটি আনুমানিক হিসাব। রিটার্ন জমার আগে nbr.gov.bd বা কর পরামর্শকের সঙ্গে মিলিয়ে নিন।",
+        ],
+      },
+    ],
+    en: [
+      {
+        h: "How income tax is worked out",
+        p: [
+          "This tool takes the tax-free limit off your taxable income. Income above the limit is taxed slab by slab: 10% on the first 3 lakh, 15% on the next 4 lakh, 20% on the next 5 lakh, 25% on the next 20 lakh and 30% on the rest.",
+          "Example: for a general taxpayer with 12,00,000 taka taxable income, after the 4,00,000 tax-free limit, 3,00,000 is taxed at 10% (30,000), 4,00,000 at 15% (60,000) and 1,00,000 at 20% (20,000), so the tax is 1,10,000 taka.",
+        ],
+      },
+      {
+        h: "Investment rebate and minimum tax",
+        p: [
+          "Eligible investment reduces your tax. In this tool the rebate is the lowest of 3% of taxable income, 10% of the investment and 7,50,000 taka. If your income is above the tax-free limit, a minimum tax (usually 5,000 taka) applies.",
+          "Tax law changes with every budget and women, senior citizens, people with disabilities and freedom fighters have different tax-free limits, so this is only an estimate. Check nbr.gov.bd or a tax adviser before you file.",
+        ],
+      },
+    ],
+  },
+
+  "fdr-dps-calculator-bd": {
+    bn: [
+      {
+        h: "এফডিআর ও ডিপিএস এর সুদ",
+        p: [
+          "এফডিআর এ একবারে টাকা জমা রেখে মেয়াদ শেষে সুদসহ ফেরত পাওয়া যায়। চক্রবৃদ্ধি সুদে প্রতি সুদ-চক্রে যোগ হওয়া সুদের ওপরেও সুদ হয়। বেশিরভাগ ব্যাংক ত্রৈমাসিক চক্রবৃদ্ধি ধরে।",
+          "উদাহরণ: ১,০০,০০০ টাকা ৮% সুদে ১২ মাসের এফডিআর এ ত্রৈমাসিক চক্রবৃদ্ধিতে সুদ হয় ৮,২৪৩.২২ টাকা। ১০% উৎসে কর ৮২৪.৩২ টাকা কেটে হাতে পাবেন ১,০৭,৪১৮.৯০ টাকা।",
+        ],
+      },
+      {
+        h: "ডিপিএস এর হিসাব ও কর",
+        p: [
+          "ডিপিএস এ প্রতি মাসে নির্দিষ্ট কিস্তি জমা দিতে হয়। এই টুলে প্রতি মাসের শুরুতে কিস্তি জমা ও মাসিক চক্রবৃদ্ধি ধরা হয়েছে, তবে ব্যাংকভেদে নিয়ম আলাদা হতে পারে।",
+          "সুদের ওপর উৎসে কর সাধারণত TIN থাকলে ১০% এবং না থাকলে ১৫%। আবগারি শুল্ক ও ব্যাংকের অন্যান্য চার্জ এখানে ধরা হয়নি, তাই আপনার ব্যাংকের ঘোষিত অঙ্কই চূড়ান্ত।",
+        ],
+      },
+    ],
+    en: [
+      {
+        h: "Interest on FDR and DPS",
+        p: [
+          "With an FDR you deposit a lump sum and get it back with interest at maturity. With compound interest, the interest added in each period also earns interest. Most banks use quarterly compounding.",
+          "Example: a 12 month FDR of 1,00,000 taka at 8% with quarterly compounding earns 8,243.22 taka. After 10% source tax of 824.32 you receive 1,07,418.90 taka.",
+        ],
+      },
+      {
+        h: "DPS calculation and tax",
+        p: [
+          "With a DPS you pay a fixed installment every month. This tool takes each installment at the start of the month with monthly compounding, but banks can differ.",
+          "Source tax on interest is generally 10% with a TIN and 15% without. Excise duty and other bank charges are not included, so the figure your bank states is final.",
+        ],
+      },
+    ],
+  },
 };

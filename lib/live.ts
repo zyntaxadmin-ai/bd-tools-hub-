@@ -59,4 +59,7 @@ export const LIVE_SLUGS = [
   "number-to-words-bd",
   "zakat-calculator-bd",
   "gold-weight-converter-bd",
+  // batch 11
+  "income-tax-calculator-bd",
+  "fdr-dps-calculator-bd",
 ];

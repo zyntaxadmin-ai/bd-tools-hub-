@@ -481,6 +481,31 @@ export const TOOL_EN: Record<string, ToolEn> = {
       { q: "Does it show today's gold price?", a: "No. Prices change daily, so type today's price yourself from the BAJUS rate." },
     ],
   },
+  "income-tax-calculator-bd": {
+    title: "Income Tax Calculator BD",
+    desc: "Estimate an individual taxpayer's income tax from monthly or yearly income, with tax slabs, investment rebate and minimum tax. Income year 2026-27, Finance Act 2026.",
+    howTo: ["Enter your income (per month or per year) and any tax-exempt part", "Choose general taxpayer, or type your own tax-free limit", "Add any eligible investment and tap Calculate Tax"],
+    faqs: [
+      { q: "What is the tax-free income limit?", a: "Under the Finance Act 2026 it is 4,00,000 taka for a general taxpayer for 2026-27. Women, people aged 65+, people with disabilities and freedom fighters have higher limits, so choose Other and type your own." },
+      { q: "What are the tax rates?", a: "After the tax-free limit: 10% on the next 3 lakh, 15% on the next 4 lakh, 20% on the next 5 lakh, 25% on the next 20 lakh and 30% on the rest." },
+      { q: "What is the minimum tax?", a: "Usually 5,000 taka when income is above the tax-free limit. New taxpayers are reported to pay 1,000, so the box can be changed." },
+      { q: "How is the investment rebate worked out?", a: "In this tool the rebate is the lowest of 3% of taxable income, 10% of eligible investment and 7,50,000 taka. Check the NBR's list of eligible investments." },
+      { q: "Which part of my salary is tax free?", a: "Some parts of salary are exempt. Get that amount from your payslip or a tax adviser and type it in the tax-exempt box. If you leave it empty, all income is treated as taxable." },
+      { q: "Can I file my return with this?", a: "No, it is only an estimate. Check nbr.gov.bd or a tax adviser before you file." },
+    ],
+  },
+  "fdr-dps-calculator-bd": {
+    title: "FDR DPS Calculator BD",
+    desc: "Work out how much you get at maturity from an FDR or a DPS. Enter the interest rate, term and source tax (10% or 15%) to see total interest and the amount in hand.",
+    howTo: ["Choose FDR or DPS", "Enter the deposit or monthly installment, interest rate and term in months", "Pick the source tax rate and tap Calculate"],
+    faqs: [
+      { q: "How is FDR interest worked out?", a: "With compound interest, the maturity amount = principal × (1 + rate ÷ times per year)^(times per year × years). Most banks use quarterly compounding." },
+      { q: "How much tax is cut from the interest?", a: "Source tax is generally 10% with a TIN and 15% without one. Check your bank's rate." },
+      { q: "How does the DPS calculation work?", a: "This tool takes each installment at the start of the month with monthly compounding. Banks differ, so the result is an estimate." },
+      { q: "Is excise duty included?", a: "No. Banks deduct excise duty on FDR balances depending on the amount, and it is not included here." },
+      { q: "Why does my bank show a different figure?", a: "Banks can differ in when they add interest, how they count days and which charges they apply. The maturity figure your bank states is final." },
+    ],
+  },
   "bangla-calendar": {
     title: "Bangla Calendar",
     desc: "See today's Bangla date, browse a Gregorian and Bangla calendar and convert dates, using Bangladesh's revised Bangla calendar.",

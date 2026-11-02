@@ -89,6 +89,8 @@ export const DESC_EN: Record<string, string> = {
   "zakat-calculator-bd": "Zakat and nisab calculator",
   "gold-weight-converter-bd": "Vori, ana, roti to grams",
   "number-to-words-bd": "Write taka amount in words",
+  "income-tax-calculator-bd": "Individual income tax estimate",
+  "fdr-dps-calculator-bd": "FDR and DPS interest",
   "govt-job-age-calculator": "Check your govt job age limit",
   "rocket-calculator": "Rocket charge calculator",
   "passport-fee-calculator-bd": "E-Passport fee check",

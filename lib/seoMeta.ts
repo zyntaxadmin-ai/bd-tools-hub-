@@ -14,6 +14,14 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
     title: "টাকার অঙ্ক কথায় - Number to Words BD",
     description: "টাকার অঙ্ক বাংলা ও ইংরেজি কথায় লিখুন। চেক ও ভাউচারের জন্য সুবিধাজনক। লাখ-কোটি পদ্ধতি, পয়সাসহ। Taka amount in words, ফ্রি।",
   },
+  "income-tax-calculator-bd": {
+    title: "Income Tax Calculator BD - আয়কর ক্যালকুলেটর",
+    description: "আয়কর ক্যালকুলেটর ২০২৬-২৭। মাসিক বা বার্ষিক আয় দিয়ে ব্যক্তি করদাতার কর হিসাব করুন, কর-ধাপ, বিনিয়োগ রেয়াত ও ন্যূনতম করসহ। Income tax BD।",
+  },
+  "fdr-dps-calculator-bd": {
+    title: "FDR DPS Calculator BD - এফডিআর ডিপিএস সুদ",
+    description: "এফডিআর ও ডিপিএস ক্যালকুলেটর। সুদের হার, মেয়াদ ও উৎসে কর ধরে মেয়াদ শেষে কত টাকা পাবেন, মোট সুদসহ হিসাব করুন। FDR interest calculator BD।",
+  },
   "nagad-calculator": {
     title: "Nagad Charge Calculator - নগদ ক্যাশ আউট চার্জ",
     description: "নগদ ক্যাশ আউট চার্জ ক্যালকুলেটর। Nagad cash out কত টাকা কাটবে ও মোট কত লাগবে, এক সেকেন্ডে হিসাব করুন। ফ্রি ও আপলোড ছাড়াই।",
