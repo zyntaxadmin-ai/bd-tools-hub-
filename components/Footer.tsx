@@ -35,6 +35,7 @@ export default function Footer() {
               <li><Link href="/tool/age-calculator" className="hover:text-indigo-600">Age Calculator</Link></li>
               <li><Link href="/tool/gpa-calculator-bd" className="hover:text-indigo-600">GPA Calculator</Link></li>
               <li><Link href="/tool/word-counter" className="hover:text-indigo-600">Word Counter</Link></li>
+              <li><Link href="/guides" className="hover:text-indigo-600">{ui.guides}</Link></li>
             </ul>
           </div>
           <div>
