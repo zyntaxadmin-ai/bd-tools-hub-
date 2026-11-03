@@ -484,6 +484,741 @@ export const TOOL_ARTICLES: Record<string, ToolArticle> = {
     ],
   },
 
+  "password-generator": {
+    bn: [
+      {
+        h: "কীভাবে শক্তিশালী পাসওয়ার্ড বানাবেন",
+        p: [
+          "পাসওয়ার্ডের দৈর্ঘ্য ঠিক করুন এবং কোন ধরনের অক্ষর থাকবে তা বেছে নিন। টুলটি আপনার ব্রাউজারেই এলোমেলো পাসওয়ার্ড তৈরি করে, কোথাও পাঠায় না বা সংরক্ষণ করে না।",
+          "সাধারণভাবে অন্তত ১২ থেকে ১৬ অক্ষরের পাসওয়ার্ড ভালো, যেখানে বড় হাতের ও ছোট হাতের অক্ষর, সংখ্যা এবং চিহ্ন মেশানো থাকে।",
+        ],
+      },
+      {
+        h: "কোথায় কাজে লাগে",
+        p: [
+          "ইমেইল, ফেসবুক, ব্যাংক বা মোবাইল ব্যাংকিং অ্যাকাউন্টের জন্য নতুন পাসওয়ার্ড দরকার হলে এটি কাজে লাগে। প্রতিটি অ্যাকাউন্টে আলাদা পাসওয়ার্ড ব্যবহার করা নিরাপদ।",
+          "তৈরি করার পর কপি করে নিরাপদ জায়গায় রাখুন। পেজ বন্ধ করলে পাসওয়ার্ড আর দেখা যাবে না।",
+        ],
+      },
+    ],
+    en: [
+      {
+        h: "How to make a strong password",
+        p: [
+          "Set the length and choose which kinds of characters to include. The tool creates a random password in your browser and does not send or store it anywhere.",
+          "In general, a password of at least 12 to 16 characters that mixes upper and lower case letters, numbers and symbols is a good choice.",
+        ],
+      },
+      {
+        h: "When it helps",
+        p: [
+          "Use it whenever you need a new password for email, Facebook, a bank or a mobile banking account. Using a different password for each account is safer.",
+          "Copy it after generating and keep it somewhere safe. Once you close the page the password cannot be shown again.",
+        ],
+      },
+    ],
+  },
+
+  "case-converter": {
+    bn: [
+      {
+        h: "কেসের ধরন",
+        p: [
+          "লেখা পেস্ট করে পছন্দের ফরম্যাটে ক্লিক করুন। UPPERCASE, lowercase, Title Case, Sentence case, camelCase, snake_case ও kebab-case বেছে নেওয়া যায়।",
+          "বাংলা লিপিতে বড় বা ছোট হাতের অক্ষর নেই, তাই বাংলা লেখা অপরিবর্তিত থাকে। শুধু ইংরেজি লেখা বদলায়।",
+        ],
+      },
+      {
+        h: "কোথায় কাজে লাগে",
+        p: [
+          "ভুলে CAPS LOCK চালু রেখে লেখা টেক্সট ঠিক করতে, শিরোনাম সাজাতে বা প্রোগ্রামিংয়ের নামকরণে (camelCase, snake_case) এটি কাজে লাগে।",
+          "Sentence case-এ প্রতিটি বাক্যের প্রথম অক্ষর বড় হয় এবং বাকি অক্ষর ছোট হয়।",
+        ],
+      },
+    ],
+    en: [
+      {
+        h: "Available cases",
+        p: [
+          "Paste your text and click the format you want. You can choose UPPERCASE, lowercase, Title Case, Sentence case, camelCase, snake_case and kebab-case.",
+          "Bangla script has no upper or lower case, so Bangla text stays unchanged. Only English text is converted.",
+        ],
+      },
+      {
+        h: "When it helps",
+        p: [
+          "It helps fix text typed with Caps Lock on by mistake, tidy up headings, or name things in code (camelCase, snake_case).",
+          "In Sentence case the first letter of each sentence is capital and the rest is lowercase.",
+        ],
+      },
+    ],
+  },
+
+  "unit-converter": {
+    bn: [
+      {
+        h: "কীভাবে ব্যবহার করবেন",
+        p: [
+          "দৈর্ঘ্য, ওজন, তাপমাত্রা, ক্ষেত্রফল, আয়তন, গতি ও ডেটা সাইজের মধ্যে একটি ক্যাটাগরি বেছে নিন, মান লিখুন এবং কোন একক থেকে কোন এককে বদলাবেন তা ঠিক করুন। সোয়াপ বাটনে একক উল্টে নেওয়া যায়।",
+          "কিছু মূল সম্পর্ক: ১ ইঞ্চি = ২.৫৪ সেমি। তাপমাত্রায় °F = °C × ৯/৫ + ৩২। এই টুলে ১ KB = ১,০২৪ বাইট ধরা হয়।",
+        ],
+      },
+      {
+        h: "কোথায় কাজে লাগে",
+        p: [
+          "পড়াশোনার হিসাব, রান্নার মাপ, ঘর বা জিনিসের মাপ এবং ফাইলের সাইজ বোঝার জন্য এটি কাজে লাগে। জমির শতাংশ বা কাঠার জন্য আমাদের জমি পরিমাপ ক্যালকুলেটর ব্যবহার করুন।",
+          "সব হিসাব আপনার ফোন বা ব্রাউজারেই হয়।",
+        ],
+      },
+    ],
+    en: [
+      {
+        h: "How to use it",
+        p: [
+          "Pick a category such as length, weight, temperature, area, volume, speed or data size, enter a value, and choose the units to convert from and to. The swap button reverses the units.",
+          "A few key relations: 1 inch = 2.54 cm. For temperature, °F = °C × 9/5 + 32. This tool uses 1 KB = 1,024 bytes.",
+        ],
+      },
+      {
+        h: "When it helps",
+        p: [
+          "It helps with study problems, cooking measures, sizes of rooms or items, and understanding file sizes. For shotangsho or katha, use our land calculator.",
+          "All calculations happen on your phone or in your browser.",
+        ],
+      },
+    ],
+  },
+
+  "bill-calculator": {
+    bn: [
+      {
+        h: "কীভাবে বিল ভাগ করবেন",
+        p: [
+          "মোট বিল ও কতজন তা লিখুন। চাইলে VAT বা সার্ভিস চার্জ এবং টিপের শতকরা হার দিন। টুলটি প্রতিজনের ভাগ দেখিয়ে দেয়।",
+          "VAT ও টিপ দুটোই মূল বিলের শতকরা হিসেবে ধরে মূল বিলের সঙ্গে যোগ হয়। প্রতিজনের টাকা দশমিকের পর দুই ঘর পর্যন্ত দেখানো হয়, প্রয়োজনে নিজের মতো রাউন্ড করে নিন।",
+        ],
+      },
+      {
+        h: "কোথায় কাজে লাগে",
+        p: [
+          "বন্ধুদের সঙ্গে রেস্টুরেন্টে খাওয়ার পর, ঘুরতে গিয়ে বা মেসের খরচ ভাগ করতে এটি কাজে লাগে।",
+          "রেস্টুরেন্ট আসলে কত VAT বা চার্জ নেয় তা বিলে দেখে নিয়ে সেই হার দিন।",
+        ],
+      },
+    ],
+    en: [
+      {
+        h: "How to split a bill",
+        p: [
+          "Enter the total bill and the number of people. If you like, add the VAT or service charge percentage and the tip percentage. The tool shows each person's share.",
+          "VAT and tip are both calculated as a percentage of the original bill and added to it. Per-person amounts are shown to two decimal places, so round them however you like.",
+        ],
+      },
+      {
+        h: "When it helps",
+        p: [
+          "It helps after a restaurant meal with friends, on a trip, or when sharing mess or hostel costs.",
+          "Check the actual VAT or charge on your bill and enter that rate.",
+        ],
+      },
+    ],
+  },
+
+  "date-difference-calculator": {
+    bn: [
+      {
+        h: "দুটি মোড",
+        p: [
+          "Difference মোডে দুটি তারিখ দিলে মাঝের সময় বছর, মাস, দিন এবং মোট দিনে দেখা যায়। Add/Subtract মোডে কোনো তারিখের সঙ্গে দিন, মাস বা বছর যোগ-বিয়োগ করা যায়।",
+          "প্রথমে শুরুর তারিখ থেকে পূর্ণ মাস গোনা হয়, বাকি দিন আলাদা দেখানো হয়। শুরুর তারিখ পরে হলে টুলটি নিজেই তারিখ দুটি অদলবদল করে নেয়।",
+        ],
+      },
+      {
+        h: "কোথায় কাজে লাগে",
+        p: [
+          "চুক্তির মেয়াদ, ছুটির দিন গোনা, পরীক্ষা বা কোনো ঘটনা কত দিন বাকি, বা কোনো কাজ শেষ হওয়ার তারিখ বের করতে এটি কাজে লাগে।",
+          "৩১ তারিখ থেকে মাস যোগ করলে ছোট মাসের শেষ দিনে গিয়ে থামে।",
+        ],
+      },
+    ],
+    en: [
+      {
+        h: "Two modes",
+        p: [
+          "In Difference mode, enter two dates to see the time between them in years, months, days and total days. In Add/Subtract mode you can add or subtract days, months or years from a date.",
+          "Whole months from the start date are counted first and the remaining days are shown separately. If the start date is later, the tool swaps the two dates automatically.",
+        ],
+      },
+      {
+        h: "When it helps",
+        p: [
+          "It helps with contract periods, counting holidays, how many days are left to an exam or event, and working out a deadline.",
+          "When you add months starting from the 31st, the result stops at the last day of shorter months.",
+        ],
+      },
+    ],
+  },
+
+  "scientific-calculator": {
+    bn: [
+      {
+        h: "কী কী করা যায়",
+        p: [
+          "sin, cos, tan, log, ln, বর্গমূল, ঘাত, ফ্যাক্টরিয়াল ও বন্ধনী ব্যবহার করে হিসাব করা যায়। কোণের জন্য Deg বা Rad বেছে নিন। Deg মোডে sin(30) = ০.৫।",
+          "= চাপলে ফল আসে এবং Ans দিয়ে আগের ফল আবার ব্যবহার করা যায়।",
+        ],
+      },
+      {
+        h: "সীমা ও ব্যবহার",
+        p: [
+          "ফ্যাক্টরিয়াল ০ থেকে ১৭০ পর্যন্ত পূর্ণসংখ্যার জন্য কাজ করে। শিক্ষার্থীদের গণিত, পদার্থবিজ্ঞান ও রসায়নের হিসাব মেলাতে এটি কাজে লাগে।",
+          "পরীক্ষার হলে কোন ক্যালকুলেটর চলবে তা পরীক্ষার নিয়মে দেখে নিন।",
+        ],
+      },
+    ],
+    en: [
+      {
+        h: "What it can do",
+        p: [
+          "You can calculate with sin, cos, tan, log, ln, square roots, powers, factorials and brackets. Choose Deg or Rad for angles. In Deg mode, sin(30) = 0.5.",
+          "Press = for the result and use Ans to reuse the previous result.",
+        ],
+      },
+      {
+        h: "Limits and use",
+        p: [
+          "Factorial works for whole numbers from 0 to 170. It helps students check maths, physics and chemistry calculations.",
+          "Check your exam rules to see which calculators are allowed in the hall.",
+        ],
+      },
+    ],
+  },
+
+  "character-counter": {
+    bn: [
+      {
+        h: "কীভাবে ব্যবহার করবেন",
+        p: [
+          "লেখা টাইপ বা পেস্ট করলে স্পেসসহ ও স্পেস ছাড়া অক্ষর সংখ্যা সঙ্গে সঙ্গে দেখা যায়। SMS, X (টুইটার), SEO টাইটেল ও ডেসক্রিপশনের মতো সীমা বেছে নিলে আর কত অক্ষর বাকি তা দেখায়।",
+          "একটি ইংরেজি (GSM) SMS-এ ১৬০ অক্ষর যায়। বাংলা বা ইউনিকোড SMS-এ প্রতি অংশে ৭০ অক্ষর। এর বেশি হলে একাধিক SMS হিসেবে যায়।",
+        ],
+      },
+      {
+        h: "কোথায় কাজে লাগে",
+        p: [
+          "SEO টাইটেল সাধারণত ৫০ থেকে ৬০ অক্ষরের মধ্যে রাখা ভালো। গুগল পিক্সেল প্রস্থ ধরে কাটে, তাই এটি আনুমানিক সীমা।",
+          "বায়ো, আবেদনের ঘর বা বিজ্ঞাপনের লেখা কোনো সীমার মধ্যে রাখতে এটি কাজে লাগে।",
+        ],
+      },
+    ],
+    en: [
+      {
+        h: "How to use it",
+        p: [
+          "Type or paste your text and see the character count with and without spaces right away. Pick a limit such as SMS, X, SEO title or description to see how many characters remain.",
+          "A single English (GSM) SMS holds 160 characters. A Bangla or Unicode SMS holds 70 per part. Longer messages are sent as several SMS.",
+        ],
+      },
+      {
+        h: "When it helps",
+        p: [
+          "An SEO title is best kept around 50 to 60 characters. Google truncates by pixel width, so this limit is approximate.",
+          "It also helps keep a bio, a form field or an ad text within a limit.",
+        ],
+      },
+    ],
+  },
+
+  "color-picker": {
+    bn: [
+      {
+        h: "কীভাবে ব্যবহার করবেন",
+        p: [
+          "একটি রং বেছে নিন বা HEX কোড লিখুন, তাহলে HEX, RGB ও HSL মান দেখা যাবে এবং এক ট্যাপে কপি করা যাবে। ৩ অঙ্কের HEX কোডও চলে, যেমন #FFF মানে #FFFFFF।",
+          "এগুলো একই রং লেখার তিনটি উপায়। HEX ও RGB লাল, সবুজ ও নীল মিশিয়ে রং বানায়, আর HSL ব্যবহার করে হিউ, স্যাচুরেশন ও লাইটনেস।",
+        ],
+      },
+      {
+        h: "কোথায় কাজে লাগে",
+        p: [
+          "ওয়েবসাইট, ডিজাইন, ছবি বা প্রেজেন্টেশনের রংয়ের কোড বের করতে এটি কাজে লাগে।",
+          "ডিজাইনার ও ডেভেলপারের মধ্যে রং ঠিকঠাক বোঝানোর জন্য কোড কপি করে পাঠানো সুবিধাজনক।",
+        ],
+      },
+    ],
+    en: [
+      {
+        h: "How to use it",
+        p: [
+          "Pick a colour or type a HEX code to see the HEX, RGB and HSL values and copy them in one tap. 3-digit HEX codes work too, for example #FFF means #FFFFFF.",
+          "These are three ways to write the same colour. HEX and RGB mix red, green and blue, while HSL uses hue, saturation and lightness.",
+        ],
+      },
+      {
+        h: "When it helps",
+        p: [
+          "It helps you find colour codes for websites, designs, images or presentations.",
+          "Copying the code is handy for telling a designer or developer exactly which colour you mean.",
+        ],
+      },
+    ],
+  },
+
+  "lorem-ipsum-generator": {
+    bn: [
+      {
+        h: "Lorem Ipsum কী",
+        p: [
+          "Lorem Ipsum হলো ডিজাইনে ব্যবহৃত নমুনা লেখা, যা দিয়ে বোঝা যায় আসল লেখা বসলে লেআউট কেমন দেখাবে। এর কোনো অর্থ নেই, এটি শুধু লেখার আকার ও জায়গা দেখানোর জন্য।",
+          "অনুচ্ছেদ, বাক্য বা শব্দ বেছে নিন, কতটা লাগবে লিখুন এবং কপি করে নিন।",
+        ],
+      },
+      {
+        h: "কোথায় কাজে লাগে",
+        p: [
+          "ওয়েবসাইট বা অ্যাপের ডিজাইন, ব্লগ টেমপ্লেট ও প্রেজেন্টেশনে আসল লেখা তৈরির আগে জায়গা ভরাতে এটি কাজে লাগে।",
+          "সাইট চালু করার আগে নমুনা লেখা সরিয়ে আসল লেখা বসাতে ভুলবেন না।",
+        ],
+      },
+    ],
+    en: [
+      {
+        h: "What Lorem Ipsum is",
+        p: [
+          "Lorem Ipsum is placeholder text used in design to show how real text will fill a layout. It has no meaning and is only there to show text size and space.",
+          "Choose paragraphs, sentences or words, enter how many you need, and copy it.",
+        ],
+      },
+      {
+        h: "When it helps",
+        p: [
+          "It helps fill space in website or app designs, blog templates and presentations before the real text is ready.",
+          "Remember to replace the placeholder text with real content before you publish.",
+        ],
+      },
+    ],
+  },
+
+  "meta-tag-generator": {
+    bn: [
+      {
+        h: "কী তৈরি হয়",
+        p: [
+          "পেজের টাইটেল ও ডেসক্রিপশন লিখুন, প্রয়োজনে URL, ছবি ও লেখকের নাম দিন। টুলটি SEO মেটা ট্যাগ, Open Graph ও Twitter ট্যাগ তৈরি করে। এটি Blogger বা যেকোনো ওয়েবসাইটের জন্য কাজে লাগে।",
+          "তৈরি কোড কপি করে পেজের <head> অংশে বসান।",
+        ],
+      },
+      {
+        h: "কিছু জরুরি কথা",
+        p: [
+          "টাইটেল ৫০ থেকে ৬০ অক্ষর এবং ডেসক্রিপশন ১২০ থেকে ১৬০ অক্ষরের মধ্যে রাখা ভালো। গুগল পিক্সেল প্রস্থ ধরে কাটে, তাই এই সীমা আনুমানিক।",
+          "গুগল র‍্যাংকিংয়ে meta keywords ব্যবহার করে না, তাই না দিলেও চলে। একই লেখা একাধিক URL-এ থাকলে canonical URL দিয়ে মূল URL জানানো হয়।",
+        ],
+      },
+    ],
+    en: [
+      {
+        h: "What it creates",
+        p: [
+          "Enter the page title and description and, if needed, the URL, image and author. The tool creates SEO meta tags plus Open Graph and Twitter tags. It works for Blogger or any website.",
+          "Copy the generated code and paste it into your page's <head>.",
+        ],
+      },
+      {
+        h: "A few useful points",
+        p: [
+          "Keep titles around 50 to 60 characters and descriptions 120 to 160. Google truncates by pixel width, so these limits are approximate.",
+          "Google does not use meta keywords for ranking, so you can leave them out. A canonical URL tells search engines which URL is the main one when the same content appears at several URLs.",
+        ],
+      },
+    ],
+  },
+
+  "keyword-density-checker": {
+    bn: [
+      {
+        h: "কীভাবে কাজ করে",
+        p: [
+          "লেখা পেস্ট করে ১, ২ বা ৩ শব্দের ফ্রেজ বেছে নিন। টুলটি সবচেয়ে বেশি আসা শীর্ষ ২০টি কীওয়ার্ড ও তাদের ঘনত্ব দেখায়। বাংলা ও ইংরেজি দুটোতেই কাজ করে।",
+          "ঘনত্বের সূত্র: কীওয়ার্ড যতবার এসেছে ÷ মোট শব্দ × ১০০। সাধারণ শব্দের তালিকা ছোট, তাই দরকার হলে ফিল্টার বন্ধ করে নিন।",
+        ],
+      },
+      {
+        h: "কোথায় কাজে লাগে",
+        p: [
+          "ব্লগ বা গাইড লেখার পর দেখা যায় কোন শব্দ বেশি ঘুরেফিরে এসেছে। কোনো একটি নির্দিষ্ট ঘনত্ব গুগল র‍্যাংকিংয়ের জন্য জরুরি নয়।",
+          "স্বাভাবিকভাবে লিখুন, জোর করে একই শব্দ বারবার ঢোকাবেন না।",
+        ],
+      },
+    ],
+    en: [
+      {
+        h: "How it works",
+        p: [
+          "Paste your text and choose 1, 2 or 3-word phrases. The tool shows the top 20 keywords and their density. It works for both Bangla and English.",
+          "Density is the number of times the keyword appears ÷ total words × 100. The common-word list is short, so turn the filter off if needed.",
+        ],
+      },
+      {
+        h: "When it helps",
+        p: [
+          "After writing a blog post or guide you can see which words repeat most. There is no magic density number that Google requires for ranking.",
+          "Write naturally and do not force the same word in again and again.",
+        ],
+      },
+    ],
+  },
+
+  "stopwatch-timer": {
+    bn: [
+      {
+        h: "স্টপওয়াচ ও টাইমার",
+        p: [
+          "Stopwatch বা Countdown Timer বেছে নিন। Start চাপুন (টাইমারের আগে সময় ঠিক করুন), তারপর Pause, Lap বা Reset ব্যবহার করুন। স্টপওয়াচে ল্যাপ সময় রাখা যায়, আর কাউন্টডাউন শেষে বিপ শব্দ হয়।",
+          "সময় আপনার ডিভাইসের ঘড়ি থেকে মাপা হয়, তাই ট্যাব ব্যাকগ্রাউন্ডে গেলেও সময় ঠিক থাকে। পেশাদার খেলার সময় মাপার জন্য এটি নয়।",
+        ],
+      },
+      {
+        h: "শব্দ না হলে",
+        p: [
+          "ফোনের ভলিউম ও সাইলেন্ট মোড দেখুন। পেজ খোলা রাখুন, কারণ স্ক্রিন লক বা ট্যাব বন্ধ হলে শব্দ বন্ধ হতে পারে।",
+          "পড়াশোনার সময় মাপা, রান্না, ব্যায়াম বা পরীক্ষার অনুশীলনে এটি কাজে লাগে।",
+        ],
+      },
+    ],
+    en: [
+      {
+        h: "Stopwatch and timer",
+        p: [
+          "Pick Stopwatch or Countdown Timer. Press Start (set the time first for the timer), then use Pause, Lap or Reset. The stopwatch can record laps, and the countdown beeps when it ends.",
+          "Time is measured from your device clock, so it stays correct even if the tab goes to the background. It is not meant for professional sports timing.",
+        ],
+      },
+      {
+        h: "If there is no sound",
+        p: [
+          "Check your phone volume and silent mode. Keep the page open, because a locked screen or closed tab may stop the sound.",
+          "It helps with timing study sessions, cooking, exercise and exam practice.",
+        ],
+      },
+    ],
+  },
+
+  "todo-list": {
+    bn: [
+      {
+        h: "কীভাবে ব্যবহার করবেন",
+        p: [
+          "একটি কাজ লিখে + বা Enter চাপুন, শেষ হলে টিক দিন। All, Active ও Done ফিল্টারে কাজ আলাদা করে দেখা যায়। সাইন আপ লাগে না।",
+          "তালিকা শুধু আপনার ফোন বা ব্রাউজারে (লোকাল স্টোরেজ) থাকে, কোনো সার্ভারে যায় না। তাই অন্য ডিভাইসে দেখা যাবে না।",
+        ],
+      },
+      {
+        h: "মনে রাখার বিষয়",
+        p: [
+          "ব্রাউজারের ডেটা মুছলে তালিকাও মুছে যায়, তাই জরুরি কাজ অন্য কোথাও লিখে রাখুন।",
+          "দৈনিক পড়াশোনা, বাজারের তালিকা বা কাজের পরিকল্পনা সাজাতে এটি কাজে লাগে।",
+        ],
+      },
+    ],
+    en: [
+      {
+        h: "How to use it",
+        p: [
+          "Type a task and press + or Enter, then tick it when it is done. Filter by All, Active or Done. No signup is needed.",
+          "The list is kept only on your phone or browser (local storage) and never goes to a server, so it will not appear on other devices.",
+        ],
+      },
+      {
+        h: "Worth remembering",
+        p: [
+          "Clearing your browser data also deletes the list, so keep important items somewhere else too.",
+          "It helps with daily study plans, shopping lists and planning your work.",
+        ],
+      },
+    ],
+  },
+
+  "random-number-generator": {
+    bn: [
+      {
+        h: "কীভাবে ব্যবহার করবেন",
+        p: [
+          "সর্বনিম্ন, সর্বোচ্চ এবং কতটি সংখ্যা লাগবে তা লিখুন। চাইলে ইউনিক সংখ্যা বেছে নিন, তারপর জেনারেট চাপুন। কয়েন ফ্লিপ ও ডাইস রোলও আছে।",
+          "সংখ্যাগুলো ব্রাউজারের crypto জেনারেটর থেকে আসে, যা Math.random-এর চেয়ে শক্তিশালী।",
+        ],
+      },
+      {
+        h: "সীমা ও ব্যবহার",
+        p: [
+          "ইউনিক সংখ্যা রেঞ্জের চেয়ে বেশি চাওয়া যায় না। যেমন ১ থেকে ১০ রেঞ্জে সর্বোচ্চ ১০টি ইউনিক সংখ্যা পাওয়া যায়।",
+          "খেলা, লটারির মতো ঘরোয়া সিদ্ধান্ত বা নমুনা বাছাইয়ে এটি কাজে লাগে। সরকারি বা আইনি লটারির জন্য অনুমোদিত পদ্ধতি ব্যবহার করুন।",
+        ],
+      },
+    ],
+    en: [
+      {
+        h: "How to use it",
+        p: [
+          "Enter the minimum, maximum and how many numbers you want. Optionally choose unique numbers, then click generate. There is also a coin flip and a dice roll.",
+          "The numbers come from the browser's crypto generator, which is stronger than Math.random.",
+        ],
+      },
+      {
+        h: "Limits and use",
+        p: [
+          "You cannot ask for more unique numbers than the range holds. For example, 1 to 10 gives at most 10 unique numbers.",
+          "It helps with games, informal draws and picking samples. For official or legal lotteries, use an approved method.",
+        ],
+      },
+    ],
+  },
+
+  "countdown-timer": {
+    bn: [
+      {
+        h: "কীভাবে ব্যবহার করবেন",
+        p: [
+          "ইভেন্টের নাম লিখুন, তারিখ ও সময় বেছে নিন, তারপর কত দিন, ঘণ্টা, মিনিট ও সেকেন্ড বাকি তা লাইভ দেখুন। ইভেন্ট আপনার ব্রাউজারেই সংরক্ষিত থাকে, ফিরে এলে আবার পাবেন।",
+          "ঈদ বা রমজানের তারিখ টুলে দেওয়া নেই, কারণ তা চাঁদ দেখার ওপর নির্ভর করে এবং প্রতি বছর বদলায়। তারিখ নিজে দিন।",
+        ],
+      },
+      {
+        h: "কোথায় কাজে লাগে",
+        p: [
+          "পরীক্ষা, ভর্তি পরীক্ষা, জন্মদিন, বিয়ে, ভ্রমণ বা কোনো আবেদনের শেষ তারিখ কত দিন বাকি তা দেখতে এটি কাজে লাগে।",
+          "দ্রুত সময় মাপতে চাইলে আমাদের স্টপওয়াচ ও টাইমার টুল ব্যবহার করুন।",
+        ],
+      },
+    ],
+    en: [
+      {
+        h: "How to use it",
+        p: [
+          "Enter the event name, pick the date and time, and watch the days, hours, minutes and seconds left, live. The event is saved in your browser and will be there when you come back.",
+          "Eid and Ramadan dates are not built in because they depend on moon sighting and change every year. Set the date yourself.",
+        ],
+      },
+      {
+        h: "When it helps",
+        p: [
+          "It shows how long is left to an exam, an admission test, a birthday, a wedding, a trip or an application deadline.",
+          "To time something short, use our stopwatch and timer tool.",
+        ],
+      },
+    ],
+  },
+
+  "time-zone-converter": {
+    bn: [
+      {
+        h: "কীভাবে ব্যবহার করবেন",
+        p: [
+          "যে দেশের সময় থেকে বদলাবেন তা বেছে নিন, তারিখ ও সময় লিখুন বা বর্তমান সময় নিন। তারপর সব দেশের সময় একসঙ্গে দেখুন। বাংলাদেশ, যুক্তরাজ্য, যুক্তরাষ্ট্র, সৌদি আরব, মালয়েশিয়া ও আরও কিছু দেশ আছে।",
+          "বাংলাদেশ স্ট্যান্ডার্ড টাইম UTC+৬ এবং বাংলাদেশ বর্তমানে ডে-লাইট সেভিং ব্যবহার করে না।",
+        ],
+      },
+      {
+        h: "ডে-লাইট সেভিং",
+        p: [
+          "টুলটি ব্রাউজারের টাইম জোন ডেটা ব্যবহার করে, তাই তারিখ অনুযায়ী ডে-লাইট সেভিং নিজেই হিসাব হয়। যেমন লন্ডন গ্রীষ্মে UTC+১ এবং শীতে UTC+০।",
+          "প্রবাসী আত্মীয়ের সঙ্গে কথা, অনলাইন মিটিং বা বিদেশি অফিসের সময় মেলাতে এটি কাজে লাগে।",
+        ],
+      },
+    ],
+    en: [
+      {
+        h: "How to use it",
+        p: [
+          "Choose the country to convert from, enter the date and time or use the current time, then see the time in all countries together. Bangladesh, the UK, the US, Saudi Arabia, Malaysia and a few more are included.",
+          "Bangladesh Standard Time is UTC+6, and Bangladesh currently does not use daylight saving.",
+        ],
+      },
+      {
+        h: "Daylight saving",
+        p: [
+          "The tool uses your browser's time zone data, so daylight saving is handled by date. For example, London is UTC+1 in summer and UTC+0 in winter.",
+          "It helps with calls to relatives abroad, online meetings or matching an overseas office's hours.",
+        ],
+      },
+    ],
+  },
+
+  "expense-tracker": {
+    bn: [
+      {
+        h: "কীভাবে ব্যবহার করবেন",
+        p: [
+          "আয় বা খরচ বেছে নিয়ে টাকার পরিমাণ ও ক্যাটাগরি দিন এবং Add চাপুন। মাস অনুযায়ী মোট আয়, খরচ ও ব্যালেন্স দেখা যায়, আর ক্যাটাগরি অনুযায়ী টাকা কোথায় যাচ্ছে তাও বোঝা যায়। চাইলে CSV ডাউনলোড করা যায়।",
+          "তথ্য শুধু আপনার ফোন বা ব্রাউজারে (লোকাল স্টোরেজ) থাকে, কোনো সার্ভারে যায় না। অন্য ডিভাইসে দেখা যাবে না।",
+        ],
+      },
+      {
+        h: "ব্যাকআপ",
+        p: [
+          "ব্রাউজারের ডেটা মুছলে হিসাবও মুছে যায়, তাই মাঝে মাঝে CSV ডাউনলোড করে রাখুন।",
+          "খরচের হিসাব রাখার সহজ নিয়ম নিয়ে আমাদের গাইডটিও পড়ে দেখতে পারেন।",
+        ],
+      },
+    ],
+    en: [
+      {
+        h: "How to use it",
+        p: [
+          "Choose income or expense, enter the amount and category, and tap Add. You see total income, expenses and balance by month, and where your money goes by category. You can also download a CSV.",
+          "Entries are kept only on your phone or browser (local storage) and never go to a server. They will not appear on other devices.",
+        ],
+      },
+      {
+        h: "Backups",
+        p: [
+          "Clearing your browser data also deletes your entries, so download a CSV now and then as a backup.",
+          "You can also read our guide on a simple way to keep track of your expenses.",
+        ],
+      },
+    ],
+  },
+
+  "invoice-generator": {
+    bn: [
+      {
+        h: "কীভাবে ইনভয়েস বানাবেন",
+        p: [
+          "নিজের ও ক্লায়েন্টের তথ্য লিখুন, আইটেম, VAT ও ডিসকাউন্ট যোগ করুন, তারপর Print চাপুন এবং প্রিন্টারের জায়গায় \"Save as PDF\" বেছে নিন। সাইন আপ লাগে না।",
+          "সব কাজ ব্রাউজারেই হয়, তথ্য কোথাও পাঠানো হয় না। পরেরবারের জন্য শুধু আপনার (বিক্রেতার) তথ্য ও মুদ্রা এই ব্রাউজারে মনে রাখা হয়।",
+        ],
+      },
+      {
+        h: "সতর্কতা",
+        p: [
+          "এটি একটি সাধারণ ইনভয়েস, সরকারি VAT চালান (মূসক) ফরম্যাট নয়। সরকারি VAT ইনভয়েসের নিয়ম আলাদা, তাই তার জন্য এনবিআর-এর নিয়ম দেখুন।",
+          "ফ্রিল্যান্সার, ছোট ব্যবসা ও দোকানদারদের দ্রুত বিল বা কোটেশন পাঠাতে এটি কাজে লাগে।",
+        ],
+      },
+    ],
+    en: [
+      {
+        h: "How to make an invoice",
+        p: [
+          "Enter your details and your client's, add the items, VAT and discount, then tap Print and choose \"Save as PDF\" in place of a printer. No signup is needed.",
+          "Everything happens in your browser and nothing is sent anywhere. Only your (seller) details and currency are remembered in this browser for next time.",
+        ],
+      },
+      {
+        h: "A caution",
+        p: [
+          "This is a general invoice, not the official government VAT challan (Mushak) format. The official VAT invoice rules are different, so check the NBR rules for that.",
+          "It helps freelancers, small businesses and shopkeepers send a quick bill or quotation.",
+        ],
+      },
+    ],
+  },
+
+  "qr-scanner": {
+    bn: [
+      {
+        h: "কীভাবে স্ক্যান করবেন",
+        p: [
+          "ক্যামেরা চালু করে অনুমতি দিন এবং QR কোড ফ্রেমের ভেতরে ধরুন। ফল দেখা যাবে, আর সেটি লিংক হলে খোলার আগে ঠিকানা দেখে নিন। চাইলে QR কোডের ছবিও আপলোড করা যায়।",
+          "ক্যামেরা না চললে ব্রাউজারে এই সাইটের জন্য ক্যামেরার অনুমতি আছে কি না এবং অন্য কোনো অ্যাপ ক্যামেরা ব্যবহার করছে কি না দেখুন।",
+        ],
+      },
+      {
+        h: "নিরাপত্তা",
+        p: [
+          "অচেনা QR কোড ক্ষতিকর সাইটে নিয়ে যেতে পারে, তাই স্ক্যান করা লিংক খোলার আগে ঠিকানা দেখে নিন।",
+          "কোনো ছবি সার্ভারে যায় না, সব প্রসেস আপনার ফোনেই হয়।",
+        ],
+      },
+    ],
+    en: [
+      {
+        h: "How to scan",
+        p: [
+          "Start the camera, allow permission, and hold the QR code inside the frame. You see the result and, if it is a link, check the address before opening it. You can also upload a photo of the QR code.",
+          "If the camera does not start, check that camera permission is allowed for this site in your browser and that no other app is using the camera.",
+        ],
+      },
+      {
+        h: "Safety",
+        p: [
+          "An unknown QR code can lead to a harmful site, so check the address before opening a link.",
+          "No image goes to a server. Everything is processed on your phone.",
+        ],
+      },
+    ],
+  },
+
+  "text-to-speech": {
+    bn: [
+      {
+        h: "কীভাবে ব্যবহার করবেন",
+        p: [
+          "লেখা টাইপ বা পেস্ট করুন, ভাষা ও ভয়েস বেছে নিন (Automatic রাখলে লেখার বর্ণমালা দেখে ভাষা ধরা হয়), গতি ও পিচ ঠিক করুন এবং Speak চাপুন। আপনার লেখা কোথাও পাঠানো হয় না।",
+          "যে ভাষার ভয়েস আপনার ফোন বা ব্রাউজারে ইনস্টল আছে সেই ভাষাই চলে। ল্যাটিন অক্ষরে লেখা অন্য ভাষার (যেমন স্প্যানিশ) জন্য Language তালিকা থেকে সেই ভাষা বেছে নিন।",
+        ],
+      },
+      {
+        h: "বাংলা না পড়লে",
+        p: [
+          "ফোনের Settings → Language → Text-to-speech থেকে সেই ভাষার ভয়েস ইনস্টল করুন। \"অনলাইন\" চিহ্নিত ভয়েসের জন্য ইন্টারনেট লাগতে পারে।",
+          "পড়াশোনা, বানান শোনা বা চোখ বন্ধ করে লেখা শুনতে এটি কাজে লাগে।",
+        ],
+      },
+    ],
+    en: [
+      {
+        h: "How to use it",
+        p: [
+          "Type or paste your text, choose the language and voice (leave it on Automatic to detect the language from the writing system), set speed and pitch, then tap Speak. Your text is never sent anywhere.",
+          "It works for languages that have a voice installed on your phone or browser. For other languages written in Latin letters, such as Spanish, choose that language from the Language list.",
+        ],
+      },
+      {
+        h: "If Bangla is not read aloud",
+        p: [
+          "Install a voice for that language in Settings → Language → Text-to-speech. Voices marked \"online\" may need an internet connection.",
+          "It helps with studying, hearing how words sound, or listening to text with your eyes closed.",
+        ],
+      },
+    ],
+  },
+
+  "bangla-calendar": {
+    bn: [
+      {
+        h: "কী দেখা যায়",
+        p: [
+          "আজকের বাংলা তারিখ ও ঋতু দেখা যায়, মাস বদলে গ্রেগরিয়ান ও বাংলা ক্যালেন্ডার ঘোরা যায়, এবং তারিখ কনভার্টারে গ্রেগরিয়ান থেকে বাংলা বা বাংলা থেকে গ্রেগরিয়ান তারিখ বের করা যায়। এটি বাংলাদেশের সংশোধিত বাংলা পঞ্জিকা অনুসরণ করে।",
+          "এই পঞ্জিকায় পহেলা বৈশাখ প্রতি বছর ১৪ এপ্রিল। ফাল্গুনে সাধারণ বছরে ২৯ দিন এবং গ্রেগরিয়ান অধিবর্ষে ৩০ দিন।",
+        ],
+      },
+      {
+        h: "পশ্চিমবঙ্গের সঙ্গে পার্থক্য",
+        p: [
+          "এই টুল বাংলাদেশের পঞ্জিকা মানে, তাই পশ্চিমবঙ্গের তারিখের সঙ্গে মিলবে না। পশ্চিমবঙ্গে ভিন্ন পঞ্জিকা চলে, যেখানে পহেলা বৈশাখ সাধারণত ১৫ এপ্রিল।",
+          "জন্মদিন, বিয়ের তারিখ বা সরকারি অনুষ্ঠানের বাংলা তারিখ জানতে এটি কাজে লাগে।",
+        ],
+      },
+    ],
+    en: [
+      {
+        h: "What you can see",
+        p: [
+          "You see today's Bangla date and season, can browse a Gregorian and Bangla calendar by changing the month, and can convert dates between Gregorian and Bangla with the converter. It follows Bangladesh's revised Bangla calendar.",
+          "In this calendar Pohela Boishakh is on 14 April every year. Falgun has 29 days in a normal year and 30 in a Gregorian leap year.",
+        ],
+      },
+      {
+        h: "Difference from West Bengal",
+        p: [
+          "This tool follows Bangladesh's calendar, so it will not match West Bengal's dates. West Bengal uses a different calendar, where Pohela Boishakh is usually on 15 April.",
+          "It helps you find the Bangla date of a birthday, a wedding or an official event.",
+        ],
+      },
+    ],
+  },
+
   "rotate-pdf": {
     bn: [
       {

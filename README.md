@@ -6,13 +6,13 @@ Free online tools for Bangladesh. Fast, no signup, and everything runs in your b
 
 ## Tools
 
-51 tools are live. A tool is shown on the site only after its slug is added to `lib/live.ts`.
+52 tools are live. A tool is shown on the site only after its slug is added to `lib/live.ts`.
 
 | Category | Tools |
 | --- | --- |
 | Bangladesh Special (12) | bKash, Nagad, Rocket and Upay cash out calculators, Land Calculator (শতাংশ/কাঠা/বিঘা), BDT Currency Converter, Electricity Bill Calculator, Govt Job Age Calculator, Passport Fee Calculator, Zakat Calculator, Gold Weight Converter (ভরি/আনা/রতি), Income Tax Calculator |
 | Education & Calculation (12) | Number to Words, FDR/DPS Calculator, Age, GPA (SSC/HSC), CGPA, BMI, EMI, Percentage, Scientific Calculator, Unit Converter, Bill Calculator, Date Difference |
-| Image & PDF (9) | Image Compressor, Image Resizer, Image Converter, Image to PDF, Merge PDF, Split PDF, Compress PDF, QR Code Generator, PDF to JPG |
+| Image & PDF (10) | Image Compressor, Image Resizer, Image Converter, Image to PDF, Merge PDF, Split PDF, Compress PDF, QR Code Generator, PDF to JPG, Rotate PDF |
 | Text & SEO (8) | Word Counter, Character Counter, Case Converter, Password Generator, Color Picker, Lorem Ipsum, Meta Tag Generator, Keyword Density |
 | Daily Utility (10) | Stopwatch & Timer, To-Do, Random Number, Countdown, Time Zone Converter, Expense Tracker, Invoice Generator, QR Scanner, Text to Speech, Bangla Calendar |
 
@@ -22,7 +22,7 @@ Dropped: Background Remover, TIN Check, Plagiarism Helper, Article Rewriter. Not
 
 The `/guides` section has Bangla and English how-to articles, each linked to a tool. Guides live in `lib/guides.ts` (a `GUIDES` array). Add an object there and the guide page, the `/guides` list, the sitemap, the home page section and the link on the matching tool page all pick it up. Every guide needs a dated `updated` field, a tool link, sections and FAQs. Check facts against official sources before publishing.
 
-Live guides (11): cash out charges, SSC GPA, income tax 2026-27, electricity bill, zakat, FDR/DPS, passport fee, how many grams in a vori, CGPA, EMI, BMI.
+Live guides (23): cash out charges (and a charge table for 500 to 10,000 taka), SSC GPA, GPA to grade, GPA with the 4th subject, income tax 2026-27, electricity bill, zakat, FDR/DPS, passport fee, how many grams in a vori, CGPA, university grade points, EMI, flat vs reducing EMI, how to lower an EMI, BMI, percentage, age, number to words, square feet to shotangsho, US time to Bangladesh time, and tracking monthly expenses.
 
 ## SEO
 
@@ -41,7 +41,7 @@ Live guides (11): cash out charges, SSC GPA, income tax 2026-27, electricity bil
 
 ```
 app/
-  page.tsx                  Homepage with search and categories
+  page.tsx                  Server wrapper for the homepage (passes only guide slugs and titles)
   layout.tsx                Root layout (header, footer, theme, optional AdSense script)
   tool/[slug]/page.tsx      Renders any tool from the registry (+ SEO metadata, JSON-LD)
   category/[categorySlug]/  Category pages
@@ -53,7 +53,8 @@ components/
   toolRegistry.tsx          Base tools and merge of the batch registries
   toolRegistryB1.tsx ... B3.tsx    Registries for earlier batches
   toolRegistryB4.tsx ... B11.tsx   Registries for later batches (each entry: component, title, desc, howTo, faqs)
-  ToolLayout.tsx            Shared page layout (title, how-to, FAQ, related tools)
+  ToolLayout.tsx            Shared page layout (title, how-to, FAQ, related tools). The tool page passes in only that tool's article and English text, to keep the JS small
+  HomeContent.tsx           Homepage UI with search and categories (client component)
   ToolCard, Header, Footer, SearchBar, JsonLd, AdSlot, ThemeProvider
 data/tools.ts               The full list of tools (name, slug, category, icon)
 lib/
@@ -66,7 +67,7 @@ lib/
   i18nData.ts               UI strings, category names, English card descriptions
   guides.ts                 Guide articles (Bangla and English)
   seoMeta.ts                SEO titles and descriptions per tool
-  toolArticles.ts           Long-form text shown under tools
+  toolArticles.ts           Long-form text shown under every tool (Bangla and English)
   toolContentEn.ts          English title/description/how-to/FAQ for every live tool
   site.ts                   CONTACT_EMAIL (edit this one line)
 ```

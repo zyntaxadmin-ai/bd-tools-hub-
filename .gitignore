@@ -1,0 +1,21 @@
+# dependencies
+node_modules/
+
+# next.js
+.next/
+out/
+
+# env files (never commit secrets)
+.env
+.env.*
+!.env.example
+
+# logs and OS files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+
+# vercel
+.vercel
+*.tsbuildinfo

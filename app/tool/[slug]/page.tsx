@@ -9,6 +9,8 @@ import { siteConfig } from "@/lib/seo";
 import Link from "next/link";
 import { GUIDES } from "@/lib/guides";
 import { SEO_META } from "@/lib/seoMeta";
+import { TOOL_EN } from "@/lib/toolContentEn";
+import { TOOL_ARTICLES } from "@/lib/toolArticles";
 
 export function generateStaticParams() {
   return tools.map((t) => ({ slug: t.slug.replace("/tool/", "") }));
@@ -44,7 +46,7 @@ export default function ToolPage({ params }: { params: { slug: string } }) {
   return (
     <>
       <JsonLd toolName={entry.title} description={entry.desc} url={`${siteConfig.url}/tool/${params.slug}`} faqs={entry.faqs} />
-      <ToolLayout title={entry.title} description={entry.desc} category={tool.category} categorySlug={cat.slug} slug={tool.slug} howToSteps={entry.howTo} faqs={entry.faqs}>
+      <ToolLayout title={entry.title} description={entry.desc} category={tool.category} categorySlug={cat.slug} slug={tool.slug} howToSteps={entry.howTo} faqs={entry.faqs} enContent={TOOL_EN[params.slug]} articles={TOOL_ARTICLES[params.slug]}>
         <Component />
         {GUIDES.filter((g) => g.tool.slug === params.slug).map((g) => (
           <Link key={g.slug} href={`/guides/${g.slug}`} className="mt-6 block rounded-xl border border-slate-200 dark:border-slate-700 p-4 text-sm hover:border-indigo-400 transition">

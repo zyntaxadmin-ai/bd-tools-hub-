@@ -22,11 +22,14 @@ export const TOOL_EN: Record<string, ToolEn> = {
   },
   "bkash-calculator": {
     title: "bKash Charge Calculator",
-    desc: "Calculate bKash Cash Out and Send Money charges easily.",
+    desc: "Calculate the bKash Cash Out charge (agent, 18.50 per 1,000 taka, last checked October 2026) and see the Send Money charge, plus the total deducted.",
     howTo: ["Enter the amount", "Choose Cash Out or Send Money", "See the charge and the total"],
     faqs: [
       { q: "Is the charge always the same?", a: "No. bKash can change its charges at any time. Check the official charge chart to confirm." },
-      { q: "What is the Cash Out charge on 1,000 taka?", a: "This calculator uses 18.5 taka." },
+      { q: "What is the Cash Out charge on 1,000 taka?", a: "This calculator uses 18.5 taka (agent cash out, last checked October 2026)." },
+      { q: "How is the charge worked out?", a: "Charge = amount × 18.5 ÷ 1,000. For example 37 taka on 2,000 taka and 92.5 taka on 5,000 taka. The charge is taken from your balance on top of the amount." },
+      { q: "What Send Money charge does the tool assume?", a: "The tool assumes a charge of 0 for Send Money. A charge can apply above limits or for other kinds of transfer, so check the bKash app or the official chart." },
+      { q: "How do I compare with other services?", a: "Nagad, Rocket and Upay have their own calculators. For all four side by side, read our cash out charge table guide." },
     ],
   },
   "word-counter": {

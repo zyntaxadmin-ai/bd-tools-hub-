@@ -5,8 +5,8 @@ import ToolCard from "./ToolCard";
 import AdSlot from "./AdSlot";
 import { tools } from "@/data/tools";
 import { LIVE_SLUGS } from "@/lib/live";
-import { TOOL_EN } from "@/lib/toolContentEn";
-import { TOOL_ARTICLES } from "@/lib/toolArticles";
+import type { TOOL_EN } from "@/lib/toolContentEn";
+import type { TOOL_ARTICLES } from "@/lib/toolArticles";
 import { CAT_I18N } from "@/lib/i18nData";
 import { useLang, useUI } from "@/lib/lang";
 
@@ -19,17 +19,20 @@ interface ToolLayoutProps {
   children: React.ReactNode;
   howToSteps: string[];
   faqs: { q: string; a: string }[];
+  // Only this tool's English text and article are passed in (not every tool's), to keep the page JS small.
+  enContent?: (typeof TOOL_EN)[string];
+  articles?: (typeof TOOL_ARTICLES)[string];
 }
 
-export default function ToolLayout({ title, description, category, categorySlug, slug, children, howToSteps, faqs }: ToolLayoutProps) {
+export default function ToolLayout({ title, description, category, categorySlug, slug, children, howToSteps, faqs, enContent, articles }: ToolLayoutProps) {
   const { lang } = useLang();
   const ui = useUI();
-  const en = lang === "en" ? TOOL_EN[slug.replace("/tool/", "")] : undefined;
+  const en = lang === "en" ? enContent : undefined;
   const t = en ? en.title : title;
   const d = en ? en.desc : description;
   const steps = en ? en.howTo : howToSteps;
   const questions = en ? en.faqs : faqs;
-  const article = TOOL_ARTICLES[slug.replace("/tool/", "")]?.[lang === "en" ? "en" : "bn"];
+  const article = articles?.[lang === "en" ? "en" : "bn"];
   const catLabel = CAT_I18N[categorySlug]?.[lang].name ?? category;
 
   const related = tools

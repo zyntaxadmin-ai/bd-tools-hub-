@@ -86,6 +86,7 @@ export default function MfsChargeCalculator({
         </div>
       )}
       <p className="text-xs text-slate-500 mt-4">{tr(sendNote.bn, sendNote.en)}</p>
+      <p className="text-xs text-slate-500 mt-2">{tr("এজেন্ট ক্যাশ আউটের রেট শেষ দেখা হয়েছে অক্টোবর ২০২৬-এ।", "Agent cash out rates were last checked in October 2026.")}</p>
     </div>
   );
 }

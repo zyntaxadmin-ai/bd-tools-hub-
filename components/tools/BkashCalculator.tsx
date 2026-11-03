@@ -38,6 +38,7 @@ export default function BkashCalculator() {
           </select>
         </div>
       </div>
+      <p className="text-xs text-slate-500 mt-3">{tr("Cash Out রেট (এজেন্ট) শেষ দেখা হয়েছে অক্টোবর ২০২৬-এ। Send Money-তে এই টুল চার্জ ০ ধরে, সীমা ছাড়ালে বা অন্য ধরনের লেনদেনে চার্জ লাগতে পারে।", "The agent Cash Out rate was last checked in October 2026. For Send Money this tool assumes a charge of 0. A charge can apply above limits or for other kinds of transfer.")}</p>
       {error && <p className="text-sm text-red-500 mt-2">{error}</p>}
       <div className="flex gap-3 mt-4">
         <button onClick={calculate} className="flex-1 py-3 bg-[#E2136E] text-white rounded-xl font-medium hover:bg-[#c0105c]">Calculate Charge</button>
