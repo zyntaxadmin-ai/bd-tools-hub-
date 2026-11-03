@@ -46,6 +46,8 @@ export const GUIDES: Guide[] = [
     faqs: [
       { q: ["১০,০০০ টাকা ক্যাশ আউটে কত চার্জ কাটে?", "How much is the charge for cashing out 10,000 taka?"], a: ["প্রতি ১০০০ টাকায় ১৮.৫০ হলে ১০ × ১৮.৫০ = ১৮৫ টাকা। রেট ১৪ হলে ১৪০ টাকা। আপনার রেট অনুযায়ী ক্যালকুলেটরে দেখে নিন।", "At 18.50 per 1,000 it is 10 × 18.50 = 185 taka. At a rate of 14 it is 140 taka. Check your own rate in the calculator."] },
       { q: ["প্রতি ১০০০ টাকায় ১৮.৫০ মানে কত শতাংশ?", "What percentage is 18.50 per 1,000 taka?"], a: ["১.৮৫%। প্রতি ১০০০ এর চার্জকে ১০ দিয়ে ভাগ করলে শতাংশ পাওয়া যায়।", "It is 1.85%. Divide the charge per 1,000 by 10 to get the percentage."] },
+      { q: ["২০০০ টাকা ক্যাশ আউট চার্জ বিকাশে কত?", "What is the bKash cash out charge on 2,000 taka?"], a: ["প্রতি ১০০০ টাকায় ১৮.৫০ ধরলে ২ × ১৮.৫০ = ৩৭ টাকা। ৩০০০ টাকায় ৫৫.৫০, ১০০ টাকায় ১.৮৫ এবং ৫০০০ টাকায় ৯২.৫০ টাকা। রেট বদলালে অঙ্কও বদলাবে।", "At 18.50 per 1,000 taka, 2 × 18.50 = 37 taka. It is 55.50 on 3,000 taka, 1.85 on 100 taka and 92.50 on 5,000 taka. If the rate changes, these figures change too."] },
+      { q: ["প্রিয় নম্বর বা অফারে চার্জ আলাদা হয়?", "Can a Priyo number or an offer change the charge?"], a: ["বিশেষ অফার বা সুবিধা থাকলে রেট আলাদা হতে পারে। আপনার ক্ষেত্রে প্রযোজ্য রেট বিকাশ অ্যাপ বা অফিসিয়াল সাইটে দেখে নিন।", "A special offer or benefit can change the rate. Check the rate that applies to you in the bKash app or on the official site."] },
       { q: ["সেন্ড মানির চার্জও কি এভাবে হিসাব হয়?", "Is send money calculated the same way?"], a: ["সেন্ড মানি অ্যাপ ও অফারভেদে বদলায়, বেশিরভাগ ক্ষেত্রে একই কোম্পানির নম্বরে পাঠানো সাধারণত ফ্রি। অ্যাপে দেখে নিন।", "Send money varies by app and offer, and sending to a number of the same company is often free. Check in the app."] },
     ],
   },
@@ -580,6 +582,219 @@ export const GUIDES: Guide[] = [
       { q: ["১ কোটি মানে কত লাখ?", "How many lakh is 1 crore?"], a: ["১০০ লাখ।", "100 lakh."] },
       { q: ["১,০০,০০০ কে কী বলে?", "What is 1,00,000 called?"], a: ["এক লাখ।", "One lakh."] },
       { q: ["পয়সাসহ টাকা কথায় কীভাবে লিখব?", "How do I write an amount with paisa in words?"], a: ["আগে টাকা কথায় লিখুন, তারপর পয়সা কথায় লিখুন। যেমন ১২৩.৫০ = একশ তেইশ টাকা পঞ্চাশ পয়সা।", "Write the taka in words first and then the paisa. For example 123.50 = one hundred twenty-three taka fifty paisa."] },
+    ],
+  },
+  {
+    slug: "bargofut-theke-shotangsho",
+    title: ["বর্গফুট থেকে শতাংশ কীভাবে হিসাব করবেন? জমি মাপার সহজ নিয়ম", "How to convert square feet to shotangsho: a simple land measurement guide"],
+    desc: ["১,৪০০ বর্গফুট কত শতাংশ, ১ শতাংশে কত বর্গফুট এবং একরের হিসাব, উদাহরণসহ।", "How many shotangsho is 1,400 square feet, how many square feet in 1 shotangsho, and the acre conversion, with examples."],
+    updated: "2026-11-03",
+    updatedLabel: ["৩ নভেম্বর, ২০২৬", "3 November 2026"],
+    tool: { slug: "land-calculator-bd", name: ["জমি পরিমাপ ক্যালকুলেটর", "Land calculator"] },
+    sections: [
+      {
+        h: ["মূল মাপ", "The basic measures"],
+        p: [
+          ["১ শতাংশ = ৪৩৫.৬ বর্গফুট। ১ একর = ১০০ শতাংশ = ৪৩,৫৬০ বর্গফুট।", "1 shotangsho = 435.6 square feet. 1 acre = 100 shotangsho = 43,560 square feet."],
+        ],
+      },
+      {
+        h: ["বর্গফুট থেকে শতাংশ", "Square feet to shotangsho"],
+        p: [
+          ["সূত্র: বর্গফুট ÷ ৪৩৫.৬। যেমন ১,৪০০ বর্গফুট ÷ ৪৩৫.৬ = প্রায় ৩.২১ শতাংশ। ১,০০০ বর্গফুট = প্রায় ২.৩০ শতাংশ এবং ২,০০০ বর্গফুট = প্রায় ৪.৫৯ শতাংশ।", "Formula: square feet ÷ 435.6. For example 1,400 sq ft ÷ 435.6 = about 3.21 shotangsho. 1,000 sq ft is about 2.30 and 2,000 sq ft is about 4.59 shotangsho."],
+        ],
+      },
+      {
+        h: ["শতাংশ থেকে বর্গফুট", "Shotangsho to square feet"],
+        p: [
+          ["সূত্র: শতাংশ × ৪৩৫.৬। যেমন ৩ শতাংশ × ৪৩৫.৬ = ১,৩০৬.৮ বর্গফুট। ১০ শতাংশ = ৪,৩৫৬ বর্গফুট।", "Formula: shotangsho × 435.6. For example 3 shotangsho × 435.6 = 1,306.8 sq ft. 10 shotangsho = 4,356 sq ft."],
+        ],
+      },
+      {
+        h: ["কাঠা ও বিঘা নিয়ে সতর্কতা", "A caution about katha and bigha"],
+        p: [
+          ["কাঠা ও বিঘার মাপ এলাকাভেদে আলাদা হয়। তাই দলিলে বা এলাকায় কাঠা কত বর্গফুট ধরা হয় তা নিশ্চিত হয়ে হিসাব করুন। আমাদের ক্যালকুলেটরে কাঠার মাপ নিজে বদলে নেওয়া যায়। জমির দলিলের হিসাবের জন্য সরকারি ভূমি অফিস বা সার্ভেয়ারের মাপই চূড়ান্ত।", "The size of a katha or bigha differs by area, so confirm how many square feet a katha means in your deed or locality. Our calculator lets you change the katha size. For legal land records, the measurement from the government land office or a surveyor is final."],
+        ],
+      },
+    ],
+    faqs: [
+      { q: ["১,৪০০ বর্গফুট কত শতাংশ?", "How many shotangsho is 1,400 square feet?"], a: ["১,৪০০ ÷ ৪৩৫.৬ = প্রায় ৩.২১ শতাংশ।", "1,400 ÷ 435.6 = about 3.21 shotangsho."] },
+      { q: ["১ শতাংশে কত বর্গফুট?", "How many square feet in 1 shotangsho?"], a: ["৪৩৫.৬ বর্গফুট।", "435.6 square feet."] },
+      { q: ["১ একরে কত শতাংশ?", "How many shotangsho in 1 acre?"], a: ["১০০ শতাংশ।", "100 shotangsho."] },
+    ],
+  },
+  {
+    slug: "usa-somoy-bangladesh-somoy",
+    title: ["আমেরিকার সময় বাংলাদেশে কত? সময়ের পার্থক্য ও হিসাব", "US time in Bangladesh time: the time difference explained"],
+    desc: ["নিউ ইয়র্ক, লস অ্যাঞ্জেলেস ও অন্য মার্কিন সময়কে বাংলাদেশ সময়ে বদলানোর নিয়ম, শীত ও গ্রীষ্মের পার্থক্যসহ।", "How to convert New York, Los Angeles and other US times to Bangladesh time, including the winter and summer difference."],
+    updated: "2026-11-03",
+    updatedLabel: ["৩ নভেম্বর, ২০২৬", "3 November 2026"],
+    tool: { slug: "time-zone-converter", name: ["টাইম জোন কনভার্টার", "Time zone converter"] },
+    sections: [
+      {
+        h: ["বাংলাদেশের সময়", "Bangladesh time"],
+        p: [
+          ["বাংলাদেশ UTC+৬ সময়ে চলে এবং বর্তমানে ডে-লাইট সেভিং ব্যবহার করে না, তাই সারা বছর পার্থক্য একই থাকে।", "Bangladesh follows UTC+6 and currently does not use daylight saving time, so its offset stays the same all year."],
+        ],
+      },
+      {
+        h: ["যুক্তরাষ্ট্রের সময়ের পার্থক্য", "The difference with US time"],
+        p: [
+          ["যুক্তরাষ্ট্রের অনেক অঞ্চলে সময় বছরে দুবার বদলায়। মার্চের দ্বিতীয় রবিবার থেকে নভেম্বরের প্রথম রবিবার পর্যন্ত গ্রীষ্মকালীন সময় চলে। এ বছর তা ১ নভেম্বর ২০২৬ এ শেষ হয়েছে।", "In much of the US the clocks change twice a year. Daylight saving time runs from the second Sunday of March to the first Sunday of November. This year it ended on 1 November 2026."],
+          ["পূর্ব সময় (নিউ ইয়র্ক): শীতে (EST) বাংলাদেশ ১১ ঘণ্টা এগিয়ে, গ্রীষ্মে (EDT) ১০ ঘণ্টা। পশ্চিম সময় (লস অ্যাঞ্জেলেস): শীতে (PST) ১৪ ঘণ্টা, গ্রীষ্মে (PDT) ১৩ ঘণ্টা।", "Eastern time (New York): Bangladesh is 11 hours ahead in winter (EST) and 10 hours ahead in summer (EDT). Pacific time (Los Angeles): 14 hours ahead in winter (PST) and 13 hours in summer (PDT)."],
+        ],
+      },
+      {
+        h: ["উদাহরণ", "Examples"],
+        p: [
+          ["নভেম্বরে নিউ ইয়র্কে সকাল ৯টা মানে বাংলাদেশে একই দিন রাত ৮টা। জুলাইয়ে নিউ ইয়র্কে সকাল ৯টা মানে বাংলাদেশে সন্ধ্যা ৭টা। নভেম্বরে লস অ্যাঞ্জেলেসে সকাল ৯টা মানে বাংলাদেশে রাত ১১টা।", "9:00 AM in New York in November is 8:00 PM the same day in Bangladesh. 9:00 AM in New York in July is 7:00 PM in Bangladesh. 9:00 AM in Los Angeles in November is 11:00 PM in Bangladesh."],
+          ["পার্থক্য যোগ করার পর সময় ২৪ ঘণ্টার বেশি হলে পরের দিনে চলে যায়, তাই তারিখও মিলিয়ে নিন।", "If adding the difference passes midnight, the date moves to the next day, so check the date too."],
+        ],
+      },
+    ],
+    faqs: [
+      { q: ["এখন আমেরিকার পূর্ব সময় ও বাংলাদেশ সময়ের পার্থক্য কত?", "What is the gap between US Eastern and Bangladesh time now?"], a: ["নভেম্বর ২০২৬ থেকে (শীতকালীন সময়) ১১ ঘণ্টা। গ্রীষ্মকালীন সময় শুরু হলে ১০ ঘণ্টা হবে।", "From November 2026 (winter time) it is 11 hours. It will be 10 hours once daylight saving starts again."] },
+      { q: ["মিটিংয়ের সময় ঠিক করতে কী করব?", "How do I set a meeting time?"], a: ["টাইম জোন কনভার্টারে দুই দেশের শহর বেছে সময় দিন। ব্রাউজার ডে-লাইট সেভিং নিজেই হিসাব করে।", "Pick both cities in the time zone converter and enter the time. The browser works out daylight saving itself."] },
+    ],
+  },
+  {
+    slug: "gpa-4th-subject-hisab",
+    title: ["এসএসসি-এইচএসসি জিপিএ কীভাবে হিসাব করবেন? ৪র্থ বিষয়সহ ও ছাড়া", "How to calculate SSC and HSC GPA with and without the 4th subject"],
+    desc: ["গ্রেড পয়েন্ট যোগ করে জিপিএ বের করার নিয়ম, ৪র্থ বিষয়ের অতিরিক্ত পয়েন্ট কীভাবে যোগ হয় এবং উদাহরণ।", "How to find GPA by adding grade points, how the 4th subject's extra points are added, and an example."],
+    updated: "2026-11-03",
+    updatedLabel: ["৩ নভেম্বর, ২০২৬", "3 November 2026"],
+    tool: { slug: "gpa-calculator-bd", name: ["জিপিএ ক্যালকুলেটর", "GPA calculator"] },
+    sections: [
+      {
+        h: ["গ্রেড ও পয়েন্ট", "Grades and points"],
+        p: [
+          ["সাধারণ বোর্ডে নম্বর অনুযায়ী পয়েন্ট: ৮০-১০০ A+ (৫.০০), ৭০-৭৯ A (৪.০০), ৬০-৬৯ A- (৩.৫০), ৫০-৫৯ B (৩.০০), ৪০-৪৯ C (২.০০), ৩৩-৩৯ D (১.০০), ০-৩২ F (০.০০)।", "In the general boards the points follow marks: 80-100 A+ (5.00), 70-79 A (4.00), 60-69 A- (3.50), 50-59 B (3.00), 40-49 C (2.00), 33-39 D (1.00), 0-32 F (0.00)."],
+        ],
+      },
+      {
+        h: ["৪র্থ বিষয় ছাড়া জিপিএ", "GPA without the 4th subject"],
+        p: [
+          ["সব আবশ্যিক বিষয়ের পয়েন্ট যোগ করে বিষয়ের সংখ্যা দিয়ে ভাগ করুন। জিপিএ = মোট পয়েন্ট ÷ বিষয়ের সংখ্যা।", "Add the points of all compulsory subjects and divide by the number of subjects. GPA = total points ÷ number of subjects."],
+        ],
+      },
+      {
+        h: ["৪র্থ বিষয়সহ জিপিএ", "GPA with the 4th subject"],
+        p: [
+          ["৪র্থ বিষয়ের পয়েন্ট ২.০০ এর বেশি হলে শুধু বাড়তি অংশ (পয়েন্ট − ২) মোট পয়েন্টের সঙ্গে যোগ হয়। ভাগ হয় আবশ্যিক বিষয়ের সংখ্যা দিয়েই। ৪র্থ বিষয়ে ২.০০ বা তার কম পেলে কিছু যোগ হয় না। জিপিএ ৫.০০ এর বেশি দেখানো হয় না।", "If the 4th subject's points are above 2.00, only the extra part (points − 2) is added to the total. The divisor stays the number of compulsory subjects. If the 4th subject is 2.00 or less, nothing is added. A GPA is not shown above 5.00."],
+          ["উদাহরণ: ধরুন ১০টি আবশ্যিক বিষয়ে মোট ৪০ পয়েন্ট এবং ৪র্থ বিষয়ে ৪.০০। জিপিএ = (৪০ + (৪ − ২)) ÷ ১০ = ৪২ ÷ ১০ = ৪.২০।", "Example: say 10 compulsory subjects total 40 points and the 4th subject is 4.00. GPA = (40 + (4 − 2)) ÷ 10 = 42 ÷ 10 = 4.20."],
+        ],
+      },
+      {
+        h: ["বোর্ডভেদে পার্থক্য", "Differences between boards"],
+        p: [
+          ["বিষয়ের সংখ্যা শাখা ও বোর্ডভেদে (সাধারণ, মাদ্রাসা, কারিগরি) আলাদা হতে পারে। চূড়ান্ত হিসাবের জন্য নিজের বোর্ডের ফলাফল বিজ্ঞপ্তি বা মার্কশিট দেখুন।", "The number of subjects can differ by stream and board (general, madrasah, technical). For the final figure check your board's result notice or marksheet."],
+        ],
+      },
+    ],
+    faqs: [
+      { q: ["৪র্থ বিষয় ছাড়া জিপিএ কীভাবে বের করব?", "How do I find GPA without the 4th subject?"], a: ["সব আবশ্যিক বিষয়ের পয়েন্ট যোগ করে বিষয়ের সংখ্যা দিয়ে ভাগ করুন।", "Add the points of all compulsory subjects and divide by their number."] },
+      { q: ["৪র্থ বিষয়ে A পেলে কত যোগ হয়?", "How much is added for an A in the 4th subject?"], a: ["A এর পয়েন্ট ৪.০০, তাই ৪ − ২ = ২ পয়েন্ট যোগ হয়।", "An A is 4.00 points, so 4 − 2 = 2 points are added."] },
+    ],
+  },
+  {
+    slug: "university-cgpa-grade-point",
+    title: ["বিশ্ববিদ্যালয়ে A-, B+ এর পয়েন্ট কত? CGPA ও গ্রেড পয়েন্টের নিয়ম", "University grade points in Bangladesh: A-, B+ and how CGPA works"],
+    desc: ["বাংলাদেশের বিশ্ববিদ্যালয়ে গ্রেডের পয়েন্ট কেন আলাদা, দুটি প্রচলিত স্কেল এবং ক্রেডিট দিয়ে CGPA হিসাবের উদাহরণ।", "Why grade points differ between Bangladeshi universities, two common scales, and a CGPA example using credits."],
+    updated: "2026-11-03",
+    updatedLabel: ["৩ নভেম্বর, ২০২৬", "3 November 2026"],
+    tool: { slug: "cgpa-calculator", name: ["CGPA ক্যালকুলেটর", "CGPA calculator"] },
+    sections: [
+      {
+        h: ["প্রতি বিশ্ববিদ্যালয়ে স্কেল আলাদা", "Each university has its own scale"],
+        p: [
+          ["বাংলাদেশে সব বিশ্ববিদ্যালয়ে একই গ্রেড স্কেল নেই। একটি প্রচলিত ৪.০০ স্কেলে A+ = ৪.০০, A = ৩.৭৫, A- = ৩.৫০, B+ = ৩.২৫, B = ৩.০০, B- = ২.৭৫, C+ = ২.৫০, C = ২.২৫, D = ২.০০, F = ০।", "Bangladeshi universities do not all use one grade scale. One common 4.00 scale is A+ = 4.00, A = 3.75, A- = 3.50, B+ = 3.25, B = 3.00, B- = 2.75, C+ = 2.50, C = 2.25, D = 2.00, F = 0."],
+          ["কিছু বিশ্ববিদ্যালয় অন্য স্কেল ব্যবহার করে, যেমন A- = ৩.৭০ এবং B+ = ৩.৩০ (IUB ও BRAC ইউনিভার্সিটিতে এমন দেখা যায়), আবার কোথাও A- = ৩.৬৭ এবং B+ = ৩.৩৩।", "Some universities use another scale, for example A- = 3.70 and B+ = 3.30 (seen at IUB and BRAC University), and elsewhere A- = 3.67 and B+ = 3.33."],
+          ["এসব তথ্য প্রকাশিত তালিকা থেকে নেওয়া এবং বদলাতে পারে। তাই নিজের বিশ্ববিদ্যালয়ের গ্রেডিং পলিসি দেখে নিন।", "These figures come from published lists and may change, so check your own university's grading policy."],
+        ],
+      },
+      {
+        h: ["CGPA কীভাবে হিসাব হয়", "How CGPA is calculated"],
+        p: [
+          ["সূত্র: CGPA = Σ (কোর্সের গ্রেড পয়েন্ট × ক্রেডিট) ÷ মোট ক্রেডিট।", "Formula: CGPA = Σ (course grade point × credits) ÷ total credits."],
+          ["উদাহরণ: তিনটি কোর্স। ৩ ক্রেডিটে ৩.৭৫, ৩ ক্রেডিটে ৩.২৫ এবং ৪ ক্রেডিটে ৩.৫০। (৩ × ৩.৭৫ + ৩ × ৩.২৫ + ৪ × ৩.৫০) ÷ ১০ = (১১.২৫ + ৯.৭৫ + ১৪) ÷ ১০ = ৩৫ ÷ ১০ = ৩.৫০।", "Example: three courses. 3.75 on 3 credits, 3.25 on 3 credits and 3.50 on 4 credits. (3 × 3.75 + 3 × 3.25 + 4 × 3.50) ÷ 10 = (11.25 + 9.75 + 14) ÷ 10 = 35 ÷ 10 = 3.50."],
+        ],
+      },
+    ],
+    faqs: [
+      { q: ["A- এর পয়েন্ট কত?", "What is the grade point of A-?"], a: ["স্কেলভেদে ৩.৫০ বা ৩.৭০ ও ৩.৬৭ হতে পারে। নিজের বিশ্ববিদ্যালয়ের স্কেল দেখুন।", "Depending on the scale it can be 3.50, 3.70 or 3.67. Check your university's scale."] },
+      { q: ["৩.৩৩ জিপিএ কত গ্রেড?", "What grade is a 3.33 GPA?"], a: ["যে স্কেলে B+ = ৩.৩৩ (যেমন UIU তে), সেখানে এটি B+। অন্য স্কেলে ৩.৩৩ গ্রেডের মাঝামাঝি পড়তে পারে।", "On a scale where B+ = 3.33 (for example at UIU) it is B+. On other scales 3.33 may fall between two grades."] },
+      { q: ["ক্রেডিট ছাড়া CGPA হিসাব করা যায়?", "Can I work out CGPA without credits?"], a: ["সব কোর্সের ক্রেডিট সমান হলে গ্রেড পয়েন্টের সাধারণ গড়ই CGPA। না হলে ক্রেডিট ধরে হিসাব করতে হবে।", "If all courses have equal credits, the plain average of grade points is the CGPA. Otherwise weight by credits."] },
+    ],
+  },
+  {
+    slug: "emi-flat-reducing-parthokko",
+    title: ["EMI-তে ফ্ল্যাট রেট ও রিডিউসিং ব্যালেন্সের পার্থক্য কী? মোবাইল ও লোনের কিস্তি", "Flat rate vs reducing balance EMI: what is the difference?"],
+    desc: ["একই সুদের হারে ফ্ল্যাট ও রিডিউসিং পদ্ধতিতে কিস্তি কত আলাদা হয়, উদাহরণ ও কেনার আগে কী জিজ্ঞেস করবেন।", "How much the instalment differs between flat and reducing methods at the same rate, with an example and what to ask before you buy."],
+    updated: "2026-11-03",
+    updatedLabel: ["৩ নভেম্বর, ২০২৬", "3 November 2026"],
+    tool: { slug: "emi-calculator-bd", name: ["EMI ক্যালকুলেটর", "EMI calculator"] },
+    sections: [
+      {
+        h: ["দুই পদ্ধতি", "The two methods"],
+        p: [
+          ["রিডিউসিং ব্যালেন্সে প্রতি মাসে বাকি থাকা আসলের ওপর সুদ ধরা হয়। ফ্ল্যাট রেটে পুরো মেয়াদে শুরুর আসলের ওপরই সুদ ধরা হয়, যদিও আপনি প্রতি মাসে আসল ফেরত দিচ্ছেন। তাই একই হারে ফ্ল্যাট রেটে মোট সুদ বেশি পড়ে।", "With reducing balance, interest is charged on the principal still owed each month. With a flat rate, interest is charged on the original principal for the whole term even though you repay principal every month. So at the same stated rate, the flat method costs more in total."],
+        ],
+      },
+      {
+        h: ["উদাহরণ", "Example"],
+        p: [
+          ["১,০০,০০০ টাকা, ১২% বার্ষিক হার, ১২ মাস। রিডিউসিং ব্যালেন্সে কিস্তি প্রায় ৮,৮৮৫ টাকা, মোট সুদ প্রায় ৬,৬১৯ টাকা। ফ্ল্যাট রেটে সুদ ১,০০,০০০ × ১২% = ১২,০০০ টাকা, কিস্তি (১,০০,০০০ + ১২,০০০) ÷ ১২ = প্রায় ৯,৩৩৩ টাকা।", "100,000 taka at 12% a year for 12 months. With reducing balance the instalment is about 8,885 taka and total interest about 6,619 taka. With a flat rate the interest is 100,000 × 12% = 12,000 taka and the instalment is (100,000 + 12,000) ÷ 12 = about 9,333 taka."],
+          ["অর্থাৎ ফ্ল্যাট ১২% আসলে রিডিউসিং ব্যালেন্সের প্রায় ২১.৫% বার্ষিক হারের সমান।", "In other words, a flat 12% works out to about 21.5% a year on a reducing balance basis."],
+        ],
+      },
+      {
+        h: ["কেনার আগে কী জিজ্ঞেস করবেন", "What to ask before you buy"],
+        p: [
+          ["দোকান বা ব্যাংককে জিজ্ঞেস করুন হার ফ্ল্যাট না রিডিউসিং, কিস্তির সংখ্যা কত, মোট কত টাকা ফেরত দিতে হবে এবং প্রসেসিং ফি বা অন্য চার্জ আছে কি না। মোট ফেরতের অঙ্ক নগদ দামের সঙ্গে মিলিয়ে দেখলে খরচ বোঝা যায়। আমাদের ক্যালকুলেটর রিডিউসিং ব্যালেন্স পদ্ধতিতে আনুমানিক হিসাব দেয়।", "Ask whether the rate is flat or reducing, how many instalments there are, the total you will repay, and whether there is a processing fee or other charges. Comparing the total repayment with the cash price shows the real cost. Our calculator gives an estimate using the reducing balance method."],
+        ],
+      },
+    ],
+    faqs: [
+      { q: ["মোবাইল ফোন কিস্তিতে কেনা কি লাভজনক?", "Is buying a phone on instalments worth it?"], a: ["মোট ফেরতের অঙ্ক নগদ দামের চেয়ে কত বেশি তা দেখুন। ওই বাড়তি টাকাই আপনার কিস্তির খরচ।", "Check how much more the total repayment is than the cash price. That extra is the cost of the instalments."] },
+      { q: ["ফ্ল্যাট রেট কি সবসময় বেশি খরচের?", "Is a flat rate always more expensive?"], a: ["একই ঘোষিত হারে হ্যাঁ। তবে দুই অফারের হার আলাদা হলে মোট ফেরতের অঙ্ক দিয়ে তুলনা করুন।", "At the same stated rate, yes. If the two offers have different rates, compare them by total repayment."] },
+    ],
+  },
+  {
+    slug: "khoroch-hisab-rakhar-niyom",
+    title: ["মাসিক খরচের হিসাব কীভাবে রাখবেন? সহজ নিয়ম ও ধাপ", "How to keep track of your monthly expenses: simple steps"],
+    desc: ["আয় ও খরচ লিখে রাখার সহজ পদ্ধতি, খরচের ভাগ এবং মাস শেষে হিসাব মেলানোর উপায়।", "A simple way to record income and spending, group your expenses, and review them at the end of the month."],
+    updated: "2026-11-03",
+    updatedLabel: ["৩ নভেম্বর, ২০২৬", "3 November 2026"],
+    tool: { slug: "expense-tracker", name: ["খরচের হিসাব", "Expense tracker"] },
+    sections: [
+      {
+        h: ["ধাপ ১: আয় লিখুন", "Step 1: write down your income"],
+        p: [
+          ["মাসের শুরুতে হাতে আসা মোট টাকা লিখুন। বেতন, টিউশন বা অন্য আয় থাকলে আলাদা করে লিখুন।", "At the start of the month write down the total money you have. If you have salary, tuition or other income, list each one."],
+        ],
+      },
+      {
+        h: ["ধাপ ২: খরচ ভাগ করুন", "Step 2: group your spending"],
+        p: [
+          ["খরচকে কয়েকটি ভাগে রাখুন, যেমন খাবার, যাতায়াত, বাসাভাড়া ও বিল, পড়াশোনা, মোবাইল রিচার্জ ও অন্যান্য। নিয়মিত খরচ (ভাড়া, বিল) আর বদলানো খরচ (খাবার, শখ) আলাদা দেখলে কোথায় কমানো যায় বোঝা সহজ হয়।", "Sort spending into a few groups such as food, transport, rent and bills, education, mobile top-up and other. Seeing fixed costs (rent, bills) apart from changing costs (food, hobbies) makes it easier to see where you can cut."],
+        ],
+      },
+      {
+        h: ["ধাপ ৩: প্রতিদিন লিখুন", "Step 3: record it every day"],
+        p: [
+          ["খরচ করার দিনই লিখে ফেলুন। কয়েক দিন পরে লিখতে গেলে ছোট খরচ ভুলে যাওয়া সহজ। আমাদের খরচের হিসাব টুলে খরচ ও আয় যোগ করলে মোট নিজে হিসাব হয়।", "Write it the same day you spend. If you wait a few days, small expenses are easy to forget. In our expense tracker, add each expense and income and the totals are worked out for you."],
+        ],
+      },
+      {
+        h: ["ধাপ ৪: মাস শেষে মেলান", "Step 4: review at month end"],
+        p: [
+          ["মাস শেষে আয় − মোট খরচ = বাকি টাকা। এটি হাতের টাকার সঙ্গে মিলিয়ে দেখুন। কোন ভাগে সবচেয়ে বেশি গেছে দেখে পরের মাসের সীমা ঠিক করুন।", "At month end, income − total spending = money left. Check it against the cash you actually have. See which group took the most and set limits for next month."],
+        ],
+      },
+    ],
+    faqs: [
+      { q: ["খরচের হিসাব রাখার সবচেয়ে সহজ উপায় কী?", "What is the easiest way to track expenses?"], a: ["প্রতিদিন খরচ করার পরই লিখে ফেলা। একটি খাতা বা টুল যেকোনোটিই চলে।", "Write it down right after you spend. A notebook or a tool both work."] },
+      { q: ["এই টুলের ডেটা কি কোথাও জমা হয়?", "Is my data stored anywhere?"], a: ["টুলটি আপনার ব্রাউজারেই চলে। ব্রাউজারের ডেটা মুছলে হিসাব হারিয়ে যেতে পারে, তাই গুরুত্বপূর্ণ হিসাব আলাদা করে লিখে রাখুন।", "The tool runs in your browser. Clearing browser data can erase your records, so keep a separate note of anything important."] },
     ],
   },
 ];
