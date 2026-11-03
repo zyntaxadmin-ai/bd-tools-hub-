@@ -67,7 +67,7 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
     description: "সরকারি চাকরির বয়স ক্যালকুলেটর। জন্ম তারিখ, বিজ্ঞপ্তির বয়স গণনার তারিখ ও সর্বোচ্চ বয়স দিয়ে বয়সসীমা আছে কিনা দেখুন।",
   },
   "land-calculator-bd": {
-    title: "Land Calculator BD - জমি পরিমাপ কনভার্টার",
+    title: "Land Calculator BD - বর্গফুট থেকে শতাংশ",
     description: "জমির হিসাব ক্যালকুলেটর। শতাংশ, কাঠা, বিঘা, একর, বর্গফুট ও বর্গমিটারে জমির পরিমাণ এক জায়গায় রূপান্তর করুন। ফ্রি টুল।",
   },
   "emi-calculator-bd": {
@@ -79,12 +79,12 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
     description: "আজকের বাংলা তারিখ দেখুন। ইংরেজি-বাংলা ক্যালেন্ডার ও তারিখ রূপান্তর, বাংলাদেশের সংশোধিত পঞ্জিকা অনুযায়ী।",
   },
   "countdown-timer": {
-    title: "Countdown Timer - কাউন্টডাউন টাইমার",
+    title: "Countdown - কাউন্টডাউন টাইমার অনলাইন",
     description: "অনলাইন কাউন্টডাউন। পরীক্ষা, ট্রিপ বা যেকোনো ইভেন্টের তারিখ দিয়ে কত দিন-ঘণ্টা-মিনিট বাকি তা লাইভ দেখুন। ফ্রি countdown timer।",
   },
   "stopwatch-timer": {
-    title: "Online Stopwatch & Timer - অনলাইন স্টপওয়াচ",
-    description: "ল্যাপসহ ফ্রি অনলাইন স্টপওয়াচ এবং শেষে শব্দ করা কাউন্টডাউন টাইমার, একই পেজে। Online stopwatch and timer।",
+    title: "Online Stopwatch - অনলাইন স্টপওয়াচ ও টাইমার",
+    description: "ল্যাপসহ ফ্রি অনলাইন স্টপওয়াচ এবং শেষে শব্দ করা কাউন্টডাউন টাইমার, একই পেজে। Online stopwatch, online timer stopwatch, ফ্রি।",
   },
   "image-compressor": {
     title: "Image Compressor - ছবির সাইজ কমান KB",
@@ -179,12 +179,12 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
     description: "নির্দিষ্ট সীমার মধ্যে র‍্যান্ডম সংখ্যা বানান। কয়েন টস ও ডাইস রোলও আছে। ফ্রি random number generator।",
   },
   "time-zone-converter": {
-    title: "Time Zone Converter - বাংলাদেশ সময় কনভার্টার",
-    description: "বাংলাদেশের সময় থেকে যুক্তরাজ্য, যুক্তরাষ্ট্র, সৌদি আরব, মালয়েশিয়া ও অন্যান্য দেশের সময় জানুন। BD time converter, ফ্রি।",
+    title: "Time Zone Converter - আমেরিকা ও বাংলাদেশ সময়",
+    description: "আমেরিকার সময় বাংলাদেশে কত? Eastern time to Bangladesh time, USA time to BD time সহ যুক্তরাজ্য, সৌদি আরব, মালয়েশিয়ার সময় জানুন। ফ্রি time zone converter online।",
   },
   "expense-tracker": {
-    title: "Expense Tracker - আয়-ব্যয়ের হিসাব",
-    description: "আয়-ব্যয়ের হিসাব রাখুন, মাস অনুযায়ী দেখুন ও ক্যাটাগরি অনুযায়ী খরচের ভাগ জানুন। CSV ডাউনলোড করা যায়। ফ্রি expense tracker।",
+    title: "খরচের হিসাব - Expense Tracker আয়-ব্যয়",
+    description: "খরচের হিসাব ও আয়-ব্যয় রাখুন, মাস অনুযায়ী দেখুন ও ক্যাটাগরি অনুযায়ী খরচের ভাগ জানুন। CSV ডাউনলোড করা যায়। ফ্রি expense tracker।",
   },
   "invoice-generator": {
     title: "Invoice Generator - ফ্রি ইনভয়েস বানান",
