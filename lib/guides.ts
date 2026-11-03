@@ -476,6 +476,112 @@ export const GUIDES: Guide[] = [
       { q: ["BMI কি সবার জন্য নির্ভরযোগ্য?", "Is BMI reliable for everyone?"], a: ["না, পেশিবহুল ব্যক্তি, বয়স্ক বা শিশুদের ক্ষেত্রে এটি যথেষ্ট নয়।", "No, it is not sufficient for muscular people, older adults or children."] },
     ],
   },
+  {
+    slug: "percentage-hisab-niyom",
+    title: ["শতকরা (পার্সেন্টেজ) কীভাবে হিসাব করবেন? সহজ সূত্র ও উদাহরণ", "How to calculate a percentage: simple formulas and examples"],
+    desc: ["X এর Y% কত, একটি সংখ্যা আরেকটির কত শতাংশ এবং শতকরা বৃদ্ধি-হ্রাস বের করার সূত্র, পরীক্ষার নম্বর ও দামের উদাহরণসহ।", "Formulas for Y% of X, one number as a percentage of another, and percentage increase or decrease, with exam marks and price examples."],
+    updated: "2026-11-03",
+    updatedLabel: ["৩ নভেম্বর, ২০২৬", "3 November 2026"],
+    tool: { slug: "percentage-calculator", name: ["শতকরা হিসাব ক্যালকুলেটর", "Percentage calculator"] },
+    sections: [
+      {
+        h: ["X এর Y% কত", "Finding Y% of X"],
+        p: [
+          ["সূত্র: X × Y ÷ ১০০। যেমন ২০০ টাকার ১৫% = ২০০ × ১৫ ÷ ১০০ = ৩০ টাকা।", "Formula: X × Y ÷ 100. For example, 15% of 200 taka = 200 × 15 ÷ 100 = 30 taka."],
+        ],
+      },
+      {
+        h: ["একটি সংখ্যা আরেকটির কত শতাংশ", "One number as a percentage of another"],
+        p: [
+          ["সূত্র: অংশ ÷ মোট × ১০০। ৫০ নম্বরের মধ্যে ৪০ পেলে ৪০ ÷ ৫০ × ১০০ = ৮০%। ৫০০ নম্বরের মধ্যে ৪৩২ পেলে ৪৩২ ÷ ৫০০ × ১০০ = ৮৬.৪%।", "Formula: part ÷ total × 100. Scoring 40 out of 50 gives 40 ÷ 50 × 100 = 80%. Scoring 432 out of 500 gives 432 ÷ 500 × 100 = 86.4%."],
+        ],
+      },
+      {
+        h: ["শতকরা বৃদ্ধি ও হ্রাস", "Percentage increase and decrease"],
+        p: [
+          ["সূত্র: (নতুন মান − পুরোনো মান) ÷ পুরোনো মান × ১০০। দাম ৫০০ থেকে ৬০০ হলে (৬০০ − ৫০০) ÷ ৫০০ × ১০০ = ২০% বৃদ্ধি। আবার ৬০০ থেকে ৫০০ হলে (৫০০ − ৬০০) ÷ ৬০০ × ১০০ = প্রায় −১৬.৬৭%, অর্থাৎ প্রায় ১৬.৬৭% হ্রাস।", "Formula: (new value − old value) ÷ old value × 100. If a price goes from 500 to 600, that is (600 − 500) ÷ 500 × 100 = a 20% increase. From 600 back to 500 it is (500 − 600) ÷ 600 × 100 = about −16.67%, a decrease of about 16.67%."],
+          ["লক্ষ করুন, বৃদ্ধি ও হ্রাসের শতাংশ এক হয় না, কারণ প্রতিবার ভাগ হয় পুরোনো মান দিয়ে।", "Notice that the increase and decrease percentages are not the same, because each time you divide by the old value."],
+        ],
+      },
+      {
+        h: ["শতকরা যোগ ও বিয়োগ", "Adding and subtracting a percentage"],
+        p: [
+          ["২,০০০ টাকার সঙ্গে ১৫% যোগ করতে: ২,০০০ × (১ + ০.১৫) = ২,৩০০ টাকা। ১,৫০০ টাকা থেকে ১০% ছাড় দিতে: ১,৫০০ × (১ − ০.১০) = ১,৩৫০ টাকা।", "To add 15% to 2,000 taka: 2,000 × (1 + 0.15) = 2,300 taka. To take 10% off 1,500 taka: 1,500 × (1 − 0.10) = 1,350 taka."],
+        ],
+      },
+    ],
+    faqs: [
+      { q: ["শতকরা হিসাবের মূল সূত্র কী?", "What is the basic percentage formula?"], a: ["অংশ ÷ মোট × ১০০।", "Part ÷ total × 100."] },
+      { q: ["৩০০ এর ২৫% কত?", "What is 25% of 300?"], a: ["৩০০ × ২৫ ÷ ১০০ = ৭৫।", "300 × 25 ÷ 100 = 75."] },
+      { q: ["২০% ছাড়ের পর দাম ৮০০ টাকা হলে আসল দাম কত?", "If the price after a 20% discount is 800 taka, what was the original price?"], a: ["ছাড়ের পর দাম আসল দামের ৮০%। তাই আসল দাম = ৮০০ ÷ ০.৮ = ১,০০০ টাকা।", "After the discount the price is 80% of the original, so the original is 800 ÷ 0.8 = 1,000 taka."] },
+    ],
+  },
+  {
+    slug: "boyosh-hisab-niyom",
+    title: ["বয়স কীভাবে হিসাব করবেন? জন্মতারিখ থেকে বছর, মাস ও দিন", "How to calculate age in years, months and days from a date of birth"],
+    desc: ["জন্মতারিখ থেকে আজ পর্যন্ত বছর, মাস ও দিনে বয়স বের করার ধাপ, উদাহরণ এবং কোথায় কাজে লাগে।", "Steps to work out age in years, months and days from a date of birth, with an example and where it helps."],
+    updated: "2026-11-03",
+    updatedLabel: ["৩ নভেম্বর, ২০২৬", "3 November 2026"],
+    tool: { slug: "age-calculator", name: ["বয়স ক্যালকুলেটর", "Age calculator"] },
+    sections: [
+      {
+        h: ["হাতে হিসাবের ধাপ", "Steps to work it out by hand"],
+        p: [
+          ["প্রথমে পুরো বছর গুনুন, যতক্ষণ না এ বছরের জন্মদিন পার হয়। এরপর শেষ জন্মদিন থেকে পূর্ণ মাস গুনুন। সবশেষে ওই মাসের তারিখ থেকে আজকের তারিখ পর্যন্ত দিন গুনুন।", "First count whole years until this year's birthday has passed. Then count whole months since the last birthday. Finally count the days from that monthly date to today."],
+        ],
+      },
+      {
+        h: ["উদাহরণ", "Example"],
+        p: [
+          ["জন্ম ১৫ মার্চ ২০০৮, হিসাবের দিন ৩ নভেম্বর ২০২৬। ১৫ মার্চ ২০০৮ থেকে ১৫ মার্চ ২০২৬ পর্যন্ত ১৮ বছর। ১৫ মার্চ ২০২৬ থেকে ১৫ অক্টোবর ২০২৬ পর্যন্ত ৭ মাস। ১৫ অক্টোবর থেকে ৩ নভেম্বর পর্যন্ত ১৯ দিন (অক্টোবরে ৩১ দিন, তাই ১৫ থেকে ৩১ অক্টোবর ১৬ দিন, তারপর ৩ দিন)। বয়স ১৮ বছর ৭ মাস ১৯ দিন।", "Born 15 March 2008, calculated on 3 November 2026. From 15 March 2008 to 15 March 2026 is 18 years. From 15 March 2026 to 15 October 2026 is 7 months. From 15 October to 3 November is 19 days (October has 31 days, so 16 days from 15 to 31 October, then 3 more). The age is 18 years, 7 months and 19 days."],
+        ],
+      },
+      {
+        h: ["কোথায় কাজে লাগে", "Where it helps"],
+        p: [
+          ["ফর্ম পূরণ, স্কুল বা কলেজে ভর্তি এবং চাকরির আবেদনে বয়স হিসাব করতে হয়। কোনো আবেদনে বয়সের সীমা থাকলে বিজ্ঞপ্তিতে লেখা নির্দিষ্ট তারিখ অনুযায়ী বয়স গুনুন এবং বিজ্ঞপ্তির নিয়ম মিলিয়ে নিন।", "You need an age for forms, school or college admission and job applications. If an application has an age limit, count the age as of the date stated in the notice and check the notice for its rules."],
+        ],
+      },
+    ],
+    faqs: [
+      { q: ["জন্মতারিখ থেকে আজ পর্যন্ত বয়স কীভাবে বের করব?", "How do I find my age from my date of birth?"], a: ["জন্মতারিখ ও আজকের তারিখ দিলে ক্যালকুলেটর বছর, মাস ও দিন দেখায়। হাতে করলে উপরের ধাপগুলো মানুন।", "Enter your date of birth and today's date and the calculator shows years, months and days. By hand, follow the steps above."] },
+      { q: ["অন্য একটি তারিখ অনুযায়ী বয়স জানা যাবে?", "Can I find the age as of another date?"], a: ["হ্যাঁ, হিসাবের তারিখ বদলে দিলেই হবে।", "Yes, just change the calculation date."] },
+    ],
+  },
+  {
+    slug: "taka-kothay-likhar-niyom",
+    title: ["টাকার অঙ্ক কথায় কীভাবে লিখবেন? লাখ, কোটি ও চেকে লেখার নিয়ম", "How to write a taka amount in words: lakh, crore and writing cheques"],
+    desc: ["বাংলাদেশের লাখ-কোটি পদ্ধতিতে সংখ্যা ভাগ করে অঙ্ক কথায় লেখার সহজ নিয়ম, উদাহরণসহ।", "A simple method for splitting a number in the Bangladeshi lakh-crore system and writing the amount in words, with an example."],
+    updated: "2026-11-03",
+    updatedLabel: ["৩ নভেম্বর, ২০২৬", "3 November 2026"],
+    tool: { slug: "number-to-words-bd", name: ["টাকার অঙ্ক কথায়", "Number to words"] },
+    sections: [
+      {
+        h: ["লাখ-কোটির ভাগ", "The lakh-crore grouping"],
+        p: [
+          ["বাংলাদেশে সংখ্যার কমা ডান দিক থেকে প্রথমে তিন অঙ্ক, তারপর প্রতি দুই অঙ্ক পরপর বসে। যেমন ১২,৩৪,৫৬৭। ডান থেকে ভাগগুলো হলো: ৫৬৭ (শতক), ৩৪ (হাজার), ১২ (লাখ)।", "In Bangladesh, commas go after the first three digits from the right and then after every two digits, for example 12,34,567. From the right the groups are 567 (hundreds), 34 (thousands) and 12 (lakh)."],
+          ["১০০ হাজারে ১ লাখ এবং ১০০ লাখে ১ কোটি।", "100 thousand makes 1 lakh, and 100 lakh makes 1 crore."],
+        ],
+      },
+      {
+        h: ["উদাহরণ", "Example"],
+        p: [
+          ["১২,৩৪,৫৬৭ টাকা = বারো লাখ চৌত্রিশ হাজার পাঁচশ সাতষট্টি টাকা। প্রতিটি ভাগের নাম বলে এরপর ভাগের সংখ্যাকে শব্দ করুন।", "12,34,567 taka = twelve lakh thirty-four thousand five hundred sixty-seven taka. Say each group's number in words, then add the group's name."],
+        ],
+      },
+      {
+        h: ["চেক বা ভাউচারে লেখার সময়", "When writing a cheque or voucher"],
+        p: [
+          ["সংখ্যা ও কথায় লেখা অঙ্ক একই হতে হবে। কথায় লেখার পর সাধারণত শেষে টাকা মাত্র লেখা হয়। ফাঁকা জায়গা রাখলে কেউ অঙ্ক বদলাতে পারে, তাই লাইন টেনে ফাঁকা অংশ ভরাট করে দিন। ব্যাংকের নিজস্ব নিয়ম থাকলে সেটি মানুন।", "The amount in figures and in words must match. After the words it is usual to add \"only\" (taka matro in Bangla). Blank space lets someone change the amount, so draw a line through any empty part. Follow your bank's own rules if it has any."],
+        ],
+      },
+    ],
+    faqs: [
+      { q: ["১ কোটি মানে কত লাখ?", "How many lakh is 1 crore?"], a: ["১০০ লাখ।", "100 lakh."] },
+      { q: ["১,০০,০০০ কে কী বলে?", "What is 1,00,000 called?"], a: ["এক লাখ।", "One lakh."] },
+      { q: ["পয়সাসহ টাকা কথায় কীভাবে লিখব?", "How do I write an amount with paisa in words?"], a: ["আগে টাকা কথায় লিখুন, তারপর পয়সা কথায় লিখুন। যেমন ১২৩.৫০ = একশ তেইশ টাকা পঞ্চাশ পয়সা।", "Write the taka in words first and then the paisa. For example 123.50 = one hundred twenty-three taka fifty paisa."] },
+    ],
+  },
 ];
 
 export const getGuide = (slug: string) => GUIDES.find((g) => g.slug === slug);
