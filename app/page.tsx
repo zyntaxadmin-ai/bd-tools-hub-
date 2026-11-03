@@ -7,6 +7,8 @@ import { tools, categories } from "@/data/tools";
 import { CAT_I18N, DESC_EN } from "@/lib/i18nData";
 import { useLang, useUI } from "@/lib/lang";
 import { ShieldCheck, Zap, Users, Sparkles } from "lucide-react";
+import Link from "next/link";
+import { GUIDES } from "@/lib/guides";
 
 const ICONS = [Zap, ShieldCheck, Users, Sparkles];
 
@@ -81,6 +83,25 @@ export default function HomePage() {
               </div>
             </section>
           ))
+        )}
+
+        {!search.trim() && (
+          <section className="mb-12" id="guides">
+            <div className="flex items-end justify-between mb-4">
+              <div>
+                <h2 className="font-bold text-xl text-slate-900 dark:text-white">{ui.guides}</h2>
+                <p className="text-sm text-slate-500">{lang === "en" ? "How calculations work, with examples" : "হিসাবের নিয়ম উদাহরণসহ"}</p>
+              </div>
+              <Link href="/guides" className="text-sm text-indigo-600 dark:text-indigo-400 hover:underline">{lang === "en" ? "All guides" : "সব গাইড"}</Link>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {GUIDES.map((g) => (
+                <Link key={g.slug} href={`/guides/${g.slug}`} className="block rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4 hover:border-indigo-400 transition">
+                  <span className="font-semibold text-sm text-slate-900 dark:text-white">{lang === "en" ? g.title[1] : g.title[0]}</span>
+                </Link>
+              ))}
+            </div>
+          </section>
         )}
       </div>
     </div>
