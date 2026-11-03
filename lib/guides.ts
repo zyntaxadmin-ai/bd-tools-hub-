@@ -797,6 +797,106 @@ export const GUIDES: Guide[] = [
       { q: ["এই টুলের ডেটা কি কোথাও জমা হয়?", "Is my data stored anywhere?"], a: ["টুলটি আপনার ব্রাউজারেই চলে। ব্রাউজারের ডেটা মুছলে হিসাব হারিয়ে যেতে পারে, তাই গুরুত্বপূর্ণ হিসাব আলাদা করে লিখে রাখুন।", "The tool runs in your browser. Clearing browser data can erase your records, so keep a separate note of anything important."] },
     ],
   },
+  {
+    slug: "cash-out-charge-table-500-theke-10000",
+    title: ["ক্যাশ আউট চার্জ টেবিল: ৫০০ থেকে ১০,০০০ টাকায় bKash, Nagad, Rocket ও Upay এ কত", "Cash out charge table: bKash, Nagad, Rocket and Upay from 500 to 10,000 taka"],
+    desc: ["৫০০, ১০০০, ২০০০, ৩০০০, ৫০০০ ও ১০,০০০ টাকা ক্যাশ আউটে চার্জ কত পড়ে, চারটি সার্ভিসের জন্য হিসাবসহ।", "The cash out charge on 500, 1,000, 2,000, 3,000, 5,000 and 10,000 taka for four services, with the working."],
+    updated: "2026-11-04",
+    updatedLabel: ["৪ নভেম্বর, ২০২৬", "4 November 2026"],
+    tool: { slug: "bkash-calculator", name: ["bKash চার্জ ক্যালকুলেটর", "bKash charge calculator"] },
+    sections: [
+      {
+        h: ["যে রেটে হিসাব করা হয়েছে", "The rates used"],
+        p: [
+          ["এজেন্ট ক্যাশ আউটে প্রতি ১০০০ টাকায় আমাদের ক্যালকুলেটরের রেট: bKash ১৮.৫০, Nagad ১৪.৯০, Rocket ১৮, Upay ১৪। নিচের সব অঙ্ক এই রেট ধরে হিসাব করা।", "Our calculators use these agent cash out rates per 1,000 taka: bKash 18.50, Nagad 14.90, Rocket 18, Upay 14. Every figure below is worked out at these rates."],
+        ],
+      },
+      {
+        h: ["চার্জ টেবিল (টাকায়)", "Charge table (in taka)"],
+        p: [
+          ["৫০০ টাকায়: bKash ৯.২৫, Nagad ৭.৪৫, Rocket ৯, Upay ৭।", "On 500 taka: bKash 9.25, Nagad 7.45, Rocket 9, Upay 7."],
+          ["১,০০০ টাকায়: bKash ১৮.৫০, Nagad ১৪.৯০, Rocket ১৮, Upay ১৪।", "On 1,000 taka: bKash 18.50, Nagad 14.90, Rocket 18, Upay 14."],
+          ["২,০০০ টাকায়: bKash ৩৭, Nagad ২৯.৮০, Rocket ৩৬, Upay ২৮।", "On 2,000 taka: bKash 37, Nagad 29.80, Rocket 36, Upay 28."],
+          ["৩,০০০ টাকায়: bKash ৫৫.৫০, Nagad ৪৪.৭০, Rocket ৫৪, Upay ৪২।", "On 3,000 taka: bKash 55.50, Nagad 44.70, Rocket 54, Upay 42."],
+          ["৫,০০০ টাকায়: bKash ৯২.৫০, Nagad ৭৪.৫০, Rocket ৯০, Upay ৭০।", "On 5,000 taka: bKash 92.50, Nagad 74.50, Rocket 90, Upay 70."],
+          ["১০,০০০ টাকায়: bKash ১৮৫, Nagad ১৪৯, Rocket ১৮০, Upay ১৪০।", "On 10,000 taka: bKash 185, Nagad 149, Rocket 180, Upay 140."],
+        ],
+      },
+      {
+        h: ["নিজের রেটে মিলিয়ে নিন", "Check it against your own rate"],
+        p: [
+          ["সূত্র: চার্জ = টাকার পরিমাণ ÷ ১০০০ × প্রতি ১০০০ টাকার রেট। যেমন আপনার রেট ১৪ হলে ৭,০০০ টাকায় ৭ × ১৪ = ৯৮ টাকা।", "Formula: charge = amount ÷ 1,000 × the rate per 1,000 taka. For example, at a rate of 14, 7,000 taka costs 7 × 14 = 98 taka."],
+          ["রেট কোম্পানি বদলাতে পারে এবং এজেন্ট, এটিএম বা বিশেষ সুবিধাভেদে আলাদা হতে পারে। বিকাশের প্রিয় এজেন্টের মতো কম রেটের সুবিধার খবরও প্রকাশিত হয়েছে। তাই চূড়ান্ত অঙ্কের জন্য নিজের অ্যাপ বা অফিসিয়াল সাইট দেখুন।", "Companies can change their rates, and the rate can differ for an agent, an ATM or a special benefit. There have been published reports of lower rates such as bKash's Priyo agent. For the final figure, check your own app or the official site."],
+        ],
+      },
+    ],
+    faqs: [
+      { q: ["১০০০ টাকা ক্যাশ আউটে সবচেয়ে কম চার্জ কোনটিতে?", "Which service has the lowest charge on 1,000 taka?"], a: ["উপরের রেটে Upay (১৪ টাকা), এরপর Nagad (১৪.৯০), Rocket (১৮) ও bKash (১৮.৫০)। রেট বদলালে এই ক্রমও বদলাবে।", "At the rates above it is Upay (14 taka), then Nagad (14.90), Rocket (18) and bKash (18.50). If the rates change, this order changes too."] },
+      { q: ["৫০০০ টাকা তুললে মোট কত কাটবে?", "How much is deducted in total if I cash out 5,000 taka?"], a: ["আপনার ব্যালেন্স থেকে ৫,০০০ টাকার সঙ্গে চার্জও কাটে। যেমন bKash এ ৫,০০০ + ৯২.৫০ = ৫,০৯২.৫০ টাকা।", "The charge is taken on top of the 5,000 from your balance. For example on bKash it is 5,000 + 92.50 = 5,092.50 taka."] },
+    ],
+  },
+  {
+    slug: "gpa-theke-grade-niyom",
+    title: ["জিপিএ থেকে গ্রেড কত? ৩.৩৩, ৪.৫০ জিপিএ কী গ্রেড ও ৪.০০ স্কেলের অর্থ", "GPA to grade: what grade is a 3.33 or 4.50 GPA, and what a 4.00 scale means"],
+    desc: ["এসএসসি-এইচএসসির জিপিএ থেকে লেটার গ্রেড কীভাবে বোঝা যায়, ৩.৩৩ কত গ্রেড, এবং ৫.০০ ও ৪.০০ স্কেলের পার্থক্য।", "How to read a letter grade from an SSC or HSC GPA, what grade 3.33 is, and the difference between the 5.00 and 4.00 scales."],
+    updated: "2026-11-04",
+    updatedLabel: ["৪ নভেম্বর, ২০২৬", "4 November 2026"],
+    tool: { slug: "gpa-calculator-bd", name: ["জিপিএ ক্যালকুলেটর", "GPA calculator"] },
+    sections: [
+      {
+        h: ["৫.০০ স্কেলে জিপিএ থেকে গ্রেড", "Grade from a GPA on the 5.00 scale"],
+        p: [
+          ["এসএসসি-এইচএসসিতে সামগ্রিক জিপিএ থেকে সাধারণত এভাবে গ্রেড বোঝা যায়: ৫.০০ = A+, ৪.০০ থেকে ৪.৯৯ = A, ৩.৫০ থেকে ৩.৯৯ = A-, ৩.০০ থেকে ৩.৪৯ = B, ২.০০ থেকে ২.৯৯ = C, ১.০০ থেকে ১.৯৯ = D, ১ এর নিচে F।", "For SSC and HSC an overall GPA is usually read as: 5.00 = A+, 4.00 to 4.99 = A, 3.50 to 3.99 = A-, 3.00 to 3.49 = B, 2.00 to 2.99 = C, 1.00 to 1.99 = D, below 1 = F."],
+          ["তাই ৩.৩৩ জিপিএ মানে B গ্রেড এবং ৪.৫০ জিপিএ মানে A গ্রেড।", "So a 3.33 GPA is a B grade and a 4.50 GPA is an A grade."],
+        ],
+      },
+      {
+        h: ["৪.০০ স্কেল মানে কী", "What a 4.00 scale means"],
+        p: [
+          ["বাংলাদেশের স্কুল-কলেজ বোর্ডে সর্বোচ্চ জিপিএ ৫.০০। বিশ্ববিদ্যালয়ে সাধারণত সর্বোচ্চ ৪.০০ ধরা হয় এবং তাকে CGPA বলে। তাই ৪.০০ এর মধ্যে ৩.৫০ পেলে সেটি সাধারণত A- বা তার কাছাকাছি, কিন্তু স্কেল বিশ্ববিদ্যালয়ভেদে আলাদা।", "In Bangladesh's school and college boards the top GPA is 5.00. Universities usually use 4.00 as the top and call it CGPA. So 3.50 out of 4.00 is typically about an A-, but the scale differs between universities."],
+          ["৫.০০ স্কেলের জিপিএ সরাসরি ৪.০০ স্কেলে বদলানোর একটি সবার জন্য এক নিয়ম নেই। ভর্তি বা চাকরির আবেদনে যে প্রতিষ্ঠান চাইছে, তার নিজের নিয়ম মানুন।", "There is no single rule that converts a 5.00 GPA to the 4.00 scale for everyone. For admission or job forms, follow the rule of the institution asking."],
+        ],
+      },
+    ],
+    faqs: [
+      { q: ["৩.৩৩ জিপিএ কত গ্রেড?", "What grade is a 3.33 GPA?"], a: ["৫.০০ স্কেলে (এসএসসি-এইচএসসি) এটি B গ্রেড। ৪.০০ স্কেলের বিশ্ববিদ্যালয়ে গ্রেড স্কেলভেদে আলাদা হতে পারে।", "On the 5.00 scale (SSC and HSC) it is a B grade. At a university on a 4.00 scale the grade depends on that university's scale."] },
+      { q: ["জিপিএ ৪.৫০ মানে কী?", "What does a 4.50 GPA mean?"], a: ["৫.০০ স্কেলে A গ্রেড।", "An A grade on the 5.00 scale."] },
+      { q: ["A- এর জিপিএ কত?", "What GPA is an A-?"], a: ["একটি বিষয়ে A- মানে ৩.৫০ পয়েন্ট। সামগ্রিক জিপিএ ৩.৫০ থেকে ৩.৯৯ হলেও সাধারণত A- ধরা হয়।", "In a single subject an A- is 3.50 points. An overall GPA from 3.50 to 3.99 is also usually read as A-."] },
+    ],
+  },
+  {
+    slug: "emi-kisti-komanor-upay",
+    title: ["EMI বা কিস্তি কমানোর উপায়: মেয়াদ, ডাউন পেমেন্ট ও সুদের হিসাব", "How to lower your EMI: tenure, down payment and the interest trade-off"],
+    desc: ["মেয়াদ বাড়ালে বা ডাউন পেমেন্ট বেশি দিলে মাসিক কিস্তি ও মোট সুদ কত বদলায়, ৫ লাখ টাকার ঋণের উদাহরণসহ।", "How the monthly EMI and total interest change if you lengthen the tenure or pay a larger down payment, with a 5 lakh taka loan example."],
+    updated: "2026-11-04",
+    updatedLabel: ["৪ নভেম্বর, ২০২৬", "4 November 2026"],
+    tool: { slug: "emi-calculator-bd", name: ["EMI ক্যালকুলেটর", "EMI calculator"] },
+    sections: [
+      {
+        h: ["মেয়াদ বাড়ালে কী হয়", "What a longer tenure does"],
+        p: [
+          ["৫,০০,০০০ টাকা ঋণ, ১০% বার্ষিক হার (রিডিউসিং ব্যালেন্স)। ১২ মাসে কিস্তি প্রায় ৪৩,৯৫৮ টাকা, মোট সুদ প্রায় ২৭,৪৯৫ টাকা। ২৪ মাসে কিস্তি প্রায় ২৩,০৭২, সুদ প্রায় ৫৩,৭৩৯। ৩৬ মাসে কিস্তি প্রায় ১৬,১৩৪, সুদ প্রায় ৮০,৮০৯। ৬০ মাসে কিস্তি প্রায় ১০,৬২৪, সুদ প্রায় ১,৩৭,৪১১ টাকা।", "A loan of 500,000 taka at 10% a year (reducing balance). Over 12 months the EMI is about 43,958 and total interest about 27,495. Over 24 months it is about 23,072 and about 53,739. Over 36 months about 16,134 and about 80,809. Over 60 months about 10,624 and about 137,411 taka."],
+          ["অর্থাৎ মেয়াদ যত বাড়ে মাসিক কিস্তি তত কমে, কিন্তু মোট সুদ অনেক বেড়ে যায়।", "So a longer tenure lowers the monthly EMI but raises the total interest a lot."],
+        ],
+      },
+      {
+        h: ["ডাউন পেমেন্ট বেশি দিলে", "Paying a larger down payment"],
+        p: [
+          ["৫ লাখ টাকার জিনিস কিনতে পুরো ৫ লাখ ঋণ নিলে ২৪ মাসের কিস্তি প্রায় ২৩,০৭২ টাকা। ১ লাখ টাকা ডাউন পেমেন্ট দিয়ে ৪ লাখ ঋণ নিলে কিস্তি প্রায় ১৮,৪৫৮ টাকা এবং সুদ প্রায় ৪২,৯৯১ টাকা, যা ৫৩,৭৩৯ এর চেয়ে প্রায় ১০,৭৪৮ টাকা কম।", "To buy something worth 500,000 taka, borrowing the full amount over 24 months gives an EMI of about 23,072. Paying 100,000 down and borrowing 400,000 gives an EMI of about 18,458 and interest of about 42,991, which is about 10,748 less than 53,739."],
+        ],
+      },
+      {
+        h: ["কোনটি বেছে নেবেন", "Which to choose"],
+        p: [
+          ["মাসের আয়ের মধ্যে কিস্তি রাখতে হলে মেয়াদ বাড়ানো যায়, কিন্তু মোট সুদ বাড়বে তা মাথায় রাখুন। সম্ভব হলে বেশি ডাউন পেমেন্ট দিলে কিস্তি ও সুদ দুটোই কমে। ঋণ নেওয়ার আগে অগ্রিম পরিশোধে ফি আছে কি না জেনে নিন। এই হিসাব আনুমানিক, ব্যাংক বা দোকানের চার্জ আলাদা হতে পারে।", "If the EMI has to fit your monthly income you can lengthen the tenure, but remember the total interest rises. If you can, a larger down payment lowers both the EMI and the interest. Before borrowing, ask whether there is a fee for early repayment. These figures are estimates and a bank or shop's charges may differ."],
+        ],
+      },
+    ],
+    faqs: [
+      { q: ["EMI কমাতে সবচেয়ে ভালো উপায় কী?", "What is the best way to lower an EMI?"], a: ["ডাউন পেমেন্ট বাড়ালে কিস্তি ও মোট সুদ দুটোই কমে। মেয়াদ বাড়ালে কিস্তি কমে, কিন্তু মোট সুদ বাড়ে।", "A larger down payment lowers both the EMI and the total interest. A longer tenure lowers the EMI but raises the total interest."] },
+      { q: ["৫ লাখ টাকার ঋণের কিস্তি ২৪ মাসে কত?", "What is the EMI on a 5 lakh loan over 24 months?"], a: ["১০% বার্ষিক হারে (রিডিউসিং ব্যালেন্স) প্রায় ২৩,০৭২ টাকা।", "At 10% a year (reducing balance) it is about 23,072 taka."] },
+    ],
+  },
 ];
 
 export const getGuide = (slug: string) => GUIDES.find((g) => g.slug === slug);
