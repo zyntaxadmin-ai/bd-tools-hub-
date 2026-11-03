@@ -6,15 +6,29 @@ Free online tools for Bangladesh. Fast, no signup, and everything runs in your b
 
 ## Tools
 
-46 tools are planned. Tools that are not built yet are hidden everywhere (homepage, categories, search, sitemap) until their slug is added to `lib/live.ts`. Background Remover, TIN Check, Plagiarism Helper and Article Rewriter were dropped.
+51 tools are live. A tool is shown on the site only after its slug is added to `lib/live.ts`.
 
-| Category | Live | Coming soon |
-| --- | --- | --- |
-| Education & Calculation | Age, GPA (SSC/HSC), CGPA, Percentage, BMI, EMI, Unit Converter, Bill Splitter, Date Difference, Scientific Calculator | |
-| Bangladesh Special | bKash Calculator, Land Calculator (শতাংশ/কাঠা/বিঘা), Govt Job Age | Nagad, Rocket, Upay, BDT Converter, Electricity Bill, Passport Fee, TIN Check |
-| Image & PDF | Image Compressor, Image Resizer, Image Converter, QR Code Generator | Background Remover, Image to PDF, PDF to JPG, Merge PDF, Split PDF, Compress PDF |
-| Text & SEO | Word Counter, Character Counter, Case Converter, Password Generator, Color Picker, Lorem Ipsum, Meta Tag Generator, Keyword Density | Plagiarism Helper, Article Rewriter |
-| Daily Utility | Stopwatch & Timer, To-Do, Random Number, Countdown, Time Zone Converter, Expense Tracker, Invoice Generator, QR Scanner, Text to Speech, Bangla Calendar | |
+| Category | Tools |
+| --- | --- |
+| Bangladesh Special (12) | bKash, Nagad, Rocket and Upay cash out calculators, Land Calculator (শতাংশ/কাঠা/বিঘা), BDT Currency Converter, Electricity Bill Calculator, Govt Job Age Calculator, Passport Fee Calculator, Zakat Calculator, Gold Weight Converter (ভরি/আনা/রতি), Income Tax Calculator |
+| Education & Calculation (12) | Number to Words, FDR/DPS Calculator, Age, GPA (SSC/HSC), CGPA, BMI, EMI, Percentage, Scientific Calculator, Unit Converter, Bill Calculator, Date Difference |
+| Image & PDF (9) | Image Compressor, Image Resizer, Image Converter, Image to PDF, Merge PDF, Split PDF, Compress PDF, QR Code Generator, PDF to JPG |
+| Text & SEO (8) | Word Counter, Character Counter, Case Converter, Password Generator, Color Picker, Lorem Ipsum, Meta Tag Generator, Keyword Density |
+| Daily Utility (10) | Stopwatch & Timer, To-Do, Random Number, Countdown, Time Zone Converter, Expense Tracker, Invoice Generator, QR Scanner, Text to Speech, Bangla Calendar |
+
+Dropped: Background Remover, TIN Check, Plagiarism Helper, Article Rewriter. Not built yet: Bijoy to Unicode converter.
+
+## Guides
+
+The `/guides` section has Bangla and English how-to articles, each linked to a tool. Guides live in `lib/guides.ts` (a `GUIDES` array). Add an object there and the guide page, the `/guides` list, the sitemap, the home page section and the link on the matching tool page all pick it up. Every guide needs a dated `updated` field, a tool link, sections and FAQs. Check facts against official sources before publishing.
+
+Live guides (11): cash out charges, SSC GPA, income tax 2026-27, electricity bill, zakat, FDR/DPS, passport fee, how many grams in a vori, CGPA, EMI, BMI.
+
+## SEO
+
+- `lib/seoMeta.ts` holds the page title and description for every tool (Bangla and English keywords). Titles stay under about 52 characters because the layout adds " | BD Tools Flow".
+- Tool and guide pages include JSON-LD structured data (guides: Article and FAQPage). `app/sitemap.ts` lists the home page, categories, tools and guides.
+- `public/ads.txt` holds the AdSense publisher line.
 
 ## Tech stack
 
@@ -31,18 +45,17 @@ app/
   layout.tsx                Root layout (header, footer, theme, optional AdSense script)
   tool/[slug]/page.tsx      Renders any tool from the registry (+ SEO metadata, JSON-LD)
   category/[categorySlug]/  Category pages
+  guides/, guides/[slug]/   Guides list and guide pages
   about, contact, privacy-policy, disclaimer
   sitemap.ts, robots.ts
 components/
   tools/                    One file per tool (client components)
   toolRegistry.tsx          Base tools and merge of the batch registries
-  toolRegistryB1.tsx        Registry for batch 1 tools
-  toolRegistryB2.tsx        Registry for batch 2 tools
-  toolRegistryB3.tsx        Registry for batch 3 tools
-  toolRegistryB4.tsx        Registry for batch 4 tools
+  toolRegistryB1.tsx ... B3.tsx    Registries for earlier batches
+  toolRegistryB4.tsx ... B11.tsx   Registries for later batches (each entry: component, title, desc, howTo, faqs)
   ToolLayout.tsx            Shared page layout (title, how-to, FAQ, related tools)
   ToolCard, Header, Footer, SearchBar, JsonLd, AdSlot, ThemeProvider
-data/tools.ts               The full list of 50 tools (name, slug, category, icon)
+data/tools.ts               The full list of tools (name, slug, category, icon)
 lib/
   live.ts                   Slugs that are actually built (sitemap and related tools use this)
   seo.ts                    Site URL and name
@@ -51,6 +64,9 @@ lib/
   banglaDate.ts, expense.ts, invoice.ts, scan.ts, tts.ts, ttsEngine.ts   Shared, tested logic
   lang.tsx                  Language provider (BN default, EN) saved in localStorage
   i18nData.ts               UI strings, category names, English card descriptions
+  guides.ts                 Guide articles (Bangla and English)
+  seoMeta.ts                SEO titles and descriptions per tool
+  toolArticles.ts           Long-form text shown under tools
   toolContentEn.ts          English title/description/how-to/FAQ for every live tool
   site.ts                   CONTACT_EMAIL (edit this one line)
 ```
@@ -87,13 +103,15 @@ npm run dev
 
 Import the repo in Vercel (Next.js is detected automatically). Every commit to `main` redeploys.
 
-## Cash out rates (Nagad, Rocket, Upay)
+## Rates and rules that change
 
-The rates live at the top of `components/tools/NagadCalculator.tsx`, `RocketCalculator.tsx` and `UpayCalculator.tsx` (taka per 1,000). Public sources disagree and none is official, so check each app and edit the numbers:
+Public sources for these disagree or change often, and none is official, so check them and edit the numbers when needed:
 
-- Nagad agent: 14.9 used (one source says 12.99 in the app, 15 on USSD)
-- Rocket agent: 18 used (another source says 16.7), Dutch-Bangla ATM: 10 used (another says 9)
-- Upay agent: 14, UCB ATM: 8 (single source)
+- Cash out rates (taka per 1,000) are at the top of `NagadCalculator.tsx`, `RocketCalculator.tsx` and `UpayCalculator.tsx`.
+- Electricity slabs and demand charge: top of `ElectricityBillCalculator.tsx` (June 2026 billing rates).
+- Income tax slabs, rebate and minimum tax: top of `IncomeTaxCalculator.tsx` (Finance Act 2026, FY 2026-27).
+- Zakat nisab (7.5 vori gold, 52.5 vori silver) is in `ZakatCalculator.tsx`.
+- Passport fees: `PassportFeeCalculator.tsx`.
 
 ## Notes
 
