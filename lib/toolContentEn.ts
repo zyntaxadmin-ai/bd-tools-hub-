@@ -376,6 +376,17 @@ export const TOOL_EN: Record<string, ToolEn> = {
       { q: "Will the file get bigger?", a: "It will be roughly the sum of all the file sizes. Compress it afterwards if you need it smaller." },
     ],
   },
+  "rotate-pdf": {
+    title: "Rotate PDF",
+    desc: "Fix upside-down or sideways PDF pages by rotating them right, left or 180°. Rotate all pages or only the ones you choose. Your file is not uploaded, everything happens on your phone.",
+    howTo: ["Select a PDF", "Choose right 90°, left 90° or 180°, and pick all pages or chosen pages", "Tap Rotate PDF and download the new file"],
+    faqs: [
+      { q: "Is my PDF uploaded anywhere?", a: "No. Rotating happens entirely on your phone or browser and no file goes to a server." },
+      { q: "Can I rotate only a few pages?", a: "Yes. Choose chosen pages and type page numbers such as 1-3, 5. The other pages stay as they are. Bangla digits work too." },
+      { q: "Can I rotate a password protected PDF?", a: "No. Password protected or damaged PDFs cannot be opened." },
+      { q: "Does the original PDF change?", a: "No. Your original stays as it was, only a new file is created." },
+    ],
+  },
   "split-pdf": {
     title: "Split PDF",
     desc: "Pull chosen pages out of a PDF, or turn every page into its own PDF. Your file is not uploaded, everything happens on your phone.",

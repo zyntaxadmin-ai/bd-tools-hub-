@@ -113,6 +113,7 @@ export const DESC_EN: Record<string, string> = {
   "image-to-pdf": "Make a PDF from images",
   "merge-pdf": "Combine multiple PDFs",
   "split-pdf": "Separate PDF pages",
+  "rotate-pdf": "Rotate PDF pages",
   "compress-pdf": "Make PDFs smaller",
   "qr-code-generator": "Create QR codes for free",
   "pdf-to-jpg": "Convert PDF to images",

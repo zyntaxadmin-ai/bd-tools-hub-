@@ -198,6 +198,10 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
     title: "Text to Speech - লেখা থেকে ভয়েস (বাংলা)",
     description: "লেখা পেস্ট করে বাংলা, ইংরেজি ও আপনার ডিভাইসে থাকা অন্যান্য ভাষায় পড়ে শোনান। কণ্ঠ, গতি ও সুর ঠিক করা যায়। ফ্রি text to speech।",
   },
+  "rotate-pdf": {
+    title: "Rotate PDF - পিডিএফ ঘুরান",
+    description: "উল্টো বা কাত হওয়া PDF পেজ ডানে, বামে বা ১৮০° ঘুরিয়ে সোজা করুন। সব পেজ বা নির্দিষ্ট পেজ বাছুন। ফাইল আপলোড হয় না। ফ্রি rotate PDF online।",
+  },
   "split-pdf": {
     title: "Split PDF - পিডিএফ ভাগ করুন",
     description: "PDF থেকে পছন্দের পেজ বের করুন বা প্রতিটি পেজ আলাদা PDF করুন। ফাইল আপলোড হয় না, সব কাজ আপনার ফোনেই হয়। ফ্রি split PDF।",

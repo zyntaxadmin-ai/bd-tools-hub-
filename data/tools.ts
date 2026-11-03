@@ -55,6 +55,7 @@ const allTools: Tool[] = [
   { id: 20, name: "Compress PDF", slug: "/tool/compress-pdf", description: "PDF সাইজ ছোট করুন", category: "Image & PDF", icon: "FileDown" },
   { id: 15, name: "QR Code Generator", slug: "/tool/qr-code-generator", description: "QR কোড বানান ফ্রি", category: "Image & PDF", icon: "QrCode" },
   { id: 17, name: "PDF to JPG", slug: "/tool/pdf-to-jpg", description: "PDF to Image convert", category: "Image & PDF", icon: "FileUp" },
+  { id: 56, name: "Rotate PDF", slug: "/tool/rotate-pdf", description: "PDF পেজ ঘোরান", category: "Image & PDF", icon: "RotateCw" },
 
   { id: 21, name: "Word Counter", slug: "/tool/word-counter", description: "শব্দ ও অক্ষর গণনা", category: "Text & SEO", icon: "Type" },
   { id: 29, name: "Password Generator", slug: "/tool/password-generator", description: "Strong password তৈরি", category: "Text & SEO", icon: "KeyRound" },

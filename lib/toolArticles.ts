@@ -484,6 +484,41 @@ export const TOOL_ARTICLES: Record<string, ToolArticle> = {
     ],
   },
 
+  "rotate-pdf": {
+    bn: [
+      {
+        h: "PDF এর পেজ কীভাবে ঘোরাবেন",
+        p: [
+          "PDF সিলেক্ট করে ডানে ৯০°, বামে ৯০° বা ১৮০° বেছে নিন। সব পেজ একসঙ্গে ঘোরাতে পারেন, আবার 1-3, 5 এর মতো করে শুধু নির্দিষ্ট পেজও বাছতে পারেন। বাকি পেজ যেমন আছে তেমনই থাকে।",
+          "ঘোরানোর পর নতুন PDF ডাউনলোড করুন। আগে থেকে ঘোরানো পেজের ওপর আবার ঘোরালে নতুন কোণ আগের কোণের সঙ্গে যোগ হয়।",
+        ],
+      },
+      {
+        h: "কখন কাজে লাগে",
+        p: [
+          "স্ক্যান করা বা ফোনে তোলা PDF অনেক সময় কাত বা উল্টো হয়ে যায়। জমা দেওয়ার আগে এটি সোজা করতে কাজে লাগে।",
+          "আপনার ফাইল কোথাও আপলোড হয় না, সব কাজ আপনার ফোন বা ব্রাউজারেই হয়।",
+        ],
+      },
+    ],
+    en: [
+      {
+        h: "How to rotate the pages of a PDF",
+        p: [
+          "Select a PDF and choose right 90°, left 90° or 180°. You can rotate every page at once, or pick only some pages by typing something like 1-3, 5. The other pages stay as they are.",
+          "After rotating, download the new PDF. If a page was already rotated, the new angle is added to the old one.",
+        ],
+      },
+      {
+        h: "When it helps",
+        p: [
+          "Scanned or phone-captured PDFs often come out sideways or upside down. This straightens them before you submit them.",
+          "Your file is not uploaded anywhere, everything happens on your phone or browser.",
+        ],
+      },
+    ],
+  },
+
   "split-pdf": {
     bn: [
       {

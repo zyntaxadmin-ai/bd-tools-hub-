@@ -49,6 +49,7 @@ export const LIVE_SLUGS = [
   "split-pdf",
   // batch 7
   "pdf-to-jpg",
+  "rotate-pdf",
   "compress-pdf",
   // batch 8
   "passport-fee-calculator-bd",
