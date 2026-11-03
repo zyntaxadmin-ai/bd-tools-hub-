@@ -138,6 +138,219 @@ export const GUIDES: Guide[] = [
       { q: ["রিটার্ন জমা না দিলে কী হয়?", "What if I do not file a return?"], a: ["TIN থাকলে করমুক্ত আয়ের মধ্যে থাকলেও রিটার্ন জমা দেওয়ার বাধ্যবাধকতা থাকে। বিস্তারিত নিয়ম এনবিআর বা কর পরামর্শকের কাছে জেনে নিন।", "If you have a TIN you are generally required to file a return even when your income is within the tax-free limit. Ask the NBR or a tax adviser for the details."] },
     ],
   },
+  {
+    slug: "bidyut-bill-hisab-niyom",
+    title: ["বিদ্যুৎ বিল কীভাবে হিসাব করবেন (ইউনিট, স্ল্যাব, ডিমান্ড চার্জ ও ভ্যাট)", "How to calculate your electricity bill (units, slabs, demand charge and VAT)"],
+    desc: ["আবাসিক বিদ্যুৎ বিল ইউনিট অনুযায়ী ধাপে ধাপে কীভাবে হিসাব হয়, ডিমান্ড চার্জ ও ৫% ভ্যাটসহ উদাহরণ দেখে নিন।", "See step by step how a residential electricity bill is worked out from units, with the demand charge and 5% VAT, and examples."],
+    updated: "2026-11-03",
+    updatedLabel: ["৩ নভেম্বর, ২০২৬", "3 November 2026"],
+    tool: { slug: "electricity-bill-calculator-bd", name: ["বিদ্যুৎ বিল ক্যালকুলেটর", "Electricity bill calculator"] },
+    sections: [
+      {
+        h: ["বিলের তিনটি অংশ", "The three parts of a bill"],
+        p: [
+          ["আবাসিক (LT-A) বিদ্যুৎ বিলে তিনটি অংশ থাকে: ইউনিট অনুযায়ী বিদ্যুতের মূল্য, অনুমোদিত লোড (kW) অনুযায়ী ডিমান্ড চার্জ, আর এই দুটির যোগফলের ওপর ৫% ভ্যাট। মিটার ভাড়া, বকেয়া ও দেরির জরিমানা থাকলে তা আলাদাভাবে যোগ হয়।", "A residential (LT-A) electricity bill has three parts: the energy charge based on units used, the demand charge based on your sanctioned load (kW), and 5% VAT on the sum of those two. Meter rent, arrears and late fees are added separately if they apply."],
+        ],
+      },
+      {
+        h: ["স্ল্যাব অনুযায়ী রেট", "Rates by slab"],
+        p: [
+          ["জুন ২০২৬ বিলিং থেকে কার্যকর রেট: মোট ইউনিট ৫০ বা কম হলে সব ইউনিট ৪.৬৩ টাকা। এর বেশি হলে ধাপে ধাপে: প্রথম ৭৫ ইউনিট ৫.২৬, ৭৬-২০০ ইউনিট ৮.৫০, ২০১-৩০০ ইউনিট ৯.১০, ৩০১-৪০০ ইউনিট ৯.৬২, ৪০১-৬০০ ইউনিট ১৫.০১ এবং ৬০০ এর বেশি ইউনিট ১৭.৩৫ টাকা।", "Rates effective from the June 2026 billing month: if total units are 50 or fewer, all units are 4.63 taka. Above that, slab by slab: the first 75 units at 5.26, 76-200 at 8.50, 201-300 at 9.10, 301-400 at 9.62, 401-600 at 15.01 and above 600 at 17.35 taka."],
+          ["বিইআরসি ৩ জুন দাম বাড়ালেও ৫০ ও ৭৫ ইউনিটের স্ল্যাবের বাড়তি দাম ৪ জুন প্রত্যাহার করেছে, তাই ওই দুই রেট আগের মতোই আছে। প্রতিটি রেট শুধু ওই স্ল্যাবের ইউনিটে লাগে, সব ইউনিটে নয়।", "Although BERC raised prices on 3 June, it withdrew the hike for the 50 and 75 unit slabs on 4 June, so those two rates stay as before. Each rate applies only to the units inside its slab, not to all your units."],
+        ],
+      },
+      {
+        h: ["উদাহরণ: ২০০ ইউনিট, ১ kW লোড", "Example: 200 units, 1 kW load"],
+        p: [
+          ["প্রথম ৭৫ ইউনিট × ৫.২৬ = ৩৯৪.৫০; পরের ১২৫ ইউনিট × ৮.৫০ = ১,০৬২.৫০। বিদ্যুতের মূল্য ১,৪৫৭ টাকা।", "First 75 units × 5.26 = 394.50; next 125 units × 8.50 = 1,062.50. The energy charge is 1,457 taka."],
+          ["ডিমান্ড চার্জ ধরা হয়েছে প্রতি kW ৪২ টাকা, তাই ১ kW এ ৪২ টাকা। যোগফল ১,৪৯৯ টাকার ওপর ৫% ভ্যাট ৭৪.৯৫। মোট বিল ১,৫৭৩.৯৫ টাকা।", "The demand charge is taken as 42 taka per kW, so 42 taka for 1 kW. The sum of 1,499 taka plus 5% VAT of 74.95 gives a total bill of 1,573.95 taka."],
+        ],
+      },
+      {
+        h: ["আরও কয়েকটি উদাহরণ", "A few more examples"],
+        p: [
+          ["একই হিসাবে (১ kW, ডিমান্ড ৪২): ৩০ ইউনিটে মোট প্রায় ১৮৯.৯৪ টাকা, ১০০ ইউনিটে প্রায় ৬৮১.৪৫ টাকা, ৩০০ ইউনিটে প্রায় ২,৫২৯.৪৫ টাকা এবং ৫০০ ইউনিটে প্রায় ৫,১১৫.৬০ টাকা।", "With the same assumptions (1 kW, demand charge 42): about 189.94 taka for 30 units, 681.45 for 100 units, 2,529.45 for 300 units and 5,115.60 for 500 units."],
+          ["লক্ষ করুন ৪০০ ইউনিটের পর রেট হঠাৎ বেড়ে ১৫.০১ হয়, তাই ৪০০ এর কাছাকাছি গেলে বিল দ্রুত বাড়ে। মাসে ইউনিট কমিয়ে ৪০০ এর নিচে রাখলে সাশ্রয় বেশি হয়।", "Note that after 400 units the rate jumps to 15.01, so the bill rises fast once you pass 400. Keeping your monthly use below 400 units saves more."],
+        ],
+      },
+      {
+        h: ["আপনার বিলের সঙ্গে না মিললে", "If it does not match your bill"],
+        p: [
+          ["আপনার বিলে মিটার ভাড়া, বকেয়া, দেরির জরিমানা, রিবেট বা ভিন্ন ডিমান্ড চার্জ থাকতে পারে। বিতরণ প্রতিষ্ঠান (ডেসকো, ডিপিডিসি, পল্লী বিদ্যুৎ) নিজস্ব নিয়মও ব্যবহার করতে পারে। তাই এটি আনুমানিক হিসাব, আপনার হাতে পাওয়া বিলই চূড়ান্ত।", "Your bill may include meter rent, arrears, late fees, rebates or a different demand charge. Distribution companies (DESCO, DPDC, Palli Bidyut) may also apply their own rules. So this is an estimate, and the bill in your hand is final."],
+        ],
+      },
+    ],
+    faqs: [
+      { q: ["১০০ ইউনিটে বিল কত আসে?", "What is the bill for 100 units?"], a: ["১ kW লোড ও ডিমান্ড চার্জ ৪২ ধরে মোট প্রায় ৬৮১.৪৫ টাকা। প্রথম ৭৫ ইউনিট ৫.২৬ ও পরের ২৫ ইউনিট ৮.৫০ হিসেবে বিদ্যুতের মূল্য ৬০৭ টাকা, এর সঙ্গে ডিমান্ড ও ৫% ভ্যাট যোগ হয়।", "With a 1 kW load and a demand charge of 42, about 681.45 taka. The first 75 units at 5.26 and the next 25 at 8.50 make an energy charge of 607 taka, then demand and 5% VAT are added."] },
+      { q: ["লাইফলাইন রেট কখন প্রযোজ্য?", "When does the lifeline rate apply?"], a: ["মাসে মোট ৫০ ইউনিট বা কম ব্যবহার করলে সব ইউনিট ৪.৬৩ টাকা। ৫১ ইউনিট হলে আর লাইফলাইন রেট পাওয়া যায় না, তখন স্ল্যাব অনুযায়ী হিসাব হয়।", "If you use 50 units or fewer in the month, all units are 4.63 taka. At 51 units you no longer get the lifeline rate and the slab calculation applies."] },
+      { q: ["ডিমান্ড চার্জ কত?", "How much is the demand charge?"], a: ["আমাদের টুলে প্রতি kW ৪২ টাকা ধরা আছে, তবে আপনার বিলে আলাদা থাকতে পারে, তাই ক্যালকুলেটরে সেই ঘর বদলানো যায়।", "Our tool uses 42 taka per kW, but your bill may differ, so that box can be changed in the calculator."] },
+    ],
+  },
+  {
+    slug: "zakat-hisab-niyom",
+    title: ["যাকাত কীভাবে হিসাব করবেন (নিসাব, ২.৫% হার ও উদাহরণ)", "How to calculate zakat (nisab, the 2.5% rate and an example)"],
+    desc: ["নিসাব কত, কোন সম্পদে যাকাত হিসাব হয়, ঋণ কীভাবে বাদ যায় এবং ২.৫% যাকাত বের করার ধাপগুলো উদাহরণসহ।", "What the nisab is, which wealth is counted, how debts are subtracted and the steps to find 2.5% zakat, with an example."],
+    updated: "2026-11-03",
+    updatedLabel: ["৩ নভেম্বর, ২০২৬", "3 November 2026"],
+    tool: { slug: "zakat-calculator-bd", name: ["যাকাত ক্যালকুলেটর", "Zakat calculator"] },
+    sections: [
+      {
+        h: ["নিসাব কী", "What is the nisab"],
+        p: [
+          ["নিসাব হলো যাকাত ফরজ হওয়ার ন্যূনতম সম্পদের পরিমাণ। এটি ৭.৫ ভরি সোনা অথবা ৫২.৫ ভরি রুপার দামের সমান ধরা হয়। ১ ভরি ১১.৬৬৪ গ্রাম ধরলে এটি প্রায় ৮৭.৪৮ গ্রাম সোনা বা ৬১২.৩৬ গ্রাম রুপা।", "The nisab is the minimum amount of wealth at which zakat becomes due. It is taken as the price of 7.5 vori of gold or 52.5 vori of silver. With 1 vori = 11.664 g, that is about 87.48 g of gold or 612.36 g of silver."],
+          ["রুপা না সোনা দিয়ে নিসাব ধরবেন, তা নিয়ে আলিমদের মত আছে। রুপার নিসাবের দাম কম, তাই বেশি মানুষের ওপর যাকাত আসে। আপনার স্থানীয় আলিমের পরামর্শ নিন।", "Scholars differ on whether to use silver or gold for the nisab. The silver nisab is lower in value, so more people owe zakat. Take the advice of your local scholar."],
+        ],
+      },
+      {
+        h: ["কোন সম্পদ ধরা হয়", "Which wealth is counted"],
+        p: [
+          ["সাধারণত নগদ টাকা, ব্যাংকে জমা, সোনা ও রুপার বাজার মূল্য, ব্যবসার পণ্য ও মজুত, এবং ফেরত পাওয়ার মতো পাওনা এই হিসাবে ধরা হয়। এরপর আপনার দেনা বাদ দিয়ে নিট সম্পদ পাওয়া যায়।", "Generally cash, bank savings, the market value of gold and silver, business goods and stock, and money owed to you that is likely to be repaid are counted. Then your debts are subtracted to get net wealth."],
+          ["সম্পদ নিসাব পরিমাণ হয়ে এক চান্দ্র বছর আপনার কাছে থাকলে যাকাত দিতে হয়। কোন সম্পদ ও ঋণ ধরা যাবে তা নিয়ে বিস্তারিত নিয়ম আলিমের কাছ থেকে জেনে নিন।", "Zakat is due once your wealth has reached the nisab and you have held it for one lunar year. Ask a scholar for the detailed rules on which wealth and debts count."],
+        ],
+      },
+      {
+        h: ["উদাহরণ (দাম কাল্পনিক)", "Example (prices are made up)"],
+        p: [
+          ["ধরুন রুপার দাম প্রতি ভরি ২,০০০ টাকা। তাহলে নিসাব ৫২.৫ × ২,০০০ = ১,০৫,০০০ টাকা। কারও নগদ ও ব্যাংকে ১,০০,০০০ আর সোনার মূল্য ৫০,০০০ মিলে সম্পদ ১,৫০,০০০, ঋণ ২০,০০০। নিট সম্পদ ১,৩০,০০০ যা নিসাবের চেয়ে বেশি।", "Suppose silver is 2,000 taka per vori. Then the nisab is 52.5 × 2,000 = 1,05,000 taka. Someone has 1,00,000 in cash and bank plus 50,000 in gold, so wealth is 1,50,000, with debts of 20,000. Net wealth is 1,30,000, which is above the nisab."],
+          ["যাকাত = ১,৩০,০০০ × ২.৫% = ৩,২৫০ টাকা। আসল দাম বাজুসের আজকের দাম দেখে বসাতে হবে, কারণ সোনা-রুপার দাম রোজ বদলায়।", "Zakat = 1,30,000 × 2.5% = 3,250 taka. For real use, put in today's BAJUS price, because gold and silver prices change every day."],
+        ],
+      },
+      {
+        h: ["মনে রাখুন", "Keep in mind"],
+        p: [
+          ["এটি একটি সাধারণ হিসাবের গাইড, ফতোয়া নয়। ব্যক্তিগত পরিস্থিতিতে যাকাতের শর্ত, ঋণ ও বিশেষ সম্পদ নিয়ে সন্দেহ থাকলে আলিম বা ইসলামী প্রতিষ্ঠানের সঙ্গে কথা বলুন।", "This is a general calculation guide, not a religious ruling. If you have doubts about zakat conditions, debts or special assets in your own situation, speak to a scholar or an Islamic institution."],
+        ],
+      },
+    ],
+    faqs: [
+      { q: ["যাকাতের হার কত?", "What is the zakat rate?"], a: ["নিট সম্পদের ২.৫%, অর্থাৎ প্রতি ১০০ টাকায় আড়াই টাকা।", "2.5% of net wealth, which is 2.5 taka for every 100 taka."] },
+      { q: ["নিসাবের কম সম্পদ থাকলে কি যাকাত দিতে হয়?", "Is zakat due if my wealth is below the nisab?"], a: ["সাধারণ নিয়মে না। নিট সম্পদ নিসাবের কম হলে যাকাত ফরজ হয় না। তবে দান-সদকা যেকোনো পরিমাণে করা যায়।", "Under the general rule, no. If net wealth is below the nisab, zakat is not due. Voluntary charity can still be given in any amount."] },
+      { q: ["সোনার গয়নায় কি যাকাত লাগে?", "Is zakat due on gold jewellery?"], a: ["এ নিয়ে আলিমদের মত আছে এবং শর্ত আছে। আপনার গয়নার ক্ষেত্রে করণীয় আপনার স্থানীয় আলিমের কাছ থেকে জেনে নিন।", "Scholars differ on this and there are conditions. Ask your local scholar what applies to your jewellery."] },
+    ],
+  },
+  {
+    slug: "fdr-dps-ki-kivabe-hishab",
+    title: ["এফডিআর ও ডিপিএস কী, কোনটি ভালো এবং সুদ কীভাবে হিসাব হয়", "What FDR and DPS are, which is better and how the interest is worked out"],
+    desc: ["এফডিআর ও ডিপিএস এর পার্থক্য, চক্রবৃদ্ধি সুদের সূত্র, উৎসে কর এবং মেয়াদ শেষে কত টাকা পাবেন তার উদাহরণ।", "The difference between FDR and DPS, the compound interest formula, source tax and an example of what you get at maturity."],
+    updated: "2026-11-03",
+    updatedLabel: ["৩ নভেম্বর, ২০২৬", "3 November 2026"],
+    tool: { slug: "fdr-dps-calculator-bd", name: ["FDR DPS ক্যালকুলেটর", "FDR DPS calculator"] },
+    sections: [
+      {
+        h: ["এফডিআর ও ডিপিএস এর পার্থক্য", "The difference between FDR and DPS"],
+        p: [
+          ["এফডিআর (ফিক্সড ডিপোজিট) এ একবারে একটি অঙ্ক নির্দিষ্ট মেয়াদের জন্য ব্যাংকে রাখা হয় এবং মেয়াদ শেষে সুদসহ ফেরত পাওয়া যায়। যাদের হাতে এককালীন টাকা আছে, তাদের জন্য এটি উপযোগী।", "With an FDR (fixed deposit) you place one lump sum in the bank for a fixed term and get it back with interest at maturity. It suits people who have a lump sum."],
+          ["ডিপিএস (ডিপোজিট পেনশন স্কিম) এ প্রতি মাসে নির্দিষ্ট কিস্তি জমা দিতে হয় এবং মেয়াদ শেষে মোট জমা ও সুদ একসঙ্গে পাওয়া যায়। যাদের মাসিক আয় থেকে অল্প অল্প করে সঞ্চয় করতে হয়, তাদের জন্য এটি উপযোগী।", "With a DPS (deposit pension scheme) you pay a fixed installment every month and get the total deposit and interest together at maturity. It suits people who save a little at a time from monthly income."],
+        ],
+      },
+      {
+        h: ["এফডিআর এর সুদ কীভাবে হিসাব হয়", "How FDR interest is worked out"],
+        p: [
+          ["চক্রবৃদ্ধি সুদের সূত্র: মেয়াদ শেষে প্রাপ্য = আসল × (১ + হার ÷ বছরে যতবার সুদ যোগ হয়)^(বছরে যতবার × বছর)। বেশিরভাগ ব্যাংকে ত্রৈমাসিক চক্রবৃদ্ধি ধরা হয়, মানে বছরে ৪ বার।", "The compound interest formula: maturity amount = principal × (1 + rate ÷ times per year)^(times per year × years). Most banks use quarterly compounding, which is 4 times a year."],
+          ["উদাহরণ: ১,০০,০০০ টাকা ৮% সুদে ১২ মাস। ১,০০,০০০ × (১.০২)^৪ = ১,০৮,২৪৩.২২। সুদ ৮,২৪৩.২২ টাকা। ১০% উৎসে কর ৮২৪.৩২ কেটে হাতে পাবেন ১,০৭,৪১৮.৯০ টাকা।", "Example: 1,00,000 taka at 8% for 12 months. 1,00,000 × (1.02)^4 = 1,08,243.22. The interest is 8,243.22 taka. After 10% source tax of 824.32 you receive 1,07,418.90 taka."],
+        ],
+      },
+      {
+        h: ["ডিপিএস এর হিসাব", "How DPS is worked out"],
+        p: [
+          ["প্রতি মাসের শুরুতে কিস্তি জমা এবং মাসিক চক্রবৃদ্ধি ধরলে ৫,০০০ টাকার কিস্তিতে ১২ মাসে ৮% সুদে মোট জমা ৬০,০০০ টাকা, সুদ প্রায় ২,৬৬৪.৬৩ টাকা। ১০% কর ২৬৬.৪৬ বাদে হাতে পাবেন ৬২,৩৯৮.১৭ টাকা। ব্যাংকভেদে নিয়ম আলাদা, তাই এটি আনুমানিক।", "Taking each installment at the start of the month with monthly compounding, a 5,000 taka installment for 12 months at 8% gives total deposits of 60,000 taka and interest of about 2,664.63. After 10% tax of 266.46 you receive 62,398.17 taka. Banks differ, so this is an estimate."],
+        ],
+      },
+      {
+        h: ["সুদের ওপর কর", "Tax on the interest"],
+        p: [
+          ["ব্যাংক সুদ থেকে উৎসে কর কাটে, সাধারণত TIN থাকলে ১০% এবং TIN না থাকলে ১৫%। এফডিআর এর ব্যালেন্সভেদে আবগারি শুল্কও কাটা হয়, যা আমাদের ক্যালকুলেটরে ধরা হয়নি। তাই আপনার ব্যাংকের ঘোষিত মেয়াদ শেষের অঙ্কই চূড়ান্ত।", "Banks deduct tax at source from the interest, generally 10% with a TIN and 15% without. Excise duty is also deducted depending on the FDR balance, and it is not included in our calculator. So the maturity figure your bank states is final."],
+        ],
+      },
+      {
+        h: ["কোনটি ভালো", "Which is better"],
+        p: [
+          ["কোনটি ভালো তা আপনার অবস্থার ওপর নির্ভর করে। এককালীন টাকা থাকলে এফডিআর, মাসিক আয় থেকে জমাতে হলে ডিপিএস। সুদের হার, মেয়াদ, ব্যাংকের নিরাপত্তা ও মেয়াদের আগে ভাঙলে কী কাটে, এসব ব্যাংকে জেনে তুলনা করুন।", "Which is better depends on your situation. An FDR if you have a lump sum, a DPS if you save from monthly income. Compare the interest rate, the term, the bank's safety and what is deducted if you break it early by asking the bank."],
+        ],
+      },
+    ],
+    faqs: [
+      { q: ["১ লাখ টাকার এফডিআর এ এক বছরে কত সুদ?", "How much interest on a 1 lakh taka FDR in a year?"], a: ["৮% সুদে ত্রৈমাসিক চক্রবৃদ্ধিতে প্রায় ৮,২৪৩ টাকা, কর কাটার আগে। সুদের হার ব্যাংকভেদে আলাদা, তাই আপনার ব্যাংকের হার ক্যালকুলেটরে দিয়ে দেখুন।", "About 8,243 taka at 8% with quarterly compounding, before tax. Rates differ by bank, so put your bank's rate in the calculator."] },
+      { q: ["TIN না থাকলে কর বেশি কাটে?", "Is more tax deducted if I have no TIN?"], a: ["সাধারণত হ্যাঁ, TIN থাকলে ১০% এবং না থাকলে ১৫% উৎসে কর কাটে। আপনার ব্যাংকের হার জেনে নিন।", "Generally yes, 10% with a TIN and 15% without. Check your bank's rate."] },
+      { q: ["চক্রবৃদ্ধি আর সরল সুদের পার্থক্য কী?", "What is the difference between compound and simple interest?"], a: ["সরল সুদে শুধু আসলের ওপর সুদ হয়। চক্রবৃদ্ধিতে আগের সুদও আসলের সঙ্গে যোগ হয়ে তার ওপর সুদ হয়, তাই মেয়াদ শেষে একটু বেশি পাওয়া যায়।", "Simple interest is earned only on the original amount. With compound interest the earlier interest is added to the principal and earns interest too, so you get a little more at maturity."] },
+    ],
+  },
+  {
+    slug: "passport-fee-2026",
+    title: ["ই-পাসপোর্ট ফি কত (৪৮ ও ৬৪ পৃষ্ঠা, ৫ ও ১০ বছর, ডেলিভারিভেদে)", "How much is the e-passport fee (48 and 64 pages, 5 and 10 years, by delivery type)"],
+    desc: ["৪৮ ও ৬৪ পৃষ্ঠার ই-পাসপোর্টের ৫ ও ১০ বছর মেয়াদের সাধারণ, জরুরি ও অতি জরুরি ডেলিভারির ফি এক জায়গায়।", "The fees for 48 and 64 page e-passports for 5 and 10 years, with regular, express and super express delivery, in one place."],
+    updated: "2026-11-03",
+    updatedLabel: ["৩ নভেম্বর, ২০২৬", "3 November 2026"],
+    tool: { slug: "passport-fee-calculator-bd", name: ["পাসপোর্ট ফি ক্যালকুলেটর", "Passport fee calculator"] },
+    sections: [
+      {
+        h: ["ফি তালিকা (১৫% ভ্যাটসহ)", "Fee list (15% VAT included)"],
+        p: [
+          ["৪৮ পৃষ্ঠা, ৫ বছর: সাধারণ ৪,০২৫ টাকা, জরুরি ৬,৩২৫ টাকা, অতি জরুরি ৮,৬২৫ টাকা। ৪৮ পৃষ্ঠা, ১০ বছর: সাধারণ ৫,৭৫০ টাকা, জরুরি ৮,০৫০ টাকা, অতি জরুরি ১০,৩৫০ টাকা।", "48 pages, 5 years: regular 4,025 taka, express 6,325 taka, super express 8,625 taka. 48 pages, 10 years: regular 5,750 taka, express 8,050 taka, super express 10,350 taka."],
+          ["৬৪ পৃষ্ঠা, ৫ বছর: সাধারণ ৬,৩২৫ টাকা, জরুরি ৮,৬২৫ টাকা, অতি জরুরি ১২,০৭৫ টাকা। ৬৪ পৃষ্ঠা, ১০ বছর: সাধারণ ৮,০৫০ টাকা, জরুরি ১০,৩৫০ টাকা, অতি জরুরি ১৩,৮০০ টাকা।", "64 pages, 5 years: regular 6,325 taka, express 8,625 taka, super express 12,075 taka. 64 pages, 10 years: regular 8,050 taka, express 10,350 taka, super express 13,800 taka."],
+          ["এই তালিকা ১২ জুলাই ২০২৬ তারিখে হালনাগাদ হওয়া সরকারি তালিকার উদ্ধৃতি দেওয়া প্রকাশিত তথ্য থেকে নেওয়া। ফি বদলাতে পারে।", "This list comes from published information quoting the official schedule updated on 12 July 2026. Fees can change."],
+        ],
+      },
+      {
+        h: ["কোনটি বেছে নেবেন", "Which one to choose"],
+        p: [
+          ["৪৮ পৃষ্ঠা সাধারণ ভ্রমণের জন্য যথেষ্ট, আর যারা ঘন ঘন বিদেশ যান তারা ৬৪ পৃষ্ঠা নিতে পারেন। ১০ বছর মেয়াদে ফি বেশি হলেও বছরপ্রতি খরচ কম পড়ে। সাধারণ ডেলিভারিতে সময় বেশি লাগে, জরুরি বা অতি জরুরি হলে ফি বেশি দিয়ে দ্রুত পাওয়া যায়।", "48 pages is enough for ordinary travel, and frequent travellers can take 64 pages. A 10 year passport costs more up front but less per year. Regular delivery takes longer, while express and super express cost more but arrive faster."],
+        ],
+      },
+      {
+        h: ["আবেদনের আগে যা দেখে নেবেন", "What to check before you apply"],
+        p: [
+          ["শিশু, নবায়ন, জরুরি পাসপোর্ট, বিদেশের দূতাবাস এবং বিশেষ ছাড়ের (যেমন এনওসি) ক্ষেত্রে ফি আলাদা হতে পারে, যা এই তালিকায় নেই। আবেদন ও ফি জমার আগে সবসময় অফিসিয়াল পোর্টাল epassport.gov.bd এ বর্তমান ফি মিলিয়ে নিন।", "Fees can differ for children, renewals, emergency passports, overseas missions and special concessions (such as an NOC), which are not in this list. Before you apply and pay, always check the current fee on the official portal epassport.gov.bd."],
+        ],
+      },
+    ],
+    faqs: [
+      { q: ["৪৮ পৃষ্ঠার ৫ বছরের সাধারণ ই-পাসপোর্টের ফি কত?", "What is the fee for a 48 page, 5 year regular e-passport?"], a: ["এই তালিকা অনুযায়ী ৪,০২৫ টাকা, ১৫% ভ্যাটসহ। আবেদনের আগে epassport.gov.bd এ দেখে নিন।", "According to this list it is 4,025 taka including 15% VAT. Check epassport.gov.bd before you apply."] },
+      { q: ["১০ বছরের ৬৪ পৃষ্ঠার পাসপোর্টের সবচেয়ে দ্রুত ডেলিভারির ফি কত?", "What is the fee for the fastest delivery of a 10 year, 64 page passport?"], a: ["অতি জরুরি ডেলিভারিতে ১৩,৮০০ টাকা, ১৫% ভ্যাটসহ।", "13,800 taka for super express delivery, including 15% VAT."] },
+      { q: ["ফি কোথায় জমা দেব?", "Where do I pay the fee?"], a: ["আবেদনের ধাপে অফিসিয়াল ই-পাসপোর্ট পোর্টালের নির্দেশ অনুযায়ী ফি জমা দিতে হয়। কোনো দালাল বা অনানুষ্ঠানিক উৎসকে টাকা না দিয়ে পোর্টালের নির্দেশনা অনুসরণ করুন।", "You pay the fee according to the instructions of the official e-passport portal during the application. Follow the portal's instructions instead of paying any broker or unofficial source."] },
+    ],
+  },
+  {
+    slug: "vori-koto-gram",
+    title: ["১ ভরি কত গ্রাম? ভরি, আনা, রতি ও গ্রামের হিসাব", "How many grams is 1 vori? Vori, ana, roti and gram conversion"],
+    desc: ["১ ভরি = ১১.৬৬৪ গ্রাম। ভরি, আনা, রতি থেকে গ্রামে এবং গ্রাম থেকে ভরিতে রূপান্তরের নিয়ম ও তালিকা উদাহরণসহ।", "1 vori = 11.664 grams. The rules and a table for converting vori, ana and roti to grams and back, with examples."],
+    updated: "2026-11-03",
+    updatedLabel: ["৩ নভেম্বর, ২০২৬", "3 November 2026"],
+    tool: { slug: "gold-weight-converter-bd", name: ["ভরি আনা রতি কনভার্টার", "Vori ana roti converter"] },
+    sections: [
+      {
+        h: ["ভরি, আনা, রতি ও গ্রামের সম্পর্ক", "How vori, ana, roti and grams relate"],
+        p: [
+          ["বাংলাদেশে সোনা-রুপার ওজন ভরি, আনা ও রতিতে মাপা হয়। ১ ভরি = ১৬ আনা এবং ১ আনা = ৬ রতি, তাই ১ ভরিতে ৯৬ রতি। ১ ভরি = ১১.৬৬৪ গ্রাম।", "In Bangladesh gold and silver are weighed in vori, ana and roti. 1 vori = 16 ana and 1 ana = 6 roti, so 1 vori has 96 roti. 1 vori = 11.664 grams."],
+          ["এ থেকে ১ আনা = ১১.৬৬৪ ÷ ১৬ = ০.৭২৯ গ্রাম এবং ১ রতি = ১১.৬৬৪ ÷ ৯৬ = ০.১২১৫ গ্রাম।", "From this, 1 ana = 11.664 ÷ 16 = 0.729 grams and 1 roti = 11.664 ÷ 96 = 0.1215 grams."],
+        ],
+      },
+      {
+        h: ["ভরি থেকে গ্রামের তালিকা", "Vori to gram table"],
+        p: [
+          ["আধা ভরি = ৫.৮৩২ গ্রাম; ১ ভরি = ১১.৬৬৪ গ্রাম; ২ ভরি = ২৩.৩২৮ গ্রাম; ৩ ভরি = ৩৪.৯৯২ গ্রাম; ৫ ভরি = ৫৮.৩২০ গ্রাম; ১০ ভরি = ১১৬.৬৪০ গ্রাম।", "Half a vori = 5.832 grams; 1 vori = 11.664 grams; 2 vori = 23.328 grams; 3 vori = 34.992 grams; 5 vori = 58.320 grams; 10 vori = 116.640 grams."],
+        ],
+      },
+      {
+        h: ["হিসাবের নিয়ম ও উদাহরণ", "The method and an example"],
+        p: [
+          ["ভরি-আনা-রতি থেকে গ্রাম: সব রতিতে বদলে ০.১২১৫ দিয়ে গুণ করুন। যেমন ২ ভরি ৮ আনা ৩ রতি = (২ × ৯৬) + (৮ × ৬) + ৩ = ২৪৩ রতি। ২৪৩ × ০.১২১৫ = ২৯.৫২৪৫ গ্রাম।", "Vori-ana-roti to grams: turn everything into roti and multiply by 0.1215. For example 2 vori 8 ana 3 roti = (2 × 96) + (8 × 6) + 3 = 243 roti. 243 × 0.1215 = 29.5245 grams."],
+          ["গ্রাম থেকে ভরি: গ্রামকে ১১.৬৬৪ দিয়ে ভাগ করুন। যেমন ২৫ গ্রাম ÷ ১১.৬৬৪ = প্রায় ২.১৪৩ ভরি, যা প্রায় ২ ভরি ২ আনা ১.৭৬ রতি।", "Grams to vori: divide the grams by 11.664. For example 25 grams ÷ 11.664 is about 2.143 vori, which is about 2 vori 2 ana 1.76 roti."],
+        ],
+      },
+      {
+        h: ["দাম হিসাব করার সময় যা মনে রাখবেন", "Things to remember when working out price"],
+        p: [
+          ["সোনার দাম ক্যারেট অনুযায়ী আলাদা, আর গয়নার ক্ষেত্রে মজুরি ও ভ্যাট আলাদা যোগ হয়। প্রতি ভরির দাম বাজুসের আজকের দাম থেকে দেখে নিয়ে ওজনের সঙ্গে গুণ করুন। ওজনের রূপান্তরে ক্যারেট ধরা হয় না।", "The price of gold differs by carat, and for jewellery the making charge and VAT are added separately. Take the price per vori from today's BAJUS rate and multiply it by the weight. Carat is not part of the weight conversion."],
+        ],
+      },
+    ],
+    faqs: [
+      { q: ["১ ভরি কত গ্রাম?", "How many grams is 1 vori?"], a: ["বাংলাদেশে ১ ভরি = ১১.৬৬৪ গ্রাম।", "In Bangladesh 1 vori = 11.664 grams."] },
+      { q: ["১ ভরিতে কত আনা ও রতি?", "How many ana and roti are in 1 vori?"], a: ["১ ভরিতে ১৬ আনা এবং ৯৬ রতি। ১ আনায় ৬ রতি।", "1 vori has 16 ana and 96 roti. 1 ana has 6 roti."] },
+      { q: ["১০ গ্রাম সোনা কত ভরি?", "How many vori is 10 grams of gold?"], a: ["১০ ÷ ১১.৬৬৪ = প্রায় ০.৮৫৭ ভরি, মানে প্রায় ১৩ আনা ৪.৩০ রতি।", "10 ÷ 11.664 is about 0.857 vori, which is about 13 ana 4.30 roti."] },
+    ],
+  },
 ];
 
 export const getGuide = (slug: string) => GUIDES.find((g) => g.slug === slug);
