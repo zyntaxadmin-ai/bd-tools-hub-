@@ -351,6 +351,131 @@ export const GUIDES: Guide[] = [
       { q: ["১০ গ্রাম সোনা কত ভরি?", "How many vori is 10 grams of gold?"], a: ["১০ ÷ ১১.৬৬৪ = প্রায় ০.৮৫৭ ভরি, মানে প্রায় ১৩ আনা ৪.৩০ রতি।", "10 ÷ 11.664 is about 0.857 vori, which is about 13 ana 4.30 roti."] },
     ],
   },
+  {
+    slug: "cgpa-hisab-niyom",
+    title: ["CGPA কীভাবে হিসাব করবেন? ক্রেডিট ধরে সহজ নিয়ম", "How to calculate CGPA: a simple credit-weighted method"],
+    desc: ["সেমিস্টারের GPA ও ক্রেডিট থেকে CGPA বের করার নিয়ম, উদাহরণ ও ৪.০০ বা ৫.০০ স্কেলের পার্থক্য।", "How to work out CGPA from semester GPA and credits, with an example and the difference between 4.00 and 5.00 scales."],
+    updated: "2026-11-03",
+    updatedLabel: ["৩ নভেম্বর, ২০২৬", "3 November 2026"],
+    tool: { slug: "cgpa-calculator", name: ["CGPA ক্যালকুলেটর", "CGPA calculator"] },
+    sections: [
+      {
+        h: ["CGPA আসলে কী", "What CGPA is"],
+        p: [
+          ["CGPA মানে Cumulative GPA, অর্থাৎ সব সেমিস্টার মিলিয়ে গড় গ্রেড পয়েন্ট। এটি সেমিস্টারের GPA-র সাধারণ গড় নয়, বরং ক্রেডিট অনুযায়ী ভারযুক্ত গড়, তাই বেশি ক্রেডিটের সেমিস্টার ফলাফলে বেশি প্রভাব ফেলে।", "CGPA stands for Cumulative GPA, the average grade point across all semesters. It is not a plain average of semester GPAs but a credit-weighted average, so a semester with more credits counts for more."],
+        ],
+      },
+      {
+        h: ["হিসাবের নিয়ম", "The method"],
+        p: [
+          ["প্রতিটি সেমিস্টারের GPA-কে তার ক্রেডিট দিয়ে গুণ করুন, গুণফলগুলো যোগ করুন, তারপর মোট ক্রেডিট দিয়ে ভাগ করুন। সূত্র: CGPA = Σ(GPA × ক্রেডিট) ÷ Σ ক্রেডিট।", "Multiply each semester GPA by its credits, add the products, then divide by the total credits. Formula: CGPA = Σ(GPA × credits) ÷ Σ credits."],
+        ],
+      },
+      {
+        h: ["উদাহরণ", "Example"],
+        p: [
+          ["ধরুন তিন সেমিস্টারে GPA ৩.৫০ (১৫ ক্রেডিট), ৩.০০ (১২ ক্রেডিট) ও ৪.০০ (৩ ক্রেডিট)। গুণফল: ৩.৫০ × ১৫ = ৫২.৫, ৩.০০ × ১২ = ৩৬, ৪.০০ × ৩ = ১২, মোট ১০০.৫। মোট ক্রেডিট ১৫ + ১২ + ৩ = ৩০। CGPA = ১০০.৫ ÷ ৩০ = ৩.৩৫।", "Say three semesters have GPA 3.50 (15 credits), 3.00 (12 credits) and 4.00 (3 credits). Products: 3.50 × 15 = 52.5, 3.00 × 12 = 36, 4.00 × 3 = 12, total 100.5. Total credits are 15 + 12 + 3 = 30. CGPA = 100.5 ÷ 30 = 3.35."],
+          ["সাধারণ গড় করলে (৩.৫ + ৩ + ৪) ÷ ৩ = ৩.৫০ আসত, যা ভুল। ক্রেডিট ধরলে ফল আলাদা হয়।", "A plain average, (3.5 + 3 + 4) ÷ 3 = 3.50, would be wrong. Weighting by credits gives a different answer."],
+        ],
+      },
+      {
+        h: ["৪.০০ নাকি ৫.০০ স্কেল", "4.00 or 5.00 scale"],
+        p: [
+          ["বেশিরভাগ বিশ্ববিদ্যালয় ৪.০০ স্কেল ব্যবহার করে, তবে কিছু প্রতিষ্ঠান ৫.০০ স্কেল নেয়। আপনার প্রতিষ্ঠানের গ্রেডিং নিয়ম ও ক্রেডিট নিয়ম দেখে নিন, কারণ রিটেক বা বাদ পড়া কোর্সের হিসাব প্রতিষ্ঠানভেদে আলাদা হতে পারে।", "Most universities use a 4.00 scale, though some use 5.00. Check your institution's grading and credit rules, because retakes and dropped courses may be counted differently from one institution to another."],
+        ],
+      },
+    ],
+    faqs: [
+      { q: ["CGPA কি সেমিস্টার GPA-র গড়?", "Is CGPA the average of semester GPAs?"], a: ["না, এটি ক্রেডিট দিয়ে ভারযুক্ত গড়। Σ(GPA × ক্রেডিট) ÷ Σ ক্রেডিট।", "No, it is a credit-weighted average: Σ(GPA × credits) ÷ Σ credits."] },
+      { q: ["৩.৫ আর ৩ GPA, দুটোই ১৫ ক্রেডিট হলে CGPA কত?", "What is the CGPA for GPA 3.5 and 3.0 with 15 credits each?"], a: ["ক্রেডিট সমান হলে সাধারণ গড়ই হয়: (৩.৫ + ৩.০) ÷ ২ = ৩.২৫।", "With equal credits it equals the plain average: (3.5 + 3.0) ÷ 2 = 3.25."] },
+      { q: ["রিটেক করলে CGPA কীভাবে হিসাব হয়?", "How is CGPA counted after a retake?"], a: ["এটি প্রতিষ্ঠানের নিয়মের ওপর নির্ভর করে, তাই আপনার বিশ্ববিদ্যালয়ের নিয়ম দেখে নিন।", "It depends on your institution's rules, so check your university's policy."] },
+    ],
+  },
+  {
+    slug: "emi-kisti-hisab-niyom",
+    title: ["EMI বা মাসিক কিস্তি কীভাবে হিসাব করবেন? ঋণের সূত্র ও উদাহরণ", "How to calculate EMI: loan formula with examples"],
+    desc: ["ব্যাংক ঋণের মাসিক কিস্তি (EMI), মোট সুদ ও মোট পরিশোধ বের করার সূত্র, উদাহরণসহ।", "The formula for a bank loan's monthly instalment (EMI), total interest and total repayment, with examples."],
+    updated: "2026-11-03",
+    updatedLabel: ["৩ নভেম্বর, ২০২৬", "3 November 2026"],
+    tool: { slug: "emi-calculator-bd", name: ["EMI ক্যালকুলেটর", "EMI calculator"] },
+    sections: [
+      {
+        h: ["EMI কী", "What EMI is"],
+        p: [
+          ["EMI (Equated Monthly Instalment) হলো ঋণ শোধের জন্য প্রতি মাসে একই অঙ্কের কিস্তি। এতে আসল ও সুদ দুটোই থাকে। শুরুতে কিস্তির বড় অংশ সুদ, পরে আসলের অংশ বাড়ে।", "EMI (Equated Monthly Instalment) is the fixed amount you pay each month to repay a loan. It contains both principal and interest. Early on most of it is interest, and the principal share grows later."],
+        ],
+      },
+      {
+        h: ["সূত্র", "The formula"],
+        p: [
+          ["EMI = P × r × (1 + r)^n ÷ ((1 + r)^n − 1)। এখানে P হলো ঋণের পরিমাণ, r হলো মাসিক সুদের হার (বার্ষিক হার ÷ ১২ ÷ ১০০) এবং n হলো মাসের সংখ্যা।", "EMI = P × r × (1 + r)^n ÷ ((1 + r)^n − 1). Here P is the loan amount, r is the monthly rate (annual rate ÷ 12 ÷ 100) and n is the number of months."],
+        ],
+      },
+      {
+        h: ["উদাহরণ ১: ৫ লাখ টাকা, ১০%, ১২ মাস", "Example 1: 5 lakh taka, 10%, 12 months"],
+        p: [
+          ["P = ৫,০০,০০০, বার্ষিক ১০%, n = ১২। এই সূত্রে মাসিক কিস্তি প্রায় ৪৩,৯৫৮ টাকা। মোট পরিশোধ প্রায় ৫,২৭,৪৯৫ টাকা, অর্থাৎ মোট সুদ প্রায় ২৭,৪৯৫ টাকা।", "P = 5,00,000, 10% a year, n = 12. By this formula the monthly instalment is about 43,958 taka. Total repayment is about 5,27,495 taka, so the total interest is about 27,495 taka."],
+        ],
+      },
+      {
+        h: ["উদাহরণ ২: ১০ লাখ টাকা, ৯.৫%, ৫ বছর", "Example 2: 10 lakh taka, 9.5%, 5 years"],
+        p: [
+          ["P = ১০,০০,০০০, বার্ষিক ৯.৫%, n = ৬০ মাস। মাসিক কিস্তি প্রায় ২১,০০২ টাকা। মোট পরিশোধ প্রায় ১২,৬০,১১২ টাকা এবং মোট সুদ প্রায় ২,৬০,১১২ টাকা।", "P = 10,00,000, 9.5% a year, n = 60 months. The monthly instalment is about 21,002 taka. Total repayment is about 12,60,112 taka and total interest about 2,60,112 taka."],
+        ],
+      },
+      {
+        h: ["ব্যাংকের হিসাবের সঙ্গে মেলানো", "Matching with the bank's figure"],
+        p: [
+          ["ব্যাংক প্রসেসিং ফি, বীমা, আবগারি শুল্ক বা ভিন্ন সুদের পদ্ধতি ধরলে কিস্তি এই হিসাব থেকে কিছুটা আলাদা হতে পারে। চূড়ান্ত অঙ্কের জন্য ব্যাংকের অফার লেটার দেখুন।", "If the bank adds a processing fee, insurance, excise duty or uses a different interest method, the instalment can differ slightly from this calculation. For the final figure, see the bank's offer letter."],
+        ],
+      },
+    ],
+    faqs: [
+      { q: ["ঋণের মেয়াদ বাড়ালে কী হয়?", "What happens if I lengthen the loan term?"], a: ["মাসিক কিস্তি কমে, কিন্তু মোট সুদ বেড়ে যায়।", "The monthly instalment falls, but the total interest rises."] },
+      { q: ["সুদের হার ০% হলে EMI কত?", "What is the EMI at 0% interest?"], a: ["তখন EMI = P ÷ n, অর্থাৎ ঋণ সমান ভাগে ভাগ হয়।", "Then EMI = P ÷ n, i.e. the loan is simply split equally."] },
+      { q: ["এই হিসাব কি ব্যাংকের হিসাবের সঙ্গে হুবহু মিলবে?", "Will this match the bank exactly?"], a: ["সাধারণ হ্রাসমান স্থিতিতে প্রায় মিলবে, তবে ফি ও চার্জ ধরলে ব্যাংকের অঙ্ক আলাদা হতে পারে।", "On a standard reducing balance it should be close, but fees and charges can make the bank's figure differ."] },
+    ],
+  },
+  {
+    slug: "bmi-hisab-niyom",
+    title: ["BMI কীভাবে হিসাব করবেন? ওজন ও উচ্চতা থেকে সহজ নিয়ম", "How to calculate BMI from weight and height"],
+    desc: ["কেজি ও সেমি থেকে BMI বের করার সূত্র, কম ওজন, স্বাভাবিক ও বেশি ওজনের সীমা এবং উদাহরণ।", "The formula for BMI from kg and cm, the underweight, normal and overweight ranges, and an example."],
+    updated: "2026-11-03",
+    updatedLabel: ["৩ নভেম্বর, ২০২৬", "3 November 2026"],
+    tool: { slug: "bmi-calculator", name: ["BMI ক্যালকুলেটর", "BMI calculator"] },
+    sections: [
+      {
+        h: ["সূত্র", "The formula"],
+        p: [
+          ["BMI = ওজন (কেজি) ÷ উচ্চতা (মিটার)²। সেমিকে ১০০ দিয়ে ভাগ করে মিটার বানিয়ে নিন।", "BMI = weight (kg) ÷ height (metres)². Divide centimetres by 100 to get metres."],
+        ],
+      },
+      {
+        h: ["উদাহরণ", "Example"],
+        p: [
+          ["ওজন ৭০ কেজি, উচ্চতা ১৭০ সেমি (১.৭ মিটার)। ১.৭ × ১.৭ = ২.৮৯। BMI = ৭০ ÷ ২.৮৯ = প্রায় ২৪.২২, যা স্বাভাবিক সীমার মধ্যে।", "Weight 70 kg, height 170 cm (1.7 m). 1.7 × 1.7 = 2.89. BMI = 70 ÷ 2.89 = about 24.22, which is in the normal range."],
+          ["১৭০ সেমি উচ্চতায় স্বাভাবিক ওজনের সীমা: ১৮.৫ × ২.৮৯ = প্রায় ৫৩.৫ কেজি থেকে ২৪.৯ × ২.৮৯ = প্রায় ৭২.০ কেজি।", "At 170 cm the normal weight range is 18.5 × 2.89 = about 53.5 kg to 24.9 × 2.89 = about 72.0 kg."],
+        ],
+      },
+      {
+        h: ["সাধারণ বিভাগ", "Common categories"],
+        p: [
+          ["সাধারণভাবে ১৮.৫ এর নিচে কম ওজন, ১৮.৫ থেকে ২৪.৯ স্বাভাবিক, ২৫ থেকে ২৯.৯ বেশি ওজন এবং ৩০ বা তার বেশি স্থূলতা ধরা হয়। এশীয়দের জন্য কিছু সংস্থা ভিন্ন সীমা ব্যবহার করে।", "Commonly, below 18.5 is underweight, 18.5 to 24.9 normal, 25 to 29.9 overweight, and 30 or above obese. Some bodies use different cut-offs for Asian populations."],
+        ],
+      },
+      {
+        h: ["BMI-র সীমাবদ্ধতা", "Limits of BMI"],
+        p: [
+          ["BMI পেশি ও চর্বির পার্থক্য ধরে না, তাই খেলোয়াড় বা বয়স্কদের ক্ষেত্রে বিভ্রান্তিকর হতে পারে। এটি শুধু একটি মোটামুটি সূচক, রোগ নির্ণয় নয়। স্বাস্থ্য নিয়ে চিন্তা থাকলে চিকিৎসকের পরামর্শ নিন।", "BMI does not separate muscle from fat, so it can mislead for athletes or older people. It is only a rough indicator, not a diagnosis. If you are worried about your health, see a doctor."],
+        ],
+      },
+    ],
+    faqs: [
+      { q: ["৬৫ কেজি ও ১৬৫ সেমির BMI কত?", "What is the BMI for 65 kg and 165 cm?"], a: ["১৬৫ সেমি = ১.৬৫ মিটার, ১.৬৫² = ২.৭২২৫। ৬৫ ÷ ২.৭২২৫ = প্রায় ২৩.৮৮, স্বাভাবিক।", "165 cm = 1.65 m, 1.65² = 2.7225. 65 ÷ 2.7225 = about 23.88, normal."] },
+      { q: ["স্বাভাবিক BMI কত?", "What is a normal BMI?"], a: ["সাধারণভাবে ১৮.৫ থেকে ২৪.৯।", "Generally 18.5 to 24.9."] },
+      { q: ["BMI কি সবার জন্য নির্ভরযোগ্য?", "Is BMI reliable for everyone?"], a: ["না, পেশিবহুল ব্যক্তি, বয়স্ক বা শিশুদের ক্ষেত্রে এটি যথেষ্ট নয়।", "No, it is not sufficient for muscular people, older adults or children."] },
+    ],
+  },
 ];
 
 export const getGuide = (slug: string) => GUIDES.find((g) => g.slug === slug);
