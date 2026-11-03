@@ -23,6 +23,7 @@ export default function Header() {
             <span className="font-bold text-[17px] tracking-tight text-slate-900 dark:text-white truncate">BD Tools Flow</span>
           </Link>
           <div className="flex items-center gap-2">
+            <Link href="/guides" className="text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-indigo-600 dark:hover:text-indigo-400 px-2 py-1">{ui.guides}</Link>
             <LangToggle />
             {mounted && (
               <button
