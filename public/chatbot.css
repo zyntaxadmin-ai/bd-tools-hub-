@@ -8,16 +8,37 @@
 
 .bdfc-launcher,
 .bdfc-panel {
-  --bdfc-green: #0b6b4f;
-  --bdfc-green-dark: #08523d;
-  --bdfc-ink: #14231d;
-  --bdfc-muted: #4b5f56;
-  --bdfc-mint: #e8f3ee;
-  --bdfc-line: #d5e3dc;
-  --bdfc-paper: #fbfcfb;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans Bengali", "Noto Sans", "Nirmala UI",
-    "Siyam Rupali", Kalpurush, sans-serif;
+  /* Colours match the site: indigo to violet, slate neutrals (same as the header logo). */
+  --bdfc-brand: #4f46e5;
+  --bdfc-brand-dark: #4338ca;
+  --bdfc-grad: linear-gradient(135deg, #4f46e5, #7c3aed);
+  --bdfc-grad-dark: linear-gradient(135deg, #4338ca, #6d28d9);
+  --bdfc-ink: #0f172a;
+  --bdfc-muted: #64748b;
+  --bdfc-mint: #eef2ff;
+  --bdfc-line: #e2e8f0;
+  --bdfc-paper: #f8fafc;
+  --bdfc-card: #ffffff;
+  --bdfc-input-border: #cbd5e1;
+  --bdfc-link: #4338ca;
+  --bdfc-disabled: #a5b4fc;
+  font-family: inherit;
   letter-spacing: 0;
+}
+
+/* Dark mode: the site switches it with the "dark" class on <html> */
+.dark .bdfc-launcher,
+.dark .bdfc-panel {
+  --bdfc-brand: #a5b4fc;
+  --bdfc-ink: #e2e8f0;
+  --bdfc-muted: #94a3b8;
+  --bdfc-mint: #312e81;
+  --bdfc-line: #334155;
+  --bdfc-paper: #0f172a;
+  --bdfc-card: #1e293b;
+  --bdfc-input-border: #475569;
+  --bdfc-link: #a5b4fc;
+  --bdfc-disabled: #475569;
 }
 
 /* Launcher button */
@@ -33,13 +54,13 @@
   justify-content: center;
   border: 0;
   border-radius: 50%;
-  background: var(--bdfc-green);
+  background: var(--bdfc-grad);
   color: #fff;
   cursor: pointer;
-  box-shadow: 0 6px 18px rgba(8, 82, 61, 0.35);
+  box-shadow: 0 6px 18px rgba(79, 70, 229, 0.35);
 }
 .bdfc-launcher:hover {
-  background: var(--bdfc-green-dark);
+  background: var(--bdfc-grad-dark);
 }
 
 /* Panel */
@@ -57,7 +78,7 @@
   border-radius: 14px;
   background: var(--bdfc-paper);
   color: var(--bdfc-ink);
-  box-shadow: 0 12px 36px rgba(20, 35, 29, 0.22);
+  box-shadow: 0 12px 36px rgba(15, 23, 42, 0.22);
   font-size: 15px;
   line-height: 1.55;
 }
@@ -71,7 +92,7 @@
   align-items: center;
   gap: 6px;
   padding: 10px 10px 10px 14px;
-  background: var(--bdfc-green);
+  background: var(--bdfc-grad);
   color: #fff;
 }
 .bdfc-title {
@@ -117,11 +138,11 @@
 .bdfc-bot {
   align-self: flex-start;
   border: 1px solid var(--bdfc-line);
-  background: #fff;
+  background: var(--bdfc-card);
 }
 .bdfc-user {
   align-self: flex-end;
-  background: var(--bdfc-green);
+  background: var(--bdfc-grad);
   color: #fff;
 }
 .bdfc-err {
@@ -130,8 +151,13 @@
   background: #fdf3f3;
   color: #6d1f1f;
 }
+.dark .bdfc-err {
+  border-color: #7f3a3a;
+  background: #3b1d1d;
+  color: #fecaca;
+}
 .bdfc-link {
-  color: #0a5a42;
+  color: var(--bdfc-link);
   font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 2px;
@@ -145,16 +171,19 @@
 }
 .bdfc-quickbtn {
   padding: 7px 14px;
-  border: 1px solid var(--bdfc-green);
+  border: 1px solid var(--bdfc-brand);
   border-radius: 999px;
-  background: #fff;
-  color: var(--bdfc-green);
+  background: var(--bdfc-card);
+  color: var(--bdfc-brand);
   font: inherit;
   font-size: 14px;
   cursor: pointer;
 }
 .bdfc-quickbtn:hover {
   background: var(--bdfc-mint);
+}
+.dark .bdfc-quickbtn:hover {
+  background: #1e1b4b;
 }
 
 /* Typing indicator */
@@ -191,7 +220,7 @@
 /* Footer: notice + input */
 .bdfc-foot {
   border-top: 1px solid var(--bdfc-line);
-  background: #fff;
+  background: var(--bdfc-card);
 }
 .bdfc-notice {
   margin: 0;
@@ -210,9 +239,9 @@
   min-width: 0;
   height: 42px;
   padding: 0 12px;
-  border: 1px solid #b9cdc3;
+  border: 1px solid var(--bdfc-input-border);
   border-radius: 8px;
-  background: #fff;
+  background: var(--bdfc-card);
   color: var(--bdfc-ink);
   font: inherit;
   font-size: 16px;
@@ -222,7 +251,7 @@
   padding: 0 16px;
   border: 0;
   border-radius: 8px;
-  background: var(--bdfc-green);
+  background: var(--bdfc-grad);
   color: #fff;
   font: inherit;
   font-size: 15px;
@@ -230,10 +259,10 @@
   cursor: pointer;
 }
 .bdfc-send:hover {
-  background: var(--bdfc-green-dark);
+  background: var(--bdfc-grad-dark);
 }
 .bdfc-send:disabled {
-  background: #8aa89c;
+  background: var(--bdfc-disabled);
   cursor: default;
 }
 
