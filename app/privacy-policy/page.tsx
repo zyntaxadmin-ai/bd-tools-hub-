@@ -19,6 +19,14 @@ const sections: Sec[] = [
     ],
   },
   {
+    h: ["AI চ্যাট সহকারী (BD Flow Helper)", "AI chat assistant (BD Flow Helper)"],
+    p: [
+      ["আমাদের সাইটে একটি AI চ্যাট সহকারী আছে। আপনি চ্যাটে যা লেখেন তা উত্তর তৈরির জন্য আমাদের সার্ভার হয়ে একটি তৃতীয় পক্ষের AI সেবাদাতার কাছে পাঠানো হয় এবং সেখানে প্রক্রিয়াকৃত হয়। অর্থাৎ ব্রাউজারে চলা টুলগুলোর ইনপুটের মতো এটি শুধু আপনার ডিভাইসে থাকে না।", "Our site has an AI chat assistant. What you type in the chat is sent through our server to a third-party AI provider and processed there to create a reply. So, unlike the input of our in-browser tools, it does not stay only on your device."],
+      ["আমরা চ্যাটের লেখা নিজেদের ডাটাবেসে রাখি না এবং নিজেরা লগ করি না। চ্যাট পেজ খোলা থাকা পর্যন্ত আপনার ব্রাউজারের মেমোরিতে থাকে। তবে AI সেবাদাতা তাদের নিজস্ব নীতি অনুযায়ী তথ্য প্রক্রিয়া বা সংরক্ষণ করতে পারে।", "We do not keep chat text in our own database and we do not log it ourselves. While the page stays open, the chat is held in your browser's memory. The AI provider may process or keep data under its own policy."],
+      ["পাসওয়ার্ড, OTP, NID বা পাসপোর্ট নম্বর, কার্ড বা ব্যাংকের তথ্য এবং মোবাইল ব্যাংকিং PIN চ্যাটে লিখবেন না।", "Do not type passwords, OTPs, NID or passport numbers, card or bank details, or mobile banking PINs into the chat."],
+    ],
+  },
+  {
     h: ["আমরা কোন তথ্য পেতে পারি", "What information we may receive"],
     p: [
       ["ওয়েবসাইট ব্যবহার করার সময় ব্রাউজার, ডিভাইস, পরিদর্শিত পেজ, আনুমানিক ব্যবহারসংক্রান্ত পরিসংখ্যান এবং প্রযুক্তিগত লগের মতো কিছু তথ্য ওয়েব হোস্টিং বা তৃতীয় পক্ষের সেবা দ্বারা প্রক্রিয়াকৃত হতে পারে।", "While you use the website, some information such as your browser, device, pages visited, approximate usage statistics and technical logs may be processed by the web hosting or third-party services."],

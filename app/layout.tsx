@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import ThemeProvider from "@/components/ThemeProvider";
@@ -47,6 +48,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Footer />
           </LangProvider>
         </ThemeProvider>
+        {/* BD Flow Helper chat widget (public/chatbot.js). It talks to /api/chat. */}
+        <Script src="/chatbot.js?v=1" strategy="lazyOnload" />
       </body>
     </html>
   );

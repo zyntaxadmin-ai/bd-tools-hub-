@@ -30,6 +30,13 @@ Live guides (23): cash out charges (and a charge table for 500 to 10,000 taka), 
 - Tool and guide pages include JSON-LD structured data (guides: Article and FAQPage). `app/sitemap.ts` lists the home page, categories, tools and guides.
 - `public/ads.txt` holds the AdSense publisher line.
 
+## Chat assistant (BD Flow Helper)
+
+- `pages/api/chat.js` is the server route. It holds the system prompt, FAQ knowledge, a link allowlist (only bdtoolsflow.cyou pages are kept in replies), an origin check and a soft per-IP rate limit. Message text is never logged.
+- `public/chatbot.js` and `public/chatbot.css` are the widget, loaded from `app/layout.tsx` with `next/script`.
+- Secrets live only in Vercel Environment Variables: `LLM_BASE_URL`, `LLM_API_KEY`, `LLM_MODEL` (see `.env.example`). Never commit real keys.
+- When you add a tool or page, add its slug to `TOOL_SLUGS` or `PAGES` in `pages/api/chat.js` and to the directory inside `SYSTEM_PROMPT`, otherwise the link guard replaces that link with the Contact link.
+
 ## Tech stack
 
 - Next.js 14 (App Router) and TypeScript

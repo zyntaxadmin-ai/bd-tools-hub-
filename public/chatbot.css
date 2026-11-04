@@ -1,0 +1,274 @@
+/* BD Flow Helper widget. All classes start with bdfc- so they cannot clash with the site. */
+
+.bdfc-launcher,
+.bdfc-panel,
+.bdfc-panel * {
+  box-sizing: border-box;
+}
+
+.bdfc-launcher,
+.bdfc-panel {
+  --bdfc-green: #0b6b4f;
+  --bdfc-green-dark: #08523d;
+  --bdfc-ink: #14231d;
+  --bdfc-muted: #4b5f56;
+  --bdfc-mint: #e8f3ee;
+  --bdfc-line: #d5e3dc;
+  --bdfc-paper: #fbfcfb;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans Bengali", "Noto Sans", "Nirmala UI",
+    "Siyam Rupali", Kalpurush, sans-serif;
+  letter-spacing: 0;
+}
+
+/* Launcher button */
+.bdfc-launcher {
+  position: fixed;
+  right: 16px;
+  bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  z-index: 2147483000;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 50%;
+  background: var(--bdfc-green);
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(8, 82, 61, 0.35);
+}
+.bdfc-launcher:hover {
+  background: var(--bdfc-green-dark);
+}
+
+/* Panel */
+.bdfc-panel {
+  position: fixed;
+  right: 16px;
+  bottom: calc(84px + env(safe-area-inset-bottom, 0px));
+  z-index: 2147483001;
+  width: min(380px, calc(100vw - 32px));
+  height: min(600px, calc(100vh - 110px));
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--bdfc-line);
+  border-radius: 14px;
+  background: var(--bdfc-paper);
+  color: var(--bdfc-ink);
+  box-shadow: 0 12px 36px rgba(20, 35, 29, 0.22);
+  font-size: 15px;
+  line-height: 1.55;
+}
+.bdfc-panel.bdfc-open {
+  display: flex;
+}
+
+/* Header */
+.bdfc-head {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 10px 10px 14px;
+  background: var(--bdfc-green);
+  color: #fff;
+}
+.bdfc-title {
+  flex: 1;
+  min-width: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+.bdfc-headbtn {
+  min-width: 36px;
+  height: 36px;
+  padding: 0 10px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 8px;
+  background: transparent;
+  color: #fff;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+.bdfc-headbtn:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+/* Messages */
+.bdfc-messages {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 14px 12px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.bdfc-msg {
+  max-width: 88%;
+  padding: 8px 12px;
+  border-radius: 12px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.bdfc-bot {
+  align-self: flex-start;
+  border: 1px solid var(--bdfc-line);
+  background: #fff;
+}
+.bdfc-user {
+  align-self: flex-end;
+  background: var(--bdfc-green);
+  color: #fff;
+}
+.bdfc-err {
+  align-self: flex-start;
+  border: 1px solid #e3b8b8;
+  background: #fdf3f3;
+  color: #6d1f1f;
+}
+.bdfc-link {
+  color: #0a5a42;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Quick replies */
+.bdfc-quick {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.bdfc-quickbtn {
+  padding: 7px 14px;
+  border: 1px solid var(--bdfc-green);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--bdfc-green);
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+.bdfc-quickbtn:hover {
+  background: var(--bdfc-mint);
+}
+
+/* Typing indicator */
+.bdfc-typing {
+  display: flex;
+  gap: 5px;
+  padding: 12px 14px;
+}
+.bdfc-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--bdfc-muted);
+  opacity: 0.35;
+  animation: bdfc-pulse 1.2s infinite ease-in-out;
+}
+.bdfc-dot:nth-child(2) {
+  animation-delay: 0.18s;
+}
+.bdfc-dot:nth-child(3) {
+  animation-delay: 0.36s;
+}
+@keyframes bdfc-pulse {
+  0%,
+  80%,
+  100% {
+    opacity: 0.35;
+  }
+  40% {
+    opacity: 1;
+  }
+}
+
+/* Footer: notice + input */
+.bdfc-foot {
+  border-top: 1px solid var(--bdfc-line);
+  background: #fff;
+}
+.bdfc-notice {
+  margin: 0;
+  padding: 7px 12px 0;
+  color: var(--bdfc-muted);
+  font-size: 12px;
+  line-height: 1.45;
+}
+.bdfc-row {
+  display: flex;
+  gap: 8px;
+  padding: 8px 10px calc(10px + env(safe-area-inset-bottom, 0px));
+}
+.bdfc-input {
+  flex: 1;
+  min-width: 0;
+  height: 42px;
+  padding: 0 12px;
+  border: 1px solid #b9cdc3;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--bdfc-ink);
+  font: inherit;
+  font-size: 16px;
+}
+.bdfc-send {
+  height: 42px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--bdfc-green);
+  color: #fff;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.bdfc-send:hover {
+  background: var(--bdfc-green-dark);
+}
+.bdfc-send:disabled {
+  background: #8aa89c;
+  cursor: default;
+}
+
+/* Keyboard focus */
+.bdfc-launcher:focus-visible,
+.bdfc-headbtn:focus-visible,
+.bdfc-quickbtn:focus-visible,
+.bdfc-input:focus-visible,
+.bdfc-send:focus-visible,
+.bdfc-link:focus-visible {
+  outline: 3px solid #f2b705;
+  outline-offset: 2px;
+}
+
+/* Phones: nearly full screen */
+@media (max-width: 480px) {
+  .bdfc-panel {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: auto;
+    height: 100vh;
+    height: 100dvh;
+    border: 0;
+    border-radius: 0;
+  }
+  .bdfc-launcher.bdfc-active {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bdfc-dot {
+    animation: none;
+    opacity: 0.7;
+  }
+}
