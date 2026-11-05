@@ -27,8 +27,8 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
     description: "নগদ ক্যাশ আউট চার্জ ক্যালকুলেটর। Nagad cash out কত টাকা কাটবে ও মোট কত লাগবে, এক সেকেন্ডে হিসাব করুন। ফ্রি ও আপলোড ছাড়াই।",
   },
   "bkash-calculator": {
-    title: "bKash Charge Calculator - বিকাশ চার্জ হিসাব",
-    description: "বিকাশ ক্যাশ আউট ও সেন্ড মানি চার্জ ক্যালকুলেটর। bKash cash out charge কত কাটবে, মুহূর্তে হিসাব করুন। ফ্রি অনলাইন টুল।",
+    title: "bKash Cash Out Charge Calculator - বিকাশ ক্যাশ আউট",
+    description: "বিকাশ ক্যাশ আউট চার্জ ক্যালকুলেটর। bKash cash out charge কত কাটবে, মোট কত লাগবে ও ব্যালেন্সে কত তোলা যাবে, এক সেকেন্ডে দেখুন। ফ্রি টুল।",
   },
   "rocket-calculator": {
     title: "Rocket Charge Calculator - রকেট ক্যাশ আউট চার্জ",
