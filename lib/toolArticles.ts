@@ -79,8 +79,15 @@ export const TOOL_ARTICLES: Record<string, ToolArticle> = {
       {
         h: "bKash ক্যাশ আউট চার্জ কীভাবে হিসাব হয়",
         p: [
-          "ক্যাশ আউট চার্জ সাধারণত টাকার পরিমাণের একটি শতাংশ। এই টুলে এজেন্ট ক্যাশ আউট প্রতি ১০০০ টাকায় ১৮.৫ টাকা (১.৮৫%) ধরা হয়েছে। অর্থাৎ ৫০০০ টাকা তুললে চার্জ ৯২.৫ টাকা, আর মোট কাটবে ৫০৯২.৫ টাকা।",
-          "টাকার পরিমাণ লিখলেই চার্জ ও মোট কত টাকা লাগবে, তা সঙ্গে সঙ্গে দেখা যায়।",
+          "ক্যাশ আউট চার্জ সাধারণত টাকার পরিমাণের একটি শতাংশ। এই টুলে এজেন্ট ক্যাশ আউট প্রতি ১০০০ টাকায় ১৮.৫ টাকা (১.৮৫%) এবং এটিএম ক্যাশ আউট প্রতি ১০০০ টাকায় ১৪.৯ টাকা ধরা হয়েছে। অর্থাৎ এজেন্টে ৫০০০ টাকা তুললে চার্জ ৯২.৫ টাকা, আর মোট কাটবে ৫০৯২.৫ টাকা।",
+          "টাকার পরিমাণ লিখলেই চার্জ ও মোট কত টাকা লাগবে, তা সঙ্গে সঙ্গে দেখা যায়। পেজের নিচের টেবিলে ৫০০ থেকে ২০,০০০ টাকা পর্যন্ত চার্জ একসঙ্গে দেওয়া আছে।",
+        ],
+      },
+      {
+        h: "ব্যালেন্সে যত টাকা আছে, তার কতটা তোলা যাবে",
+        p: [
+          "চার্জ আপনার ব্যালেন্স থেকেই কাটে, তাই ব্যালেন্সের পুরোটা তোলা যায় না। যেমন এজেন্ট রেটে ৫০০০ টাকা ব্যালেন্স থাকলে প্রায় ৪৯০৯ টাকা তোলা যায়, চার্জ লাগে প্রায় ৯০.৮২ টাকা।",
+          "এটি জানতে ক্যালকুলেটরের দ্বিতীয় ট্যাব \"ব্যালেন্স থেকে কত তোলা যাবে\" খুলে নিজের ব্যালেন্স লিখুন।",
         ],
       },
       {
@@ -95,8 +102,15 @@ export const TOOL_ARTICLES: Record<string, ToolArticle> = {
       {
         h: "How the bKash cash out charge is worked out",
         p: [
-          "A cash out charge is usually a percentage of the amount. This tool uses 18.5 taka per 1,000 (1.85%) for agent cash out. So cashing out 5,000 taka costs 92.5 taka and 5,092.5 taka is deducted in total.",
-          "Type the amount and you immediately see the charge and the total needed.",
+          "A cash out charge is usually a percentage of the amount. This tool uses 18.5 taka per 1,000 (1.85%) for agent cash out and 14.9 taka per 1,000 for ATM cash out. So cashing out 5,000 taka at an agent costs 92.5 taka and 5,092.5 taka is deducted in total.",
+          "Type the amount and you immediately see the charge and the total needed. The table below the calculator lists the charge for 500 up to 20,000 taka.",
+        ],
+      },
+      {
+        h: "How much can you cash out from your balance",
+        p: [
+          "The charge comes out of the same balance, so you cannot cash out all of it. For example, with 5,000 taka in your account at the agent rate you can cash out about 4,909 taka, and the charge is about 90.82 taka.",
+          "To find this, open the second tab, \"Cash out from my balance\", and enter your balance.",
         ],
       },
       {
