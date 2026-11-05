@@ -250,10 +250,15 @@ export const TOOL_EN: Record<string, ToolEn> = {
     ],
   },
   "stopwatch-timer": {
-    title: "Stopwatch & Timer",
-    desc: "Online stopwatch with laps, and a countdown timer that beeps at the end, on one page.",
-    howTo: ["Pick Stopwatch or Countdown Timer", "Press Start (set the time first for the timer)", "Use Pause, Lap or Reset"],
+    title: "Online Stopwatch & Timer",
+    desc: "Free online stopwatch (stop watch) with laps and a countdown timer that beeps at the end, on one page. Includes full screen, keyboard shortcuts and 1, 5 and 10 minute presets.",
+    howTo: ["Pick the Stopwatch or Countdown Timer tab", "Press Start (for the timer, set the time first or tap a 1, 5 or 10 minute preset)", "Press Lap to record a lap, Pause to stop and Reset to start over", "Use the full screen button for a big display"],
     faqs: [
+      { q: "How do I use the online stopwatch?", a: "On the Stopwatch tab press Start and the time runs. Pause stops it and Start (Resume) carries on from where it stopped. Reset clears everything." },
+      { q: "What is the difference between a stopwatch and a timer?", a: "A stopwatch starts at 0 and counts up, for measuring how long something takes. A timer (countdown) counts down from the time you set and beeps at zero." },
+      { q: "How do I record a lap?", a: "Press Lap while the stopwatch is running. Each lap shows its own split time and the total time in the list." },
+      { q: "Are there keyboard shortcuts?", a: "On a computer, Space starts or pauses the stopwatch, L records a lap and R resets it." },
+      { q: "How do I use it in full screen?", a: "Press the full screen button next to the tabs. If your browser does not support it, the button is hidden." },
       { q: "What if the timer makes no sound?", a: "Check your phone volume and silent mode. Keep the page open, because a locked screen or closed tab may stop the sound." },
       { q: "How accurate is it?", a: "Time is measured from your device clock, so it stays correct even if the tab goes to the background. It is not meant for professional sports timing." },
     ],

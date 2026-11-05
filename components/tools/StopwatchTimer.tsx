@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { Play, Pause, RotateCcw, Flag } from "lucide-react";
+import { Play, Pause, RotateCcw, Flag, Maximize, Minimize } from "lucide-react";
 import { useTr } from "@/lib/lang";
 
 const input = "w-full mt-1 px-3 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none text-center";
@@ -30,6 +30,7 @@ function errEn(m: string): string {
 }
 
 function Stopwatch() {
+  const tr = useTr();
   const [running, setRunning] = useState(false);
   const [elapsed, setElapsed] = useState(0);
   const [laps, setLaps] = useState<{ n: number; split: number; total: number }[]>([]);
@@ -50,9 +51,33 @@ function Stopwatch() {
     setLaps([{ n: laps.length + 1, split: elapsed - prev, total: elapsed }, ...laps]);
   };
 
+  // Keyboard shortcuts: Space = start/pause, L = lap, R = reset. Handlers are read from a ref so the listener is added only once.
+  const actions = useRef({ running, start, pause, lap, reset });
+  actions.current = { running, start, pause, lap, reset };
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.ctrlKey || e.metaKey || e.altKey) return;
+      const t = e.target as HTMLElement | null;
+      const tag = t?.tagName;
+      if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT" || t?.isContentEditable) return;
+      const a = actions.current;
+      if (e.code === "Space") {
+        if (tag === "BUTTON") return; // the focused button handles Space itself
+        e.preventDefault();
+        if (a.running) a.pause(); else a.start();
+      } else if (e.key === "l" || e.key === "L") {
+        if (a.running) a.lap();
+      } else if (e.key === "r" || e.key === "R") {
+        a.reset();
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
+
   return (
     <div className="space-y-4">
-      <p className="text-center text-5xl font-mono font-bold dark:text-white tabular-nums">{fmtSw(elapsed)}</p>
+      <p className="text-center text-5xl sm:text-7xl font-mono font-bold dark:text-white tabular-nums">{fmtSw(elapsed)}</p>
       <div className="flex gap-3">
         {running ? (
           <button onClick={pause} className="flex-1 py-3 bg-amber-500 text-white rounded-xl font-medium flex items-center justify-center gap-2"><Pause className="w-4 h-4" /> Pause</button>
@@ -69,6 +94,7 @@ function Stopwatch() {
           ))}
         </div>
       )}
+      <p className="hidden sm:block text-xs text-center text-slate-500">{tr("শর্টকাট: Space = Start/Pause, L = Lap, R = Reset", "Shortcuts: Space = Start/Pause, L = Lap, R = Reset")}</p>
     </div>
   );
 }
@@ -137,9 +163,25 @@ function Timer() {
   const pause = () => { setRemaining(Math.max(0, endRef.current - Date.now())); setStatus("paused"); };
   const reset = () => { setStatus("idle"); setRemaining(0); setError(""); };
 
+  const setPreset = (mins: number) => {
+    setH(mins >= 60 ? String(Math.floor(mins / 60)) : "");
+    setM(mins % 60 ? String(mins % 60) : "");
+    setS("");
+    setError("");
+  };
+
   const showInputs = status === "idle" || status === "done";
   return (
     <div className="space-y-4">
+      {showInputs && (
+        <div className="flex flex-wrap gap-2">
+          {[1, 5, 10, 15, 30, 60].map((mins) => (
+            <button key={mins} type="button" onClick={() => setPreset(mins)} className="px-3 py-1.5 text-xs rounded-full border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:border-indigo-400 hover:text-indigo-600">
+              {mins >= 60 ? tr("১ ঘণ্টা", "1 hour") : tr(`${mins} মিনিট`, `${mins} min`)}
+            </button>
+          ))}
+        </div>
+      )}
       {showInputs ? (
         <div className="grid grid-cols-3 gap-3">
           <div><label className="text-xs text-slate-500">{tr("ঘণ্টা", "Hours")}</label><input type="number" inputMode="numeric" value={h} onChange={(e) => setH(e.target.value)} placeholder="0" className={input} /></div>
@@ -167,11 +209,34 @@ function Timer() {
 export default function StopwatchTimer() {
   const tr = useTr();
   const [mode, setMode] = useState<"sw" | "timer">("sw");
+  const boxRef = useRef<HTMLDivElement>(null);
+  const [fs, setFs] = useState(false);
+  const [fsOk, setFsOk] = useState(false);
+
+  useEffect(() => {
+    setFsOk(typeof document !== "undefined" && !!document.documentElement.requestFullscreen);
+    const onChange = () => setFs(!!document.fullscreenElement);
+    document.addEventListener("fullscreenchange", onChange);
+    return () => document.removeEventListener("fullscreenchange", onChange);
+  }, []);
+
+  const toggleFs = () => {
+    try {
+      if (document.fullscreenElement) document.exitFullscreen().catch(() => {});
+      else boxRef.current?.requestFullscreen().catch(() => {});
+    } catch { /* ignore */ }
+  };
+
   return (
-    <div className="space-y-5">
+    <div ref={boxRef} className={fs ? "bg-white dark:bg-slate-900 p-6 sm:p-12 flex flex-col justify-center min-h-screen space-y-5" : "space-y-5"}>
       <div className="flex gap-2">
         <button onClick={() => setMode("sw")} className={tab(mode === "sw")}>{tr("স্টপওয়াচ", "Stopwatch")}</button>
         <button onClick={() => setMode("timer")} className={tab(mode === "timer")}>{tr("কাউন্টডাউন টাইমার", "Countdown timer")}</button>
+        {fsOk && (
+          <button onClick={toggleFs} aria-label={fs ? tr("ফুলস্ক্রিন বন্ধ করুন", "Exit full screen") : tr("ফুলস্ক্রিন", "Full screen")} className="px-3 rounded-xl border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:text-indigo-600">
+            {fs ? <Minimize className="w-4 h-4" /> : <Maximize className="w-4 h-4" />}
+          </button>
+        )}
       </div>
       {mode === "sw" ? <Stopwatch /> : <Timer />}
     </div>
