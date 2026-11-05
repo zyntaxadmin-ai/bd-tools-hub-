@@ -83,8 +83,8 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
     description: "অনলাইন কাউন্টডাউন। পরীক্ষা, ট্রিপ বা যেকোনো ইভেন্টের তারিখ দিয়ে কত দিন-ঘণ্টা-মিনিট বাকি তা লাইভ দেখুন। ফ্রি countdown timer।",
   },
   "stopwatch-timer": {
-    title: "Online Stopwatch - অনলাইন স্টপওয়াচ ও টাইমার",
-    description: "ল্যাপসহ ফ্রি অনলাইন স্টপওয়াচ এবং শেষে শব্দ করা কাউন্টডাউন টাইমার, একই পেজে। Online stopwatch, online timer stopwatch, ফ্রি।",
+    title: "Online Stopwatch & Timer - অনলাইন স্টপওয়াচ",
+    description: "ফ্রি অনলাইন স্টপওয়াচ (stop watch) ল্যাপসহ এবং শব্দ করা কাউন্টডাউন টাইমার, একই পেজে। ফুলস্ক্রিন ও শর্টকাট আছে। Online timer stopwatch।",
   },
   "image-compressor": {
     title: "Image Compressor - ছবির সাইজ কমান KB",

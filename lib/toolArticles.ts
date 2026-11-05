@@ -886,33 +886,59 @@ export const TOOL_ARTICLES: Record<string, ToolArticle> = {
   "stopwatch-timer": {
     bn: [
       {
-        h: "স্টপওয়াচ ও টাইমার",
+        h: "অনলাইন স্টপওয়াচ কীভাবে ব্যবহার করবেন",
         p: [
-          "Stopwatch বা Countdown Timer বেছে নিন। Start চাপুন (টাইমারের আগে সময় ঠিক করুন), তারপর Pause, Lap বা Reset ব্যবহার করুন। স্টপওয়াচে ল্যাপ সময় রাখা যায়, আর কাউন্টডাউন শেষে বিপ শব্দ হয়।",
-          "সময় আপনার ডিভাইসের ঘড়ি থেকে মাপা হয়, তাই ট্যাব ব্যাকগ্রাউন্ডে গেলেও সময় ঠিক থাকে। পেশাদার খেলার সময় মাপার জন্য এটি নয়।",
+          "স্টপওয়াচ ট্যাবে Start চাপলেই সময় চলতে শুরু করে। Pause দিলে থামে, আবার চাপলে যেখানে থেমেছিল সেখান থেকে চলে, আর Reset দিলে সব শূন্য হয়ে যায়। দৌড়, পড়াশোনা বা যেকোনো কাজে কত সময় লাগছে মাপতে এটি কাজে লাগে।",
+          "চলার সময় Lap চাপলে প্রতিটি ল্যাপের আলাদা সময় এবং মোট সময় তালিকায় জমা হয়। কম্পিউটারে Space চাপলে Start/Pause, L চাপলে Lap এবং R চাপলে Reset হয়।",
         ],
       },
       {
-        h: "শব্দ না হলে",
+        h: "কাউন্টডাউন টাইমার",
         p: [
-          "ফোনের ভলিউম ও সাইলেন্ট মোড দেখুন। পেজ খোলা রাখুন, কারণ স্ক্রিন লক বা ট্যাব বন্ধ হলে শব্দ বন্ধ হতে পারে।",
-          "পড়াশোনার সময় মাপা, রান্না, ব্যায়াম বা পরীক্ষার অনুশীলনে এটি কাজে লাগে।",
+          "টাইমার ট্যাবে ঘণ্টা, মিনিট ও সেকেন্ড দিন, অথবা ১, ৫, ১০, ১৫, ৩০ মিনিট বা ১ ঘণ্টার প্রিসেটে ট্যাপ করুন। সময় শেষ হলে বিপ শব্দ হয় এবং ফোন কাঁপে (ব্রাউজার সাপোর্ট করলে)।",
+          "রান্না, পড়ার সেশন, ব্যায়াম বা পরীক্ষার অনুশীলনে সময় বেঁধে দিতে এটি সুবিধাজনক।",
+        ],
+      },
+      {
+        h: "স্টপওয়াচ আর টাইমারের পার্থক্য",
+        p: [
+          "স্টপওয়াচ ০ থেকে সামনের দিকে গোনে, কোনো কাজে কত সময় লাগল তা মাপতে। টাইমার ঠিক করা সময় থেকে পেছনের দিকে গোনে এবং শূন্যে পৌঁছে জানিয়ে দেয়। দুটোই এই পেজের দুই ট্যাবে আছে।",
+        ],
+      },
+      {
+        h: "ফুলস্ক্রিন, নির্ভুলতা ও শব্দ",
+        p: [
+          "বড় পর্দায় বা ক্লাসরুমে দেখাতে ট্যাবের পাশের ফুলস্ক্রিন বাটন ব্যবহার করুন। ব্রাউজার সাপোর্ট না করলে বাটনটি দেখা যায় না।",
+          "সময় আপনার ডিভাইসের ঘড়ি থেকে মাপা হয়, তাই ট্যাব ব্যাকগ্রাউন্ডে গেলেও সময় ঠিক থাকে। পেশাদার খেলার সময় মাপার জন্য এটি তৈরি নয়। শব্দ না হলে ফোনের ভলিউম ও সাইলেন্ট মোড দেখুন এবং পেজ খোলা রাখুন।",
         ],
       },
     ],
     en: [
       {
-        h: "Stopwatch and timer",
+        h: "How to use the online stopwatch",
         p: [
-          "Pick Stopwatch or Countdown Timer. Press Start (set the time first for the timer), then use Pause, Lap or Reset. The stopwatch can record laps, and the countdown beeps when it ends.",
-          "Time is measured from your device clock, so it stays correct even if the tab goes to the background. It is not meant for professional sports timing.",
+          "On the Stopwatch tab, press Start and the time begins to run. Pause stops it, pressing Start again carries on from where it stopped, and Reset clears it to zero. It helps you measure how long a run, a study session or any task takes.",
+          "Press Lap while it runs to save each lap's own time and the total time in the list. On a computer, Space starts or pauses, L records a lap and R resets.",
         ],
       },
       {
-        h: "If there is no sound",
+        h: "The countdown timer",
         p: [
-          "Check your phone volume and silent mode. Keep the page open, because a locked screen or closed tab may stop the sound.",
-          "It helps with timing study sessions, cooking, exercise and exam practice.",
+          "On the Timer tab, enter hours, minutes and seconds, or tap a 1, 5, 10, 15, 30 minute or 1 hour preset. When time is up it beeps and your phone vibrates (if the browser supports it).",
+          "It is handy for cooking, study sessions, exercise and exam practice.",
+        ],
+      },
+      {
+        h: "Stopwatch vs timer",
+        p: [
+          "A stopwatch counts up from 0 to measure how long something takes. A timer counts down from the time you set and tells you when it reaches zero. Both are on this page, one in each tab.",
+        ],
+      },
+      {
+        h: "Full screen, accuracy and sound",
+        p: [
+          "Use the full screen button next to the tabs to show it on a big screen or in a classroom. If your browser does not support full screen, the button is hidden.",
+          "Time is measured from your device clock, so it stays correct even if the tab goes to the background. It is not built for professional sports timing. If there is no sound, check your phone volume and silent mode and keep the page open.",
         ],
       },
     ],
