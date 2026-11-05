@@ -1448,15 +1448,28 @@ export const TOOL_ARTICLES: Record<string, ToolArticle> = {
       {
         h: "CGPA কীভাবে হিসাব হয়",
         p: [
-          "প্রতিটি সেমিস্টারের GPA কে সেই সেমিস্টারের ক্রেডিট দিয়ে গুণ করে সব সেমিস্টারের গুণফল যোগ করা হয়। তারপর মোট ক্রেডিট দিয়ে ভাগ করলে CGPA পাওয়া যায়।",
-          "উদাহরণ: প্রথম সেমিস্টারে GPA ৩.৫০ ও ১৫ ক্রেডিট, দ্বিতীয়টিতে GPA ৩.০০ ও ১৫ ক্রেডিট হলে CGPA হয় (৩.৫ × ১৫ + ৩.০ × ১৫) ÷ ৩০ = ৩.২৫।",
+          "প্রতিটি কোর্সের গ্রেড পয়েন্টকে সেই কোর্সের ক্রেডিট দিয়ে গুণ করে সব গুণফল যোগ করা হয়। তারপর মোট ক্রেডিট দিয়ে ভাগ করলে GPA বা CGPA পাওয়া যায়। সূত্র: CGPA = Σ(গ্রেড পয়েন্ট × ক্রেডিট) ÷ মোট ক্রেডিট।",
+          "উদাহরণ: চারটি কোর্স, প্রতিটি ৩ ক্রেডিট, গ্রেড A+ (৪.০০), A (৩.৭৫), B+ (৩.২৫) ও B (৩.০০)। মোট পয়েন্ট (৪.০০ + ৩.৭৫ + ৩.২৫ + ৩.০০) × ৩ = ৪২, মোট ক্রেডিট ১২। তাই GPA = ৪২ ÷ ১২ = ৩.৫০।",
         ],
       },
       {
-        h: "স্কেল ও সীমাবদ্ধতা",
+        h: "গ্রেড পয়েন্ট টেবিল (৪.০০ স্কেল)",
         p: [
-          "টুলে ৪.০০ ও ৫.০০ দুই স্কেলই আছে, উপরে থেকে আপনার স্কেল বেছে নিন। দরকার হলে নতুন সেমিস্টার যোগ করা যায়।",
-          "বিশ্ববিদ্যালয়ভেদে গ্রেডিং সিস্টেম এবং রিটেক বা ইমপ্রুভমেন্টের নিয়ম আলাদা। তাই এই ফলাফল আনুমানিক ধরুন এবং চূড়ান্ত CGPA আপনার বিশ্ববিদ্যালয় থেকে দেখে নিন।",
+          "প্রচলিত ৪.০০ স্কেলে A+ = ৪.০০, A = ৩.৭৫, A- = ৩.৫০, B+ = ৩.২৫, B = ৩.০০, B- = ২.৭৫, C+ = ২.৫০, C = ২.২৫, D = ২.০০ এবং F = ০। পেজের নিচে পুরো টেবিলটি দেওয়া আছে।",
+          "নম্বরের সীমা এবং কিছু গ্রেড বিশ্ববিদ্যালয়ভেদে আলাদা হতে পারে, তাই নিজের বিশ্ববিদ্যালয়ের গ্রেডিং সিস্টেম মিলিয়ে নিন।",
+        ],
+      },
+      {
+        h: "আগের CGPA থেকে নতুন CGPA",
+        p: [
+          "ধরুন আগের CGPA ৩.৪০ এবং মোট ক্রেডিট ৪৫। এই সেমিস্টারে ১২ ক্রেডিটে GPA ৩.৫০ হলে নতুন CGPA = (৩.৪০ × ৪৫ + ৩.৫০ × ১২) ÷ ৫৭ = ৩.৪২।",
+          "টুলে \"কোর্স অনুযায়ী\" ট্যাবে কোর্সগুলো দিন এবং নিচের ঘরে আগের CGPA ও ক্রেডিট লিখুন, হিসাব নিজে থেকে হয়ে যাবে। সেমিস্টারের GPA আগে থেকে জানা থাকলে \"সেমিস্টার GPA থেকে\" ট্যাব ব্যবহার করুন, সেখানে ৪.০০ ও ৫.০০ দুই স্কেলই আছে।",
+        ],
+      },
+      {
+        h: "সীমাবদ্ধতা",
+        p: [
+          "বিশ্ববিদ্যালয়ভেদে গ্রেডিং সিস্টেম এবং রিটেক বা ইমপ্রুভমেন্টের নিয়ম আলাদা। CGPA থেকে শতকরা নম্বরে রূপান্তরেরও সবার জন্য একই সূত্র নেই। তাই এই ফলাফল আনুমানিক ধরুন এবং চূড়ান্ত CGPA আপনার বিশ্ববিদ্যালয় থেকে দেখে নিন।",
         ],
       },
     ],
@@ -1464,15 +1477,28 @@ export const TOOL_ARTICLES: Record<string, ToolArticle> = {
       {
         h: "How CGPA is calculated",
         p: [
-          "Multiply each semester's GPA by that semester's credits and add up the results for all semesters. Divide by the total credits to get the CGPA.",
-          "Example: if the first semester has a GPA of 3.50 with 15 credits and the second has 3.00 with 15 credits, the CGPA is (3.5 × 15 + 3.0 × 15) ÷ 30 = 3.25.",
+          "Multiply each course's grade point by that course's credits and add up the results. Divide by the total credits to get the GPA or CGPA. Formula: CGPA = Σ(grade point × credits) ÷ total credits.",
+          "Example: four courses of 3 credits each, graded A+ (4.00), A (3.75), B+ (3.25) and B (3.00). Total points are (4.00 + 3.75 + 3.25 + 3.00) × 3 = 42 and total credits are 12, so GPA = 42 ÷ 12 = 3.50.",
         ],
       },
       {
-        h: "Scale and limitations",
+        h: "Grade point table (4.00 scale)",
         p: [
-          "The tool supports both 4.00 and 5.00 scales, so choose yours at the top. You can add more semesters as needed.",
-          "Grading systems and retake or improvement rules differ between universities. Treat this result as an estimate and check your final CGPA with your university.",
+          "On the common 4.00 scale, A+ = 4.00, A = 3.75, A- = 3.50, B+ = 3.25, B = 3.00, B- = 2.75, C+ = 2.50, C = 2.25, D = 2.00 and F = 0. The full table is shown at the bottom of the tool.",
+          "Mark ranges and some grades can differ between universities, so check your own university's grading system.",
+        ],
+      },
+      {
+        h: "New CGPA from a previous CGPA",
+        p: [
+          "Say your previous CGPA is 3.40 over 45 credits. If this semester you earn a GPA of 3.50 over 12 credits, your new CGPA = (3.40 × 45 + 3.50 × 12) ÷ 57 = 3.42.",
+          "In the tool, enter your courses on the \"By course\" tab and your previous CGPA and credits in the box below, and the calculation is done for you. If you already know the semester GPAs, use the \"From semester GPA\" tab, which supports both the 4.00 and 5.00 scales.",
+        ],
+      },
+      {
+        h: "Limitations",
+        p: [
+          "Grading systems and retake or improvement rules differ between universities, and there is no single formula for converting CGPA to percentage. Treat this result as an estimate and check your final CGPA with your university.",
         ],
       },
     ],
