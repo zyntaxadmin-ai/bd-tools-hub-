@@ -56,7 +56,7 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
   },
   "cgpa-calculator": {
     title: "CGPA Calculator BD - সিজিপিএ ক্যালকুলেটর",
-    description: "বিশ্ববিদ্যালয়ের সিজিপিএ ক্যালকুলেটর। সেমিস্টারের GPA ও ক্রেডিট দিয়ে CGPA বের করুন, ৪.০০ ও ৫.০০ দুই স্কেলেই কাজ করে।",
+    description: "CGPA calculator Bangladesh। কোর্সের গ্রেড ও ক্রেডিট দিয়ে সেমিস্টার GPA ও CGPA বের করুন, আগের CGPA যোগ করুন। গ্রেড পয়েন্ট টেবিলসহ। ফ্রি।",
   },
   "age-calculator": {
     title: "Age Calculator - বয়স ক্যালকুলেটর",

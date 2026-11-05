@@ -103,12 +103,18 @@ export const TOOL_EN: Record<string, ToolEn> = {
     ],
   },
   "cgpa-calculator": {
-    title: "CGPA Calculator",
-    desc: "Calculate your CGPA from semester GPA and credits, on a 4.00 or 5.00 scale.",
-    howTo: ["Choose the 4.00 or 5.00 scale", "Enter the GPA and credits for each semester", "Add more semesters if needed and read your CGPA"],
+    title: "CGPA Calculator BD",
+    desc: "Calculate your semester GPA and CGPA from course grades and credits. Add your previous CGPA to see the updated one. Includes a grade point table and 4.00 and 5.00 scales.",
+    howTo: ["On the \"By course\" tab, enter each course's grade and credits", "If you have a previous CGPA and credits, enter them in the box below (optional)", "See your semester GPA and updated CGPA straight away", "If you already know semester GPAs, use the \"From semester GPA\" tab"],
     faqs: [
-      { q: "How is CGPA calculated?", a: "Each semester's GPA is multiplied by its credits, the results are added, then divided by the total credits." },
-      { q: "Is it the same for every university?", a: "No. Grading systems and retake or improvement rules differ. Check your final CGPA with your university." },
+      { q: "How is CGPA calculated?", a: "Each course's grade point is multiplied by its credits, the results are added, then divided by the total credits. Formula: CGPA = Σ(grade point × credits) ÷ total credits." },
+      { q: "What is the difference between GPA and CGPA?", a: "GPA is the average result of one semester. CGPA is the credit-weighted average across all semesters so far." },
+      { q: "What are the grade points from A+ to F?", a: "On the common 4.00 scale: A+ 4.00, A 3.75, A- 3.50, B+ 3.25, B 3.00, B- 2.75, C+ 2.50, C 2.25, D 2.00 and F 0. This can differ between universities." },
+      { q: "How do I work out my new CGPA with a previous CGPA?", a: "On the \"By course\" tab, enter this semester's courses and your previous CGPA and total credits in the box below. The tool combines them into the updated CGPA." },
+      { q: "What is the difference between the 4.00 and 5.00 scales?", a: "Most universities in Bangladesh use the 4.00 scale. SSC and HSC use the 5.00 scale. The \"From semester GPA\" tab lets you pick either." },
+      { q: "How do I convert CGPA to percentage?", a: "There is no single formula that every university uses. Check your university's grading policy or conversion formula, because this tool does not assume one." },
+      { q: "How does a retake or improvement change the result?", a: "The rules differ between universities. Some replace the old grade with the new one, others count both. In the tool you can remove the old course and enter the new grade, but check the final result with your university." },
+      { q: "Is the calculation the same at every university?", a: "No. Grading systems and retake or improvement rules differ. Check your final CGPA with your university." },
     ],
   },
   "unit-converter": {
