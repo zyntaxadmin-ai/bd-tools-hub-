@@ -128,14 +128,22 @@ export const TOOL_ARTICLES: Record<string, ToolArticle> = {
       {
         h: "Nagad ক্যাশ আউট চার্জের হিসাব",
         p: [
-          "এই ক্যালকুলেটরে Nagad এজেন্ট ও এটিএম ক্যাশ আউট প্রতি ১০০০ টাকায় ১৪.৯ টাকা ধরা হয়েছে। যেমন ২০০০ টাকা তুললে চার্জ ২৯.৮ টাকা, আর মোট কাটবে ২০২৯.৮ টাকা।",
-          "বিভিন্ন সূত্রে Nagad এর রেট আলাদা পাওয়া যায়, কারণ অ্যাপ, USSD ও অফার ভেদে চার্জ বদলায়। তাই আপনার রেট জানা থাকলে \"নিজে রেট দিন\" অপশনে সেটি বসিয়ে হিসাব করুন।",
+          "এই ক্যালকুলেটরে Nagad এজেন্ট ও এটিএম ক্যাশ আউট প্রতি ১০০০ টাকায় ১৪.৯ টাকা ধরা হয়েছে (শেষ দেখা অক্টোবর ২০২৬)। যেমন ২০০০ টাকা তুললে চার্জ ২৯.৮ টাকা এবং ৫০০০ টাকায় ৭৪.৫ টাকা, আর মোট কাটবে ৫০৭৪.৫ টাকা।",
+          "টাকার পরিমাণ লিখলেই চার্জ ও মোট কত টাকা লাগবে, তা সঙ্গে সঙ্গে দেখা যায়। পেজের নিচের টেবিলে ৫০০ থেকে ২০,০০০ টাকা পর্যন্ত চার্জ একসঙ্গে দেওয়া আছে।",
+          "বিভিন্ন সূত্রে Nagad এর রেট আলাদা পাওয়া যায়, কারণ অ্যাপ, USSD ও অফার ভেদে চার্জ বদলায়। নিজের রেট জানা থাকলে \"নিজে রেট দিন\" বেছে সেটি ব্যবহার করুন।",
+        ],
+      },
+      {
+        h: "ব্যালেন্সে যত টাকা আছে, তার কতটা তোলা যাবে",
+        p: [
+          "চার্জ আপনার ব্যালেন্স থেকেই কাটে, তাই ব্যালেন্সের পুরোটা তোলা যায় না। যেমন ৫০০০ টাকা ব্যালেন্স থাকলে এই রেটে ৪৯২৬ টাকা তোলা যায়, চার্জ লাগে প্রায় ৭৩.৪ টাকা।",
+          "এটি জানতে ক্যালকুলেটরের দ্বিতীয় ট্যাব \"ব্যালেন্স থেকে কত তোলা যাবে\" খুলে নিজের ব্যালেন্স লিখুন।",
         ],
       },
       {
         h: "কেন অ্যাপে মিলিয়ে নেবেন",
         p: [
-          "মোবাইল ব্যাংকিং চার্জ নিয়মিত বদলায়। টাকা তোলার আগে Nagad অ্যাপে দেখানো চার্জই চূড়ান্ত ধরুন। এই টুল শুধু আগে থেকে আন্দাজ করার জন্য।",
+          "মোবাইল ব্যাংকিং চার্জ নিয়মিত বদলায়। টাকা তোলার আগে Nagad অ্যাপে দেখানো চার্জ বা অফিসিয়াল চার্জ চার্টের সঙ্গে মিলিয়ে নিন। সেন্ড মানির চার্জ অ্যাপ ও অফারভেদে বদলায়, তাই এই টুলে ধরা হয়নি।",
         ],
       },
     ],
@@ -143,14 +151,22 @@ export const TOOL_ARTICLES: Record<string, ToolArticle> = {
       {
         h: "Working out the Nagad cash out charge",
         p: [
-          "This calculator uses 14.9 taka per 1,000 for Nagad agent and ATM cash out. For example, cashing out 2,000 taka costs 29.8 taka and 2,029.8 taka is deducted in total.",
+          "This calculator uses 14.9 taka per 1,000 for Nagad agent and ATM cash out (last checked October 2026). For example, cashing out 2,000 taka costs 29.8 taka and 5,000 taka costs 74.5 taka, so 5,074.5 taka is deducted in total.",
+          "Type the amount and you immediately see the charge and the total needed. The table below the calculator lists the charge for 500 up to 20,000 taka.",
           "Public sources list different Nagad rates because the charge varies by app, USSD and offer. If you know your own rate, choose \"Enter my own rate\" and use that instead.",
         ],
       },
       {
-        h: "Why you should confirm in the app",
+        h: "How much can you cash out from your balance",
         p: [
-          "Mobile banking charges change regularly. Treat the charge shown in the Nagad app as final before you withdraw. This tool is only for estimating in advance.",
+          "The charge comes out of the same balance, so you cannot cash out all of it. For example, with 5,000 taka in your account at this rate you can cash out 4,926 taka, and the charge is about 73.4 taka.",
+          "To find this, open the second tab, \"Cash out from my balance\", and enter your balance.",
+        ],
+      },
+      {
+        h: "Why check the app",
+        p: [
+          "Mobile banking charges change regularly. Before you cash out, compare with the charge shown in the Nagad app or the official charge chart. Send money fees vary by app and offer, so they are not included in this tool.",
         ],
       },
     ],
