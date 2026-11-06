@@ -5,6 +5,7 @@ import ToolCard from "./ToolCard";
 import AdSlot from "./AdSlot";
 import { tools } from "@/data/tools";
 import { LIVE_SLUGS } from "@/lib/live";
+import { preferredRelated } from "@/lib/relatedTools";
 import type { TOOL_EN } from "@/lib/toolContentEn";
 import type { TOOL_ARTICLES } from "@/lib/toolArticles";
 import { CAT_I18N } from "@/lib/i18nData";
@@ -35,9 +36,12 @@ export default function ToolLayout({ title, description, category, categorySlug,
   const article = articles?.[lang === "en" ? "en" : "bn"];
   const catLabel = CAT_I18N[categorySlug]?.[lang].name ?? category;
 
-  const related = tools
-    .filter((x) => x.category === category && x.slug !== slug && LIVE_SLUGS.includes(x.slug.replace("/tool/", "")))
-    .slice(0, 4);
+  const isLive = (x: (typeof tools)[number]) => LIVE_SLUGS.includes(x.slug.replace("/tool/", ""));
+  const preferred = preferredRelated(slug)
+    .map((s) => tools.find((x) => x.slug === `/tool/${s}`))
+    .filter((x): x is (typeof tools)[number] => !!x && isLive(x));
+  const sameCategory = tools.filter((x) => x.category === category && x.slug !== slug && isLive(x) && !preferred.includes(x));
+  const related = [...preferred, ...sameCategory].slice(0, 4);
 
   return (
     <div className="max-w-[900px] mx-auto px-4 sm:px-6 py-6">
