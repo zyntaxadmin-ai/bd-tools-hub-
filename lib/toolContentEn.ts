@@ -371,12 +371,17 @@ export const TOOL_EN: Record<string, ToolEn> = {
   },
   "upay-calculator": {
     title: "Upay Charge Calculator",
-    desc: "Work out how much it costs to cash out from UCB's Upay at an agent or an ATM.",
-    howTo: ["Enter the amount", "Choose agent or UCB ATM", "See the charge and the total deducted"],
+    desc: "Upay cash out charge calculator. See the charge, the total deducted and how much you can cash out from your balance at an agent or a UCB Bank ATM. Includes a charge table.",
+    howTo: ["Enter the amount (or tap a quick amount below)", "Choose agent or UCB Bank ATM, or enter your own rate", "See the charge and the total deducted straight away", "To find how much you can cash out, open the second tab and enter your balance"],
     faqs: [
-      { q: "What is the Upay agent cash out charge?", a: "This calculator uses 14 taka per 1,000 (1.4%) and 8 taka at UCB ATMs. Confirm in the app." },
-      { q: "Do charges change?", a: "Yes, at any time. Check the official app or charge chart." },
-      { q: "What if my rate is different?", a: "Choose \"Enter my own rate\" and type your rate per 1,000 taka." },
+      { q: "What is the Upay agent cash out charge?", a: "This calculator uses 14 taka per 1,000 (1.4%) for agents and 8 taka (0.8%) at UCB ATMs, last checked October 2026. Confirm in the app." },
+      { q: "What is the Upay charge on 1,000 taka?", a: "14 taka at an agent, so 1,014 taka is deducted in total. At a UCB ATM it is 8 taka, 1,008 in total." },
+      { q: "What is the Upay charge on 5,000 taka?", a: "70 taka at an agent, so 5,070 taka is deducted in total. At a UCB ATM it is 40 taka, 5,040 in total." },
+      { q: "How is the charge worked out?", a: "Charge = amount × 14 ÷ 1,000 (agent). For example 28 taka on 2,000 taka. The charge is taken from your balance on top of the amount." },
+      { q: "How much can I cash out if my balance is 5,000 taka?", a: "The charge comes out of the same balance, so you cannot cash out the full 5,000. At the agent rate you can cash out 4,930 taka, with a charge of about 69.02 taka. At a UCB ATM it is 4,960 taka. Use the second tab for any balance." },
+      { q: "Why is the UCB ATM cheaper?", a: "Upay is a UCB Bank service, so withdrawing from a UCB ATM usually costs less." },
+      { q: "Do charges change?", a: "Yes, at any time. We found only limited public sources for Upay rates, so check the official app or charge chart." },
+      { q: "What if my rate is different?", a: "Choose \"Enter my own rate\" and type your rate per 1,000 taka. The table and result switch to that rate." },
     ],
   },
   "image-to-pdf": {

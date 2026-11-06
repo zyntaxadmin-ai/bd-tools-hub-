@@ -432,14 +432,22 @@ export const TOOL_ARTICLES: Record<string, ToolArticle> = {
       {
         h: "Upay ক্যাশ আউট চার্জের হিসাব",
         p: [
-          "এই ক্যালকুলেটরে Upay এজেন্ট ক্যাশ আউট প্রতি ১০০০ টাকায় ১৪ টাকা (১.৪%) এবং ইউসিবি ব্যাংকের এটিএমে ৮ টাকা (০.৮%) ধরা হয়েছে। যেমন ৩০০০ টাকা এজেন্টের কাছ থেকে তুললে চার্জ ৪২ টাকা, আর মোট কাটবে ৩০৪২ টাকা।",
+          "এই ক্যালকুলেটরে Upay এজেন্ট ক্যাশ আউট প্রতি ১০০০ টাকায় ১৪ টাকা (১.৪%) এবং ইউসিবি ব্যাংকের এটিএমে ৮ টাকা (০.৮%) ধরা হয়েছে (শেষ দেখা অক্টোবর ২০২৬)। যেমন এজেন্টে ৩০০০ টাকা তুললে চার্জ ৪২ টাকা এবং ৫০০০ টাকায় ৭০ টাকা, আর মোট কাটবে ৫০৭০ টাকা।",
+          "টাকার পরিমাণ লিখলেই চার্জ ও মোট কত টাকা লাগবে, তা সঙ্গে সঙ্গে দেখা যায়। পেজের নিচের টেবিলে ৫০০ থেকে ২০,০০০ টাকা পর্যন্ত চার্জ একসঙ্গে দেওয়া আছে।",
           "Upay ইউসিবি ব্যাংকের সেবা, তাই ইউসিবি এটিএম থেকে টাকা তুললে সাধারণত চার্জ কম লাগে।",
+        ],
+      },
+      {
+        h: "ব্যালেন্সে যত টাকা আছে, তার কতটা তোলা যাবে",
+        p: [
+          "চার্জ আপনার ব্যালেন্স থেকেই কাটে, তাই ব্যালেন্সের পুরোটা তোলা যায় না। যেমন ৫০০০ টাকা ব্যালেন্স থাকলে এজেন্ট রেটে ৪৯৩০ টাকা তোলা যায়, চার্জ লাগে প্রায় ৬৯ টাকা। ইউসিবি এটিএমে তোলা যায় ৪৯৬০ টাকা।",
+          "এটি জানতে ক্যালকুলেটরের দ্বিতীয় ট্যাব \"ব্যালেন্স থেকে কত তোলা যাবে\" খুলে নিজের ব্যালেন্স লিখুন।",
         ],
       },
       {
         h: "অ্যাপে মিলিয়ে নিন",
         p: [
-          "Upay এর চার্জ সম্পর্কে আমরা সীমিত সূত্র পেয়েছি, তাই টাকা তোলার আগে Upay অ্যাপে দেখানো চার্জ যাচাই করুন। রেট আলাদা হলে \"নিজে রেট দিন\" অপশনে প্রতি ১০০০ টাকায় আপনার রেট বসিয়ে হিসাব করুন।",
+          "Upay এর চার্জ সম্পর্কে আমরা সীমিত সূত্র পেয়েছি, তাই টাকা তোলার আগে Upay অ্যাপে দেখানো চার্জ যাচাই করুন। রেট আলাদা হলে \"নিজে রেট দিন\" বেছে প্রতি ১০০০ টাকায় আপনার রেট লিখুন।",
         ],
       },
     ],
@@ -447,8 +455,16 @@ export const TOOL_ARTICLES: Record<string, ToolArticle> = {
       {
         h: "Working out the Upay cash out charge",
         p: [
-          "This calculator uses 14 taka per 1,000 (1.4%) for Upay agent cash out and 8 taka (0.8%) at UCB Bank ATMs. For example, taking out 3,000 taka from an agent costs 42 taka and 3,042 taka is deducted in total.",
+          "This calculator uses 14 taka per 1,000 (1.4%) for Upay agent cash out and 8 taka (0.8%) at UCB Bank ATMs (last checked October 2026). For example, taking out 3,000 taka from an agent costs 42 taka and 5,000 taka costs 70 taka, so 5,070 taka is deducted in total.",
+          "Type the amount and you immediately see the charge and the total needed. The table below the calculator lists the charge for 500 up to 20,000 taka.",
           "Upay is a UCB Bank service, so withdrawing from a UCB ATM usually costs less.",
+        ],
+      },
+      {
+        h: "How much can you cash out from your balance",
+        p: [
+          "The charge comes out of the same balance, so you cannot cash out all of it. For example, with 5,000 taka in your account at the agent rate you can cash out 4,930 taka, and the charge is about 69 taka. At a UCB ATM you can cash out 4,960 taka.",
+          "To find this, open the second tab, \"Cash out from my balance\", and enter your balance.",
         ],
       },
       {
