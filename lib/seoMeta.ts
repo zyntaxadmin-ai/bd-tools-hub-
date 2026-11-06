@@ -31,8 +31,8 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
     description: "বিকাশ ক্যাশ আউট চার্জ ক্যালকুলেটর। bKash cash out charge কত কাটবে, মোট কত লাগবে ও ব্যালেন্সে কত তোলা যাবে, এক সেকেন্ডে দেখুন। ফ্রি টুল।",
   },
   "rocket-calculator": {
-    title: "Rocket Charge Calculator - রকেট ক্যাশ আউট চার্জ",
-    description: "রকেট ক্যাশ আউট চার্জ ক্যালকুলেটর। Rocket cash out এজেন্ট ও ATM এ কত টাকা কাটবে, সহজে হিসাব করুন। ফ্রি অনলাইন টুল।",
+    title: "Rocket Charge Calculator 2026 - রকেট ক্যাশ আউট চার্জ",
+    description: "Rocket charge calculator। রকেট ক্যাশ আউটে এজেন্ট বা ডাচ-বাংলা এটিএমে কত টাকা কাটবে ও ব্যালেন্সে কত তোলা যাবে, এক সেকেন্ডে দেখুন। চার্জ টেবিলসহ, ফ্রি।",
   },
   "upay-calculator": {
     title: "Upay Charge Calculator - উপায় ক্যাশ আউট চার্জ",

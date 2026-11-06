@@ -367,14 +367,22 @@ export const TOOL_ARTICLES: Record<string, ToolArticle> = {
       {
         h: "Rocket ক্যাশ আউট চার্জের হিসাব",
         p: [
-          "এই ক্যালকুলেটরে Rocket এজেন্ট ক্যাশ আউট প্রতি ১০০০ টাকায় ১৮ টাকা (১.৮%) এবং ডাচ-বাংলা ব্যাংকের এটিএমে ১০ টাকা (১%) ধরা হয়েছে। যেমন ৫০০০ টাকা এজেন্টের কাছ থেকে তুললে চার্জ ৯০ টাকা, আর মোট কাটবে ৫০৯০ টাকা।",
-          "ডাচ-বাংলা ব্যাংকের নিজস্ব এটিএমে চার্জ সাধারণত কম, কারণ Rocket ওই ব্যাংকেরই সেবা। টাকা তোলার আগে কোন উপায়ে কত লাগবে তা মিলিয়ে দেখলে কিছু টাকা বাঁচানো যায়।",
+          "এই ক্যালকুলেটরে Rocket এজেন্ট ক্যাশ আউট প্রতি ১০০০ টাকায় ১৮ টাকা (১.৮%) এবং ডাচ-বাংলা ব্যাংকের এটিএমে ১০ টাকা (১%) ধরা হয়েছে (শেষ দেখা অক্টোবর ২০২৬)। যেমন এজেন্টে ৫০০০ টাকা তুললে চার্জ ৯০ টাকা, আর মোট কাটবে ৫০৯০ টাকা।",
+          "টাকার পরিমাণ লিখলেই চার্জ ও মোট কত টাকা লাগবে, তা সঙ্গে সঙ্গে দেখা যায়। পেজের নিচের টেবিলে ৫০০ থেকে ২০,০০০ টাকা পর্যন্ত চার্জ একসঙ্গে দেওয়া আছে।",
+          "ডাচ-বাংলা ব্যাংকের নিজস্ব এটিএমে চার্জ সাধারণত কম, কারণ Rocket ওই ব্যাংকেরই সেবা। টাকা তোলার আগে কোথায় তুললে কত লাগবে, তা মিলিয়ে দেখলে কিছু টাকা বাঁচতে পারে।",
+        ],
+      },
+      {
+        h: "ব্যালেন্সে যত টাকা আছে, তার কতটা তোলা যাবে",
+        p: [
+          "চার্জ আপনার ব্যালেন্স থেকেই কাটে, তাই ব্যালেন্সের পুরোটা তোলা যায় না। যেমন ৫০০০ টাকা ব্যালেন্স থাকলে এজেন্ট রেটে ৪৯১১ টাকা তোলা যায়, চার্জ লাগে প্রায় ৮৮.৪ টাকা। ডাচ-বাংলা এটিএমে তোলা যায় ৪৯৫০ টাকা।",
+          "এটি জানতে ক্যালকুলেটরের দ্বিতীয় ট্যাব \"ব্যালেন্স থেকে কত তোলা যাবে\" খুলে নিজের ব্যালেন্স লিখুন।",
         ],
       },
       {
         h: "রেট না মিললে কী করবেন",
         p: [
-          "বিভিন্ন সূত্রে Rocket এর এজেন্ট চার্জ ১.৬৭% থেকে ১.৮% পর্যন্ত লেখা আছে। আপনার রেট আলাদা হলে \"নিজে রেট দিন\" অপশনে প্রতি ১০০০ টাকায় সেটি লিখে হিসাব করুন। চূড়ান্ত চার্জ সবসময় Rocket অ্যাপে দেখে নিন।",
+          "বিভিন্ন সূত্রে Rocket এর এজেন্ট চার্জ ১.৬৭% থেকে ১.৮% পর্যন্ত লেখা আছে। আপনার রেট আলাদা হলে \"নিজে রেট দিন\" বেছে প্রতি ১০০০ টাকায় সেটি লিখুন। অ্যাপে দেখানো চার্জকেই চূড়ান্ত ধরুন।",
         ],
       },
     ],
@@ -382,8 +390,16 @@ export const TOOL_ARTICLES: Record<string, ToolArticle> = {
       {
         h: "Working out the Rocket cash out charge",
         p: [
-          "This calculator uses 18 taka per 1,000 (1.8%) for Rocket agent cash out and 10 taka (1%) at Dutch-Bangla Bank ATMs. For example, taking out 5,000 taka from an agent costs 90 taka and 5,090 taka is deducted in total.",
+          "This calculator uses 18 taka per 1,000 (1.8%) for Rocket agent cash out and 10 taka (1%) at Dutch-Bangla Bank ATMs (last checked October 2026). For example, taking out 5,000 taka from an agent costs 90 taka and 5,090 taka is deducted in total.",
+          "Type the amount and you immediately see the charge and the total needed. The table below the calculator lists the charge for 500 up to 20,000 taka.",
           "Charges at Dutch-Bangla Bank's own ATMs are usually lower because Rocket is that bank's service. Comparing the options before you withdraw can save you a little money.",
+        ],
+      },
+      {
+        h: "How much can you cash out from your balance",
+        p: [
+          "The charge comes out of the same balance, so you cannot cash out all of it. For example, with 5,000 taka in your account at the agent rate you can cash out 4,911 taka, and the charge is about 88.4 taka. At a Dutch-Bangla ATM you can cash out 4,950 taka.",
+          "To find this, open the second tab, \"Cash out from my balance\", and enter your balance.",
         ],
       },
       {
