@@ -23,8 +23,8 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
     description: "এফডিআর ও ডিপিএস ক্যালকুলেটর। সুদের হার, মেয়াদ ও উৎসে কর ধরে মেয়াদ শেষে কত টাকা পাবেন, মোট সুদসহ হিসাব করুন। FDR interest calculator BD।",
   },
   "nagad-calculator": {
-    title: "Nagad Charge Calculator - নগদ ক্যাশ আউট চার্জ",
-    description: "নগদ ক্যাশ আউট চার্জ ক্যালকুলেটর। Nagad cash out কত টাকা কাটবে ও মোট কত লাগবে, এক সেকেন্ডে হিসাব করুন। ফ্রি ও আপলোড ছাড়াই।",
+    title: "Nagad Charge Calculator 2026 - নগদ ক্যাশ আউট চার্জ",
+    description: "Nagad charge calculator। নগদ ক্যাশ আউটে কত টাকা কাটবে, মোট কত লাগবে ও ব্যালেন্সে কত তোলা যাবে, এক সেকেন্ডে দেখুন। চার্জ টেবিলসহ, ফ্রি।",
   },
   "bkash-calculator": {
     title: "bKash Cash Out Charge Calculator - বিকাশ ক্যাশ আউট",
