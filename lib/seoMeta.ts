@@ -35,8 +35,8 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
     description: "Rocket charge calculator। রকেট ক্যাশ আউটে এজেন্ট বা ডাচ-বাংলা এটিএমে কত টাকা কাটবে ও ব্যালেন্সে কত তোলা যাবে, এক সেকেন্ডে দেখুন। চার্জ টেবিলসহ, ফ্রি।",
   },
   "upay-calculator": {
-    title: "Upay Charge Calculator - উপায় ক্যাশ আউট চার্জ",
-    description: "উপায় ক্যাশ আউট চার্জ ক্যালকুলেটর। Upay cash out এজেন্ট ও ATM এ কত টাকা কাটবে, সহজে হিসাব করুন। ফ্রি অনলাইন টুল।",
+    title: "Upay Charge Calculator 2026 - উপায় ক্যাশ আউট চার্জ",
+    description: "Upay charge calculator। উপায় ক্যাশ আউটে এজেন্ট বা ইউসিবি এটিএমে কত টাকা কাটবে ও ব্যালেন্সে কত তোলা যাবে, এক সেকেন্ডে দেখুন। চার্জ টেবিলসহ, ফ্রি।",
   },
   "passport-fee-calculator-bd": {
     title: "Passport Fee BD - ই-পাসপোর্ট ফি কত",
