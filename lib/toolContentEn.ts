@@ -352,12 +352,17 @@ export const TOOL_EN: Record<string, ToolEn> = {
   },
   "rocket-calculator": {
     title: "Rocket Charge Calculator",
-    desc: "Work out how much it costs to cash out from Dutch-Bangla Bank's Rocket at an agent or an ATM.",
-    howTo: ["Enter the amount", "Choose agent or Dutch-Bangla ATM", "See the charge and the total deducted"],
+    desc: "Rocket cash out charge calculator. See the charge, the total deducted and how much you can cash out from your balance at an agent or a Dutch-Bangla Bank ATM. Includes a charge table.",
+    howTo: ["Enter the amount (or tap a quick amount below)", "Choose agent or Dutch-Bangla Bank ATM, or enter your own rate", "See the charge and the total deducted straight away", "To find how much you can cash out, open the second tab and enter your balance"],
     faqs: [
-      { q: "What is the Rocket agent cash out charge?", a: "This calculator uses 18 taka per 1,000 (1.8%). Some sources list 1.67%, so check the app." },
+      { q: "What is the Rocket agent cash out charge?", a: "This calculator uses 18 taka per 1,000 (1.8%), last checked October 2026. Some sources list 1.67%, so check the app." },
+      { q: "What is the Rocket charge on 1,000 taka?", a: "18 taka at an agent, so 1,018 taka is deducted in total. At a Dutch-Bangla ATM it is 10 taka, 1,010 in total." },
+      { q: "What is the Rocket charge on 5,000 taka?", a: "90 taka at an agent, so 5,090 taka is deducted in total. At a Dutch-Bangla ATM it is 50 taka, 5,050 in total." },
+      { q: "How is the charge worked out?", a: "Charge = amount × 18 ÷ 1,000 (agent). For example 36 taka on 2,000 taka. The charge is taken from your balance on top of the amount." },
+      { q: "How much can I cash out if my balance is 5,000 taka?", a: "The charge comes out of the same balance, so you cannot cash out the full 5,000. At the agent rate you can cash out 4,911 taka, with a charge of about 88.40 taka. At a Dutch-Bangla ATM it is 4,950 taka. Use the second tab for any balance." },
       { q: "Why is the Dutch-Bangla ATM cheaper?", a: "Rocket is a Dutch-Bangla Bank service, so cash out at its own ATMs usually costs less." },
-      { q: "Do charges change?", a: "Yes, at any time. Check the official app or charge chart." },
+      { q: "Do charges change?", a: "Yes, at any time, and public sources list different rates. Check the official app or charge chart." },
+      { q: "What if my rate is different?", a: "Choose \"Enter my own rate\" and type your rate per 1,000 taka. The table and result switch to that rate." },
     ],
   },
   "upay-calculator": {
